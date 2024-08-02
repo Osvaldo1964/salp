@@ -44,7 +44,7 @@
                         <div class="col-8">
                             <div class="icheck-primary">
                                 <input type="checkbox" id="remember" onchange="rememberMe(event)">
-                                <label for="remember">
+                                <label class="ml-1" for="remember">
                                     Remember Me
                                 </label>
                             </div>

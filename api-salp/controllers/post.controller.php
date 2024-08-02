@@ -36,7 +36,7 @@ class PostController{
 				$response = GetModel::getDataFilter($table, "*", "email_".$suffix, $data["email_".$suffix], null,null,null,null);
 				if(!empty($response)){		
 					$token = Connection::jwt($response[0]->{"id_".$suffix}, $response[0]->{"email_".$suffix});
-					$jwt = JWT::encode($token, "dfhsdfg34dfchs4xgsrsdry46");
+					$jwt = JWT::encode($token, "dfhsdfg34dfchs4xgsrsdry46","HS256");
 
 					/* Actualizamos la base de datos con el Token del usuario */
 					$data = array(
@@ -68,7 +68,7 @@ class PostController{
 				$crypt = crypt($data["password_".$suffix], '$2a$07$azybxcags23425sdg23sdfhsd$');
 				if($response[0]->{"password_".$suffix} == $crypt){
 					$token = Connection::jwt($response[0]->{"id_".$suffix}, $response[0]->{"email_".$suffix});
-					$jwt = JWT::encode($token, "dfhsdfg34dfchs4xgsrsdry46");
+					$jwt = JWT::encode($token, "dfhsdfg34dfchs4xgsrsdry46","HS256");
 
 					/* Actualizamos la base de datos con el Token del usuario */
 					$data = array(
@@ -91,7 +91,7 @@ class PostController{
 
 				/* Actualizamos el token para usuarios logueados desde app externas */
 				$token = Connection::jwt($response[0]->{"id_".$suffix}, $response[0]->{"email_".$suffix});
-				$jwt = JWT::encode($token, "dfhsdfg34dfchs4xgsrsdry46");				
+				$jwt = JWT::encode($token, "dfhsdfg34dfchs4xgsrsdry46","HS256");				
 				$data = array(
 					"token_".$suffix => $jwt,
 					"token_exp_".$suffix => $token["exp"]

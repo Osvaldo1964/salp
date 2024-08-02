@@ -33,3 +33,30 @@
 [02-Aug-2024 04:29:53 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [02-Aug-2024 04:29:53 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [02-Aug-2024 04:29:53 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[02-Aug-2024 17:25:14 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\salp\admin-salp\controllers\admins.controller.php on line 15
+[02-Aug-2024 17:25:14 Europe/Berlin] PHP Warning:  Attempt to read property "results" on null in C:\xampp\htdocs\salp\admin-salp\controllers\admins.controller.php on line 28
+[02-Aug-2024 17:28:08 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\salp\admin-salp\controllers\admins.controller.php on line 15
+[02-Aug-2024 17:28:08 Europe/Berlin] PHP Warning:  Attempt to read property "results" on null in C:\xampp\htdocs\salp\admin-salp\controllers\admins.controller.php on line 28
+[02-Aug-2024 17:28:19 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\salp\admin-salp\controllers\admins.controller.php on line 15
+[02-Aug-2024 17:28:19 Europe/Berlin] PHP Warning:  Attempt to read property "results" on null in C:\xampp\htdocs\salp\admin-salp\controllers\admins.controller.php on line 28
+[02-Aug-2024 17:30:16 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\salp\admin-salp\controllers\admins.controller.php on line 15
+[02-Aug-2024 17:30:16 Europe/Berlin] PHP Warning:  Attempt to read property "results" on null in C:\xampp\htdocs\salp\admin-salp\controllers\admins.controller.php on line 28
+[02-Aug-2024 17:32:16 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\salp\admin-salp\controllers\admins.controller.php on line 15
+[02-Aug-2024 17:32:16 Europe/Berlin] PHP Warning:  Attempt to read property "results" on null in C:\xampp\htdocs\salp\admin-salp\controllers\admins.controller.php on line 28
+[02-Aug-2024 17:32:24 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\salp\admin-salp\controllers\admins.controller.php on line 15
+[02-Aug-2024 17:32:24 Europe/Berlin] PHP Warning:  Attempt to read property "results" on null in C:\xampp\htdocs\salp\admin-salp\controllers\admins.controller.php on line 28
+[02-Aug-2024 17:42:16 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[02-Aug-2024 17:42:16 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[02-Aug-2024 17:42:16 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[02-Aug-2024 17:42:16 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[02-Aug-2024 17:42:16 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[02-Aug-2024 17:43:54 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[02-Aug-2024 17:43:54 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[02-Aug-2024 17:43:54 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[02-Aug-2024 17:43:54 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[02-Aug-2024 17:43:54 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[02-Aug-2024 18:00:41 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[02-Aug-2024 18:00:41 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[02-Aug-2024 18:00:41 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[02-Aug-2024 18:00:41 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[02-Aug-2024 18:00:41 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
