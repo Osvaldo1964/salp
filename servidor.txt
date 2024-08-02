@@ -1,0 +1,16 @@
+ 
+## SISTEMA DE SALP API Y ADMINISTRACION\
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/salp/api-salp"
+    ServerName api-salp.com
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/salp/admin-salp"
+    ServerName admin-salp.com
+</VirtualHost>
+
+
+127.0.0.1      api-salp.com
+127.0.0.1      admin-salp.com

@@ -1,0 +1,7 @@
+.login-page, .register-page{
+    background-color:#17a2b8;
+}
+
+.note-image-input, .note-image-btn{
+    padding-bottom: 30px !important;
+}
