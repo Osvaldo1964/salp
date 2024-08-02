@@ -19,12 +19,12 @@ foreach ($routesArray as $key => $value) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SISTEMA COBRO COACTIVO</title>
+  <title>SISTEMA DE ALUMBRADO PUBLICO</title>
 
   <!-- Traigo la ruta base -->
   <base href="<?php echo TemplateController::path(); ?>">
 
-  <link rel="icon" href="views/assets/img/template/icono.png">
+  <link rel="icon" href="views/assets/img/template/icono.ico">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
