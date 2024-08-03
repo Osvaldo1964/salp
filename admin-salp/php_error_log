@@ -60,3 +60,73 @@
 [02-Aug-2024 18:00:41 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [02-Aug-2024 18:00:41 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [02-Aug-2024 18:00:41 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[03-Aug-2024 23:34:17 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[03-Aug-2024 23:34:17 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[03-Aug-2024 23:34:17 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[03-Aug-2024 23:34:17 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[03-Aug-2024 23:34:17 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[04-Aug-2024 01:13:35 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\new.php on line 65
+[04-Aug-2024 01:14:38 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\new.php on line 65
+[04-Aug-2024 01:14:41 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\new.php on line 65
+[04-Aug-2024 01:14:46 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\new.php on line 65
+[04-Aug-2024 01:16:42 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\new.php on line 65
+[04-Aug-2024 01:16:48 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\new.php on line 65
+[04-Aug-2024 01:28:02 Europe/Berlin] PHP Warning:  Undefined array key "asist" in C:\xampp\htdocs\salp\admin-salp\controllers\crews.controller.php on line 21
+[04-Aug-2024 01:40:56 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 31
+[04-Aug-2024 01:40:56 Europe/Berlin] PHP Warning:  Attempt to read property "id_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 31
+[04-Aug-2024 01:40:56 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 40
+[04-Aug-2024 01:40:56 Europe/Berlin] PHP Warning:  Attempt to read property "name_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 40
+[04-Aug-2024 01:40:56 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 50
+[04-Aug-2024 01:40:56 Europe/Berlin] PHP Warning:  Attempt to read property "driver_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 50
+[04-Aug-2024 01:40:56 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 60
+[04-Aug-2024 01:40:56 Europe/Berlin] PHP Warning:  Attempt to read property "tecno_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 60
+[04-Aug-2024 01:40:56 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 70
+[04-Aug-2024 01:40:56 Europe/Berlin] PHP Warning:  Attempt to read property "assist_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 70
+[04-Aug-2024 01:40:57 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 31
+[04-Aug-2024 01:40:57 Europe/Berlin] PHP Warning:  Attempt to read property "id_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 31
+[04-Aug-2024 01:40:57 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 40
+[04-Aug-2024 01:40:57 Europe/Berlin] PHP Warning:  Attempt to read property "name_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 40
+[04-Aug-2024 01:40:57 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 50
+[04-Aug-2024 01:40:57 Europe/Berlin] PHP Warning:  Attempt to read property "driver_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 50
+[04-Aug-2024 01:40:57 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 60
+[04-Aug-2024 01:40:57 Europe/Berlin] PHP Warning:  Attempt to read property "tecno_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 60
+[04-Aug-2024 01:40:57 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 70
+[04-Aug-2024 01:40:57 Europe/Berlin] PHP Warning:  Attempt to read property "assist_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 70
+[04-Aug-2024 01:41:27 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 27
+[04-Aug-2024 01:41:27 Europe/Berlin] PHP Warning:  Attempt to read property "id_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 27
+[04-Aug-2024 01:41:27 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 32
+[04-Aug-2024 01:41:27 Europe/Berlin] PHP Warning:  Attempt to read property "id_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 32
+[04-Aug-2024 01:41:27 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 41
+[04-Aug-2024 01:41:27 Europe/Berlin] PHP Warning:  Attempt to read property "name_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 41
+[04-Aug-2024 01:41:27 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 51
+[04-Aug-2024 01:41:27 Europe/Berlin] PHP Warning:  Attempt to read property "driver_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 51
+[04-Aug-2024 01:41:27 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 61
+[04-Aug-2024 01:41:27 Europe/Berlin] PHP Warning:  Attempt to read property "tecno_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 61
+[04-Aug-2024 01:41:27 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 71
+[04-Aug-2024 01:41:27 Europe/Berlin] PHP Warning:  Attempt to read property "assist_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 71
+[04-Aug-2024 01:41:29 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 27
+[04-Aug-2024 01:41:29 Europe/Berlin] PHP Warning:  Attempt to read property "id_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 27
+[04-Aug-2024 01:41:29 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 32
+[04-Aug-2024 01:41:29 Europe/Berlin] PHP Warning:  Attempt to read property "id_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 32
+[04-Aug-2024 01:41:29 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 41
+[04-Aug-2024 01:41:29 Europe/Berlin] PHP Warning:  Attempt to read property "name_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 41
+[04-Aug-2024 01:41:29 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 51
+[04-Aug-2024 01:41:29 Europe/Berlin] PHP Warning:  Attempt to read property "driver_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 51
+[04-Aug-2024 01:41:29 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 61
+[04-Aug-2024 01:41:29 Europe/Berlin] PHP Warning:  Attempt to read property "tecno_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 61
+[04-Aug-2024 01:41:29 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 71
+[04-Aug-2024 01:41:29 Europe/Berlin] PHP Warning:  Attempt to read property "assist_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 71
+[04-Aug-2024 01:42:53 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 27
+[04-Aug-2024 01:42:53 Europe/Berlin] PHP Warning:  Attempt to read property "id_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 27
+[04-Aug-2024 01:42:53 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 32
+[04-Aug-2024 01:42:53 Europe/Berlin] PHP Warning:  Attempt to read property "id_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 32
+[04-Aug-2024 01:42:53 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 41
+[04-Aug-2024 01:42:53 Europe/Berlin] PHP Warning:  Attempt to read property "name_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 41
+[04-Aug-2024 01:42:53 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 51
+[04-Aug-2024 01:42:53 Europe/Berlin] PHP Warning:  Attempt to read property "driver_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 51
+[04-Aug-2024 01:42:53 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 61
+[04-Aug-2024 01:42:53 Europe/Berlin] PHP Warning:  Attempt to read property "tecno_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 61
+[04-Aug-2024 01:42:53 Europe/Berlin] PHP Warning:  Undefined variable $crews in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 71
+[04-Aug-2024 01:42:53 Europe/Berlin] PHP Warning:  Attempt to read property "assist_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 71
+[04-Aug-2024 01:48:26 Europe/Berlin] PHP Warning:  Undefined array key "asist" in C:\xampp\htdocs\salp\admin-salp\controllers\crews.controller.php on line 80
+[04-Aug-2024 01:48:33 Europe/Berlin] PHP Warning:  Undefined array key "asist" in C:\xampp\htdocs\salp\admin-salp\controllers\crews.controller.php on line 80

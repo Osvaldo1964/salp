@@ -91,12 +91,7 @@ foreach ($routesArray as $key => $value) {
       $routesArray[1] == "reports" ||
       $routesArray[1] == "admins" ||
       $routesArray[1] == "users" ||
-      $routesArray[1] == "brands" ||
-      $routesArray[1] == "lines" ||
-      $routesArray[1] == "vehicles" ||
-      $routesArray[1] == "subjects" ||
-      $routesArray[1] == "titles" ||
-      $routesArray[1] == "payorders" ||
+      $routesArray[1] == "crews" ||
       $routesArray[1] == "logout"
     ) : ?>
 
@@ -169,12 +164,7 @@ foreach ($routesArray as $key => $value) {
             $routesArray[1] == "reports" ||
             $routesArray[1] == "admins" ||
             $routesArray[1] == "users" ||
-            $routesArray[1] == "brands" ||
-            $routesArray[1] == "lines" ||
-            $routesArray[1] == "vehicles" ||
-            $routesArray[1] == "subjects" ||
-            $routesArray[1] == "titles" ||
-            $routesArray[1] == "payorders" ||
+            $routesArray[1] == "crews" ||
             $routesArray[1] == "logout"
           ) {
             include "views/pages/" . $routesArray[1] . "/" . $routesArray[1] . ".php";

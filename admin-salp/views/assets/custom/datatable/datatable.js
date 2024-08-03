@@ -38,6 +38,30 @@ function execDatatable(text) {
         page = "users";
     }
 
+    /* CONFIGURA DATATABLE PARA PQRs */
+
+    /* Valido Tabla Cuadrillas*/
+    if ($(".tableCrews").length > 0) {
+
+        var url = "ajax/data-crews.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_crew" },
+            { "data": "name_crew" },
+            { "data": "driver_crew" },
+            { "data": "tecno_crew" },
+            { "data": "assist_crew" },
+            { "data": "status_crew" },
+            { "data": "date_created_crew" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "crews";
+    }
+
+
+    /* FIN CONFIGURA DATATABLE PARA PQRs */
+
     /* Valido Tabla Marcas */
     if ($(".tableBrands").length > 0) {
 

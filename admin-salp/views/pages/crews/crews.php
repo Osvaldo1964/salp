@@ -7,7 +7,16 @@
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="/">Inicio</a></li>
-                    <li class="breadcrumb-item active">Cuadrillas</li>
+                    <?php
+                    if (isset($routesArray[2])) {
+                        if ($routesArray[2] == "new" || $routesArray[2] == "edit") {
+                            echo '<li class="breadcrumb-item"><a href="/crews">Cuadrillas</a></li>';
+                            echo '<li class="breadcrumb-item active">' . $routesArray[2] . '</li>';
+                        }
+                    } else {
+                        echo '<li class="breadcrumb-item active">Cuadrillas</li>';
+                    }
+                    ?>
                 </ol>
             </div>
         </div>
