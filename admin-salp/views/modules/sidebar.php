@@ -185,6 +185,100 @@ $routesArray = array_filter($routesArray);
                     </ul>
                 </li>
 
+                <!-- Menu de ELEMENTOS-->
+                <li class="nav-item menu-close">
+                    <a href="#" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "subjects") : ?>active bg-info<?php endif ?>">
+                        <i class="nav-icon far fa-plus-square"></i>
+                        <p>
+                            INVENTARIO
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "subjects") : ?>active bg-info<?php endif ?>">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>
+                                    TABLAS
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/classes" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "powers") : ?>active bg-info<?php endif ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Clases</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/powers" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "powers") : ?>active bg-info<?php endif ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Potencias</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/resources" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "powers") : ?>active bg-info<?php endif ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Recursos</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/rouds" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "powers") : ?>active bg-info<?php endif ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Rutas</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "subjects") : ?>active bg-info<?php endif ?>">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>
+                                    MOVIMIENTOS
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/pqrs" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "titles") : ?>active bg-info<?php endif ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Registro</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/vehicles" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "payorders") : ?>active bg-info<?php endif ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Seguimiento</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "generate") : ?>active bg-info<?php endif ?>">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>
+                                    REPORTES
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/generate" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "generate") : ?>active bg-info<?php endif ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Generar Mandamientos</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/controlpqrs" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Seguimiento PQRs</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
                 <!-- Menu de PREDIAL-->
                 <li class="nav-item menu-close">
                     <a href="#" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "subjects") : ?>active bg-info<?php endif ?>">

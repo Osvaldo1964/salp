@@ -59,6 +59,95 @@ function execDatatable(text) {
         page = "crews";
     }
 
+    /* FIN CONFIGURA DATATABLE PARA ELEMENTOS */
+
+    /* Valido Tabla Potencias*/
+    if ($(".tablePowers").length > 0) {
+
+        var url = "ajax/data-powers.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_power" },
+            { "data": "name_power" },
+            { "data": "date_created_power" },
+            { "data": "status_power" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "powers";
+    }
+
+    /* Valido Tabla Clases*/
+    if ($(".tableClasses").length > 0) {
+
+        var url = "ajax/data-classes.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_class" },
+            { "data": "name_class" },
+            { "data": "life_class" },
+            { "data": "date_created_class" },
+            { "data": "status_class" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "classes";
+    }
+
+    /* Valido Tabla Recursos*/
+    if ($(".tableResources").length > 0) {
+
+        var url = "ajax/data-resources.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_resource" },
+            { "data": "name_resource" },
+            { "data": "date_created_resource" },
+            { "data": "status_resource" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "resources";
+    }
+
+    /* Valido Tabla Recursos*/
+    if ($(".tableRouds").length > 0) {
+
+        var url = "ajax/data-rouds.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_roud" },
+            { "data": "code_roud" },
+            { "data": "name_roud" },
+            { "data": "date_created_roud" },
+            { "data": "status_roud" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "rouds";
+    }
+
+    /* CONFIGURA DATATABLE PARA ELEMENTOS */
+
+    /* Valido Tabla Cuadrillas*/
+    if ($(".tableCrews").length > 0) {
+
+        var url = "ajax/data-crews.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_crew" },
+            { "data": "name_crew" },
+            { "data": "driver_crew" },
+            { "data": "tecno_crew" },
+            { "data": "assist_crew" },
+            { "data": "status_crew" },
+            { "data": "date_created_crew" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "crews";
+    }
+
 
     /* FIN CONFIGURA DATATABLE PARA PQRs */
 

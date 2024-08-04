@@ -130,3 +130,38 @@
 [04-Aug-2024 01:42:53 Europe/Berlin] PHP Warning:  Attempt to read property "assist_crew" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\crews\actions\edit.php on line 71
 [04-Aug-2024 01:48:26 Europe/Berlin] PHP Warning:  Undefined array key "asist" in C:\xampp\htdocs\salp\admin-salp\controllers\crews.controller.php on line 80
 [04-Aug-2024 01:48:33 Europe/Berlin] PHP Warning:  Undefined array key "asist" in C:\xampp\htdocs\salp\admin-salp\controllers\crews.controller.php on line 80
+[04-Aug-2024 23:01:18 Europe/Berlin] PHP Warning:  Undefined variable $powers in C:\xampp\htdocs\salp\admin-salp\views\pages\classes\actions\edit.php on line 26
+[04-Aug-2024 23:01:18 Europe/Berlin] PHP Warning:  Attempt to read property "id_power" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\classes\actions\edit.php on line 26
+[04-Aug-2024 23:01:18 Europe/Berlin] PHP Warning:  Undefined variable $powers in C:\xampp\htdocs\salp\admin-salp\views\pages\classes\actions\edit.php on line 31
+[04-Aug-2024 23:01:18 Europe/Berlin] PHP Warning:  Attempt to read property "id_power" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\classes\actions\edit.php on line 31
+[04-Aug-2024 23:01:18 Europe/Berlin] PHP Warning:  Undefined variable $powers in C:\xampp\htdocs\salp\admin-salp\views\pages\classes\actions\edit.php on line 39
+[04-Aug-2024 23:01:18 Europe/Berlin] PHP Warning:  Attempt to read property "name_power" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\classes\actions\edit.php on line 39
+[04-Aug-2024 23:03:34 Europe/Berlin] PHP Warning:  require_once(controllers/classs.controller.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\pages\classes\actions\edit.php on line 29
+[04-Aug-2024 23:03:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'controllers/classs.controller.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\salp\admin-salp\views\pages\classes\actions\edit.php:29
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\classes\classes.php(47): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(174): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\classes\actions\edit.php on line 29
+[04-Aug-2024 23:48:07 Europe/Berlin] PHP Warning:  include(views/pages/rounds/rounds.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\template.php on line 178
+[04-Aug-2024 23:48:07 Europe/Berlin] PHP Warning:  include(): Failed opening 'views/pages/rounds/rounds.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\salp\admin-salp\views\template.php on line 178
+[04-Aug-2024 23:48:32 Europe/Berlin] PHP Warning:  include(views/pages/rounds/rounds.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\template.php on line 178
+[04-Aug-2024 23:48:32 Europe/Berlin] PHP Warning:  include(): Failed opening 'views/pages/rounds/rounds.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\salp\admin-salp\views\template.php on line 178
+[04-Aug-2024 23:48:36 Europe/Berlin] PHP Warning:  include(views/pages/rounds/rounds.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\template.php on line 178
+[04-Aug-2024 23:48:36 Europe/Berlin] PHP Warning:  include(): Failed opening 'views/pages/rounds/rounds.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\salp\admin-salp\views\template.php on line 178
+[05-Aug-2024 00:01:22 Europe/Berlin] PHP Warning:  require_once(controllers/rouds.controller.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\pages\rouds\actions\new.php on line 5
+[05-Aug-2024 00:01:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'controllers/rouds.controller.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\salp\admin-salp\views\pages\rouds\actions\new.php:5
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\rouds\rouds.php(47): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(178): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\rouds\actions\new.php on line 5
+[05-Aug-2024 00:05:06 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[05-Aug-2024 00:05:06 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[05-Aug-2024 00:05:06 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[05-Aug-2024 00:05:06 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[05-Aug-2024 00:05:06 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
