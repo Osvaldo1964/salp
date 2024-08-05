@@ -59,7 +59,7 @@ function execDatatable(text) {
         page = "crews";
     }
 
-    /* FIN CONFIGURA DATATABLE PARA ELEMENTOS */
+    /* CONFIGURA DATATABLE PARA ELEMENTOS */
 
     /* Valido Tabla Potencias*/
     if ($(".tablePowers").length > 0) {
@@ -110,7 +110,7 @@ function execDatatable(text) {
         page = "resources";
     }
 
-    /* Valido Tabla Recursos*/
+    /* Valido Tabla Usos */
     if ($(".tableRouds").length > 0) {
 
         var url = "ajax/data-rouds.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
@@ -127,7 +127,56 @@ function execDatatable(text) {
         page = "rouds";
     }
 
-    /* CONFIGURA DATATABLE PARA ELEMENTOS */
+    /* Valido Tabla Materiales */
+    if ($(".tableMaterials").length > 0) {
+
+        var url = "ajax/data-materials.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_material" },
+            { "data": "name_material" },
+            { "data": "date_created_material" },
+            { "data": "status_material" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "materials";
+    }
+
+    /* Valido Tabla Tecnologías */
+    if ($(".tableTechnologies").length > 0) {
+
+        var url = "ajax/data-technologies.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_technology" },
+            { "data": "name_technology" },
+            { "data": "date_created_technology" },
+            { "data": "status_technology" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "technologies";
+    }
+
+    /* Valido Tabla Elementos */
+    if ($(".tableElements").length > 0) {
+
+        var url = "ajax/data-elements.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_element" },
+            { "data": "code_element" },
+            { "data": "name_element" },
+            { "data": "date_created_element" },
+            { "data": "status_element" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "technologies";
+    }
+
+    /* FIN CONFIGURA DATATABLE PARA ELEMENTOS */
 
     /* Valido Tabla Cuadrillas*/
     if ($(".tableCrews").length > 0) {

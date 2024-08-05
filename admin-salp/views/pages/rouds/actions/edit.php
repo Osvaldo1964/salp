@@ -41,15 +41,15 @@ if (isset($routesArray[3])) {
                     <div class="valid-feedback">Valid.</div>
                     <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
-            </div>
 
-            <!-- Descripción de la Ruta -->
-            <div class="form-group mt-1">
-                <label>Descripción</label>
-                <input type="text" class="form-control" pattern="[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ ]{1,}" name="name" value="<?php echo $rouds->name_roud ?>" required>
+                <!-- Descripción de la Ruta -->
+                <div class="form-group mt-1">
+                    <label>Descripción</label>
+                    <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]){1,}" name="name" value="<?php echo $rouds->name_roud ?>" required>
 
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
             </div>
         </div>
 </div>

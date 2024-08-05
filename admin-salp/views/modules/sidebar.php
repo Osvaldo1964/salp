@@ -211,6 +211,12 @@ $routesArray = array_filter($routesArray);
                                     </a>
                                 </li>
                                 <li class="nav-item">
+                                    <a href="/technologies" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "technologies") : ?>active bg-info<?php endif ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tecnologías</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="/powers" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "powers") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Potencias</p>
@@ -226,6 +232,18 @@ $routesArray = array_filter($routesArray);
                                     <a href="/rouds" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "powers") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Rutas</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/materials" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "materials") : ?>active bg-info<?php endif ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Materiales</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/elements" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "elements") : ?>active bg-info<?php endif ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Elementos</p>
                                     </a>
                                 </li>
                             </ul>

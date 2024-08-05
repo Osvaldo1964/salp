@@ -20,7 +20,7 @@ class DatatableController
             $length = $_POST['length']; //Indicador de la longitud de la paginación.
 
             /* Total de registros de la data */
-            $url = "rouds?select=id_roud&linkTo=date_created_roud&between1=" . $_GET["between1"] . "&between2=" . $_GET["between2"] . "&filterTo=status_roud&inTo='Activo'";
+            $url = "materials?select=id_material&linkTo=date_created_material&between1=" . $_GET["between1"] . "&between2=" . $_GET["between2"] . "&filterTo=status_material&inTo='Activo'";
 
             $method = "GET";
             $fields = array();
@@ -34,13 +34,13 @@ class DatatableController
             }
 
             /* Busqueda de datos*/
-            $select = "id_roud,code_roud,name_roud,status_roud,date_created_roud";
+            $select = "id_material,name_material,status_material,date_created_material";
             if (!empty($_POST['search']['value'])) {
                 //if (preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/', $_POST['search']['value'])) {
-                $linkTo = ["code_roud,name_roud"];
+                $linkTo = ["name_material"];
                 $search = str_replace(" ", "_", $_POST['search']['value']);
                 foreach ($linkTo as $key => $value) {
-                    $url = "rouds?select=" . $select . "&linkTo=" . $value . "&search=" . $search . "&orderBy=" . $orderBy . "&orderMode=" . $orderType . "&startAt=" . $start . "&endAt=" . $length;
+                    $url = "materials?select=" . $select . "&linkTo=" . $value . "&search=" . $search . "&orderBy=" . $orderBy . "&orderMode=" . $orderType . "&startAt=" . $start . "&endAt=" . $length;
                     $data = CurlController::request($url, $method, $fields)->results;
                     if ($data == "Not Found") {
                         $data = array();
@@ -54,9 +54,9 @@ class DatatableController
                 //}
             } else {
                 /* Seleccionar los datos */
-                $select = "id_roud,code_roud,name_roud,status_roud,date_created_roud";
-                $url = "rouds?select=" . $select . "&linkTo=date_created_roud&between1=" . $_GET["between1"] . "&between2=" . $_GET["between2"] .
-                    "&filterTo=status_roud&inTo='Activo'&orderBy=" . $orderBy . "&orderMode=" . $orderType . "&startAt=" . $start . "&endAt=" . $length;
+                $select = "id_material,name_material,status_material,date_created_material";
+                $url = "materials?select=" . $select . "&linkTo=date_created_material&between1=" . $_GET["between1"] . "&between2=" . $_GET["between2"] .
+                    "&filterTo=status_material&inTo='Activo'&orderBy=" . $orderBy . "&orderMode=" . $orderType . "&startAt=" . $start . "&endAt=" . $length;
                 $data = CurlController::request($url, $method, $fields)->results;
                 $recordsFiltered = $totalData;
             }
@@ -79,32 +79,30 @@ class DatatableController
 
                 if ($_GET["text"] == "flat") {
                     /* Variables de tipo texto normal */
-                    $status_roud = $value->status_roud;
+                    $status_material = $value->status_material;
                     $actions = "";
                 } else {
-                    if ($value->status_roud != "Activo") {
-                        $status_roud = "<span class='badge badge-danger p-2'>" . $value->status_roud . "</span>";
+                    if ($value->status_material != "Activo") {
+                        $status_material = "<span class='badge badge-danger p-2'>" . $value->status_material . "</span>";
                     } else {
-                        $status_roud = "<span class='badge badge-success p-2'>" . $value->status_roud . "</span>";
+                        $status_material = "<span class='badge badge-success p-2'>" . $value->status_material . "</span>";
                     }
-                    $actions = "<a href='/rouds/edit/" . base64_encode($value->id_roud . "~" . $_GET["token"]) . "' class='btn btn-warning btn-sm mr-1 rouded-circle'>
+                    $actions = "<a href='/materials/edit/" . base64_encode($value->id_material . "~" . $_GET["token"]) . "' class='btn btn-warning btn-sm mr-1 rounded-circle'>
 					<i class='fas fa-pencil-alt'></i>
 					</a>
-					<a class='btn btn-danger btn-sm rouded-circle removeItem' idItem='" . base64_encode($value->id_roud . "~" . $_GET["token"]) . "' table='rouds' suffix='roud' deleteFile='no' page='rouds'>
+					<a class='btn btn-danger btn-sm rounded-circle removeItem' idItem='" . base64_encode($value->id_material . "~" . $_GET["token"]) . "' table='materials' suffix='material' deleteFile='no' page='materials'>
 					<i class='fas fa-trash'></i>
 					</a>";
                     $actions = TemplateController::htmlClean($actions);
                 }
-                $code_roud = $value->code_roud;
-                $name_roud = $value->name_roud;
-                $date_created_roud = $value->date_created_roud;
+                $name_material = $value->name_material;
+                $date_created_material = $value->date_created_material;
 
                 $dataJson .= '{
-                    "id_roud":"' . ($start + $key + 1) . '",
-                    "code_roud":"' . $code_roud . '",
-                    "name_roud":"' . $name_roud . '",
-                    "date_created_roud":"' . $date_created_roud . '",
-                    "status_roud":"' . $status_roud . '",
+                    "id_material":"' . ($start + $key + 1) . '",
+                    "name_material":"' . $name_material . '",
+                    "status_material":"' . $status_material . '",
+                    "date_created_material":"' . $date_created_material . '",
                     "actions":"' . $actions . '"
                 },';
             }

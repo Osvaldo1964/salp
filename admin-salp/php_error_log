@@ -165,3 +165,86 @@ Stack trace:
 [05-Aug-2024 00:05:06 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [05-Aug-2024 00:05:06 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [05-Aug-2024 00:05:06 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[05-Aug-2024 16:34:00 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[05-Aug-2024 16:34:00 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[05-Aug-2024 16:34:00 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[05-Aug-2024 16:34:00 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[05-Aug-2024 16:34:00 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[05-Aug-2024 16:55:39 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[05-Aug-2024 16:55:39 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[05-Aug-2024 16:55:39 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[05-Aug-2024 16:55:39 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[05-Aug-2024 16:55:39 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[05-Aug-2024 17:12:16 Europe/Berlin] PHP Warning:  require_once(controllers/materials.controller.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\pages\materials\actions\new.php on line 5
+[05-Aug-2024 17:12:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'controllers/materials.controller.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\salp\admin-salp\views\pages\materials\actions\new.php:5
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\materials\materials.php(47): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(180): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\materials\actions\new.php on line 5
+[05-Aug-2024 17:39:51 Europe/Berlin] PHP Warning:  Undefined variable $technologys in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 26
+[05-Aug-2024 17:39:51 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 26
+[05-Aug-2024 17:39:51 Europe/Berlin] PHP Warning:  Undefined variable $technologies in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 31
+[05-Aug-2024 17:39:51 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 31
+[05-Aug-2024 17:39:51 Europe/Berlin] PHP Warning:  Undefined variable $technologys in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 39
+[05-Aug-2024 17:39:51 Europe/Berlin] PHP Warning:  Attempt to read property "name_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 39
+[05-Aug-2024 17:39:53 Europe/Berlin] PHP Warning:  Undefined variable $technologys in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 26
+[05-Aug-2024 17:39:53 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 26
+[05-Aug-2024 17:39:53 Europe/Berlin] PHP Warning:  Undefined variable $technologies in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 31
+[05-Aug-2024 17:39:53 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 31
+[05-Aug-2024 17:39:53 Europe/Berlin] PHP Warning:  Undefined variable $technologys in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 39
+[05-Aug-2024 17:39:53 Europe/Berlin] PHP Warning:  Attempt to read property "name_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 39
+[05-Aug-2024 17:41:58 Europe/Berlin] PHP Warning:  Undefined variable $technologys in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 26
+[05-Aug-2024 17:41:58 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 26
+[05-Aug-2024 17:41:58 Europe/Berlin] PHP Warning:  Undefined variable $technologies in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 31
+[05-Aug-2024 17:41:58 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 31
+[05-Aug-2024 17:41:58 Europe/Berlin] PHP Warning:  Undefined variable $technologys in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 39
+[05-Aug-2024 17:41:58 Europe/Berlin] PHP Warning:  Attempt to read property "name_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 39
+[05-Aug-2024 17:44:30 Europe/Berlin] PHP Warning:  Undefined variable $technologies in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 27
+[05-Aug-2024 17:44:30 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 27
+[05-Aug-2024 17:44:30 Europe/Berlin] PHP Warning:  Undefined variable $technologies in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 32
+[05-Aug-2024 17:44:30 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 32
+[05-Aug-2024 17:44:30 Europe/Berlin] PHP Warning:  Undefined variable $technologys in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 40
+[05-Aug-2024 17:44:30 Europe/Berlin] PHP Warning:  Attempt to read property "name_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 40
+[05-Aug-2024 17:44:33 Europe/Berlin] PHP Warning:  Undefined variable $technologies in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 27
+[05-Aug-2024 17:44:33 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 27
+[05-Aug-2024 17:44:33 Europe/Berlin] PHP Warning:  Undefined variable $technologies in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 32
+[05-Aug-2024 17:44:33 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 32
+[05-Aug-2024 17:44:33 Europe/Berlin] PHP Warning:  Undefined variable $technologys in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 40
+[05-Aug-2024 17:44:33 Europe/Berlin] PHP Warning:  Attempt to read property "name_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 40
+[05-Aug-2024 17:44:41 Europe/Berlin] PHP Warning:  Undefined variable $technologies in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 27
+[05-Aug-2024 17:44:41 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 27
+[05-Aug-2024 17:44:41 Europe/Berlin] PHP Warning:  Undefined variable $technologies in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 32
+[05-Aug-2024 17:44:41 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 32
+[05-Aug-2024 17:44:41 Europe/Berlin] PHP Warning:  Undefined variable $technologys in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 40
+[05-Aug-2024 17:44:41 Europe/Berlin] PHP Warning:  Attempt to read property "name_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 40
+[05-Aug-2024 17:44:55 Europe/Berlin] PHP Warning:  Undefined variable $technologies in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 27
+[05-Aug-2024 17:44:55 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 27
+[05-Aug-2024 17:44:55 Europe/Berlin] PHP Warning:  Undefined variable $technologies in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 32
+[05-Aug-2024 17:44:55 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 32
+[05-Aug-2024 17:44:55 Europe/Berlin] PHP Warning:  Undefined variable $technologys in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 40
+[05-Aug-2024 17:44:55 Europe/Berlin] PHP Warning:  Attempt to read property "name_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 40
+[05-Aug-2024 17:45:12 Europe/Berlin] PHP Warning:  Undefined variable $technologies in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 27
+[05-Aug-2024 17:45:12 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 27
+[05-Aug-2024 17:45:12 Europe/Berlin] PHP Warning:  Undefined variable $technologies in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 32
+[05-Aug-2024 17:45:12 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 32
+[05-Aug-2024 17:45:12 Europe/Berlin] PHP Warning:  Undefined variable $technologys in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 40
+[05-Aug-2024 17:45:12 Europe/Berlin] PHP Warning:  Attempt to read property "name_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 40
+[05-Aug-2024 17:52:43 Europe/Berlin] PHP Warning:  Undefined variable $technologies in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 26
+[05-Aug-2024 17:52:43 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 26
+[05-Aug-2024 17:52:43 Europe/Berlin] PHP Warning:  Undefined variable $technologies in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 31
+[05-Aug-2024 17:52:43 Europe/Berlin] PHP Warning:  Attempt to read property "id_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 31
+[05-Aug-2024 17:53:13 Europe/Berlin] PHP Warning:  Undefined variable $technologys in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 39
+[05-Aug-2024 17:53:13 Europe/Berlin] PHP Warning:  Attempt to read property "name_technology" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\technologies\actions\edit.php on line 39
+[05-Aug-2024 18:02:51 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[05-Aug-2024 18:02:51 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[05-Aug-2024 18:02:51 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[05-Aug-2024 18:02:51 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[05-Aug-2024 18:02:51 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[05-Aug-2024 18:46:47 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[05-Aug-2024 18:46:48 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[05-Aug-2024 18:46:48 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[05-Aug-2024 18:46:48 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[05-Aug-2024 18:46:48 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
