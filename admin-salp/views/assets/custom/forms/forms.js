@@ -272,3 +272,17 @@ function newPayOrder() {
     }
   ]
 }
+
+function fntBarcode(e) {
+  let codigo = document.querySelector("#txtcodElemento").value;
+  JsBarcode("#barcode", codigo);
+}
+
+function fntPrintBarcode(area) {
+  let elemntArea = document.querySelector(area);
+  let vprint = window.open(' ', 'popimpr', 'height=400, width=600');
+  vprint.document.write(elemntArea.innerHTML);
+  vprint.document.close();
+  vprint.print();
+  vprint.close();
+}
