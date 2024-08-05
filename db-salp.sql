@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-08-2024 a las 00:10:16
+-- Tiempo de generación: 05-08-2024 a las 18:51:43
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -125,7 +125,7 @@ CREATE TABLE `elements` (
   `address_element` text NOT NULL,
   `id_minute_element` bigint(20) NOT NULL,
   `id_resource_element` bigint(20) NOT NULL,
-  `id_use_element` bigint(20) NOT NULL,
+  `id_roud_element` bigint(20) NOT NULL,
   `id_tecnology_element` bigint(20) NOT NULL,
   `id_power_element` bigint(20) NOT NULL,
   `id_material_element` bigint(20) NOT NULL,
@@ -177,6 +177,27 @@ INSERT INTO `itemdeliveries` (`id_itemdelivery`, `code_itemdelivery`, `id_typede
 (1, '01', 1, 'INICIAL', 'Activo', '2024-08-02', '2024-08-02 16:17:03'),
 (2, '02', 2, 'EXPANSION', 'Activo', '2024-08-02', '2024-08-02 16:17:03'),
 (3, '03', 2, 'MODERNIZACION', 'Activo', '2024-08-02', '2024-08-02 16:17:22');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `materials`
+--
+
+CREATE TABLE `materials` (
+  `id_material` bigint(20) NOT NULL,
+  `name_material` text NOT NULL,
+  `status_material` varchar(8) NOT NULL DEFAULT 'Activo',
+  `date_created_material` date DEFAULT NULL,
+  `date_updated_material` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `materials`
+--
+
+INSERT INTO `materials` (`id_material`, `name_material`, `status_material`, `date_created_material`, `date_updated_material`) VALUES
+(1, 'MADERA', 'Activo', '2024-08-05', '2024-08-05 15:12:49');
 
 -- --------------------------------------------------------
 
@@ -274,12 +295,19 @@ INSERT INTO `rouds` (`id_roud`, `code_roud`, `name_roud`, `status_roud`, `date_c
 --
 
 CREATE TABLE `technologies` (
-  `id_technology` bigint(20) DEFAULT NULL,
+  `id_technology` bigint(20) NOT NULL,
   `name_technology` text NOT NULL,
   `status_technology` varchar(8) NOT NULL DEFAULT 'Activo',
   `date_created_technology` date DEFAULT NULL,
   `date_updated_technology` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `technologies`
+--
+
+INSERT INTO `technologies` (`id_technology`, `name_technology`, `status_technology`, `date_created_technology`, `date_updated_technology`) VALUES
+(1, 'LED', 'Activo', '2024-08-05', '2024-08-05 15:35:55');
 
 -- --------------------------------------------------------
 
@@ -336,7 +364,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fullname_user`, `username_user`, `email_user`, `password_user`, `token_user`, `token_exp_user`, `id_rol_user`, `picture_user`, `country_user`, `city_user`, `address_user`, `phone_user`, `method_user`, `date_created_user`, `date_updated_user`, `status_user`, `verification_user`) VALUES
-(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjI4MDkxMDYsImV4cCI6MTcyMjg5NTUwNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.-Xkb9LJ2E2mjxm6EXSwjeqEBUHwR9av3_kcZgCD2Hwk', '1722895506', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
+(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjI4Njk3MzksImV4cCI6MTcyMjk1NjEzOSwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.9tpHQ4B1ZxTj-zfZICRbKm3KnW_S5um765VowGc9ZAg', '1722956139', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
 (7, 'Jorge Villalobos', 'jorgito', 'jorge@gmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', NULL, NULL, 'Usuarios', '7.png', 'Algeria', 'Varsobia', 'LA QUE SEA', '+213_3153153153', 'direct', '2024-06-22', '2024-06-22 14:18:30', 1, 1),
 (31, 'Juan Prueto', '', 'prueba@mail.com', '', NULL, NULL, '1', NULL, 'Afghanistan', 'Otra', 'calle 1', '+93_3253253325', 'direct', '2024-06-25', '2024-06-25 20:10:46', 1, 1);
 
@@ -387,6 +415,12 @@ ALTER TABLE `itemdeliveries`
   ADD PRIMARY KEY (`id_itemdelivery`);
 
 --
+-- Indices de la tabla `materials`
+--
+ALTER TABLE `materials`
+  ADD PRIMARY KEY (`id_material`);
+
+--
 -- Indices de la tabla `powers`
 --
 ALTER TABLE `powers`
@@ -409,6 +443,12 @@ ALTER TABLE `resources`
 --
 ALTER TABLE `rouds`
   ADD PRIMARY KEY (`id_roud`);
+
+--
+-- Indices de la tabla `technologies`
+--
+ALTER TABLE `technologies`
+  ADD PRIMARY KEY (`id_technology`);
 
 --
 -- Indices de la tabla `typedeliveries`
@@ -470,6 +510,12 @@ ALTER TABLE `itemdeliveries`
   MODIFY `id_itemdelivery` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT de la tabla `materials`
+--
+ALTER TABLE `materials`
+  MODIFY `id_material` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `powers`
 --
 ALTER TABLE `powers`
@@ -492,6 +538,12 @@ ALTER TABLE `resources`
 --
 ALTER TABLE `rouds`
   MODIFY `id_roud` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `technologies`
+--
+ALTER TABLE `technologies`
+  MODIFY `id_technology` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `typedeliveries`
