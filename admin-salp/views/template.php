@@ -77,10 +77,12 @@ foreach ($routesArray as $key => $value) {
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <!-- tags-inputs -->
   <script src="views/assets/plugins/tags-input/tags-input.js"></script>
-   <!-- Summernote 
+  <!-- Summernote 
   https://github.com/summernote/summernote/-->
   <script src="views/assets/plugins/summernote/summernote-bs4.min.js"></script>
 
+  <script src="views/assets/plugins/JsBarcode.all.min.js"></script>
+  
   <!-- Dropzone
   https://docs.dropzone.dev/-->
   <script src="views/assets/plugins/dropzone/dropzone.js"></script>
@@ -126,11 +128,11 @@ foreach ($routesArray as $key => $value) {
   <?php endif ?>
 
   <script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-      <!-- Chart -->
-    <script src="views/assets/plugins/chart/js/Chart.min.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <!-- Chart -->
+  <script src="views/assets/plugins/chart/js/Chart.min.js"></script>
   <script src="views/assets/custom/alerts/alerts.js"></script>
 </head>
 

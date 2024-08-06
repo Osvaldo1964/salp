@@ -253,3 +253,31 @@ Stack trace:
 [05-Aug-2024 19:55:49 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [05-Aug-2024 19:55:49 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [05-Aug-2024 19:55:49 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[06-Aug-2024 20:31:26 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[06-Aug-2024 20:31:26 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[06-Aug-2024 20:31:26 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[06-Aug-2024 20:31:26 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[06-Aug-2024 20:31:26 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[06-Aug-2024 20:31:27 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[06-Aug-2024 20:31:27 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[06-Aug-2024 20:31:27 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[06-Aug-2024 20:31:27 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[06-Aug-2024 20:31:27 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[06-Aug-2024 20:33:04 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[06-Aug-2024 20:33:04 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[06-Aug-2024 20:33:04 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[06-Aug-2024 20:33:04 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[06-Aug-2024 20:33:04 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[06-Aug-2024 20:33:04 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[06-Aug-2024 20:33:04 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[06-Aug-2024 20:33:04 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[06-Aug-2024 20:33:04 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[06-Aug-2024 20:33:04 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[06-Aug-2024 20:49:32 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\new.php on line 89
+[06-Aug-2024 20:49:40 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\new.php on line 89
+[06-Aug-2024 21:00:22 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\new.php on line 158
+[06-Aug-2024 21:00:22 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\new.php on line 204
+[06-Aug-2024 21:02:11 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\new.php on line 166
+[06-Aug-2024 21:02:11 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\new.php on line 212
+[06-Aug-2024 21:03:21 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\new.php on line 212
+[06-Aug-2024 21:05:31 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\new.php on line 212

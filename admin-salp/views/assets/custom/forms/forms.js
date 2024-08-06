@@ -19,7 +19,7 @@
 
 /* Función para validar datos repetidos */
 function validateRepeat(event, type, table, suffix) {
-  console.log(event);return;
+  console.log(event); return;
   var data = new FormData();
   data.append("data", event.target.value);
   data.append("table", table);
@@ -73,8 +73,8 @@ function validateLinesJS() {
     cache: false,
     processData: false,
     success: function (response) {
-        $("#brandline").html(response);
-      }
+      $("#brandline").html(response);
+    }
   })
 }
 
@@ -273,16 +273,58 @@ function newPayOrder() {
   ]
 }
 
-function fntBarcode(e) {
-  let codigo = document.querySelector("#txtcodElemento").value;
-  JsBarcode("#barcode", codigo);
-}
+/*=============================================
+DropZone
+=============================================*/
 
-function fntPrintBarcode(area) {
-  let elemntArea = document.querySelector(area);
-  let vprint = window.open(' ', 'popimpr', 'height=400, width=600');
-  vprint.document.write(elemntArea.innerHTML);
-  vprint.document.close();
-  vprint.print();
-  vprint.close();
-}
+Dropzone.autoDiscover = false;
+var arrayFiles = [];
+var countArrayFiles = 0;
+
+$(".dropzone").dropzone({
+  url: "/",
+  addRemoveLinks: true,
+  acceptedFiles: "image/jpeg, image/png",
+  maxFilesize: 2,
+  maxFiles: 4,
+  init: function () {
+    this.on("addedfile", function (file) {
+      countArrayFiles++;
+      setTimeout(function () {
+        arrayFiles.push({
+          "file": file.dataURL,
+          "type": file.type,
+          "width": file.width,
+          "height": file.height
+        })
+        $("[name='galleryProduct']").val(JSON.stringify(arrayFiles));
+      }, 100 * countArrayFiles);
+    })
+
+    this.on("removedfile", function (file) {
+      console.log("file", file);
+      countArrayFiles++;
+      setTimeout(function () {
+        var index = arrayFiles.indexOf({
+          "file": file.dataURL,
+          "type": file.type,
+          "width": file.width,
+          "height": file.height
+        })
+
+        arrayFiles.splice(index, 1);
+        $("[name='galleryProduct']").val(JSON.stringify(arrayFiles));
+      }, 100 * countArrayFiles);
+
+    })
+
+    myDropzone = this;
+    $(".saveBtn").click(function () {
+      if (arrayFiles.length >= 1) {
+        myDropzone.processQueue();
+      } else {
+        fncSweetAlert("error", "The gallery cannot be empty", null)
+      }
+    })
+  }
+})

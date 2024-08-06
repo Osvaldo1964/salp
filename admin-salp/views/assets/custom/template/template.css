@@ -5,3 +5,11 @@
 .note-image-input, .note-image-btn{
     padding-bottom: 30px !important;
 }
+
+.notblock {
+    display: none !important;
+}
+
+.texcenter {
+    text-align: center;
+}

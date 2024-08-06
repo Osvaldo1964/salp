@@ -23,6 +23,28 @@ class ElementsController
 				preg_match('/^[-\\(\\)\\0-9 ]{1,}$/', $_POST["cilindraje"])
 			) {
 
+
+				/* Guardar Imagenes de la galeria*/
+				$galleryElement = array();
+				$count = 0;
+				foreach(json_decode($_POST['galleryElement'],true) as $key => $value) {
+					$count ++;
+
+					$image["tmp_name"] = $value["file"];
+					$image["type"] = $value["type"];
+					$image["mode"] = "base64";
+					
+					$folder = "img/elements";
+					$path =  explode("_",$_POST["categoryProduct"])[1]."/gallery";
+					$width = $value["width"];
+					$height = $value["height"];
+					$name = mt_rand(10000, 99999);
+
+					$saveImageGallery  = TemplateController::saveImage($image, $folder, $path, $width, $height, $name);
+
+					array_push($galleryProduct, $saveImageGallery);
+				}
+
 				/* Agrupamos la información */
 				$data = array(
 					"plate_vehicle" => trim(strtoupper($_POST["plate"])),
