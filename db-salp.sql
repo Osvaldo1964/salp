@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-08-2024 a las 18:51:43
+-- Tiempo de generación: 08-08-2024 a las 18:58:15
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -41,7 +41,8 @@ CREATE TABLE `classes` (
 --
 
 INSERT INTO `classes` (`id_class`, `name_class`, `life_class`, `status_class`, `date_created_class`, `date_updated_class`) VALUES
-(1, 'LUMINARIAS', 3.50, 'Activo', '2024-08-04', '2024-08-04 17:36:23');
+(1, 'LUMINARIAS', 3.50, 'Activo', '2024-08-04', '2024-08-04 17:36:23'),
+(2, 'POSTES', 20.00, 'Activo', '2024-08-02', '2024-08-06 14:45:57');
 
 -- --------------------------------------------------------
 
@@ -118,7 +119,7 @@ INSERT INTO `deliveries` (`id_delivery`, `id_typedelivery_delivery`, `id_itemdel
 
 CREATE TABLE `elements` (
   `id_element` bigint(20) NOT NULL,
-  `class_element` bigint(20) NOT NULL,
+  `id_class_element` bigint(20) NOT NULL,
   `code_element` varchar(15) NOT NULL,
   `name_element` text NOT NULL,
   `events_element` text NOT NULL,
@@ -126,7 +127,7 @@ CREATE TABLE `elements` (
   `id_minute_element` bigint(20) NOT NULL,
   `id_resource_element` bigint(20) NOT NULL,
   `id_roud_element` bigint(20) NOT NULL,
-  `id_tecnology_element` bigint(20) NOT NULL,
+  `id_technology_element` bigint(20) NOT NULL,
   `id_power_element` bigint(20) NOT NULL,
   `id_material_element` bigint(20) NOT NULL,
   `altitud_element` float NOT NULL,
@@ -134,10 +135,17 @@ CREATE TABLE `elements` (
   `longitud_element` float NOT NULL,
   `id_dispose_element` bigint(20) NOT NULL,
   `value_element` decimal(15,2) NOT NULL,
-  `status_elelemt` varchar(8) NOT NULL,
+  `status_element` varchar(8) NOT NULL,
   `date_created_element` date DEFAULT NULL,
   `date_updated_element` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `elements`
+--
+
+INSERT INTO `elements` (`id_element`, `id_class_element`, `code_element`, `name_element`, `events_element`, `address_element`, `id_minute_element`, `id_resource_element`, `id_roud_element`, `id_technology_element`, `id_power_element`, `id_material_element`, `altitud_element`, `latitud_element`, `longitud_element`, `id_dispose_element`, `value_element`, `status_element`, `date_created_element`, `date_updated_element`) VALUES
+(1, 1, '2514', 'prueba', 'nada', 'casa', 1, 1, 1, 1, 1, 0, 1.252, 10.2547, 74.2561, 0, 15000.00, 'Activo', '2024-08-08', '2024-08-08 16:11:31');
 
 -- --------------------------------------------------------
 
@@ -152,6 +160,13 @@ CREATE TABLE `heights` (
   `date_created_height` date DEFAULT NULL,
   `date_updated_height` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `heights`
+--
+
+INSERT INTO `heights` (`id_height`, `name_height`, `status_height`, `date_created_height`, `date_updated_height`) VALUES
+(1, '9 mts', 'Activo', '2024-08-01', '2024-08-06 19:06:10');
 
 -- --------------------------------------------------------
 
@@ -364,7 +379,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fullname_user`, `username_user`, `email_user`, `password_user`, `token_user`, `token_exp_user`, `id_rol_user`, `picture_user`, `country_user`, `city_user`, `address_user`, `phone_user`, `method_user`, `date_created_user`, `date_updated_user`, `status_user`, `verification_user`) VALUES
-(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjI4Njk3MzksImV4cCI6MTcyMjk1NjEzOSwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.9tpHQ4B1ZxTj-zfZICRbKm3KnW_S5um765VowGc9ZAg', '1722956139', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
+(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjMxMjk5MDcsImV4cCI6MTcyMzIxNjMwNywiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.EnXmP9a3qSQyH0u7RZijnYMKc6Ol_2o41C1cXf7jllw', '1723216307', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
 (7, 'Jorge Villalobos', 'jorgito', 'jorge@gmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', NULL, NULL, 'Usuarios', '7.png', 'Algeria', 'Varsobia', 'LA QUE SEA', '+213_3153153153', 'direct', '2024-06-22', '2024-06-22 14:18:30', 1, 1),
 (31, 'Juan Prueto', '', 'prueba@mail.com', '', NULL, NULL, '1', NULL, 'Afghanistan', 'Otra', 'calle 1', '+93_3253253325', 'direct', '2024-06-25', '2024-06-25 20:10:46', 1, 1);
 
@@ -471,7 +486,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `classes`
 --
 ALTER TABLE `classes`
-  MODIFY `id_class` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_class` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `concepts`
@@ -495,13 +510,13 @@ ALTER TABLE `deliveries`
 -- AUTO_INCREMENT de la tabla `elements`
 --
 ALTER TABLE `elements`
-  MODIFY `id_element` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_element` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `heights`
 --
 ALTER TABLE `heights`
-  MODIFY `id_height` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_height` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `itemdeliveries`
