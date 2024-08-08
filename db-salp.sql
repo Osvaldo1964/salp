@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-08-2024 a las 18:58:15
+-- Tiempo de generación: 08-08-2024 a las 19:48:51
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -122,19 +122,21 @@ CREATE TABLE `elements` (
   `id_class_element` bigint(20) NOT NULL,
   `code_element` varchar(15) NOT NULL,
   `name_element` text NOT NULL,
-  `events_element` text NOT NULL,
+  `life_element` text NOT NULL,
   `address_element` text NOT NULL,
-  `id_minute_element` bigint(20) NOT NULL,
+  `id_minute_element` bigint(20) DEFAULT NULL,
   `id_resource_element` bigint(20) NOT NULL,
   `id_roud_element` bigint(20) NOT NULL,
-  `id_technology_element` bigint(20) NOT NULL,
-  `id_power_element` bigint(20) NOT NULL,
-  `id_material_element` bigint(20) NOT NULL,
-  `altitud_element` float NOT NULL,
-  `latitud_element` float NOT NULL,
-  `longitud_element` float NOT NULL,
-  `id_dispose_element` bigint(20) NOT NULL,
+  `id_technology_element` bigint(20) DEFAULT NULL,
+  `id_power_element` bigint(20) DEFAULT NULL,
+  `id_material_element` bigint(20) DEFAULT NULL,
+  `id_height_element` bigint(20) DEFAULT NULL,
+  `altitud_element` float DEFAULT NULL,
+  `latitude_element` float NOT NULL,
+  `longitude_element` float NOT NULL,
+  `id_dispose_element` bigint(20) DEFAULT NULL,
   `value_element` decimal(15,2) NOT NULL,
+  `gallery_element` text NOT NULL,
   `status_element` varchar(8) NOT NULL,
   `date_created_element` date DEFAULT NULL,
   `date_updated_element` timestamp NOT NULL DEFAULT current_timestamp()
@@ -144,8 +146,8 @@ CREATE TABLE `elements` (
 -- Volcado de datos para la tabla `elements`
 --
 
-INSERT INTO `elements` (`id_element`, `id_class_element`, `code_element`, `name_element`, `events_element`, `address_element`, `id_minute_element`, `id_resource_element`, `id_roud_element`, `id_technology_element`, `id_power_element`, `id_material_element`, `altitud_element`, `latitud_element`, `longitud_element`, `id_dispose_element`, `value_element`, `status_element`, `date_created_element`, `date_updated_element`) VALUES
-(1, 1, '2514', 'prueba', 'nada', 'casa', 1, 1, 1, 1, 1, 0, 1.252, 10.2547, 74.2561, 0, 15000.00, 'Activo', '2024-08-08', '2024-08-08 16:11:31');
+INSERT INTO `elements` (`id_element`, `id_class_element`, `code_element`, `name_element`, `life_element`, `address_element`, `id_minute_element`, `id_resource_element`, `id_roud_element`, `id_technology_element`, `id_power_element`, `id_material_element`, `id_height_element`, `altitud_element`, `latitude_element`, `longitude_element`, `id_dispose_element`, `value_element`, `gallery_element`, `status_element`, `date_created_element`, `date_updated_element`) VALUES
+(1, 1, '2514', 'prueba', 'nada', 'casa', 1, 1, 1, 1, 1, 0, NULL, 1.252, 10.2547, 74.2561, 0, 15000.00, '', 'Activo', '2024-08-08', '2024-08-08 16:11:31');
 
 -- --------------------------------------------------------
 
