@@ -74,7 +74,7 @@
                         <!-- Longitud -->
                         <div class="form-group col-md-4">
                             <label>Longitud</label>
-                            <input type="text" class="form-control" pattern="[.\\,\\0-9]{1,}" name="longitud" required>
+                            <input type="text" class="form-control" pattern="[.\\,\\0-9]{1,}" name="longitude" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>

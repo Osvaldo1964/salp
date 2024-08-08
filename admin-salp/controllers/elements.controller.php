@@ -6,32 +6,36 @@ class ElementsController
 	/* Creacion de Sujetos */
 	public function create()
 	{
-		echo '<pre>'; print_r($_POST); echo '</pre>';
+		//echo '<pre>'; print_r($_POST); echo '</pre>';
 		if (isset($_POST["name"])) {
-			echo '<script>
+/* 			echo '<script>
 				matPreloader("on");
 				fncSweetAlert("loading", "Loading...", "");
-			</script>';
+			</script>'; */
 
 			/* Validamos la sintaxis de los campos */
 			if (
-				preg_match('/^[A-Za-z0-9]+([-])+([A-Za-z0-9]){1,}$/', $_POST["classname"]) 
+				preg_match('/[a-zA-Z0-9_]/', $_POST["classname"])
 
 			) {
 
+				$tecno = empty($_POST["tecno"]) ? null : $_POST["tecno"];
+				$power = empty($_POST["power"]) ? null : $_POST["power"];
+				$material = empty($_POST["material"]) ? null : $_POST["material"];
+				$height = empty($_POST["height"]) ? null : $_POST["height"];
 
 				/* Guardar Imagenes de la galeria*/
 				$galleryElement = array();
 				$count = 0;
-				foreach(json_decode($_POST['galleryElement'],true) as $key => $value) {
-					$count ++;
+				foreach (json_decode($_POST['galleryElement'], true) as $key => $value) {
+					$count++;
 
 					$image["tmp_name"] = $value["file"];
 					$image["type"] = $value["type"];
 					$image["mode"] = "base64";
-					
+
 					$folder = "img/elements";
-					$path =  explode("_",$_POST["categoryElement"])[1]."/gallery";
+					$path =  "/gallery";
 					$width = $value["width"];
 					$height = $value["height"];
 					$name = mt_rand(10000, 99999);
@@ -41,20 +45,39 @@ class ElementsController
 					array_push($galleryElement, $saveImageGallery);
 				}
 
-				/* Agrupamos la información */
-				$data = array(
-					"plate_vehicle" => trim(strtoupper($_POST["plate"])),
-					"id_subject_vehicle" => $_POST["subject"],
-					"id_brand_vehicle" => $_POST["brand"],
-					"id_brandline_vehicle" => $_POST["brandline"],
-					"model_vehicle" => $_POST["model"],
-					"cilindraje_vehicle" => $_POST["cilindraje"],
-					"date_created_vehicle" => date("Y-m-d")
-				);
 
-				echo '<pre>'; print_r($_POST); echo '</pre>';return;
+				echo '<pre>';
+				print_r($galleryElement);
+				echo '</pre>';
+				if (count($galleryElement) == $count) {
+					/* Agrupamos la información */
+					$data = array(
+						"id_class_element" => $_POST["classname"],
+						"code_element" => $_POST["code"],
+						"name_element" => trim(strtoupper($_POST["name"])),
+						"life_element" => $_POST["life"],
+						"address_element" => trim(strtoupper($_POST["address"])),
+						"id_resource_element" => $_POST["resource"],
+						"id_roud_element" => $_POST["roud"],
+						"id_technology_element" => $tecno,
+						"id_power_element" => $power,
+						"id_material_element" => $material,
+						"id_height_element" => $height,
+						"latitude_element" => $_POST["latitude"],
+						"longitude_element" => $_POST["longitude"],
+						"value_element" => $_POST["value"],
+						"gallery_element" => json_encode($galleryElement),
+						"date_created_vehicle" => date("Y-m-d")
+					);
 
-				$url = "vehicles?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
+					echo '<pre>';
+					print_r($_POST);
+					echo '</pre>';
+				}
+
+
+
+				$url = "elements?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
 				$method = "POST";
 				$fields = $data;
 				$response = CurlController::request($url, $method, $fields);
@@ -386,5 +409,4 @@ class ElementsController
 
 		return;
 	}
-
 }
