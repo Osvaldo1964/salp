@@ -7,12 +7,18 @@ class DeleteController{
 	/* Peticion Delete para eliminar datos */
 
 	static public function deleteData($table, $id, $nameId){
+/* 		echo '<pre>'; print_r('deletecontroler'); echo '</pre>';
+		echo '<pre>'; print_r($table); echo '</pre>';
+        echo '<pre>'; print_r($id); echo '</pre>';
+		echo '<pre>'; print_r($nameId); echo '</pre>';return; */
+            		
 		$response = DeleteModel::deleteData($table, $id, $nameId);
 		$return = new DeleteController();
 		$return -> fncResponse($response);
 	}
 
 	/* Respuestas del controlador */
+
 	public function fncResponse($response){
 		if(!empty($response)){
 			$json = array(

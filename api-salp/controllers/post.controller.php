@@ -12,6 +12,7 @@ require_once "models/put.model.php";
 class PostController{
 
 	/* Peticion POST para crear datos */
+
 	static public function postData($table, $data){
 		$response = PostModel::postData($table, $data);
 		$return = new PostController();
@@ -19,6 +20,7 @@ class PostController{
 	}
 
 	/* Peticion POST para registrar usuario */
+
 	static public function postRegister($table, $data, $suffix){
 		if(isset($data["password_".$suffix]) && $data["password_".$suffix] != null){
 			$crypt = crypt($data["password_".$suffix], '$2a$07$azybxcags23425sdg23sdfhsd$');
@@ -29,14 +31,16 @@ class PostController{
 		}else{
 
 			/* Registro de usuarios desde APP externas */
+
 			$response = PostModel::postData($table, $data);
 			if(isset($response["comment"]) && $response["comment"] == "The process was successful" ){
 
 				/* Validar que el usuario exista en BD */
+
 				$response = GetModel::getDataFilter($table, "*", "email_".$suffix, $data["email_".$suffix], null,null,null,null);
 				if(!empty($response)){		
 					$token = Connection::jwt($response[0]->{"id_".$suffix}, $response[0]->{"email_".$suffix});
-					$jwt = JWT::encode($token, "dfhsdfg34dfchs4xgsrsdry46","HS256");
+					$jwt = JWT::encode($token, "dfhsdfg34dfchs4xgsrsdry46", 'HS256');
 
 					/* Actualizamos la base de datos con el Token del usuario */
 					$data = array(
@@ -60,21 +64,25 @@ class PostController{
 	static public function postLogin($table, $data, $suffix){
 
 		/* Validar que el usuario exista en BD */
+
 		$response = GetModel::getDataFilter($table, "*", "email_".$suffix, $data["email_".$suffix], null,null,null,null);
 		if(!empty($response)){	
 			if($response[0]->{"password_".$suffix} != null)	{
 			
 				/* Encriptamos la contraseña */
+
 				$crypt = crypt($data["password_".$suffix], '$2a$07$azybxcags23425sdg23sdfhsd$');
 				if($response[0]->{"password_".$suffix} == $crypt){
 					$token = Connection::jwt($response[0]->{"id_".$suffix}, $response[0]->{"email_".$suffix});
-					$jwt = JWT::encode($token, "dfhsdfg34dfchs4xgsrsdry46","HS256");
+					$jwt = JWT::encode($token, "dfhsdfg34dfchs4xgsrsdry46", 'HS256');
 
 					/* Actualizamos la base de datos con el Token del usuario */
+
 					$data = array(
 						"token_".$suffix => $jwt,
 						"token_exp_".$suffix => $token["exp"]
 					);
+
 					$update = PutModel::putData($table, $data, $response[0]->{"id_".$suffix}, "id_".$suffix);
 					if(isset($update["comment"]) && $update["comment"] == "The process was successful" ){
 						$response[0]->{"token_".$suffix} = $jwt;
@@ -90,13 +98,13 @@ class PostController{
 			}else{
 
 				/* Actualizamos el token para usuarios logueados desde app externas */
+
 				$token = Connection::jwt($response[0]->{"id_".$suffix}, $response[0]->{"email_".$suffix});
-				$jwt = JWT::encode($token, "dfhsdfg34dfchs4xgsrsdry46","HS256");				
+				$jwt = JWT::encode($token, "dfhsdfg34dfchs4xgsrsdry46", 'HS256');				
 				$data = array(
 					"token_".$suffix => $jwt,
 					"token_exp_".$suffix => $token["exp"]
 				);
-
 				$update = PutModel::putData($table, $data, $response[0]->{"id_".$suffix}, "id_".$suffix);
 				if(isset($update["comment"]) && $update["comment"] == "The process was successful" ){
 					$response[0]->{"token_".$suffix} = $jwt;
@@ -113,15 +121,16 @@ class PostController{
 	}
 
 	/* Respuestas del controlador */
+
 	public function fncResponse($response,$error,$suffix){
 
 		if(!empty($response)){
 
 			/* Quitamos la contraseña de la respuesta */
+
 			if(isset($response[0]->{"password_".$suffix})){
 				unset($response[0]->{"password_".$suffix});
 			}
-
 			$json = array(
 				'status' => 200,
 				'results' => $response

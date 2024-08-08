@@ -5,20 +5,24 @@ require_once "controllers/get.controller.php";
 
 $routesArray = explode("/", $_SERVER['REQUEST_URI']);
 $routesArray = array_filter($routesArray);
+//echo '<pre>'; print_r($routesArray); echo '</pre>';
 
 /* Cuando no se hace ninguna petición a la API */
 
 if(count($routesArray) == 0){
+	//echo '<pre>'; print_r($routesArray); echo '</pre>';exit;
 	$json = array(
 		'status' => 404,
 		'results' => 'Not Found'
 	);
-
 	echo json_encode($json, http_response_code($json["status"]));
 	return;
+}else{
+	//echo '<pre>'; print_r('asasasas'); echo '</pre>';exit;
 }
 
 /* Cuando si se hace una petición a la API */
+//echo '<pre>'; print_r($_SERVER); echo '</pre>';exit;
 if(count($routesArray) == 1 && isset($_SERVER['REQUEST_METHOD'])){
 	$table = explode("?", $routesArray[1])[0];
 
@@ -30,7 +34,6 @@ if(count($routesArray) == 1 && isset($_SERVER['REQUEST_METHOD'])){
 				'status' => 400,
 				"results" => "You are not authorized to make this request"
 			);
-
 			echo json_encode($json, http_response_code($json["status"]));
 			return;
 		}else{
@@ -43,21 +46,25 @@ if(count($routesArray) == 1 && isset($_SERVER['REQUEST_METHOD'])){
 	}
 
 	/* Peticiones GET */
+
 	if($_SERVER['REQUEST_METHOD'] == "GET"){
 		include "services/get.php";
 	}
 
 	/* Peticiones POST */
+
 	if($_SERVER['REQUEST_METHOD'] == "POST"){
 		include "services/post.php";
 	}
 
 	/* Peticiones PUT */
+
 	if($_SERVER['REQUEST_METHOD'] == "PUT"){
 		include "services/put.php";
 	}
 
 	/* Peticiones DELETE */
+
 	if($_SERVER['REQUEST_METHOD'] == "DELETE"){
 		include "services/delete.php";
 	}

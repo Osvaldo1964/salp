@@ -173,7 +173,7 @@ function execDatatable(text) {
             { "data": "actions", "orderable": false, "search": false }
         ];
 
-        page = "technologies";
+        page = "elements";
     }
 
     /* FIN CONFIGURA DATATABLE PARA ELEMENTOS */

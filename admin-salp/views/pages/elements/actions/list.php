@@ -14,7 +14,7 @@ if (isset($_GET["start"]) && isset($_GET["end"])) {
 <div class="card">
     <div class="card-header">
         <h3 class="card-title">
-            <a class="btn bg-info btn-sm" href="/payorders/autonew">Generar Lotes</a>
+            <a class="btn bg-info btn-sm" href="/elements/autonew">Generar Lotes</a>
             <a class="btn bg-info btn-sm" href="/elements/new">Generar Manual</a>
         </h3>
         <div class="card-tools">

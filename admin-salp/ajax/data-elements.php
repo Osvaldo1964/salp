@@ -21,13 +21,13 @@ class DatatableController
 
             /* El total de registros de la data */
             $url = "relations?rel=elements,classes,powers,materials,technologies,rouds&type=element,class,power,material,technology,roud&select=id_element&linkTo=date_created_element&between1=" . $_GET["between1"] . "&between2=" . $_GET["between2"];
-            echo '<pre>';
+/*             echo '<pre>';
             print_r($url);
-            echo '</pre>';
+            echo '</pre>'; */
             $method = "GET";
             $fields = array();
             $response = CurlController::request($url, $method, $fields);
-            echo '<pre>'; print_r($response); echo '</pre>';return;
+            //echo '<pre>'; print_r($response); echo '</pre>';return;
             if ($response->status == 200) {
                 $totalData = $response->total;
             } else {
@@ -36,7 +36,7 @@ class DatatableController
             }
 
             /* Búsqueda de datos */
-            $select = "id_element,id_class_element,name_class,code_element,name_element,status_element,date_created_element";
+            $select = "*";
 
             if (!empty($_POST['search']['value'])) {
                 if (preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/', $_POST['search']['value'])) {
@@ -63,9 +63,9 @@ class DatatableController
             } else {
 
                 /* Seleccionar datos */
-                $url = "relations?rel=elements,classes&type=element,class&select=" . $select .
-                    "&linkTo=date_created_element&between1=" . $_GET["between1"] . "&between2=" . $_GET["between2"] .
-                    "&orderBy=" . $orderBy . "&orderMode=" . $orderType . "&startAt=" . $start . "&endAt=" . $length;
+                $url = "relations?rel=elements,classes,powers,materials,technologies,rouds&type=element,class,power,material,technology,roud&select=" . $select .
+                 "&linkTo=date_created_element&between1=" . $_GET["between1"] . "&between2=" . $_GET["between2"] .
+                 "&orderBy=" . $orderBy . "&orderMode=" . $orderType . "&startAt=" . $start . "&endAt=" . $length;
                 //echo '<pre>'; print_r($url); echo '</pre>';exit;
                 $data = CurlController::request($url, $method, $fields)->results;
                 $recordsFiltered = $totalData;
@@ -92,10 +92,10 @@ class DatatableController
                     //$follow_payorder = "";
                 } else {
                     //echo '<pre>'; print_r($value->follow_payorder); echo '</pre>';exit;
-                    if ($value->status_element == "Activo") {
-                        $status_element = "<span class='badge badge-danger p-2'>" . $value->status_payorder . "</span>";
+                    if ($value->status_element != "Activo") {
+                        $status_element = "<span class='badge badge-danger p-2'>" . $value->status_element . "</span>";
                     } else {
-                        $status_element = "<span class='badge badge-success p-2'>" . $value->status_payorder . "</span>";
+                        $status_element = "<span class='badge badge-success p-2'>" . $value->status_element . "</span>";
                     }
                     //echo '<pre>'; print_r($status_payorder); echo '</pre>';exit;
 
@@ -113,13 +113,15 @@ class DatatableController
 
                 $code_element = $value->code_element;
                 $name_element = $value->name_element;
-                $date_created_element = $value->date_created_payorder;
+                $date_created_element = $value->date_created_element;
 
                 $dataJson .= '{ 
-            		"id_payorder":"' . ($start + $key + 1) . '",
+            		"id_element":"' . ($start + $key + 1) . '",
 					"code_element":"' . $code_element . '",
                     "name_element":"' . $name_element . '",
-					"date_created_element":"' . $date_created_element . '"
+					"date_created_element":"' . $date_created_element . '",
+                    "status_element":"' . $status_element . '",
+                    "actions":"' . $actions . '"
             	},';
             }
             $dataJson = substr($dataJson, 0, -1); // este substr quita el último caracter de la cadena, que es una coma, para impedir que rompa la tabla

@@ -5,7 +5,6 @@ require_once "get.model.php";
 class Connection{
 
 	/* Información de la base de datos */
-
 	static public function infoDatabase(){
 		$infoDB = array(
 			"database" => "db-salp",
@@ -42,7 +41,6 @@ class Connection{
 	}
 
 	/* Validar existencia de una tabla en la bd */
-
 	static public function getColumnsData($table, $columns){
 
 		/* Traer el nombre de la base de datos */
@@ -57,6 +55,7 @@ class Connection{
 		if(empty($validate)){
 			return null;
 		}else{
+
 			/* Ajuste de selección de columnas globales */
 			if($columns[0] == "*"){
 				array_shift($columns);
@@ -78,6 +77,7 @@ class Connection{
 			"iat" =>  $time,//Tiempo en que inicia el token
 			"exp" => $time + (60*60*24), // Tiempo en que expirará el token (1 día)
 			"data" => [
+
 				"id" => $id,
 				"email" => $email
 			]

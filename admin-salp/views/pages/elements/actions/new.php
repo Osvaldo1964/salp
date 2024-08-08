@@ -22,6 +22,7 @@
 
                             <div class="form-group">
                                 <select class="form-control select2" id="classname" name="classname" style="width:100%" onchange="activeBlocks()" required>
+                                <!-- onchange="activeBlocks()" -->
                                     <option value="">Seleccione Una Clase</option>
                                     <?php foreach ($classes as $key => $value) : ?>
                                         <option value="<?php echo $value->id_class ?>"><?php echo $value->name_class ?></option>
@@ -137,7 +138,7 @@
                             ?>
 
                             <div class="form-group">
-                                <select class="form-control select2" name="tecno" style="width:100%" required>
+                                <select class="form-control select2" id="tecno" name="tecno" style="width:100%">
                                     <option value="">Seleccione la Tecnologia</option>
                                     <?php foreach ($technologies as $key => $value) : ?>
                                         <option value="<?php echo $value->id_technology ?>"><?php echo $value->name_technology ?></option>
@@ -160,7 +161,7 @@
                             ?>
 
                             <div class="form-group">
-                                <select class="form-control select2" name="power" style="width:100%" required>
+                                <select class="form-control select2" id="power" name="power" style="width:100%" >
                                     <option value="">Seleccione Una Potencia</option>
                                     <?php foreach ($powers as $key => $value) : ?>
                                         <option value="<?php echo $value->id_power ?>"><?php echo $value->name_power ?></option>
@@ -172,6 +173,53 @@
                             </div>
                         </div>
 
+                        <!-- Seleccion Material -->
+                        <div class="form-group col-md-4 notblock" id="divMaterial">
+                            <label>Materiales</label>
+                            <?php
+                            $url = "materials?select=id_material,name_material";
+                            $method = "GET";
+                            $fields = array();
+                            $materials = CurlController::request($url, $method, $fields)->results;
+                            ?>
+
+                            <div class="form-group">
+                                <select class="form-control select2" id="material" name="material" style="width:100%" >
+                                    <option value="">Seleccione un Material</option>
+                                    <?php foreach ($materials as $key => $value) : ?>
+                                        <option value="<?php echo $value->id_material ?>"><?php echo $value->name_material ?></option>
+                                    <?php endforeach ?>
+                                </select>
+
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+
+                        <!-- Seleccion altura -->
+                        <div class="form-group col-md-4 notblock" id="divAltura">
+                            <label>Alturas</label>
+                            <?php
+                            $url = "heights?select=id_height,name_height";
+                            $method = "GET";
+                            $fields = array();
+                            $heights = CurlController::request($url, $method, $fields)->results;
+                            ?>
+
+                            <div class="form-group">
+                                <select class="form-control select2" id="height" name="height" style="width:100%" >
+                                    <option value="">Seleccione una Altura</option>
+                                    <?php foreach ($heights as $key => $value) : ?>
+                                        <option value="<?php echo $value->id_height ?>"><?php echo $value->name_height ?></option>
+                                    <?php endforeach ?>
+                                </select>
+
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <!-- Precio del Elemento -->
                         <div class="form-group col-md-4">
                             <label>Precio Elemento</label>
@@ -227,9 +275,9 @@
         </div>
         <div class="card-footer">
             <div class="col-md-8 offset-md-2">
-                <div class="form-group mt-1">
+                <div class="form-group submtit">
                     <a href="/elements" class="btn btn-light border text-left">Back</a>
-                    <button type="submit" class="btn bg-dark float-right" saveBtn>Save</button>
+                    <button type="submit" class="btn bg-dark float-right saveBtn">Save</button>
                 </div>
             </div>
         </div>

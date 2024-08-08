@@ -10,20 +10,22 @@ class PutModel{
 	static public function putData($table, $data, $id, $nameId){
 
 		/* Validar el ID */
-
+		//echo '<pre>'; print_r($data); echo '</pre>';exit;
 		$response = GetModel::getDataFilter($table, $nameId, $nameId, $id, null,null,null,null);
+		//echo '<pre>'; print_r($response); echo '</pre>';exit;
 		if(empty($response)){
 			return null;
 		}
-
+		
 		/* Actualizamos registros */
+
 		$set = "";
 		foreach ($data as $key => $value) {
 			$set .= $key." = :".$key.",";
 		}
-
 		$set = substr($set, 0, -1);
 		$sql = "UPDATE $table SET $set WHERE $nameId = :$nameId";
+		//echo '<pre>'; print_r($sql); echo '</pre>';exit;
 		$link = Connection::connect();
 		$stmt = $link->prepare($sql);
 
@@ -37,6 +39,7 @@ class PutModel{
 				"comment" => "The process was successful"
 			);
 			return $response;
+		
 		}else{
 			return $link->errorInfo();
 		}

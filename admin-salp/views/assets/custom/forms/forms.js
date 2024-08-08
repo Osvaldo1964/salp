@@ -305,10 +305,9 @@ $(".dropzone").dropzone({
 
     })
 
-    myDropzone = this;
+    var myDropzone = this;
     $(".saveBtn").click(function () {
       if (arrayFiles.length >= 1) {
-        alert('asasas');
         myDropzone.processQueue();
       } else {
         fncSweetAlert("error", "The gallery cannot be empty", null)
@@ -331,7 +330,7 @@ if (document.querySelector("#code")) {
 }
 
 function activeBlocks() {
-/*   var selectElement = document.getElementById('classname');
+  var selectElement = document.getElementById('classname');
   var selectedValue = selectElement.value;
   if (selectedValue == 1) {
     document.querySelector("#divTecno").classList.remove("notblock");
@@ -345,7 +344,7 @@ function activeBlocks() {
     document.querySelector("#divMaterial").classList.remove("notblock");
     document.querySelector("#divAltura").classList.remove("notblock");
   }
-  if (selectedValue == 3) { } */
+  if (selectedValue == 3) { }
 }
 
 function fntBarcode(e) {
