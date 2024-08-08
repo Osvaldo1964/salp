@@ -4,11 +4,10 @@
             <?php
             require_once "controllers/materials.controller.php";
             $create = new MaterialsController();
-            //$create -> create();
             ?>
 
             <div class="col-md-8 offset-md-2">
-                <!-- Descripción Cuadrilla -->
+                <!-- Descripción Materiales -->
                 <div class="form-group mt-1">
                     <label>Descripción</label>
                     <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]){1,}" name="name" required>

@@ -19,7 +19,6 @@
 
 /* Función para validar datos repetidos */
 function validateRepeat(event, type, table, suffix) {
-  console.log(event); return;
   var data = new FormData();
   data.append("data", event.target.value);
   data.append("table", table);
@@ -99,16 +98,13 @@ function validateImageJS(event, input) {
 
 /* Funcion para validar pdfs */
 function validatePdfJS(event, input) {
-  //console.log(event);
+
   var archivo = this.files[0]
   console.log(archivo);
-  /*=============================================
-    VALIDAMOS EL FORMATO SEA PDF
-    =============================================*/
+  /* VALIDAMOS EL FORMATO SEA PDF */
 
   if (archivo['type'] != 'application/pdf') {
     $('.nuevoArchivo').val('')
-
     swal({
       title: 'Error al subir el archivo',
       text: '¡La archivo debe estar en formato PDF!',
@@ -131,7 +127,6 @@ function rememberMe(event) {
 }
 
 /* Funcion para Capturar el Usuario desde localStorage */
-
 $(document).ready(function () {
   if (localStorage.getItem("emailRemember") != null) {
     $('[name="loginEmail"]').val(localStorage.getItem("emailRemember"));
@@ -159,7 +154,6 @@ $(document).on("change", ".changeCountry", function () {
 })
 
 /* Función para crear Url's */
-
 function createUrl(event, name) {
 
   var value = event.target.value;
@@ -178,18 +172,12 @@ function createUrl(event, name) {
 
 /* Tags Input */
 if ($('.tags-input').length > 0) {
-
   $('.tags-input').tagsinput({
     maxTags: 10
   });
-
 }
 
-
-/*=============================================
-Plugin Summernote
-=============================================*/
-
+/* Plugin Summernote */
 $(".summernote").summernote({
 
   placeholder: '',
@@ -205,7 +193,6 @@ $(".summernote").summernote({
 });
 
 /* Formatear fecha */
-
 function formDate(date) {
   var day = date.getDate();
   var month = date.getMonth();
@@ -297,7 +284,7 @@ $(".dropzone").dropzone({
           "width": file.width,
           "height": file.height
         })
-        $("[name='galleryProduct']").val(JSON.stringify(arrayFiles));
+        $("[name='galleryElement']").val(JSON.stringify(arrayFiles));
       }, 100 * countArrayFiles);
     })
 
@@ -313,7 +300,7 @@ $(".dropzone").dropzone({
         })
 
         arrayFiles.splice(index, 1);
-        $("[name='galleryProduct']").val(JSON.stringify(arrayFiles));
+        $("[name='galleryElement']").val(JSON.stringify(arrayFiles));
       }, 100 * countArrayFiles);
 
     })
@@ -321,6 +308,7 @@ $(".dropzone").dropzone({
     myDropzone = this;
     $(".saveBtn").click(function () {
       if (arrayFiles.length >= 1) {
+        alert('asasas');
         myDropzone.processQueue();
       } else {
         fncSweetAlert("error", "The gallery cannot be empty", null)
@@ -328,3 +316,48 @@ $(".dropzone").dropzone({
     })
   }
 })
+
+
+if (document.querySelector("#code")) {
+  let inputCodigo = document.querySelector("#code");
+  inputCodigo.onkeyup = function () {
+    if (inputCodigo.value.length >= 5) {
+      document.querySelector("#divBarCode").classList.remove("notblock");
+      fntBarcode();
+    } else {
+      document.querySelector("#divBarCode").classList.add("notblock");
+    }
+  }
+}
+
+function activeBlocks() {
+/*   var selectElement = document.getElementById('classname');
+  var selectedValue = selectElement.value;
+  if (selectedValue == 1) {
+    document.querySelector("#divTecno").classList.remove("notblock");
+    document.querySelector("#divPotencia").classList.remove("notblock");
+    document.querySelector("#divMaterial").classList.add("notblock");
+    document.querySelector("#divAltura").classList.add("notblock");
+  }
+  if (selectedValue == 2) {
+    document.querySelector("#divTecno").classList.add("notblock");
+    document.querySelector("#divPotencia").classList.add("notblock");
+    document.querySelector("#divMaterial").classList.remove("notblock");
+    document.querySelector("#divAltura").classList.remove("notblock");
+  }
+  if (selectedValue == 3) { } */
+}
+
+function fntBarcode(e) {
+  let codigo = document.querySelector("#code").value;
+  JsBarcode("#barcode", codigo);
+}
+
+function fntPrintBarcode(area) {
+  let elemntArea = document.querySelector(area);
+  let vprint = window.open(' ', 'popimpr', 'height=400, width=600');
+  vprint.document.write(elemntArea.innerHTML);
+  vprint.document.close();
+  vprint.print();
+  vprint.close();
+}

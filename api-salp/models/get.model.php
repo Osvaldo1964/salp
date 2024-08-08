@@ -125,7 +125,7 @@ class GetModel{
 				}
 				
 				if($key > 0){
-					$innerJoinText .= "INNER JOIN ".$value." ON ".$relArray[0].".id_".$typeArray[$key]."_".$typeArray[0] ." = ".$value.".id_".$typeArray[$key]." ";
+					$innerJoinText .= "INNER LEFT ".$value." ON ".$relArray[0].".id_".$typeArray[$key]."_".$typeArray[0] ." = ".$value.".id_".$typeArray[$key]." ";
 				}
 			}
 
@@ -191,7 +191,7 @@ class GetModel{
 				}
 				
 				if($key > 0){
-					$innerJoinText .= "INNER JOIN ".$value." ON ".$relArray[0].".id_".$typeArray[$key]."_".$typeArray[0] ." = ".$value.".id_".$typeArray[$key]." ";
+					$innerJoinText .= "INNER LEFT ".$value." ON ".$relArray[0].".id_".$typeArray[$key]."_".$typeArray[0] ." = ".$value.".id_".$typeArray[$key]." ";
 				}
 			}
 
@@ -325,7 +325,7 @@ class GetModel{
 				}
 				
 				if($key > 0){
-					$innerJoinText .= "INNER JOIN ".$value." ON ".$relArray[0].".id_".$typeArray[$key]."_".$typeArray[0] ." = ".$value.".id_".$typeArray[$key]." ";
+					$innerJoinText .= "INNER LEFT ".$value." ON ".$relArray[0].".id_".$typeArray[$key]."_".$typeArray[0] ." = ".$value.".id_".$typeArray[$key]." ";
 				}
 			}
 
@@ -459,7 +459,7 @@ class GetModel{
 				}
 				
 				if($key > 0){
-					$innerJoinText .= "INNER JOIN ".$value." ON ".$relArray[0].".id_".$typeArray[$key]."_".$typeArray[0]." = ".$value.".id_".$typeArray[$key]." ";
+					$innerJoinText .= "INNER LEFT ".$value." ON ".$relArray[0].".id_".$typeArray[$key]."_".$typeArray[0]." = ".$value.".id_".$typeArray[$key]." ";
 				}
 			}
 

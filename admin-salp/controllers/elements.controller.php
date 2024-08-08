@@ -6,8 +6,8 @@ class ElementsController
 	/* Creacion de Sujetos */
 	public function create()
 	{
-		//echo '<pre>'; print_r($_POST); echo '</pre>';return;
-		if (isset($_POST["code"])) {
+		echo '<pre>'; print_r($_POST); echo '</pre>';
+		if (isset($_POST["name"])) {
 			echo '<script>
 				matPreloader("on");
 				fncSweetAlert("loading", "Loading...", "");
@@ -15,12 +15,8 @@ class ElementsController
 
 			/* Validamos la sintaxis de los campos */
 			if (
-				preg_match('/^[A-Za-z0-9]+([-])+([A-Za-z0-9]){1,}$/', $_POST["plate"]) &&
-				preg_match('/^[-\\(\\)\\0-9 ]{1,}$/', $_POST["subject"]) &&
-				preg_match('/^[-\\(\\)\\0-9 ]{1,}$/', $_POST["brand"]) &&
-				preg_match('/^[-\\(\\)\\0-9 ]{1,}$/', $_POST["brandline"]) &&
-				preg_match('/^[-\\(\\)\\0-9 ]{1,}$/', $_POST["model"]) &&
-				preg_match('/^[-\\(\\)\\0-9 ]{1,}$/', $_POST["cilindraje"])
+				preg_match('/^[A-Za-z0-9]+([-])+([A-Za-z0-9]){1,}$/', $_POST["classname"]) 
+
 			) {
 
 
@@ -35,14 +31,14 @@ class ElementsController
 					$image["mode"] = "base64";
 					
 					$folder = "img/elements";
-					$path =  explode("_",$_POST["categoryProduct"])[1]."/gallery";
+					$path =  explode("_",$_POST["categoryElement"])[1]."/gallery";
 					$width = $value["width"];
 					$height = $value["height"];
 					$name = mt_rand(10000, 99999);
 
 					$saveImageGallery  = TemplateController::saveImage($image, $folder, $path, $width, $height, $name);
 
-					array_push($galleryProduct, $saveImageGallery);
+					array_push($galleryElement, $saveImageGallery);
 				}
 
 				/* Agrupamos la información */
@@ -55,6 +51,8 @@ class ElementsController
 					"cilindraje_vehicle" => $_POST["cilindraje"],
 					"date_created_vehicle" => date("Y-m-d")
 				);
+
+				echo '<pre>'; print_r($_POST); echo '</pre>';return;
 
 				$url = "vehicles?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
 				$method = "POST";

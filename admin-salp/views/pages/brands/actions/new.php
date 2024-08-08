@@ -1,14 +1,7 @@
 <div class="card card-dark card-outline">
     <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
         <div class="card-header">
-            <?php
-            require_once "controllers/brands.controller.php";
-            $create = new BrandsController();
-            //$create -> create();
-            ?>
-
             <div class="col-md-8 offset-md-2">
-
                 <!-- Nombre Marca -->
                 <div class="form-group mt-1">
                     <label>Marca</label>
