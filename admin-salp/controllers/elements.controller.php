@@ -8,10 +8,10 @@ class ElementsController
 	{
 		//echo '<pre>'; print_r($_POST); echo '</pre>';
 		if (isset($_POST["name"])) {
-/* 			echo '<script>
+			echo '<script>
 				matPreloader("on");
 				fncSweetAlert("loading", "Loading...", "");
-			</script>'; */
+			</script>';
 
 			/* Validamos la sintaxis de los campos */
 			if (
@@ -46,49 +46,46 @@ class ElementsController
 				}
 
 
-				echo '<pre>';
-				print_r($galleryElement);
-				echo '</pre>';
-				if (count($galleryElement) == $count) {
-					/* Agrupamos la información */
-					$data = array(
-						"id_class_element" => $_POST["classname"],
-						"code_element" => $_POST["code"],
-						"name_element" => trim(strtoupper($_POST["name"])),
-						"life_element" => $_POST["life"],
-						"address_element" => trim(strtoupper($_POST["address"])),
-						"id_resource_element" => $_POST["resource"],
-						"id_roud_element" => $_POST["roud"],
-						"id_technology_element" => $tecno,
-						"id_power_element" => $power,
-						"id_material_element" => $material,
-						"id_height_element" => $height,
-						"latitude_element" => $_POST["latitude"],
-						"longitude_element" => $_POST["longitude"],
-						"value_element" => $_POST["value"],
-						"gallery_element" => json_encode($galleryElement),
-						"date_created_vehicle" => date("Y-m-d")
-					);
-
-					echo '<pre>';
-					print_r($_POST);
-					echo '</pre>';
-				}
+				/* 				if (count($galleryElement) == $count) { */
+				/* Agrupamos la información */
+				$data = array(
+					"id_class_element" => $_POST["classname"],
+					"code_element" => $_POST["code"],
+					"name_element" => trim(strtoupper($_POST["name"])),
+					"life_element" => $_POST["life"],
+					"address_element" => trim(strtoupper($_POST["address"])),
+					"id_minute_element" => null,
+					"id_resource_element" => $_POST["resource"],
+					"id_roud_element" => $_POST["roud"],
+					"id_technology_element" => $tecno,
+					"id_power_element" => $power,
+					"id_material_element" => $material,
+					"id_height_element" => $height,
+					"altitud_element" => 0,
+					"latitude_element" => $_POST["latitude"],
+					"longitude_element" => $_POST["longitude"],
+					"id_dispose_element" => null,
+					"value_element" => $_POST["value"],
+					"gallery_element" => json_encode($galleryElement),
+					"status_element" => "Activo",
+					"date_created_element" => date("Y-m-d")
+				);
 
 
+				/* 				} */
 
 				$url = "elements?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
 				$method = "POST";
 				$fields = $data;
 				$response = CurlController::request($url, $method, $fields);
-
+				/* echo '<pre>'; print_r($response); echo '</pre>'; */
 				/* Respuesta de la API */
 				if ($response->status == 200) {
 					echo '<script>
 					fncFormatInputs();
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Registro grabado correctamente", "/vehicles");
+					fncSweetAlert("success", "Registro grabado correctamente", "/elements");
 				</script>';
 				}
 			} else {
@@ -149,7 +146,7 @@ class ElementsController
 									fncFormatInputs();
 									matPreloader("off");
 									fncSweetAlert("close", "", "");
-									fncSweetAlert("success", "Registro actualizado correctamente", "/subjects");
+									fncSweetAlert("success", "Registro actualizado correctamente", "/elements");
 							</script>';
 						} else {
 							echo '<script>
@@ -210,7 +207,7 @@ class ElementsController
 					fncFormatInputs();
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Archivos Almacenados", "/subjects");
+					fncSweetAlert("success", "Archivos Almacenados", "/elements");
 				</script>';
 		}
 	}
