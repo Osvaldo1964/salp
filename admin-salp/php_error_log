@@ -1608,3 +1608,21 @@ Stack trace:
 #3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
 #4 {main}
   thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 53
+[09-Aug-2024 15:48:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php:53
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\elements\elements.php(46): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(186): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 53
+[09-Aug-2024 19:33:55 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[09-Aug-2024 19:33:55 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[09-Aug-2024 19:33:55 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[09-Aug-2024 19:33:55 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[09-Aug-2024 19:33:55 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[09-Aug-2024 21:13:30 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[09-Aug-2024 21:13:30 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[09-Aug-2024 21:13:30 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[09-Aug-2024 21:13:30 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[09-Aug-2024 21:13:30 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96

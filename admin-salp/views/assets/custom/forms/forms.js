@@ -316,7 +316,25 @@ $(".dropzone").dropzone({
   }
 })
 
+/* Edición de Galería */
 
+if($("[name='galleryElementOld']").length > 0 && $("[name='galleryElementOld']").val() != ""){
+  var arrayFilesOld = JSON.parse($("[name='galleryElementOld']").val());
+}
+
+var arrayFilesDelete = Array();
+
+function removeGallery(elem){
+  $(elem).parent().remove();
+  var index = arrayFilesOld.indexOf($(elem).attr("remove"));  
+    arrayFilesOld.splice(index, 1);
+    console.log("arrayFilesOld", arrayFilesOld);
+  $("[name='galleryElementOld']").val(JSON.stringify(arrayFilesOld));
+  arrayFilesDelete.push($(elem).attr("remove"));
+  $("[name='deleteGalleryElement']").val(JSON.stringify(arrayFilesDelete));
+}
+
+/* Funcion de Codigo de Barras */
 if (document.querySelector("#code")) {
   let inputCodigo = document.querySelector("#code");
   inputCodigo.onkeyup = function () {
@@ -330,6 +348,7 @@ if (document.querySelector("#code")) {
   }
 }
 
+/* Funcion para activar o desactivar atributos de elementos*/
 function activeBlocks() {
   var selectElement = document.getElementById('classname');
   var selectedValue = selectElement.value;

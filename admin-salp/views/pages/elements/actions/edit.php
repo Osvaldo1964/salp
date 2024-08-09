@@ -50,10 +50,10 @@ if (isset($routesArray[3])) {
                             <div class="form-group">
                                 <select class="form-control select2" id="classname" name="classname" style="width:100%" onchange="activeBlocks()" required>
                                     <?php foreach ($classes as $key => $value) : ?>
-                                        <?php if ($value['id_class'] == $elements->id_class_element) : ?>
-                                            <option value="<?php echo $classes->id_class ?>" selected><?php echo $classes->name_class ?></option>
+                                        <?php if ($value->id_class == $elements->id_class_element) : ?>
+                                            <option value="<?php echo $elements->id_class_element ?>" selected><?php echo $elements->name_class ?></option>
                                         <?php else : ?>
-                                            <option value="<?php echo $value["id_class"]; ?>"><?php echo $value["name_class"] ?></option>
+                                            <option value="<?php echo $value->id_class ?>"><?php echo $value->name_class ?></option>
                                         <?php endif ?>
                                     <?php endforeach ?>
                                 </select>
@@ -262,10 +262,16 @@ if (isset($routesArray[3])) {
                     <!-- Galeria de Imagenes -->
                     <label>Galeria de Imagenes del Elemento</label>
                     <div class="dropzone mb-3">
-                        <div class="dz-message">
-                            Arrastre aqui las imagenes. Maximo 500px x 500px
-                        </div>
+                        <?php foreach (json_decode($elements->gallery_element, true) as $value): ?>
+                            <div class="dz-preview dz-file-preview">
+                                <div class="dz-image">
+                                    <img src="views/img/elements/<?= $elements->code_element ?>/<?= $value ?>" width="100%">
+                                </div>
+                                <a class="dz-remove" data-dz-remove remove="<?= $value ?>" onclick="removeGallery(this)">Eliminar archivo</a>
+                            </div>
+                        <?php endforeach ?>
                     </div>
+                    <input type="hidden" name="galleryElementOld" value='<?= $elements->gallery_element ?>'>
                     <input type="hidden" name="galleryElement">
 
                 </div>
@@ -287,7 +293,9 @@ if (isset($routesArray[3])) {
                             <!-- Hoja de Vida del Elemento -->
                             <div class="form-group mt-2">
                                 <label>Hoja de Vida del Elemento</label>
-                                <textarea class="summernote" name="life" value="<?php echo $elements->life_element ?>" required></textarea>
+                                <textarea class="summernote" name="life" value="<?php echo $elements->life_element ?>">
+                                <?php echo html_entity_decode($elements->life_element) ?>
+                                </textarea>
 
                                 <div class="valid-feedback">Valid.</div>
                                 <div class="invalid-feedback">Please fill out this field.</div>
