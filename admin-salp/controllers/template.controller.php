@@ -110,18 +110,15 @@ class TemplateController
 		if(isset($image["tmp_name"]) && !empty($image["tmp_name"])){ 
 
 			/* Configuramos la ruta del directorio donde se guardará la imagen */
-
 			$directory = strtolower("views/".$folder."/".$path);
 
 			/* Preguntamos primero si no existe el directorio, para crearlo */
-
 			if(!file_exists($directory)){
 				mkdir($directory, 0755);
 			}
 
 			/* Eliminar todos los archivos que existan en ese directorio */
-
-			if($folder != "img/products" && $folder != "img/stores"){
+			if($folder != "img/elements" && $folder != "img/stores"){
 				$files = glob($directory."/*");
 				foreach ($files as $file) {
 					unlink($file);
@@ -132,7 +129,6 @@ class TemplateController
 			list($lastWidth, $lastHeight) = getimagesize($image["tmp_name"]);
 
 			/* De acuerdo al tipo de imagen aplicamos las funciones por defecto */
-
 			if($image["type"] == "image/jpeg"){
 
 				//definimos nombre del archivo

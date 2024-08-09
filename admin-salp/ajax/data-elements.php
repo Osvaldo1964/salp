@@ -21,9 +21,6 @@ class DatatableController
 
             /* El total de registros de la data */
             $url = "relations?rel=elements,classes,powers,materials,technologies,rouds&type=element,class,power,material,technology,roud&select=id_element&linkTo=date_created_element&between1=" . $_GET["between1"] . "&between2=" . $_GET["between2"];
-/*             echo '<pre>';
-            print_r($url);
-            echo '</pre>'; */
             $method = "GET";
             $fields = array();
             $response = CurlController::request($url, $method, $fields);

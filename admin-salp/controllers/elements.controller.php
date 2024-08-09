@@ -35,10 +35,11 @@ class ElementsController
 					$image["mode"] = "base64";
 
 					$folder = "img/elements";
-					$path =  "/gallery";
+					$path =  "/" . $_POST["code"];
 					$width = $value["width"];
 					$height = $value["height"];
 					$name = mt_rand(10000, 99999);
+					//echo '<pre>'; print_r($image . ' ' . $folder . ' ' . $path . ' ' . $width . ' ' . $height . ' ' . $name); echo '</pre>';exit;
 
 					$saveImageGallery  = TemplateController::saveImage($image, $folder, $path, $width, $height, $name);
 
@@ -65,7 +66,7 @@ class ElementsController
 					"latitude_element" => $_POST["latitude"],
 					"longitude_element" => $_POST["longitude"],
 					"id_dispose_element" => null,
-					"value_element" => $_POST["value"],
+					"value_element" => $_POST["price"],
 					"gallery_element" => json_encode($galleryElement),
 					"status_element" => "Activo",
 					"date_created_element" => date("Y-m-d")

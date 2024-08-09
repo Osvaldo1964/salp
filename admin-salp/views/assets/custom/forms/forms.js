@@ -323,6 +323,7 @@ if (document.querySelector("#code")) {
     if (inputCodigo.value.length >= 5) {
       document.querySelector("#divBarCode").classList.remove("notblock");
       fntBarcode();
+      document.querySelector(".btnPrint").classList.remove("d-none");
     } else {
       document.querySelector("#divBarCode").classList.add("notblock");
     }

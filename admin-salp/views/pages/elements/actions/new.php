@@ -37,7 +37,7 @@
                         <!-- Código Elemento -->
                         <div class="form-group col-md-6">
                             <label>Código</label>
-                            <input type="text" class="form-control" pattern="[a-zA-Z0-9_ ]{1,}" id="code" name="code" required>
+                            <input type="text" class="form-control" pattern="[a-zA-Z0-9_ ]{1,}" id="code" name="code" onchange="validateRepeat(event,'t&n','elements','code_element')" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -223,7 +223,7 @@
                         <!-- Precio del Elemento -->
                         <div class="form-group col-md-4">
                             <label>Precio Elemento</label>
-                            <input type="text" class="form-control" pattern="[.\\,\\0-9]{1,}" name="value" required>
+                            <input type="text" class="form-control" pattern="[.\\,\\0-9]{1,}" name="price" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -242,14 +242,14 @@
                 </div>
                 <!-- Derecha -->
                 <div class="col-md-6">
-                    <div class="row">
+                    <div class="row justify-content-center">
                         <!-- Muestro Código de Barras -->
                         <div class="form-group col-md-12 textcenter">
-                            <div id="divBarCode" class="textcenter">
+                            <div id="divBarCode" style="display: flex; flex-direction:column; align-items:center;" class="textcenter">
                                 <div id="printCode">
                                     <svg id="barcode"></svg>
                                 </div>
-                                <button class="btn btn-success btn-sm" type="button" onClick="fntPrintBarcode('#printCode')"><i class="fas fa-print"></i> Imprimir</button>
+                                <button class="btn btn-success btn-sm d-none btnPrint" type="button" onClick="fntPrintBarcode('#printCode')"><i class="fas fa-print"></i> Imprimir</button>
                             </div>
                         </div>
                     </div>

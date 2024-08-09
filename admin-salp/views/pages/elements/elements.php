@@ -10,11 +10,11 @@
                     <?php
                     if (isset($routesArray[2])) {
                         if ($routesArray[2] == "new" || $routesArray[2] == "edit") {
-                            echo '<li class="breadcrumb-item"><a href="/payorders">Mandamientos</a></li>';
+                            echo '<li class="breadcrumb-item"><a href="/elements">Elementos</a></li>';
                             echo '<li class="breadcrumb-item active">' . $routesArray[2] . '</li>';
                         }
                     } else {
-                        echo '<li class="breadcrumb-item active">Mandamientos</li>';
+                        echo '<li class="breadcrumb-item active">Elementos</li>';
                     }
                     ?>
                 </ol>
