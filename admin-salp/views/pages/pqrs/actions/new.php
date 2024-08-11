@@ -17,17 +17,15 @@
                             <div class="form-group">
                                 <label>Descripción</label>
                                 <input type="text" class="form-control" pattern='[a-zA-Z0-9_ ]{1,}' name="name" required>
-
                                 <div class="valid-feedback">Valid.</div>
                                 <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
                         </div>
-
                         <!-- Correo electrónico -->
                         <div class="form-group col-md-12">
                             <label>Email</label>
-                            <input type="email" class="form-control" pattern="[.a-zA-Z0-9_]+([.][.a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}" onchange="validateRepeat(event,'email','users','email_user')" name="email" required>
-
+                            <input type="email" class="form-control" pattern="[.a-zA-Z0-9_]+([.][.a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}"
+                                onchange="validateRepeat(event,'email','users','email_user')" name="email" required>
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
@@ -35,34 +33,31 @@
                         <div class="form-group col-md-12">
                             <label>Dirección</label>
                             <input type="text" class="form-control" pattern='[a-zA-Z0-9_ ]{1,}' name="address" required>
-
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
-
+                        <!-- Descripcion de la Falla -->
                         <div class="form-group col-md-12">
-                            <!-- Descripcion de la Falla -->
-                            <div class="form-group ">
+                            <div class="form-group">
                                 <label>Textarea</label>
                                 <textarea class="form-control" cols="65" rows="3" placeholder="Detalle ..." name="message"></textarea>
-
                                 <div class="valid-feedback">Valid.</div>
                                 <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
                         </div>
                     </div>
-                    <!-- Derecha -->
+                </div>
+                <!-- Derecha -->
                 <div class="col-md-8">
                     <div id="map">
-
                     </div>
                 </div>
             </div>
-                <?php
-                require_once "controllers/elements.controller.php";
-                $create = new ElementsController();
-                $create->create();
-                ?>
+            <?php
+            require_once "controllers/elements.controller.php";
+            $create = new ElementsController();
+            $create->create();
+            ?>
         </div>
         <div class="card-footer">
             <div class="col-md-8 offset-md-2">
