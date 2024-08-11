@@ -380,3 +380,32 @@ function fntPrintBarcode(area) {
   vprint.print();
   vprint.close();
 }
+
+
+async function initMap() {
+  // The location of Uluru
+  if(latitude === undefined || longitude === undefined)
+    {
+        latitude = 11.2084292;
+        longitude = -74.2237886;
+    }
+  const position = { lat: latitude, lng: longitude }; 
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+  // The map, centered at Uluru
+  map = new Map(document.getElementById("map"), {
+    zoom: 16,
+    center: position,
+    mapId: "DEMO_MAP_ID",
+  });
+
+  // The marker, positioned at Uluru
+  const marker = new AdvancedMarkerElement({
+    map: map,
+    position: position,
+    title: "Santa Marta",
+  });
+}

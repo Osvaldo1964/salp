@@ -292,14 +292,14 @@ if (isset($routesArray[3])) {
                     </div>
                     <input type="hidden" name="galleryElementOld" value='<?= $elements->gallery_element ?>'>
                     <input type="hidden" name="galleryElement">
-                    <input type="hidden" name="deleteGalleryElement">
+
                 </div>
                 <!-- Derecha -->
                 <div class="col-md-6">
                     <div class="row justify-content-center">
                         <!-- Muestro Código de Barras -->
-                        <div class="form-group col-md-12">
-                            <div id="divBarCode" style="display: flex; flex-direction:column; align-items:center;" >
+                        <div class="form-group col-md-12 ">
+                            <div id="divBarCode" >
                                 <div id="printCode">
                                     <svg id="barcode"></svg>
                                 </div>
@@ -323,6 +323,11 @@ if (isset($routesArray[3])) {
                     </div>
                 </div>
             </div>
+            <?php
+            require_once "controllers/elements.controller.php";
+            $create = new ElementsController();
+            $create->create();
+            ?>
         </div>
         <div class="card-footer">
             <div class="col-md-8 offset-md-2">

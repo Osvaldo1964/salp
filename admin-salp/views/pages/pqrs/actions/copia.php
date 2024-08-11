@@ -1,38 +1,14 @@
-<?php
-if (isset($routesArray[3])) {
-    $security = explode("~", base64_decode($routesArray[3]));
-    if ($security[1] == $_SESSION["user"]->token_user) {
-        $select = "*";
-        $url = "relations?rel=elements,classes,powers,materials,technologies,resources,rouds&type=element,class,power,material,technology,resource,roud&select=" . $select . "&linkTo=id_element&equalTo=" . $security[0];
-        $method = "GET";
-        $fields = array();
-        $response = CurlController::request($url, $method, $fields);
-
-        if ($response->status == 200) {
-            $elements = $response->results[0];
-        } else {
-            echo '<script>
-				window.location = "/elements";
-				</script>';
-        }
-    } else {
-        echo '<script>
-				window.location = "/elements";
-				</script>';
-    }
-}
-?>
-
+<!-- document.write(`<script src="views/assets/plugins/JsBarcode.all.min.js"></script>`); -->
 <div class="card card-dark card-outline">
     <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
-        <input type="hidden" value="<?php echo $elements->id_element ?>" name="idElement">
         <div class="card-header">
             <?php
             require_once "controllers/elements.controller.php";
             $create = new ElementsController();
-            $create->edit($elements->id_element);
+            //$create -> create();
             ?>
-
+        </div>
+        <div class="card-body">
             <div class="row">
                 <!-- Izquierda -->
                 <div class="col-md-6">
@@ -49,12 +25,9 @@ if (isset($routesArray[3])) {
 
                             <div class="form-group">
                                 <select class="form-control select2" id="classname" name="classname" style="width:100%" onchange="activeBlocks()" required>
+                                    <option value="">Seleccione Una Clase</option>
                                     <?php foreach ($classes as $key => $value) : ?>
-                                        <?php if ($value->id_class == $elements->id_class_element) : ?>
-                                            <option value="<?php echo $elements->id_class_element ?>" selected><?php echo $elements->name_class ?></option>
-                                        <?php else : ?>
-                                            <option value="<?php echo $value->id_class ?>"><?php echo $value->name_class ?></option>
-                                        <?php endif ?>
+                                        <option value="<?php echo $value->id_class ?>"><?php echo $value->name_class ?></option>
                                     <?php endforeach ?>
                                 </select>
 
@@ -66,7 +39,7 @@ if (isset($routesArray[3])) {
                         <!-- Código Elemento -->
                         <div class="form-group col-md-6">
                             <label>Código</label>
-                            <input type="text" class="form-control" pattern="[a-zA-Z0-9_ ]{1,}" id="code" name="code" onchange="validateRepeat(event,'t&n','elements','code_element')" value="<?php echo $elements->code_element ?>" required>
+                            <input type="text" class="form-control" pattern="[a-zA-Z0-9_ ]{1,}" onchange="validateRepeat(event,'t&n','elements','code_element')" id="code" name="code" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -76,7 +49,7 @@ if (isset($routesArray[3])) {
                         <!-- Descripción -->
                         <div class="form-group col-md-12">
                             <label>Descripción</label>
-                            <input type="text" class="form-control" pattern='[a-zA-Z0-9_ ]{1,}' name="name" value="<?php echo $elements->name_element ?>" required>
+                            <input type="text" class="form-control" pattern='[a-zA-Z0-9_ ]{1,}' onchange="validateJS(event,'regex')" name="name" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -85,7 +58,7 @@ if (isset($routesArray[3])) {
                         <!-- Dirección -->
                         <div class="form-group col-md-12">
                             <label>Dirección</label>
-                            <input type="text" class="form-control" pattern='[a-zA-Z0-9_ ]{1,}' name="address" value="<?php echo $elements->address_element ?>" required>
+                            <input type="text" class="form-control" pattern='[a-zA-Z0-9_ ]{1,}' onchange="validateJS(event,'regex')" name="address" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -95,7 +68,7 @@ if (isset($routesArray[3])) {
                         <!-- Latitud -->
                         <div class="form-group col-md-4">
                             <label>Latiud</label>
-                            <input type="text" class="form-control" pattern="[.\\,\\0-9]{1,}" name="latitude" value="<?php echo $elements->latitude_element ?>" required>
+                            <input type="text" class="form-control" pattern="[.\\,\\0-9]{1,}" name="latitude" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -103,7 +76,7 @@ if (isset($routesArray[3])) {
                         <!-- Longitud -->
                         <div class="form-group col-md-4">
                             <label>Longitud</label>
-                            <input type="text" class="form-control" pattern="[.\\,\\0-9]{1,}" name="longitude" value="<?php echo $elements->longitude_element ?>" required>
+                            <input type="text" class="form-control" pattern="[.\\,\\0-9]{1,}" name="longitud" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -112,7 +85,7 @@ if (isset($routesArray[3])) {
                     <div class="row">
                         <!-- Seleccion Recursos -->
                         <div class="form-group col-md-6">
-                            <label>Recurso</label>
+                            <label>Clase</label>
                             <?php
                             $url = "resources?select=id_resource,name_resource";
                             $method = "GET";
@@ -121,13 +94,10 @@ if (isset($routesArray[3])) {
                             ?>
 
                             <div class="form-group">
-                                <select class="form-control select2" name="resource" style="width:100%" required>
+                                <select class="form-control select2" id="resource" name="resource" style="width:100%" required>
+                                    <option value="">Seleccione Un Recurso</option>
                                     <?php foreach ($resources as $key => $value) : ?>
-                                        <?php if ($value->id_resource == $elements->id_resource_element) : ?>
-                                            <option value="<?php echo $elements->id_resource_element ?>" selected><?php echo $elements->name_resource ?></option>
-                                        <?php else : ?>
-                                            <option value="<?php echo $value->id_resource ?>"><?php echo $value->name_resource ?></option>
-                                        <?php endif ?>
+                                        <option value="<?php echo $value->id_resource ?>"><?php echo $value->name_resource ?></option>
                                     <?php endforeach ?>
                                 </select>
 
@@ -146,13 +116,10 @@ if (isset($routesArray[3])) {
                             ?>
 
                             <div class="form-group">
-                                <select class="form-control select2" name="roud" style="width:100%" required>
+                                <select class="form-control select2" id="resource" name="resource" style="width:100%" required>
+                                    <option value="">Seleccione Un Tipo de Via</option>
                                     <?php foreach ($rouds as $key => $value) : ?>
-                                        <?php if ($value->id_roud == $elements->id_roud_element) : ?>
-                                            <option value="<?php echo $elements->id_roud_element ?>" selected><?php echo $elements->name_roud ?></option>
-                                        <?php else : ?>
-                                            <option value="<?php echo $value->id_roud ?>"><?php echo $value->name_roud ?></option>
-                                        <?php endif ?>
+                                        <option value="<?php echo $value->id_roud ?>"><?php echo $value->name_roud ?></option>
                                     <?php endforeach ?>
                                 </select>
 
@@ -173,13 +140,10 @@ if (isset($routesArray[3])) {
                             ?>
 
                             <div class="form-group">
-                                <select class="form-control select2" id="tecno" name="tecno" style="width:100%">
+                                <select class="form-control select2" id="tecno" name="tecno" style="width:100%" required>
+                                    <option value="">Seleccione la Tecnologia</option>
                                     <?php foreach ($technologies as $key => $value) : ?>
-                                        <?php if ($value->id_technology == $elements->id_technology_element) : ?>
-                                            <option value="<?php echo $elements->id_technology_element ?>" selected><?php echo $elements->name_technology ?></option>
-                                        <?php else : ?>
-                                            <option value="<?php echo $value->id_technology ?>"><?php echo $value->name_technology ?></option>
-                                        <?php endif ?>
+                                        <option value="<?php echo $value->id_technology ?>"><?php echo $value->name_technology ?></option>
                                     <?php endforeach ?>
                                 </select>
 
@@ -199,13 +163,10 @@ if (isset($routesArray[3])) {
                             ?>
 
                             <div class="form-group">
-                                <select class="form-control select2" id="power" name="power" style="width:100%">
+                                <select class="form-control select2" id="power" name="power" style="width:100%" required>
+                                    <option value="">Seleccione Una Potencia</option>
                                     <?php foreach ($powers as $key => $value) : ?>
-                                        <?php if ($value->id_power == $elements->id_power_element) : ?>
-                                            <option value="<?php echo $elements->id_power_element ?>" selected><?php echo $elements->name_power ?></option>
-                                        <?php else : ?>
-                                            <option value="<?php echo $value->id_power ?>"><?php echo $value->name_power ?></option>
-                                        <?php endif ?>
+                                        <option value="<?php echo $value->id_power ?>"><?php echo $value->name_power ?></option>
                                     <?php endforeach ?>
                                 </select>
 
@@ -225,13 +186,10 @@ if (isset($routesArray[3])) {
                             ?>
 
                             <div class="form-group">
-                                <select class="form-control select2" id="material" name="material" style="width:100%">
+                                <select class="form-control select2" id="material" name="material" style="width:100%" required>
+                                    <option value="">Seleccione un Material</option>
                                     <?php foreach ($materials as $key => $value) : ?>
-                                        <?php if ($value->id_material == $elements->id_material_element) : ?>
-                                            <option value="<?php echo $elements->id_material_element ?>" selected><?php echo $elements->name_material ?></option>
-                                        <?php else : ?>
-                                            <option value="<?php echo $value->id_material ?>"><?php echo $value->name_material ?></option>
-                                        <?php endif ?>
+                                        <option value="<?php echo $value->id_material ?>"><?php echo $value->name_material ?></option>
                                     <?php endforeach ?>
                                 </select>
 
@@ -251,13 +209,10 @@ if (isset($routesArray[3])) {
                             ?>
 
                             <div class="form-group">
-                                <select class="form-control select2" id="height" name="height" style="width:100%">
+                                <select class="form-control select2" id="height" name="height" style="width:100%" required>
+                                    <option value="">Seleccione una Altura</option>
                                     <?php foreach ($heights as $key => $value) : ?>
-                                        <?php if ($value->id_height == $elements->id_height_element) : ?>
-                                            <option value="<?php echo $elements->id_height_element ?>" selected><?php echo $elements->name_height ?></option>
-                                        <?php else : ?>
-                                            <option value="<?php echo $value->id_height ?>"><?php echo $value->name_height ?></option>
-                                        <?php endif ?>
+                                        <option value="<?php echo $value->id_height ?>"><?php echo $value->name_height ?></option>
                                     <?php endforeach ?>
                                 </select>
 
@@ -265,10 +220,11 @@ if (isset($routesArray[3])) {
                                 <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
                         </div>
+
                         <!-- Precio del Elemento -->
                         <div class="form-group col-md-4">
                             <label>Precio Elemento</label>
-                            <input type="text" class="form-control" pattern="[.\\,\\0-9]{1,}" name="price" value="<?php echo $elements->value_element ?>" required>
+                            <input type="text" class="form-control" pattern="[.\\,\\0-9]{1,}" name="value" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -278,28 +234,18 @@ if (isset($routesArray[3])) {
                     <!-- Galeria de Imagenes -->
                     <label>Galeria de Imagenes del Elemento</label>
                     <div class="dropzone mb-3">
-                        <?php foreach (json_decode($elements->gallery_element, true) as $value): ?>
-                            <div class="dz-preview dz-file-preview">
-                                <div class="dz-image">
-                                    <img src="views/img/elements/<?= $elements->code_element ?>/<?= $value ?>" width="100%">
-                                </div>
-                                <a class="dz-remove" data-dz-remove remove="<?= $value ?>" onclick="removeGallery(this)">Eliminar archivo</a>
-                            </div>
-                        <?php endforeach ?>
                         <div class="dz-message">
+                            Arrastre aqui las imagenes. Maximo 500px x 500px
                         </div>
-
                     </div>
-                    <input type="hidden" name="galleryElementOld" value='<?= $elements->gallery_element ?>'>
                     <input type="hidden" name="galleryElement">
-                    <input type="hidden" name="deleteGalleryElement">
                 </div>
                 <!-- Derecha -->
                 <div class="col-md-6">
-                    <div class="row justify-content-center">
+                    <div class="row">
                         <!-- Muestro Código de Barras -->
-                        <div class="form-group col-md-12">
-                            <div id="divBarCode" style="display: flex; flex-direction:column; align-items:center;" >
+                        <div class="form-group col-md-12 textcenter">
+                            <div id="divBarCode" class="textcenter">
                                 <div id="printCode">
                                     <svg id="barcode"></svg>
                                 </div>
@@ -311,10 +257,8 @@ if (isset($routesArray[3])) {
                         <div class="form-group col-md-12">
                             <!-- Hoja de Vida del Elemento -->
                             <div class="form-group mt-2">
-                                <label>Hoja de Vida del Elemento</label>
-                                <textarea class="summernote" name="life" value="<?php echo $elements->life_element ?>">
-                                <?php echo html_entity_decode($elements->life_element) ?>
-                                </textarea>
+                                <label>Diseño del Documento<sup class="text-danger">*</sup></label>
+                                <textarea class="summernote" name="body-report" required></textarea>
 
                                 <div class="valid-feedback">Valid.</div>
                                 <div class="invalid-feedback">Please fill out this field.</div>
@@ -323,22 +267,65 @@ if (isset($routesArray[3])) {
                     </div>
                 </div>
             </div>
+            <?php
+            require_once "controllers/elements.controller.php";
+            $create = new ElementsController();
+            $create->create();
+            ?>
         </div>
         <div class="card-footer">
             <div class="col-md-8 offset-md-2">
-                <div class="form-group submtit">
+                <div class="form-group ">
                     <a href="/elements" class="btn btn-light border text-left">Back</a>
-                    <button type="submit" class="btn bg-dark float-right saveBtn">Save</button>
+                    <button type="submit" class="btn bg-dark float-right saveBtn">Generar</button>
                 </div>
             </div>
         </div>
     </form>
-    <script>
-        document.addEventListener("DOMContentLoaded", (event) => {
-            console.log("DOM fully loaded and parsed");
-            activeBlocks();
-            document.querySelector("#divBarCode").classList.remove("notblock");
-            fntBarcode();
-        });
-    </script>
 </div>
+
+<script>
+    if (document.querySelector("#code")) {
+        let inputCodigo = document.querySelector("#code");
+        inputCodigo.onkeyup = function() {
+            if (inputCodigo.value.length >= 5) {
+                document.querySelector("#divBarCode").classList.remove("notblock");
+                fntBarcode();
+            } else {
+                document.querySelector("#divBarCode").classList.add("notblock");
+            }
+        }
+    }
+
+    function activeBlocks() {
+        var selectElement = document.getElementById('classname');
+        var selectedValue = selectElement.value;
+        if (selectedValue == 1) {
+            document.querySelector("#divTecno").classList.remove("notblock");
+            document.querySelector("#divPotencia").classList.remove("notblock");
+            document.querySelector("#divMaterial").classList.add("notblock");
+            document.querySelector("#divAltura").classList.add("notblock");
+        }
+        if (selectedValue == 2) {
+            document.querySelector("#divTecno").classList.add("notblock");
+            document.querySelector("#divPotencia").classList.add("notblock");
+            document.querySelector("#divMaterial").classList.remove("notblock");
+            document.querySelector("#divAltura").classList.remove("notblock");
+        }
+        if (selectedValue == 3) {}
+    }
+
+    function fntBarcode(e) {
+        let codigo = document.querySelector("#code").value;
+        JsBarcode("#barcode", codigo);
+    }
+
+    function fntPrintBarcode(area) {
+        let elemntArea = document.querySelector(area);
+        let vprint = window.open(' ', 'popimpr', 'height=400, width=600');
+        vprint.document.write(elemntArea.innerHTML);
+        vprint.document.close();
+        vprint.print();
+        vprint.close();
+    }
+</script>

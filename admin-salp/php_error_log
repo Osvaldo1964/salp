@@ -1626,3 +1626,144 @@ Stack trace:
 [09-Aug-2024 21:13:30 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [09-Aug-2024 21:13:30 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [09-Aug-2024 21:13:30 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 28
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Attempt to read property "id_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 28
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 33
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Attempt to read property "id_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 33
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 53
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Attempt to read property "id_class_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 53
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 53
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Attempt to read property "id_class_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 53
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 69
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Attempt to read property "code_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 69
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 79
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Attempt to read property "name_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 79
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 88
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Attempt to read property "address_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 88
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 98
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Attempt to read property "latitude_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 98
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 106
+[10-Aug-2024 01:37:32 Europe/Berlin] PHP Warning:  Attempt to read property "longitude_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 106
+[10-Aug-2024 01:37:33 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 255
+[10-Aug-2024 01:37:33 Europe/Berlin] PHP Warning:  Attempt to read property "value_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 255
+[10-Aug-2024 01:37:33 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 265
+[10-Aug-2024 01:37:33 Europe/Berlin] PHP Warning:  Attempt to read property "gallery_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 265
+[10-Aug-2024 01:37:33 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 265
+[10-Aug-2024 01:37:33 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 274
+[10-Aug-2024 01:37:33 Europe/Berlin] PHP Warning:  Attempt to read property "gallery_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 274
+[10-Aug-2024 01:37:33 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 296
+[10-Aug-2024 01:37:33 Europe/Berlin] PHP Warning:  Attempt to read property "life_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 296
+[10-Aug-2024 01:37:33 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 297
+[10-Aug-2024 01:37:33 Europe/Berlin] PHP Warning:  Attempt to read property "life_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 297
+[10-Aug-2024 01:42:48 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_resource in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 127
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 28
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Attempt to read property "id_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 28
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 33
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Attempt to read property "id_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 33
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 53
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Attempt to read property "id_class_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 53
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 53
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Attempt to read property "id_class_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 53
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 69
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Attempt to read property "code_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 69
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 79
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Attempt to read property "name_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 79
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 88
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Attempt to read property "address_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 88
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 98
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Attempt to read property "latitude_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 98
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 106
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Attempt to read property "longitude_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 106
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 126
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Attempt to read property "id_resource_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 126
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 126
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Attempt to read property "id_resource_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 126
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 151
+[10-Aug-2024 17:30:52 Europe/Berlin] PHP Warning:  Attempt to read property "id_roud_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 151
+[10-Aug-2024 17:30:53 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 261
+[10-Aug-2024 17:30:53 Europe/Berlin] PHP Warning:  Attempt to read property "value_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 261
+[10-Aug-2024 17:30:53 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 271
+[10-Aug-2024 17:30:53 Europe/Berlin] PHP Warning:  Attempt to read property "gallery_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 271
+[10-Aug-2024 17:30:53 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 271
+[10-Aug-2024 17:30:53 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 283
+[10-Aug-2024 17:30:53 Europe/Berlin] PHP Warning:  Attempt to read property "gallery_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 283
+[10-Aug-2024 17:30:53 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 305
+[10-Aug-2024 17:30:53 Europe/Berlin] PHP Warning:  Attempt to read property "life_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 305
+[10-Aug-2024 17:30:53 Europe/Berlin] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 306
+[10-Aug-2024 17:30:53 Europe/Berlin] PHP Warning:  Attempt to read property "life_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 306
+[11-Aug-2024 17:44:56 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "=>" in C:\xampp\htdocs\salp\admin-salp\controllers\elements.controller.php on line 198
+[11-Aug-2024 17:45:26 Europe/Berlin] PHP Warning:  Undefined array key "galleryelementOld" in C:\xampp\htdocs\salp\admin-salp\controllers\elements.controller.php on line 170
+[11-Aug-2024 17:45:26 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in C:\xampp\htdocs\salp\admin-salp\controllers\elements.controller.php:170
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php(33): ElementsController->edit(6)
+#1 C:\xampp\htdocs\salp\admin-salp\views\pages\elements\elements.php(46): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\views\template.php(188): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\controllers\elements.controller.php on line 170
+[11-Aug-2024 17:45:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\controllers\elements.controller.php on line 30
+[11-Aug-2024 17:45:55 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 17:45:57 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 17:45:57 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\controllers\elements.controller.php on line 30
+[11-Aug-2024 17:46:04 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 17:46:45 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 17:48:13 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 17:48:13 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 17:48:13 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 17:48:13 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 17:48:13 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[11-Aug-2024 17:48:13 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 17:48:13 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 17:48:13 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 17:48:13 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 17:48:13 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[11-Aug-2024 17:48:16 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 17:48:32 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 17:48:32 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 17:48:32 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 17:48:32 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 17:48:32 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[11-Aug-2024 17:48:35 Europe/Berlin] PHP Warning:  Undefined array key "deleteGalleryProduct" in C:\xampp\htdocs\salp\admin-salp\controllers\elements.controller.php on line 179
+[11-Aug-2024 17:48:35 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\controllers\elements.controller.php on line 179
+[11-Aug-2024 17:49:21 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 17:49:21 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 17:49:21 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 17:49:21 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 17:49:21 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[11-Aug-2024 17:49:33 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 17:49:33 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 17:49:33 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 17:49:33 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 17:49:33 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[11-Aug-2024 17:52:46 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 17:52:46 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 17:52:46 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 17:52:46 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 17:52:46 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[11-Aug-2024 17:52:49 Europe/Berlin] PHP Warning:  unlink(views/img/elements/CLS95878): Is a directory in C:\xampp\htdocs\salp\admin-salp\controllers\elements.controller.php on line 180
+[11-Aug-2024 17:56:29 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 17:56:42 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 17:56:49 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 17:56:55 Europe/Berlin] PHP Warning:  unlink(views/img/elements/CLS95878): Is a directory in C:\xampp\htdocs\salp\admin-salp\controllers\elements.controller.php on line 180
+[11-Aug-2024 17:56:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 17:56:59 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 17:57:25 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 17:57:29 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 17:57:29 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 17:57:29 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 17:57:29 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 17:57:29 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[11-Aug-2024 17:57:31 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 17:57:34 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 18:42:33 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 18:44:17 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 18:44:17 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[11-Aug-2024 18:44:17 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 18:44:17 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[11-Aug-2024 18:44:17 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[11-Aug-2024 18:44:23 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 18:44:44 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 18:44:51 Europe/Berlin] PHP Warning:  unlink(views/img/elements/CLS95878): Is a directory in C:\xampp\htdocs\salp\admin-salp\controllers\elements.controller.php on line 180
+[11-Aug-2024 18:44:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[11-Aug-2024 18:44:54 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257

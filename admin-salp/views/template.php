@@ -94,6 +94,7 @@ foreach ($routesArray as $key => $value) {
       $routesArray[1] == "admins" ||
       $routesArray[1] == "users" ||
       $routesArray[1] == "crews" ||
+      $routesArray[1] == "pqrs" ||
       $routesArray[1] == "powers" ||
       $routesArray[1] == "classes" ||
       $routesArray[1] == "resources" ||
@@ -174,6 +175,7 @@ foreach ($routesArray as $key => $value) {
             $routesArray[1] == "admins" ||
             $routesArray[1] == "users" ||
             $routesArray[1] == "crews" ||
+            $routesArray[1] == "pqrs" ||
             $routesArray[1] == "powers" ||
             $routesArray[1] == "classes" ||
             $routesArray[1] == "resources" ||
