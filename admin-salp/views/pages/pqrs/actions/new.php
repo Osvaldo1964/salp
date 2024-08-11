@@ -1,6 +1,3 @@
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDTJ5uq4WEhP4noQ6DKM7aFVUYwGabdu8&loading=async&libraries=geometry">
-</script>
 <div class="card card-dark card-outline">
     <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
         <div class="card-header">
@@ -49,8 +46,8 @@
                 </div>
                 <!-- Derecha -->
                 <div class="col-md-8">
-                    <div id="map">
-                    </div>
+                <div id="map" style="height: 500px; width: 100%;"></div>
+
                 </div>
             </div>
             <?php
@@ -74,3 +71,6 @@
         });
     </script>
 </div>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDTJ5uq4WEhP4noQ6DKM7aFVUYwGabdu8&callback=initMap&libraries=geometry&loading=async">
+</script>

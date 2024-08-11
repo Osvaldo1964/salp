@@ -1,3 +1,4 @@
+
 /* Validacion de formularios */
 (function () {
   'use strict';
@@ -318,17 +319,17 @@ $(".dropzone").dropzone({
 
 /* Edición de Galería */
 
-if($("[name='galleryElementOld']").length > 0 && $("[name='galleryElementOld']").val() != ""){
+if ($("[name='galleryElementOld']").length > 0 && $("[name='galleryElementOld']").val() != "") {
   var arrayFilesOld = JSON.parse($("[name='galleryElementOld']").val());
 }
 
 var arrayFilesDelete = Array();
 
-function removeGallery(elem){
+function removeGallery(elem) {
   $(elem).parent().remove();
-  var index = arrayFilesOld.indexOf($(elem).attr("remove"));  
-    arrayFilesOld.splice(index, 1);
-    console.log("arrayFilesOld", arrayFilesOld);
+  var index = arrayFilesOld.indexOf($(elem).attr("remove"));
+  arrayFilesOld.splice(index, 1);
+  console.log("arrayFilesOld", arrayFilesOld);
   $("[name='galleryElementOld']").val(JSON.stringify(arrayFilesOld));
   arrayFilesDelete.push($(elem).attr("remove"));
   $("[name='deleteGalleryElement']").val(JSON.stringify(arrayFilesDelete));
@@ -381,28 +382,31 @@ function fntPrintBarcode(area) {
   vprint.close();
 }
 
-
 async function initMap() {
-  // The location of Uluru
-  if(latitude === undefined || longitude === undefined)
-    {
-        latitude = 11.2084292;
-        longitude = -74.2237886;
-    }
-  const position = { lat: latitude, lng: longitude }; 
-  // Request needed libraries.
-  //@ts-ignore
+  // Variables para ubicarte en santa marta
+  let latitude = 11.2084292;
+  let longitude = -74.2237886;
+
+  // Por si tiene la ubicación activada en el teléfono o navegador, las pilla de ahí y se las asigna
+  if (typeof window.latitude !== 'undefined' && typeof window.longitude !== 'undefined') {
+    latitude = window.latitude;
+    longitude = window.longitude;
+  }
+
+  const position = { lat: latitude, lng: longitude };
+
+  // Importas googlemaps
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-  // The map, centered at Uluru
-  map = new Map(document.getElementById("map"), {
+  // Te ubica la dirección y te la pone en un zoom que te ambienta que tienes al rededor
+  const map = new Map(document.getElementById("map"), {
     zoom: 16,
     center: position,
     mapId: "DEMO_MAP_ID",
   });
 
-  // The marker, positioned at Uluru
+  // Te pone el mondaquito ese para que sepas exactamente donde estás
   const marker = new AdvancedMarkerElement({
     map: map,
     position: position,
