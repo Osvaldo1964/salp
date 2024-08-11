@@ -8,7 +8,6 @@
             require_once "controllers/elements.controller.php";
             $create = new ElementsController();
             ?>
-
             <div class="row">
                 <!-- Izquierda -->
                 <div class="col-md-4">
@@ -52,28 +51,27 @@
                             </div>
                         </div>
                     </div>
-                
                     <!-- Derecha -->
-                    <div class="col-md-8">
-                        <div id="map">
+                <div class="col-md-8">
+                    <div id="map">
 
-                        </div>
                     </div>
                 </div>
+            </div>
                 <?php
                 require_once "controllers/elements.controller.php";
                 $create = new ElementsController();
                 $create->create();
                 ?>
-            </div>
-            <div class="card-footer">
-                <div class="col-md-8 offset-md-2">
-                    <div class="form-group submtit">
-                        <a href="/elements" class="btn btn-light border text-left">Back</a>
-                        <button type="submit" class="btn bg-dark float-right saveBtn">Save</button>
-                    </div>
+        </div>
+        <div class="card-footer">
+            <div class="col-md-8 offset-md-2">
+                <div class="form-group submtit">
+                    <a href="/elements" class="btn btn-light border text-left">Back</a>
+                    <button type="submit" class="btn bg-dark float-right saveBtn">Save</button>
                 </div>
             </div>
+        </div>
     </form>
     <script>
         document.addEventListener("DOMContentLoaded", (event) => {
