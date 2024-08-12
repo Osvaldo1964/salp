@@ -204,9 +204,9 @@ function execDatatable(text) {
     
             var columns = [
                 { "data": "id_pqr" },
-                { "data": "name_pqr`" },
+                { "data": "name_pqr" },
                 { "data": "email_pqr" },
-                { "data": "addres_pqr" },
+                { "data": "address_pqr" },
                 { "data": "message_pqr" },
                 { "data": "date_created_pqr" },
                 { "data": "status_pqr" },

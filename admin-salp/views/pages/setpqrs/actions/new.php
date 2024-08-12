@@ -59,7 +59,7 @@
         <div class="card-footer">
             <div class="col-md-8 offset-md-2">
                 <div class="form-group submtit">
-                    <a href="/elements" class="btn btn-light border text-left">Back</a>
+                    <a href="/setpqrs" class="btn btn-light border text-left">Back</a>
                     <button type="submit" class="btn bg-dark float-right saveBtn">Save</button>
                 </div>
             </div>

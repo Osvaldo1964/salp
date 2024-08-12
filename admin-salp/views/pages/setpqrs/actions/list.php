@@ -14,9 +14,9 @@ if (isset($_GET["start"]) && isset($_GET["end"])) {
 <div class="card">
     <div class="card-header">
         <h3 class="card-title">
-<!--             <a class="btn bg-info btn-sm" href="/setpqrs/autonew">Generar Lotes</a>
-            <a class="btn bg-info btn-sm" href="/setpqrs/new">Generar Manual</a>
- -->        </h3>
+            <!--             <a class="btn bg-info btn-sm" href="/setpqrs/autonew">Generar Lotes</a> -->
+            <a class="btn bg-info btn-sm" href="/setpqrs/new">Generar PQR</a>
+        </h3>
         <div class="card-tools">
             <div class="d-flex">
                 <div class="d-flex mr-2 text-sm">
@@ -87,9 +87,9 @@ if (isset($_GET["start"]) && isset($_GET["end"])) {
                 <div class="modal-footer d-flex justify-content-between">
 
                     <?php
-                        require_once "controllers/payorders.controller.php";
-                        $payorderUpdate = new PayordersController();
-                        $payorderUpdate->payorderUpdate();
+                    require_once "controllers/payorders.controller.php";
+                    $payorderUpdate = new PayordersController();
+                    $payorderUpdate->payorderUpdate();
                     ?>
                     <div><button type="button" class="btn btn-danger border" data-dismiss="modal">Cerrar</button></div>
                     <div><button type="submit" class="btn btn-success">Actualizar</button></div>
