@@ -384,8 +384,8 @@ function fntPrintBarcode(area) {
 
 async function initMap() {
   // Variables para ubicarte en santa marta
-  //let latitude = 11.2084292;
-  //let longitude = -74.2237886;
+  let latitude = 11.24323;
+  let longitude = -74.20496;
 
   // Por si tiene la ubicación activada en el teléfono o navegador, las pilla de ahí y se las asigna
   if (typeof window.latitude !== 'undefined' && typeof window.longitude !== 'undefined') {

@@ -59,7 +59,6 @@ class PqrsController
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
 					fncSweetAlert("success", "Registro grabado correctamente", "");
-                    initMap();
 				</script>';
                 }
             } else {
