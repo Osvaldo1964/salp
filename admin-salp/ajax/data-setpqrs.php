@@ -20,7 +20,7 @@ class DatatableController
 			$length = $_POST['length']; //Indicador de la longitud de la paginación.
 
 			/* El total de registros de la data */
-			$url = "relations?rel=pqrs,crews&type=pqrs,crew&select=id_pqrs&linkTo=date_created_pqrs&between1=" . $_GET["between1"] . "&between2=" . $_GET["between2"];
+			$url = "relations?rel=pqrs,crews&type=pqr,crew&select=id_pqr&linkTo=date_created_pqr&between1=" . $_GET["between1"] . "&between2=" . $_GET["between2"];
 			//echo '<pre>'; print_r($url); echo '</pre>';
 			$method = "GET";
 			$fields = array();
@@ -34,7 +34,7 @@ class DatatableController
 			}
 
 			/* Búsqueda de datos */
-			$select = "id_pqr,name_pqr,email_pqr,address_pqr,message_pqr,id_crew_pqr,id_crew,name_crew,date_created_pqr";
+			$select = "id_pqr,name_pqr,email_pqr,address_pqr,message_pqr,id_crew_pqr,id_crew,name_crew,status_pqr,date_created_pqr";
 
 			if (!empty($_POST['search']['value'])) {
 				if (preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/', $_POST['search']['value'])) {
@@ -74,7 +74,7 @@ class DatatableController
 				echo '{"data": []}';
 				return;
 			}
-
+			//echo '<pre>'; print_r($url); echo '</pre>';exit;
 			/* Construimos el dato JSON a regresar */
 			$dataJson = '{
             	"Draw": ' . intval($draw) . ',
@@ -113,7 +113,7 @@ class DatatableController
 				$email_pqr = $value->email_pqr;
 				$address_pqr = $value->address_pqr;
 				$message_pqr = $value->message_pqr;
-				$date_created_pqr = $value->date_title;
+				$date_created_pqr = $value->date_created_pqr;
 
 				$dataJson .= '{ 
             		"id_pqr":"' . ($start + $key + 1) . '",

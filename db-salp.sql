@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-08-2024 a las 19:48:51
+-- Tiempo de generación: 12-08-2024 a las 03:18:49
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -147,7 +147,12 @@ CREATE TABLE `elements` (
 --
 
 INSERT INTO `elements` (`id_element`, `id_class_element`, `code_element`, `name_element`, `life_element`, `address_element`, `id_minute_element`, `id_resource_element`, `id_roud_element`, `id_technology_element`, `id_power_element`, `id_material_element`, `id_height_element`, `altitud_element`, `latitude_element`, `longitude_element`, `id_dispose_element`, `value_element`, `gallery_element`, `status_element`, `date_created_element`, `date_updated_element`) VALUES
-(1, 1, '2514', 'prueba', 'nada', 'casa', 1, 1, 1, 1, 1, 0, NULL, 1.252, 10.2547, 74.2561, 0, 15000.00, '', 'Activo', '2024-08-08', '2024-08-08 16:11:31');
+(1, 1, '2514', 'prueba', 'nada', 'casa', 1, 1, 1, 1, 1, 0, NULL, 1.252, 10.2547, 74.2561, 0, 15000.00, '', 'Activo', '2024-08-08', '2024-08-08 16:11:31'),
+(2, 2, '2515257', 'OTRA CUADRILLA PESADA DDFS', '<p>prueba</p>', 'OTRA DIRECC', 0, 2, 1, 0, 0, 1, 185, 0, 10.2652, 14.2522, 0, 16000.00, '[\"87150.jpg\",\"20416.jpg\",\"29439.png\"]', 'Activo', '2024-08-09', '2024-08-08 23:38:16'),
+(3, 1, '2515257f', 'OTRA CUADRILLA PESADA A', '<p>otra prueba</p>', 'CALLE LDLDD', 0, 2, 1, 1, 1, 0, 185, 0, 10.2652, 14.2522, 0, 22000.00, '[\"99289.png\",\"54535.jpg\",\"30063.png\"]', 'Activo', '2024-08-09', '2024-08-08 23:43:53'),
+(4, 1, '251525736', 'PRUEBA DE ARCHIVOS', '<p>sabdienpdo</p>', 'MMMM BUENLLDS', 0, 1, 1, 1, 1, 0, 304, 0, 10.2652, 14.2522, 0, 3250.00, '[\"66876.jpg\",\"59628.jpg\",\"54638.jpg\"]', 'Activo', '2024-08-09', '2024-08-08 23:49:40'),
+(5, 1, 'CL83748', 'EJEMPLO DOS', '<p>PRUEBA</p>', 'DIRECCION TRES', 0, 2, 1, 1, 1, 0, 500, 0, 10.2652, 14.2522, 0, 14500.00, '[\"49424.jpg\",\"13773.png\",\"19857.png\"]', 'Activo', '2024-08-09', '2024-08-08 23:55:51'),
+(6, 1, 'CLS95878', 'OTRA CUADRILLA PESADA', '                                                                                                                                                                                                <p>HOJA DE VIDA</p>                                                                                                                                                                                                ', 'LA DE MEDELLIN', 0, 2, 1, 1, 1, 1, 1, 0, 10.2652, 14.2522, 0, 0.00, '[\"96111.jpg\",\"16605.jpg\",\"78349.jpg\"]', 'Activo', '2024-08-09', '2024-08-09 02:21:07');
 
 -- --------------------------------------------------------
 
@@ -251,15 +256,22 @@ CREATE TABLE `pqrs` (
   `message_pqr` text NOT NULL,
   `id_element_pqr` bigint(20) NOT NULL,
   `date_asign_pqr` date DEFAULT NULL,
-  `id_creq_pqr` bigint(20) NOT NULL,
+  `id_crew_pqr` bigint(20) NOT NULL,
   `date_solution_pqr` date DEFAULT NULL,
-  `latitud_pqr` float NOT NULL,
-  `longitud_pqr` float NOT NULL,
+  `latitude_pqr` float NOT NULL,
+  `longitude_pqr` float NOT NULL,
   `name_address_pqr` text NOT NULL,
   `status_pqr` varchar(8) NOT NULL,
   `date_created_pqr` date DEFAULT NULL,
   `date_updated_pqr` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `pqrs`
+--
+
+INSERT INTO `pqrs` (`id_pqr`, `name_pqr`, `email_pqr`, `address_pqr`, `message_pqr`, `id_element_pqr`, `date_asign_pqr`, `id_crew_pqr`, `date_solution_pqr`, `latitude_pqr`, `longitude_pqr`, `name_address_pqr`, `status_pqr`, `date_created_pqr`, `date_updated_pqr`) VALUES
+(1, 'Otra Cuadrilla Pesada', 'osvicor@hotmail.com', 'carrera 11 no. 6-45 santa marta colombia', 'oprueieie', 0, '2024-08-12', 1, NULL, 11.2503, -74.2037, 'Cra. 11 #6-45, Comuna 3, Santa Marta, Magdalena, Colombia', 'Activo', '2024-08-12', '2024-08-12 00:35:26');
 
 -- --------------------------------------------------------
 
@@ -381,7 +393,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fullname_user`, `username_user`, `email_user`, `password_user`, `token_user`, `token_exp_user`, `id_rol_user`, `picture_user`, `country_user`, `city_user`, `address_user`, `phone_user`, `method_user`, `date_created_user`, `date_updated_user`, `status_user`, `verification_user`) VALUES
-(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjMxMjk5MDcsImV4cCI6MTcyMzIxNjMwNywiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.EnXmP9a3qSQyH0u7RZijnYMKc6Ol_2o41C1cXf7jllw', '1723216307', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
+(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjM0MTg4MjYsImV4cCI6MTcyMzUwNTIyNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.FArLd5cb4j6ytnrjDJcpG1mxz3tAnmdiuxWFm_Ngc6s', '1723505226', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
 (7, 'Jorge Villalobos', 'jorgito', 'jorge@gmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', NULL, NULL, 'Usuarios', '7.png', 'Algeria', 'Varsobia', 'LA QUE SEA', '+213_3153153153', 'direct', '2024-06-22', '2024-06-22 14:18:30', 1, 1),
 (31, 'Juan Prueto', '', 'prueba@mail.com', '', NULL, NULL, '1', NULL, 'Afghanistan', 'Otra', 'calle 1', '+93_3253253325', 'direct', '2024-06-25', '2024-06-25 20:10:46', 1, 1);
 
@@ -512,7 +524,7 @@ ALTER TABLE `deliveries`
 -- AUTO_INCREMENT de la tabla `elements`
 --
 ALTER TABLE `elements`
-  MODIFY `id_element` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_element` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `heights`
@@ -542,7 +554,7 @@ ALTER TABLE `powers`
 -- AUTO_INCREMENT de la tabla `pqrs`
 --
 ALTER TABLE `pqrs`
-  MODIFY `id_pqr` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pqr` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `resources`

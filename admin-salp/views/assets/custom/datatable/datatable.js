@@ -203,13 +203,13 @@ function execDatatable(text) {
             var url = "ajax/data-setpqrs.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
     
             var columns = [
-                { "data": "id_pqrs" },
-                { "data": "name_pqrs`" },
-                { "data": "email_pqrs" },
-                { "data": "addres_pqrs" },
-                { "data": "message_pqrs" },
-                { "data": "date_created_pqrs" },
-                { "data": "status_pqrs" },
+                { "data": "id_pqr" },
+                { "data": "name_pqr`" },
+                { "data": "email_pqr" },
+                { "data": "addres_pqr" },
+                { "data": "message_pqr" },
+                { "data": "date_created_pqr" },
+                { "data": "status_pqr" },
                 { "data": "actions", "orderable": false, "search": false }
             ];
     
