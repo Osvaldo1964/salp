@@ -1767,3 +1767,4 @@ Stack trace:
 [11-Aug-2024 18:44:51 Europe/Berlin] PHP Warning:  unlink(views/img/elements/CLS95878): Is a directory in C:\xampp\htdocs\salp\admin-salp\controllers\elements.controller.php on line 180
 [11-Aug-2024 18:44:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
 [11-Aug-2024 18:44:54 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[12-Aug-2024 01:46:44 Europe/Berlin] PHP Warning:  Undefined array key "mail" in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 27

@@ -146,13 +146,13 @@ $routesArray = array_filter($routesArray);
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/pqrs" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "titles") : ?>active bg-info<?php endif ?>">
+                                    <a href="/pqrs" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "pqrs") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Registro</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/vehicles" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "payorders") : ?>active bg-info<?php endif ?>">
+                                    <a href="/setpqrs" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "setpqrs") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Seguimiento</p>
                                     </a>

@@ -197,6 +197,24 @@ function execDatatable(text) {
         page = "crews";
     }
 
+        /* Valido Tabla Cuadrillas*/
+        if ($(".tablePqrs").length > 0) {
+
+            var url = "ajax/data-setpqrs.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+    
+            var columns = [
+                { "data": "id_pqrs" },
+                { "data": "name_pqrs`" },
+                { "data": "email_pqrs" },
+                { "data": "addres_pqrs" },
+                { "data": "message_pqrs" },
+                { "data": "date_created_pqrs" },
+                { "data": "status_pqrs" },
+                { "data": "actions", "orderable": false, "search": false }
+            ];
+    
+            page = "setpqrs";
+        }
 
     /* FIN CONFIGURA DATATABLE PARA PQRs */
 

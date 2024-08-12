@@ -1,6 +1,6 @@
 <?php
 
-class CrewsController
+class PqrsController
 {
 
     /* Creacion de Marcas */
@@ -15,22 +15,39 @@ class CrewsController
 
             /* Validamos la sintaxis de los campos */
             if (
-                preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/', $_POST["name"]) &&
-                preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/', $_POST["driver"]) &&
-                preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/', $_POST["tecno"]) &&
-                preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/', $_POST["assist"])
+                preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/', $_POST["name"])
+                /*  &&
+                preg_match('/^[.a-zA-Z0-9_]+([.][.a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST["email"]) &&
+                preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/', $_POST["address"]) &&
+                preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/', $_POST["message"]) */
             ) {
+
+                /* Verifico la direccion con google */
+                $nombre = trim(TemplateController::capitalize($_POST["name"]));
+                $email  = strtolower($_POST['email']);
+                $address  = strtolower(($_POST['address']));
+                $message  = $_POST['message'];
+                $coordenadas = $this->getGeocodeData($address);
+                $latitud = $coordenadas[0];
+                $longitud = $coordenadas[1];
+                $newdireccion = $coordenadas[2];
+
 
                 /* Agrupamos la información */
                 $data = array(
-                    "name_crew" => trim(strtoupper($_POST["name"])),
-                    "driver_crew" => trim(strtoupper($_POST["driver"])),
-                    "tecno_crew" => trim(strtoupper($_POST["tecno"])),
-                    "assist_crew" => trim(strtoupper($_POST["assist"])),
-                    "date_created_crew" => date("Y-m-d")
+                    "name_pqr" => $nombre,
+                    "email_pqr" => $email,
+                    "address_pqr" => $address,
+                    "message_pqr" => $message,
+                    "latitude_pqr" => $latitud,
+                    "longitude_pqr" => $longitud,
+                    "name_address_pqr" => $newdireccion,
+                    "status_pqr" => 'Activo',
+                    "date_created_pqr" => date("Y-m-d")
                 );
 
-                $url = "crews?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
+                //echo '<pre>'; print_r($data); echo '</pre>';return;
+                $url = "pqrs?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
                 $method = "POST";
                 $fields = $data;
                 $response = CurlController::request($url, $method, $fields);
@@ -41,7 +58,8 @@ class CrewsController
 					fncFormatInputs();
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Registro grabado correctamente", "/crews");
+					fncSweetAlert("success", "Registro grabado correctamente", "");
+                    initMap();
 				</script>';
                 }
             } else {
@@ -53,28 +71,6 @@ class CrewsController
 				</script>';
             }
         }
-    }
-
-    public function pqrs()
-    {
-        if ($_POST) {
-            $nombre = ucwords(strtolower(strClean($_POST['nombrePqr'])));
-            $email  = strtolower(strClean($_POST['emailPqr']));
-            $direccion  = strtolower(strClean($_POST['direccionPqr']));
-            $mensaje  = strClean($_POST['mensajePqr']);
-            $coordenadas = $this->getGeocodeData($direccion);
-            $latitud = $coordenadas[0];
-            $longitud = $coordenadas[1];
-            $newdireccion = $coordenadas[2];
-            $userContact = $this->setPqr($nombre, $email, $direccion, $mensaje, $latitud, $longitud, $newdireccion);
-            if ($userContact > 0) {
-                $arrResponse = array('status' => true, 'lat' => $latitud, 'lon' => $longitud, 'msg' => "Su mensaje fue enviado correctamente.");
-            } else {
-                $arrResponse = array('status' => false, 'msg' => "No es posible enviar el mensaje.");
-            }
-            echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
-        }
-        die();
     }
 
     function getGeocodeData($address)
