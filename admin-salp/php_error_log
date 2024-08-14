@@ -1770,3 +1770,7 @@ Stack trace:
 [12-Aug-2024 01:46:44 Europe/Berlin] PHP Warning:  Undefined array key "mail" in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 27
 [12-Aug-2024 15:17:31 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\new.php on line 212
 [12-Aug-2024 15:19:31 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[14-Aug-2024 17:43:19 Europe/Berlin] PHP Warning:  preg_match(): Unknown modifier '/' in C:\xampp\htdocs\salp\admin-salp\controllers\typedeliveries.controller.php on line 18
+[14-Aug-2024 17:44:00 Europe/Berlin] PHP Warning:  preg_match(): Unknown modifier '/' in C:\xampp\htdocs\salp\admin-salp\controllers\typedeliveries.controller.php on line 18
+[14-Aug-2024 18:03:00 Europe/Berlin] PHP Warning:  include(views/pages/itemdeliveries/itemdeliveries.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\template.php on line 194
+[14-Aug-2024 18:03:00 Europe/Berlin] PHP Warning:  include(): Failed opening 'views/pages/itemdeliveries/itemdeliveries.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\salp\admin-salp\views\template.php on line 194

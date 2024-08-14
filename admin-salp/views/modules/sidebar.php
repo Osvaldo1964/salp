@@ -258,9 +258,15 @@ $routesArray = array_filter($routesArray);
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/pqrs" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "titles") : ?>active bg-info<?php endif ?>">
+                                    <a href="/typedeliveries" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "typedeliveries") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Registro</p>
+                                        <p>Tipo de Actas</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/itemdeliveries" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "itemdeliveries") : ?>active bg-info<?php endif ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Subtipos de Actas</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">

@@ -1,9 +1,9 @@
 <?php
 
-class RoudsController
+class TypedeliveriesController
 {
 
-	/* Creacion de Rutas */
+	/* Creacion de Tipos de Actas */
 	public function create()
 	{
 		//echo '<pre>'; print_r($_POST); echo '</pre>';return;
@@ -15,18 +15,18 @@ class RoudsController
 
 			/* Validamos la sintaxis de los campos */
 			if (
-                preg_match('/^[-\\(\\)\\=\\%\\&\\$\\;\\_\\*\\"\\#\\?\\¿\\!\\¡\\:\\,\\.\\0-9a-zA-ZñÑáéíóúÁÉÍÓÚ ]{1,}$//', $_POST["code"]) &&
+                preg_match('/^[-\\(\\)\\=\\%\\&\\$\\;\\_\\*\\"\\#\\?\\¿\\!\\¡\\:\\,\\.\\0-9a-zA-ZñÑáéíóúÁÉÍÓÚ ]{1,}$/', $_POST["code"]) &&
 				preg_match('/^[-\\(\\)\\=\\%\\&\\$\\;\\_\\*\\"\\#\\?\\¿\\!\\¡\\:\\,\\.\\0-9a-zA-ZñÑáéíóúÁÉÍÓÚ ]{1,}$/', $_POST["name"])
 			) {
 
 				/* Agrupamos la información */
 				$data = array(
-                    "code_roud" => trim(strtoupper($_POST["code"])),
-					"name_roud" => trim(strtoupper($_POST["name"])),
-					"date_created_roud" => date("Y-m-d")
+                    "code_typedelivery" => trim(strtoupper($_POST["code"])),
+					"name_typedelivery" => trim(strtoupper($_POST["name"])),
+					"date_created_typedelivery" => date("Y-m-d")
 				);
 
-				$url = "rouds?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
+				$url = "typedeliveries?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
 				$method = "POST";
 				$fields = $data;
 				
@@ -37,7 +37,7 @@ class RoudsController
 					fncFormatInputs();
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Registro grabado correctamente", "/rouds");
+					fncSweetAlert("success", "Registro grabado correctamente", "/typedeliveries");
 				</script>';
 				}
 			} else {
@@ -51,18 +51,18 @@ class RoudsController
 		}
 	}
 
-	/* Edición rutas */
+	/* Edición Tipos de Actas */
 	public function edit($id)
 	{
-		if (isset($_POST["idRoud"])) {
+		if (isset($_POST["idTypedelivery"])) {
  			echo '<script>
 					matPreloader("on");
 					fncSweetAlert("loading", "Loading...", "");
 				</script>'; 
 
-			if ($id == $_POST["idRoud"]) {
-				$select = "id_roud";
-				$url = "rouds?select=" . $select . "&linkTo=id_roud&equalTo=" . $id;
+			if ($id == $_POST["idTypedelivery"]) {
+				$select = "id_typedelivery";
+				$url = "typedeliveries?select=" . $select . "&linkTo=id_typedelivery&equalTo=" . $id;
 				$method = "GET";
 				$fields = array();
 				$response = CurlController::request($url, $method, $fields);
@@ -75,11 +75,11 @@ class RoudsController
 					) {
 
 						/* Agrupamos la información */
-						$data = "code_roud=" . $_POST["code"] .
-                                "&name_roud=" . $_POST["name"];
+						$data = "code_typedelivery=" . $_POST["code"] .
+                                "&name_typedelivery=" . $_POST["name"];
 ;
 						/* Solicitud a la API */
-						$url = "rouds?id=" . $id . "&nameId=id_roud&token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
+						$url = "typedeliveries?id=" . $id . "&nameId=id_typedelivery&token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
 
 						$method = "PUT";
 						$fields = $data;
@@ -93,7 +93,7 @@ class RoudsController
 									fncFormatInputs();
 									matPreloader("off");
 									fncSweetAlert("close", "", "");
-									fncSweetAlert("success", "Registro actualizado correctamente", "/rouds");
+									fncSweetAlert("success", "Registro actualizado correctamente", "/typedeliveries");
 							</script>';
 						} else {
 							echo '<script>

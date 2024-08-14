@@ -178,6 +178,28 @@ function execDatatable(text) {
 
     /* FIN CONFIGURA DATATABLE PARA ELEMENTOS */
 
+    /* CONFIGURAR DATOS PARA ACTAS */
+
+        /* Valido Tabla Tipos de Actas */
+        if ($(".tableTypedeliveries").length > 0) {
+
+            var url = "ajax/data-typedeliveries.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+    
+            var columns = [
+                { "data": "id_typedelivery" },
+                { "data": "code_typedelivery" },
+                { "data": "name_typedelivery" },
+                { "data": "date_created_typedelivery" },
+                { "data": "status_typedelivery" },
+                { "data": "actions", "orderable": false, "search": false }
+            ];
+    
+            page = "typedeliveries";
+        }
+
+    /* CONFIGURAR DATOS PARA ACTAS */
+
+
     /* Valido Tabla Cuadrillas*/
     if ($(".tableCrews").length > 0) {
 
