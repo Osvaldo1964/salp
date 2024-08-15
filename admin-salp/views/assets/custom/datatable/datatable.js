@@ -180,22 +180,41 @@ function execDatatable(text) {
 
     /* CONFIGURAR DATOS PARA ACTAS */
 
-        /* Valido Tabla Tipos de Actas */
-        if ($(".tableTypedeliveries").length > 0) {
+    /* Valido Tabla Tipos de Actas */
+    if ($(".tableTypedeliveries").length > 0) {
 
-            var url = "ajax/data-typedeliveries.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
-    
-            var columns = [
-                { "data": "id_typedelivery" },
-                { "data": "code_typedelivery" },
-                { "data": "name_typedelivery" },
-                { "data": "date_created_typedelivery" },
-                { "data": "status_typedelivery" },
-                { "data": "actions", "orderable": false, "search": false }
-            ];
-    
-            page = "typedeliveries";
-        }
+        var url = "ajax/data-typedeliveries.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_typedelivery" },
+            { "data": "code_typedelivery" },
+            { "data": "name_typedelivery" },
+            { "data": "date_created_typedelivery" },
+            { "data": "status_typedelivery" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "typedeliveries";
+    }
+
+    /* Valido Tabla Items de Actas */
+    if ($(".tableItemdeliveries").length > 0) {
+
+        var url = "ajax/data-itemdeliveries.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_itemdelivery" },
+            { "data": "code_itemdelivery" },
+            { "data": "name_typedelivery" },
+            { "data": "name_itemdelivery" },
+            { "data": "date_created_itemdelivery" },
+            { "data": "status_itemdelivery" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "itemdeliveries";
+    }
+
 
     /* CONFIGURAR DATOS PARA ACTAS */
 
@@ -219,24 +238,24 @@ function execDatatable(text) {
         page = "crews";
     }
 
-        /* Valido Tabla Cuadrillas*/
-        if ($(".tablePqrs").length > 0) {
+    /* Valido Tabla Cuadrillas*/
+    if ($(".tablePqrs").length > 0) {
 
-            var url = "ajax/data-setpqrs.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
-    
-            var columns = [
-                { "data": "id_pqr" },
-                { "data": "name_pqr" },
-                { "data": "email_pqr" },
-                { "data": "address_pqr" },
-                { "data": "message_pqr" },
-                { "data": "date_created_pqr" },
-                { "data": "status_pqr" },
-                { "data": "actions", "orderable": false, "search": false }
-            ];
-    
-            page = "setpqrs";
-        }
+        var url = "ajax/data-setpqrs.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_pqr" },
+            { "data": "name_pqr" },
+            { "data": "email_pqr" },
+            { "data": "address_pqr" },
+            { "data": "message_pqr" },
+            { "data": "date_created_pqr" },
+            { "data": "status_pqr" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "setpqrs";
+    }
 
     /* FIN CONFIGURA DATATABLE PARA PQRs */
 

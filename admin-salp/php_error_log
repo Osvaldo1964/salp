@@ -1774,3 +1774,50 @@ Stack trace:
 [14-Aug-2024 17:44:00 Europe/Berlin] PHP Warning:  preg_match(): Unknown modifier '/' in C:\xampp\htdocs\salp\admin-salp\controllers\typedeliveries.controller.php on line 18
 [14-Aug-2024 18:03:00 Europe/Berlin] PHP Warning:  include(views/pages/itemdeliveries/itemdeliveries.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\template.php on line 194
 [14-Aug-2024 18:03:00 Europe/Berlin] PHP Warning:  include(): Failed opening 'views/pages/itemdeliveries/itemdeliveries.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\salp\admin-salp\views\template.php on line 194
+[15-Aug-2024 16:19:03 Europe/Berlin] PHP Warning:  Undefined array key "typedel" in C:\xampp\htdocs\salp\admin-salp\controllers\itemdeliveries.controller.php on line 24
+[15-Aug-2024 16:20:15 Europe/Berlin] PHP Warning:  Undefined array key "typeact" in C:\xampp\htdocs\salp\admin-salp\controllers\itemdeliveries.controller.php on line 24
+[15-Aug-2024 16:23:56 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "public" in C:\xampp\htdocs\salp\admin-salp\controllers\itemdeliveries.controller.php on line 56
+[15-Aug-2024 16:28:27 Europe/Berlin] PHP Warning:  Undefined variable $typedeliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 26
+[15-Aug-2024 16:28:27 Europe/Berlin] PHP Warning:  Attempt to read property "id_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 26
+[15-Aug-2024 16:28:27 Europe/Berlin] PHP Warning:  Undefined variable $typedeliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 31
+[15-Aug-2024 16:28:27 Europe/Berlin] PHP Warning:  Attempt to read property "id_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 31
+[15-Aug-2024 16:28:27 Europe/Berlin] PHP Warning:  Undefined variable $typedeliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 39
+[15-Aug-2024 16:28:27 Europe/Berlin] PHP Warning:  Attempt to read property "code_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 39
+[15-Aug-2024 16:28:27 Europe/Berlin] PHP Warning:  Undefined variable $typedeliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 48
+[15-Aug-2024 16:28:27 Europe/Berlin] PHP Warning:  Attempt to read property "name_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 48
+[15-Aug-2024 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 28
+[15-Aug-2024 16:42:36 Europe/Berlin] PHP Warning:  Attempt to read property "id_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 28
+[15-Aug-2024 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 33
+[15-Aug-2024 16:42:36 Europe/Berlin] PHP Warning:  Attempt to read property "id_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 33
+[15-Aug-2024 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 42
+[15-Aug-2024 16:42:36 Europe/Berlin] PHP Warning:  Attempt to read property "plate_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 42
+[15-Aug-2024 16:42:36 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 60
+[15-Aug-2024 16:42:36 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 88
+[15-Aug-2024 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 106
+[15-Aug-2024 16:42:36 Europe/Berlin] PHP Warning:  Attempt to read property "id_brand_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 106
+[15-Aug-2024 16:42:36 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 115
+[15-Aug-2024 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 134
+[15-Aug-2024 16:42:36 Europe/Berlin] PHP Warning:  Attempt to read property "model_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 134
+[15-Aug-2024 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 145
+[15-Aug-2024 16:42:36 Europe/Berlin] PHP Warning:  Attempt to read property "cilindraje_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 145
+[15-Aug-2024 16:48:12 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 28
+[15-Aug-2024 16:48:12 Europe/Berlin] PHP Warning:  Attempt to read property "id_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 28
+[15-Aug-2024 16:48:12 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 33
+[15-Aug-2024 16:48:12 Europe/Berlin] PHP Warning:  Attempt to read property "id_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 33
+[15-Aug-2024 16:48:12 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 42
+[15-Aug-2024 16:48:12 Europe/Berlin] PHP Warning:  Attempt to read property "plate_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 42
+[15-Aug-2024 16:48:12 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 60
+[15-Aug-2024 16:48:12 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 88
+[15-Aug-2024 16:48:12 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 106
+[15-Aug-2024 16:48:12 Europe/Berlin] PHP Warning:  Attempt to read property "id_brand_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 106
+[15-Aug-2024 16:48:12 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 115
+[15-Aug-2024 16:48:12 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 134
+[15-Aug-2024 16:48:12 Europe/Berlin] PHP Warning:  Attempt to read property "model_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 134
+[15-Aug-2024 16:48:12 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 145
+[15-Aug-2024 16:48:12 Europe/Berlin] PHP Warning:  Attempt to read property "cilindraje_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 145
+[15-Aug-2024 16:56:04 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 28
+[15-Aug-2024 16:56:04 Europe/Berlin] PHP Warning:  Attempt to read property "id_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 28
+[15-Aug-2024 16:56:04 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 54
+[15-Aug-2024 16:56:04 Europe/Berlin] PHP Warning:  Attempt to read property "plate_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 54
+[15-Aug-2024 16:56:41 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 54
+[15-Aug-2024 16:56:41 Europe/Berlin] PHP Warning:  Attempt to read property "plate_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 54

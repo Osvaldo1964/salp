@@ -8,10 +8,10 @@ class PqrsController
     {
         //echo '<pre>'; print_r($_POST); echo '</pre>';return;
         if (isset($_POST["name"])) {
-            echo '<script>
+/*             echo '<script>
 				matPreloader("on");
 				fncSweetAlert("loading", "Loading...", "");
-			</script>';
+			</script>'; */
 
             /* Validamos la sintaxis de los campos */
             if (
@@ -25,7 +25,7 @@ class PqrsController
                 /* Verifico la direccion con google */
                 $nombre = trim(TemplateController::capitalize($_POST["name"]));
                 $email  = strtolower($_POST['email']);
-                $address  = strtolower(($_POST['address']));
+                $address  = strtolower(($_POST['address'])) . ', Santa Marta Colombia';
                 $message  = $_POST['message'];
                 $coordenadas = $this->getGeocodeData($address);
                 $latitud = $coordenadas[0];
@@ -46,7 +46,7 @@ class PqrsController
                     "date_created_pqr" => date("Y-m-d")
                 );
 
-                //echo '<pre>'; print_r($data); echo '</pre>';return;
+                
                 $url = "pqrs?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
                 $method = "POST";
                 $fields = $data;

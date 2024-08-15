@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Tipos de Actas</h1>
+                <h1>Items de Actas</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -10,11 +10,11 @@
                     <?php
                     if (isset($routesArray[2])) {
                         if ($routesArray[2] == "new" || $routesArray[2] == "edit") {
-                            echo '<li class="breadcrumb-item"><a href="/rouds">Rutas</a></li>';
+                            echo '<li class="breadcrumb-item"><a href="/itemdeliveries">Items de Actas</a></li>';
                             echo '<li class="breadcrumb-item active">' . $routesArray[2] . '</li>';
                         }
                     } else {
-                        echo '<li class="breadcrumb-item active">Rutas</li>';
+                        echo '<li class="breadcrumb-item active">Items de Actas</li>';
                     }
                     ?>
                 </ol>

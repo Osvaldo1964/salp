@@ -100,10 +100,10 @@ class DatatableController
                     }
 					//echo '<pre>'; print_r($status_payorder); echo '</pre>';exit;
 					
- 					$actions = "<a href='/setpqrs/asign/" . base64_encode($value->id_pqr . "~" . $_GET["token"]) . "' class='btn btn-warning btn-sm mr-1 rounded-circle'>
+ 					$actions = "<a href='/setpqrs/asign/" . base64_encode($value->id_pqr . "~" . $_GET["token"]) . "' class='btn btn-warning btn-sm mr-1 rounded-circle' title='Asignar'>
 			            		<i class='fas fa-pencil-alt'></i>
 			            		</a>
-								<a href='/setpqrs/solved/" . base64_encode($value->id_pqr . "~" . $_GET["token"]) . "' class='btn btn-success btn-sm mr-1 rounded-circle'>
+								<a href='/setpqrs/solved/" . base64_encode($value->id_pqr . "~" . $_GET["token"]) . "' class='btn btn-success btn-sm mr-1 rounded-circle' title='Cerrar'>
 			            		<i class='fas fa-check'></i>
 			            		</a>
 			            		<a class='btn btn-danger btn-sm rounded-circle removeItem' idItem='" . base64_encode($value->id_pqr . "~" . $_GET["token"]) . "' table='pqrs' suffix='pqr' deleteFile='no' page='pqrs'>

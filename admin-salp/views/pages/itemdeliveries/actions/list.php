@@ -14,7 +14,7 @@
 <div class="card">
     <div class="card-header">
         <h3 class="card-title">
-            <a class="btn bg-info btn-sm" href="/typedeliveries/new">Nuevo Typo de Acta</a>
+            <a class="btn bg-info btn-sm" href="/itemdeliveries/new">Nuevo Item de Acta</a>
         </h3>
         <div class="card-tools">
             <div class="d-flex">
@@ -38,11 +38,12 @@
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-        <table id="adminsTable" class="table table-bordered table-striped tableTypedeliveries">
+        <table id="adminsTable" class="table table-bordered table-striped tableItemdeliveries">
             <thead>
                 <tr>
                     <th>No.</th>
                     <th>Código</th>
+                    <th>Tipo de Acta</th>
                     <th>Descripcion</th>
                     <th>Creado en</th>
                     <th>Estado</th>
