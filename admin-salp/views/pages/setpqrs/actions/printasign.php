@@ -1,6 +1,9 @@
 <?php
+echo '<pre>'; print_r($routesArray); echo '</pre>';
+
 if (isset($routesArray[3])) {
-    $security = explode("~", base64_decode($routesArray[3]));
+    $security = explode("~", base64_decode($routesArray[4]));
+    echo '<pre>'; print_r($security); echo '</pre>';exit;
     if ($security[1] == $_SESSION["user"]->token_user) {
         $select = "*";
         $url = "relations?rel=pqrs,crews&type=pqr,crew&select=" .
@@ -11,7 +14,6 @@ if (isset($routesArray[3])) {
 
         if ($response->status == 200) {
             $pqrs = $response->results[0];
-           
         } else {
             echo '<script>
 				window.location = "/setpqrs";
@@ -23,102 +25,76 @@ if (isset($routesArray[3])) {
 				</script>';
     }
 }
-echo '<pre>'; print_r($routesArray); echo '</pre>';exit;
 ?>
 
-<div class="app-title">
-    <div>
-        <h1><i class="fa fa-file-text-o"></i> <?= $data['page_title'] ?></h1>
-        <p>Formato de Acta Imprimible</p>
-    </div>
-    <ul class="app-breadcrumb breadcrumb">
-        <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-        <li class="breadcrumb-item"><a href="#">Acta</a></li>
-    </ul>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <div class="tile">
+<div class="card card-dark card-outline col-md-4">
+    <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+        <div class="card-header">
+            <h5>Asignación de Cuadrilla</h5>
             <?php
-            if (empty($data['pqrs'])) {
+            require_once "controllers/pqrs.controller.php";
+            $create = new PqrsController();
+            //$create->asign($pqrs->id_pqr);
             ?>
-                <p>Datos no encontrados</p>
-            <?php } else {
-                $asignacion = $data['pqrs'];
-                //dep($asignacion);
-            ?>
-                <section id="sActa" class="invoice">
-                    <div class="row mb-4">
-                        <div class="wd33">
-                            <img src="<?php echo $imagenBase64 ?>" alt="Logo">
-                            <!--  <h2 class="page-header" style="width: 50px; height: 500px"><img src="<?= media(); ?>/site/images/icons/logo_icaruscol.jpg"></h2> -->
-                        </div>
-                        <div class="col-6">
-                            <!-- <h5 class="text-right">Fecha: <?= $orden['fecPedido']; ?></h5> -->
-                        </div>
-                    </div>
-                    <div class="row invoice-info">
-                        <div class="col-4">
-                            <address><strong><?= NOMBRE_EMPRESA; ?></strong><br>
-                                <?= DIRECCION; ?><br>
-                                <?= TELEMPRESA; ?><br>
-                                <?= EMAIL_EMPRESA; ?><br>
-                                <?= WEB_EMPRESA; ?><br>
-                            </address>
-                        </div>
-                        <div class="col-4">
-                        </div>
-                        <div class="col-4"><b>Asignacion No. <?= $asignacion[0]['idPqrs']; ?></b><br>
-                            <b>Fecha:</b> <?= $asignacion[0]['asiPqrs']; ?><br>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 table-responsive">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Código UCAP</th>
-                                        <th>Descripción</th>
-                                        <th>Dirección</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><?= $asignacion[0]['codElemento'] ?></td>
-                                        <td><?= $asignacion[0]['detElemento'] ?></td>
-                                        <td><?= $asignacion[0]['dirElemento'] ?></td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th colspan="1" class="text-left">Nombre Conductor: </th>
-                                        <td colspan="2" class="text-left"><?= $asignacion[0]['conCuadrilla']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th colspan="1" class="text-left">Nombre Técnico: </th>
-                                        <td colspan="2" class="text-left"><?= $asignacion[0]['tecCuadrilla']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th colspan="1" class="text-left">Nombre Ayudante: </th>
-                                        <td colspan="2" class="text-left"><?= $asignacion[0]['ayuCuadrilla']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th colspan="1" class="text-left">Fecha Reparación: </th>
-                                        <td colspan="2" class="text-left">_________________________</td>
-                                    </tr>
-                                    <tr>
-                                        <th colspan="1" class="text-left">Observaciones: </th>
-                                        <td colspan="2" class="text-left">__________________________________</td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="row d-print-none mt-2">
-                        <div class="col-12 text-right"><a class="btn btn-primary" href="javascript:window.print('#sAsignacion');"><i class="fa fa-print"></i> Imprimir</a></div>
-                    </div>
-                </section>
-            <?php } ?>
         </div>
-    </div>
+        <div class="card-body">
+            <!-- Numero de Pqr  -->
+            <div class="form-group col-md-6">
+                <div class="form-group">
+                    <label>No. Pqr</label>
+                    <input type="text" class="form-control" value="<?php echo $pqrs->id_pqr ?>" name="idPqr">
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+            </div>
+
+            <!-- Fecha de Asignación -->
+            <div class="form-group col-md-6">
+                <div class="input-group-append">
+                    <span class="input-group-text">
+                        Fecha :
+                    </span>
+                    <input type="date" class="form-control" name="dateasign">
+                </div>
+
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+
+            <!-- Cadrilla -->
+            <div class="form-group col-md-6">
+                <label>Cuadrilla</label>
+                <?php
+                $url = "crews?select=id_crew,name_crew";
+                $method = "GET";
+                $fields = array();
+                $crews = CurlController::request($url, $method, $fields)->results;
+                ?>
+
+                <div class="form-group">
+                    <select class="form-control select2" name="crew" style="width:100%" required>
+                        <option value="">Seleccione Cuadrilla</option>
+                        <?php foreach ($crews as $key => $value) : ?>
+                            <option value="<?php echo $value->id_crew ?>"><?php echo $value->name_crew ?></option>
+                        <?php endforeach ?>
+                    </select>
+
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="col-md-8 offset-md-2">
+                <div class="form-group submtit">
+                    <a href="/setpqrs" class="btn btn-light border text-center">Regresar</a>
+                    <a href='/printasign/4'   class='btn btn-success btn-sm mr-1 rounded-circle' title='Imprimir'>
+			            		</a>
+                    <!-- <a href='/setpqrs/solved/' . <?php echo base64_encode($pqrs->id_pqr . "~" . '9kkd92kladlsdkd') ?>   class='btn btn-success btn-sm mr-1 rounded-circle' title='Imprimir'>
+			            		</a> -->
+                    <button type="submit" class="btn bg-dark float-right">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
