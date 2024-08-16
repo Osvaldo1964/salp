@@ -1821,3 +1821,10 @@ Stack trace:
 [15-Aug-2024 16:56:04 Europe/Berlin] PHP Warning:  Attempt to read property "plate_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 54
 [15-Aug-2024 16:56:41 Europe/Berlin] PHP Warning:  Undefined variable $vehicles in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 54
 [15-Aug-2024 16:56:41 Europe/Berlin] PHP Warning:  Attempt to read property "plate_vehicle" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\itemdeliveries\actions\edit.php on line 54
+[16-Aug-2024 15:46:32 Europe/Berlin] PHP Warning:  Undefined array key "numdoc" in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 95
+[16-Aug-2024 15:49:50 Europe/Berlin] PHP Warning:  Undefined array key "dateasing" in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 95
+[16-Aug-2024 15:53:56 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[16-Aug-2024 15:53:56 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[16-Aug-2024 15:53:56 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[16-Aug-2024 15:53:56 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[16-Aug-2024 15:53:56 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96

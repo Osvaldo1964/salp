@@ -8,7 +8,7 @@ class PqrsController
     {
         //echo '<pre>'; print_r($_POST); echo '</pre>';return;
         if (isset($_POST["name"])) {
-/*             echo '<script>
+            /*             echo '<script>
 				matPreloader("on");
 				fncSweetAlert("loading", "Loading...", "");
 			</script>'; */
@@ -46,7 +46,7 @@ class PqrsController
                     "date_created_pqr" => date("Y-m-d")
                 );
 
-                
+
                 $url = "pqrs?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
                 $method = "POST";
                 $fields = $data;
@@ -67,6 +67,71 @@ class PqrsController
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
 					fncNotie(3, "Error de sintaxys en los campos");
+				</script>';
+            }
+        }
+    }
+
+
+    /* Asignar Cuadrilla */
+    public function asign($id)
+    {
+        if (isset($_POST["idPqr"])) {
+            echo '<script>
+					matPreloader("on");
+					fncSweetAlert("loading", "Loading...", "");
+				</script>';
+
+            if ($id == $_POST["idPqr"]) {
+                $select = "id_pqr";
+                $url = "pqrs?select=" . $select . "&linkTo=id_pqr&equalTo=" . $id;
+                $method = "GET";
+                $fields = array();
+                $response = CurlController::request($url, $method, $fields);
+
+                if ($response->status == 200) {
+
+                    /* Agrupamos la información */
+                    $data = "dateasign_pqr=" . $_POST["dateasign"] .
+                        "&id_crew_pqr=" . trim(TemplateController::capitalize($_POST["crew"]));
+
+                    /* Solicitud a la API */
+                    $url = "pqrs?id=" . $id . "&nameId=id_pqr&token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
+
+                    $method = "PUT";
+                    $fields = $data;
+                    $response = CurlController::request($url, $method, $fields);
+
+                    /* Respuesta de la API */
+                    if ($response->status == 200) {
+                        echo '<script>
+                        			fncFormatInputs();
+									matPreloader("off");
+									fncSweetAlert("close", "", "");
+									fncSweetAlert("success", "Registro actualizado correctamente");
+							</script>';
+                    } else {
+                        echo '<script>
+									fncFormatInputs();
+									matPreloader("off");
+									fncSweetAlert("close", "", "");
+									fncNotie(3, "Error al editar el registro");
+								</script>';
+                    }
+                } else {
+                    echo '<script>
+							fncFormatInputs();
+							matPreloader("off");
+							fncSweetAlert("close", "", "");
+							fncNotie(3, "Error editing the registry");
+						</script>';
+                }
+            } else {
+                echo '<script>
+						fncFormatInputs();
+						matPreloader("off");
+						fncSweetAlert("close", "", "");
+						fncNotie(3, "Error editing the registry");
 				</script>';
             }
         }
