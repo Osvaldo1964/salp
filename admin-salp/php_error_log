@@ -1828,3 +1828,6 @@ Stack trace:
 [16-Aug-2024 15:53:56 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [16-Aug-2024 15:53:56 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [16-Aug-2024 15:53:56 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[16-Aug-2024 17:20:20 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 88
+[16-Aug-2024 17:20:20 Europe/Berlin] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 88
+[16-Aug-2024 17:20:50 Europe/Berlin] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 88
