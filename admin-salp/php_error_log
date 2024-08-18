@@ -1928,3 +1928,8 @@ Stack trace:
 [18-Aug-2024 17:00:10 Europe/Berlin] PHP Warning:  Undefined array key 4 in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 3
 [18-Aug-2024 17:00:10 Europe/Berlin] PHP Warning:  Undefined array key 4 in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 6
 [18-Aug-2024 17:08:48 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "}" in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 16
+[18-Aug-2024 18:54:02 Europe/Berlin] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 3
+[18-Aug-2024 18:54:02 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 46
+[18-Aug-2024 18:54:02 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 46
+[18-Aug-2024 18:54:02 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 94
+[18-Aug-2024 18:54:02 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 94

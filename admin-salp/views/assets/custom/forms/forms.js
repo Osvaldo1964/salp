@@ -389,8 +389,9 @@ async function initMap() {
 
   // Por si tiene la ubicación activada en el teléfono o navegador, las pilla de ahí y se las asigna
   if (typeof window.latitude !== 'undefined' && typeof window.longitude !== 'undefined') {
-    latitude = window.latitude;
-    longitude = window.longitude;
+
+    this.latitude = window.latitude;
+    this.longitude = window.longitude;
   }
 
   const position = { lat: latitude, lng: longitude };
