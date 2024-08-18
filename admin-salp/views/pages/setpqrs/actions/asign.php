@@ -11,6 +11,8 @@ if (isset($routesArray[3])) {
 
         if ($response->status == 200) {
             $pqrs = $response->results[0];
+            $idPqr = $pqrs->id_pqr;
+
         } else {
             echo '<script>
 				window.location = "/setpqrs";
@@ -85,7 +87,7 @@ if (isset($routesArray[3])) {
             <div class="col-md-8 offset-md-2">
                 <div class="form-group submtit">
                     <a href="/setpqrs" class="btn btn-light border text-center">Regresar</a>
-                    <a href='/setpqrs/printasign/' . <?php echo $pqrs->id_pqr ?>  class='btn btn-success btn-sm mr-1 rounded-circle' title='Imprimir'>
+                    <a href='/setpqrs/printasign/" . <?php echo $idPqr ?> . "' class='btn btn-success btn-sm mr-1 rounded-circle' title='Imprimir'>
 			            		</a>
                     <button type="submit" class="btn bg-dark float-right">Guardar</button>
                 </div>

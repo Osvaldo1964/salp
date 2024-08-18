@@ -1894,3 +1894,37 @@ Stack trace:
 [16-Aug-2024 21:48:42 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 45
 [16-Aug-2024 21:48:42 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 93
 [16-Aug-2024 21:48:42 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 93
+[18-Aug-2024 16:45:25 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 34
+[18-Aug-2024 16:45:25 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 34
+[18-Aug-2024 16:45:25 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 42
+[18-Aug-2024 16:45:25 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 42
+[18-Aug-2024 16:45:25 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 88
+[18-Aug-2024 16:45:25 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 88
+[18-Aug-2024 16:45:31 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 45
+[18-Aug-2024 16:45:31 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 45
+[18-Aug-2024 16:45:31 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 93
+[18-Aug-2024 16:45:31 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 93
+[18-Aug-2024 16:46:18 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 45
+[18-Aug-2024 16:46:18 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 45
+[18-Aug-2024 16:46:18 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 93
+[18-Aug-2024 16:46:18 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 93
+[18-Aug-2024 16:47:41 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 45
+[18-Aug-2024 16:47:41 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 45
+[18-Aug-2024 16:47:41 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 93
+[18-Aug-2024 16:47:41 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 93
+[18-Aug-2024 16:55:43 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 45
+[18-Aug-2024 16:55:43 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 45
+[18-Aug-2024 16:55:43 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 93
+[18-Aug-2024 16:55:43 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 93
+[18-Aug-2024 16:56:21 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 45
+[18-Aug-2024 16:56:21 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 45
+[18-Aug-2024 16:56:21 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 93
+[18-Aug-2024 16:56:21 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 93
+[18-Aug-2024 16:57:01 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 45
+[18-Aug-2024 16:57:01 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 45
+[18-Aug-2024 16:57:01 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 93
+[18-Aug-2024 16:57:01 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 93
+[18-Aug-2024 16:59:04 Europe/Berlin] PHP Warning:  Undefined array key 4 in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 5
+[18-Aug-2024 17:00:10 Europe/Berlin] PHP Warning:  Undefined array key 4 in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 3
+[18-Aug-2024 17:00:10 Europe/Berlin] PHP Warning:  Undefined array key 4 in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 6
+[18-Aug-2024 17:08:48 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "}" in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 16

@@ -1,8 +1,9 @@
 <?php
 echo '<pre>'; print_r($routesArray); echo '</pre>';
-
+$security = base64_decode($routesArray[3]);
+echo '<pre>'; print_r($security); echo '</pre>';
 if (isset($routesArray[3])) {
-    $security = explode("~", base64_decode($routesArray[4]));
+    $security = explode("~", base64_decode($routesArray[3]));
     echo '<pre>'; print_r($security); echo '</pre>';exit;
     if ($security[1] == $_SESSION["user"]->token_user) {
         $select = "*";
