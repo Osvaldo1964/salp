@@ -74,7 +74,7 @@
         function seekAddress(Address) {
             alert(Address);
             $.ajax({
-                url: "getaddress.php",
+                url: "/views/pages/prqs/actions/getaddress.php",
                 success: function(result) {
                     coor = JSON.parse(result);
 
@@ -84,44 +84,7 @@
             })
         }
 
-        function ActMap(latitude, longitude) {
-            // Variables para ubicarte en santa marta
-            //let latitude = 11.24323;
-            //let longitude = -74.20496;
 
-            // Por si tiene la ubicación activada en el teléfono o navegador, las pilla de ahí y se las asigna
-            if (typeof window.latitude !== 'undefined' && typeof window.longitude !== 'undefined') {
-
-                this.latitude = window.latitude;
-                this.longitude = window.longitude;
-            }
-
-            const position = {
-                lat: latitude,
-                lng: longitude
-            };
-
-            // Importas googlemaps
-            const {
-                Map
-            } = await google.maps.importLibrary("maps");
-            const {
-                AdvancedMarkerElement
-            } = await google.maps.importLibrary("marker");
-
-            // Te ubica la dirección y te la pone en un zoom que te ambienta que tienes al rededor
-            const map = new Map(document.getElementById("map"), {
-                zoom: 16,
-                center: position,
-                mapId: "DEMO_MAP_ID",
-            });
-
-            // Te pone el mondaquito ese para que sepas exactamente donde estás
-            const marker = new AdvancedMarkerElement({
-                map: map,
-                position: position,
-                title: "Santa Marta",
-            });
     </script>
 
 </div>

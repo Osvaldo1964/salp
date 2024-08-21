@@ -1,7 +1,10 @@
 <?php
+echo '<pre>'; print_r('asasaasass'); echo '</pre>';
+
     function getGeocodeData($address)
     {
         $address = urlencode($address);
+        echo '<pre>'; print_r($address); echo '</pre>';
         $googleMapUrl = "https://maps.googleapis.com/maps/api/geocode/json?address={$address}&key=AIzaSyDDTJ5uq4WEhP4noQ6DKM7aFVUYwGabdu8";
         $geocodeResponseData = file_get_contents($googleMapUrl);
         $responseData = json_decode($geocodeResponseData, true);
@@ -12,6 +15,7 @@
             if ($latitude && $longitude && $formattedAddress) {
                 $geocodeData = array();
                 array_push($geocodeData, $latitude, $longitude, $formattedAddress);
+                echo '<pre>'; print_r($geocodeData); echo '</pre>';exit;
                 return json_encode($geocodeData);
             } else {
                 return false;

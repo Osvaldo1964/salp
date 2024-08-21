@@ -1933,3 +1933,13 @@ Stack trace:
 [18-Aug-2024 18:54:02 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 46
 [18-Aug-2024 18:54:02 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 94
 [18-Aug-2024 18:54:02 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 94
+[21-Aug-2024 18:34:02 Europe/Berlin] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 3
+[21-Aug-2024 18:34:02 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 46
+[21-Aug-2024 18:34:02 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 46
+[21-Aug-2024 18:34:02 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 94
+[21-Aug-2024 18:34:02 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 94
+[21-Aug-2024 18:34:10 Europe/Berlin] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 3
+[21-Aug-2024 18:34:10 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 46
+[21-Aug-2024 18:34:10 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 46
+[21-Aug-2024 18:34:10 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 94
+[21-Aug-2024 18:34:10 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 94
