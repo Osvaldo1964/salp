@@ -66,9 +66,10 @@ foreach ($routesArray as $key => $value) {
   <!-- Select2 -->
   <script src="views/assets/plugins/select2/js/select2.full.min.js"></script>
   <!-- Material Preloader -->
+  
   <!-- https://www.jqueryscript.net/loading/Google-Inbox-Style-Linear-Preloader-Plugin-with-jQuery-CSS3.html -->
   <script src="views/assets/plugins/material-preloader/material-preloader.js"></script>
-  <!-- Notie Alert -->
+    <!-- Notie Alert -->
   <!-- https://jaredreich.com/notie/ -->
   <!-- https://github.com/jaredreich/notie -->
   <script src="views/assets/plugins/notie/notie.min.js"></script>
