@@ -28,7 +28,7 @@
                         <!-- Dirección -->
                         <div class="form-group col-md-12">
                             <label>Dirección</label>
-                            <input type="text" class="form-control" pattern='[a-zA-Z0-9_ ]+[.]+[-]+[,]{1,}' onblur="seekAddress(address.value)" name="address" required>
+                            <input type="text" class="form-control" pattern='[a-zA-Z0-9_ ]{1,}' name="address" required>
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
@@ -65,26 +65,6 @@
         </div>
     </form>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDTJ5uq4WEhP4noQ6DKM7aFVUYwGabdu8&callback=initMap&libraries=geometry&loading=async">
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", (event) => {
-            //initMap();
-        });
-
-        function seekAddress(Address) {
-            alert(Address);
-            $.ajax({
-                url: "/views/pages/prqs/actions/getaddress.php",
-                success: function(result) {
-                    coor = JSON.parse(result);
-
-                    alert(coor);
-                    //$("div").text(result);
-                }
-            })
-        }
-
-
     </script>
 
 </div>

@@ -1943,3 +1943,39 @@ Stack trace:
 [21-Aug-2024 18:34:10 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 46
 [21-Aug-2024 18:34:10 Europe/Berlin] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 94
 [21-Aug-2024 18:34:10 Europe/Berlin] PHP Warning:  Attempt to read property "id_pqr" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 94
+[22-Aug-2024 17:24:04 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_pqr_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 56
+[22-Aug-2024 17:27:12 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_pqr_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 55
+[22-Aug-2024 17:27:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php:75
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\setpqrs.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(195): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 75
+[22-Aug-2024 17:27:18 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_pqr_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 55
+[22-Aug-2024 17:27:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php:75
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\setpqrs.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(195): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 75
+[22-Aug-2024 17:28:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_pqr_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 55
+[22-Aug-2024 17:28:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php:75
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\setpqrs.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(195): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 75
+[22-Aug-2024 17:28:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php:75
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\setpqrs.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(195): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 75

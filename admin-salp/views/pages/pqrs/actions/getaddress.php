@@ -1,5 +1,5 @@
 <?php
-echo '<pre>'; print_r('asasaasass'); echo '</pre>';
+echo '<pre>'; print_r('asasaasass'); echo '</pre>';exit;
 
     function getGeocodeData($address)
     {
@@ -15,7 +15,7 @@ echo '<pre>'; print_r('asasaasass'); echo '</pre>';
             if ($latitude && $longitude && $formattedAddress) {
                 $geocodeData = array();
                 array_push($geocodeData, $latitude, $longitude, $formattedAddress);
-                echo '<pre>'; print_r($geocodeData); echo '</pre>';exit;
+                echo '<pre>'; print_r($geocodeData); echo '</pre>';
                 return json_encode($geocodeData);
             } else {
                 return false;
@@ -26,3 +26,6 @@ echo '<pre>'; print_r('asasaasass'); echo '</pre>';
         }
     }
     ?>
+
+
+hola mindo
