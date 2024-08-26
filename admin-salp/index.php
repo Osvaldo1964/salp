@@ -20,6 +20,7 @@ header('Access-Control-Allow-Methods: POST, GET, PUT, DELETE');
 Requerimientos
 =============================================*/
 
+require_once "config/Config.php";
 require_once "controllers/template.controller.php";
 require_once "controllers/curl.controller.php";
 

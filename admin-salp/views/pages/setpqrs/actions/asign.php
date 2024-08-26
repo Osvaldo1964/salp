@@ -52,7 +52,7 @@ if (isset($routesArray[3])) {
                     <span class="input-group-text">
                         Fecha :
                     </span>
-                    <input type="date" class="form-control" value="<?php echo $pqrs->date_created_pqr ?>" name="dateasign">
+                    <input type="date" class="form-control" value="<?php echo $pqrs->dateasign_pqr ?>" name="dateasign">
                 </div>
 
                 <div class="valid-feedback">Valid.</div>
@@ -61,7 +61,7 @@ if (isset($routesArray[3])) {
 
             <!-- Cadrilla -->
             <div class="form-group col-md-6">
-                <label>Cuadrilla</label>
+                <label>Deudor</label>
                 <?php
                 $url = "crews?select=id_crew,name_crew";
                 $method = "GET";
@@ -71,21 +71,20 @@ if (isset($routesArray[3])) {
 
                 <div class="form-group">
                     <select class="form-control select2" name="crew" style="width:100%" required>
-                        <?php if ($pqrs->id_crew_pqr  == null) : ?>
+                        <?php if ($pqrs->id_crew_pqr != NULL) : ?>
                             <?php foreach ($crews as $key => $value) : ?>
-                                <?php if ($value["id_crew"] == $pqrs->id_crew_pqr) : ?>
+                                <?php if ($value->id_crew == $pqrs->id_crew_pqr) : ?>
                                     <option value="<?php echo $pqrs->id_crew_pqr ?>" selected><?php echo $pqrs->name_crew ?></option>
                                 <?php else : ?>
-                                    <option value="<?php echo $value["id_crew"] ?>"><?php echo $value["name_crew"] ?></option>
+                                    <option value="<?php echo $value->id_crew ?>"><?php echo $value->name_crew ?></option>
                                 <?php endif ?>
                             <?php endforeach ?>
                         <?php else : ?>
                             <option value="">Seleccione Cuadrilla</option>
-                            <?php foreach ($subjects as $key => $value) : ?>
-                                <option value="<?php echo $value->id_subject ?>"><?php echo $value->fullname_subject ?></option>
+                            <?php foreach ($crews as $key => $value) : ?>
+                                <option value="<?php echo $value->id_crew ?>"><?php echo $value->name_crew ?></option>
                             <?php endforeach ?>
                         <?php endif ?>
-
                     </select>
 
                     <div class="valid-feedback">Valid.</div>

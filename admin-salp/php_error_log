@@ -1979,3 +1979,90 @@ Stack trace:
 #3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
 #4 {main}
   thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 75
+[25-Aug-2024 18:06:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php:76
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\setpqrs.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(195): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 76
+[25-Aug-2024 18:07:18 Europe/Berlin] PHP Warning:  Undefined variable $subjects in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 84
+[25-Aug-2024 18:07:18 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 84
+[25-Aug-2024 18:12:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php:77
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\setpqrs.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(195): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 77
+[25-Aug-2024 18:13:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php:78
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\setpqrs.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(195): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 78
+[25-Aug-2024 18:14:04 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "endforeach", expecting end of file in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 83
+[25-Aug-2024 18:14:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php:78
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\setpqrs.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(195): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 78
+[25-Aug-2024 18:17:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php:78
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\setpqrs.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(195): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 78
+[25-Aug-2024 18:18:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php:75
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\setpqrs.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(195): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 75
+[25-Aug-2024 18:19:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php:75
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\setpqrs.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(195): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(29): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 75
+[25-Aug-2024 18:21:17 Europe/Berlin] PHP Warning:  Undefined variable $subjects in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 74
+[25-Aug-2024 18:21:17 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 74
+[25-Aug-2024 18:32:18 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_asing_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\asign.php on line 55
+[26-Aug-2024 00:10:06 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 18
+[26-Aug-2024 00:10:06 Europe/Berlin] PHP Warning:  file_get_contents(/site/images/icons/logo_icaruscol.jpg): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 37
+[26-Aug-2024 00:10:27 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 18
+[26-Aug-2024 00:10:27 Europe/Berlin] PHP Warning:  file_get_contents(/site/images/icons/logo_icaruscol.jpg): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 31
+[26-Aug-2024 00:11:07 Europe/Berlin] PHP Warning:  file_get_contents(/site/images/icons/logo_icaruscol.jpg): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 28
+[26-Aug-2024 00:12:16 Europe/Berlin] PHP Warning:  file_get_contents(/site/images/icons/logo_icaruscol.jpg): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 24
+[26-Aug-2024 00:15:55 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[26-Aug-2024 00:15:55 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[26-Aug-2024 00:15:55 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[26-Aug-2024 00:15:55 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[26-Aug-2024 00:15:55 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[26-Aug-2024 00:16:07 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[26-Aug-2024 00:16:07 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[26-Aug-2024 00:16:07 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[26-Aug-2024 00:16:07 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[26-Aug-2024 00:16:07 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[26-Aug-2024 00:16:58 Europe/Berlin] PHP Warning:  file_get_contents(/site/images/icons/logo_icaruscol.jpg): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 24
+[26-Aug-2024 00:21:45 Europe/Berlin] PHP Warning:  Undefined variable $security in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 3
+[25-Aug-2024 19:58:09 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_ucap_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 48
+[25-Aug-2024 19:58:09 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_ucap_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 49
+[25-Aug-2024 19:58:09 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_ucap_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 50
+[25-Aug-2024 19:58:09 America/Bogota] PHP Warning:  Undefined property: stdClass::$assist_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 64
+[25-Aug-2024 19:58:40 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_ucap_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 48
+[25-Aug-2024 19:58:40 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_ucap_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 49
+[25-Aug-2024 19:58:40 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_ucap_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 50

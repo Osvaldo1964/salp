@@ -1,101 +1,87 @@
 <?php
-echo '<pre>'; print_r($routesArray); echo '</pre>';
-$security =$routesArray[3];
-echo '<pre>'; print_r($security); echo '</pre>';
-if (isset($routesArray[3])) {
-    $security = explode("~", base64_decode($routesArray[3]));
-    echo '<pre>'; print_r($security); echo '</pre>';exit;
-    if ($security[1] == $_SESSION["user"]->token_user) {
-        $select = "*";
-        $url = "relations?rel=pqrs,crews&type=pqr,crew&select=" .
-            $select . "&linkTo=id_pqr&equalTo=" . $security[0];
-        $method = "GET";
-        $fields = array();
-        $response = CurlController::request($url, $method, $fields);
-
-        if ($response->status == 200) {
-            $pqrs = $response->results[0];
-        } else {
-            echo '<script>
-				window.location = "/setpqrs";
-				</script>';
-        }
-    } else {
-        echo '<script>
-				window.location = "/setpqrs";
-				</script>';
-    }
-}
+$security = $routesArray[3];
+$select = "*";
+$url = "relations?rel=pqrs,crews&type=pqr,crew&select=" . $select . "&linkTo=id_pqr&equalTo=" . $security;
+$method = "GET";
+$fields = array();
+$response = CurlController::request($url, $method, $fields);
+$assign = $response->results[0];
+/* echo '<pre>';
+print_r($assign);
+echo '</pre>'; */
 ?>
 
-<div class="card card-dark card-outline col-md-4">
-    <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
-        <div class="card-header">
-            <h5>Asignación de Cuadrilla</h5>
-            <?php
-            require_once "controllers/pqrs.controller.php";
-            $create = new PqrsController();
-            //$create->asign($pqrs->id_pqr);
-            ?>
-        </div>
-        <div class="card-body">
-            <!-- Numero de Pqr  -->
-            <div class="form-group col-md-6">
-                <div class="form-group">
-                    <label>No. Pqr</label>
-                    <input type="text" class="form-control" value="<?php echo $pqrs->id_pqr ?>" name="idPqr">
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
+
+
+<div class="card card-dark card-outline" id="sAssign">
+    <div class="card-header">
+        <img src="<?php echo TemplateController::srcImg() ?>views/assets/img/global_logo.png" style="width:250px" alt="User Image">
+    </div>
+    <div class="card-body">
+        <div class="row invoice-info">
+            <div class="col-4">
+                <address><strong><?= NOMBRE_EMPRESA; ?></strong><br>
+                    <?= DIRECCION; ?><br>
+                    <?= TELEMPRESA; ?><br>
+                    <?= EMAIL_EMPRESA; ?><br>
+                    <?= WEB_EMPRESA; ?><br>
+                </address>
             </div>
-
-            <!-- Fecha de Asignación -->
-            <div class="form-group col-md-6">
-                <div class="input-group-append">
-                    <span class="input-group-text">
-                        Fecha :
-                    </span>
-                    <input type="date" class="form-control" name="dateasign">
-                </div>
-
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+            <div class="col-4">
             </div>
-
-            <!-- Cadrilla -->
-            <div class="form-group col-md-6">
-                <label>Cuadrilla</label>
-                <?php
-                $url = "crews?select=id_crew,name_crew";
-                $method = "GET";
-                $fields = array();
-                $crews = CurlController::request($url, $method, $fields)->results;
-                ?>
-
-                <div class="form-group">
-                    <select class="form-control select2" name="crew" style="width:100%" required>
-                        <option value="">Seleccione Cuadrilla</option>
-                        <?php foreach ($crews as $key => $value) : ?>
-                            <option value="<?php echo $value->id_crew ?>"><?php echo $value->name_crew ?></option>
-                        <?php endforeach ?>
-                    </select>
-
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
+            <div class="col-4"><b>Asignacion No. <?= $assign->id_pqr; ?></b><br>
+                <b>Fecha:</b> <?= $assign->dateasign_pqr; ?><br>
             </div>
         </div>
-        <div class="card-footer">
-            <div class="col-md-8 offset-md-2">
-                <div class="form-group submtit">
-                    <a href="/setpqrs" class="btn btn-light border text-center">Regresar</a>
-                    <a href='/printasign/4'   class='btn btn-success btn-sm mr-1 rounded-circle' title='Imprimir'>
-			            		</a>
-                    <!-- <a href='/setpqrs/solved/' . <?php echo base64_encode($pqrs->id_pqr . "~" . '9kkd92kladlsdkd') ?>   class='btn btn-success btn-sm mr-1 rounded-circle' title='Imprimir'>
-			            		</a> -->
-                    <button type="submit" class="btn bg-dark float-right">Guardar</button>
-                </div>
+        <div class="row">
+            <div class="col-12 table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Código UCAP</th>
+                            <th>Descripción</th>
+                            <th>Dirección</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>_______________________________</td>
+                            <td>_______________________________</td>
+                            <td>_______________________________</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="1" class="text-left">Nombre Conductor: </th>
+                            <td colspan="2" class="text-left"><?= $assign->driver_crew; ?></td>
+                        </tr>
+                        <tr>
+                            <th colspan="1" class="text-left">Nombre Técnico: </th>
+                            <td colspan="2" class="text-left"><?= $assign->tecno_crew; ?></td>
+                        </tr>
+                        <tr>
+                            <th colspan="1" class="text-left">Nombre Ayudante: </th>
+                            <td colspan="2" class="text-left"><?= $assign->assist_crew; ?></td>
+                        </tr>
+                        <tr>
+                            <th colspan="1" class="text-left">Fecha Reparación: </th>
+                            <td colspan="2" class="text-left">_________________________</td>
+                        </tr>
+                        <tr>
+                            <th colspan="1" class="text-left">Observaciones: </th>
+                            <td colspan="2" class="text-left">__________________________________</td>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
         </div>
+    </div>
+    <div class="card-footer">
+        <div class="col-md-8 offset-md-2">
+            <div class="row d-print-none mt-2">
+                <div class="col-12 text-right"><a class="btn btn-primary" href="javascript:window.print('#sActa');"><i class="fa fa-print"></i> Imprimir</a></div>
+            </div>
+        </div>
+    </div>
     </form>
 </div>
