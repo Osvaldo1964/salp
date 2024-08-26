@@ -215,6 +215,24 @@ function execDatatable(text) {
         page = "itemdeliveries";
     }
 
+    /* Valido Tabla Actas */
+    if ($(".tableDeliveries").length > 0) {
+
+        var url = "ajax/data-deliveries.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_delivery" },
+            { "data": "name_typedelivery" },
+            { "data": "name_itemdelivery" },
+            { "data": "number_delivery" },
+            { "data": "name_resource" },
+            { "data": "date_delivery" },
+            { "data": "date_created_delivery" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "deliveries";
+    }
 
     /* CONFIGURAR DATOS PARA ACTAS */
 

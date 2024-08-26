@@ -18,7 +18,7 @@ class DatatableController{
             $length = $_POST['length'];//Indicador de la longitud de la paginación.
 
             /* El total de registros de la data */
-            $url = "relations?rel=titles,subjects,payorders&type=title,subject,payorder&select=id_title&linkTo=date_created_title&between1=".$_GET["between1"]."&between2=".$_GET["between2"];
+            $url = "relations?rel=deliveries,typedeliveries,itemdeliveries,resources&type=delivery,typedelivery,itemdelivery,resource&select=id_delivery&linkTo=date_created_delivery&between1=".$_GET["between1"]."&between2=".$_GET["between2"];
 			$method = "GET";
 			$fields = array();
 			$response = CurlController::request($url,$method,$fields);  
@@ -30,14 +30,14 @@ class DatatableController{
 			}	
 
 			/* Búsqueda de datos */	
-            $select = "id_title,number_title,date_title,type_title,fullname_subject,amount_title,interest_title,number_payorder";
+            $select = "id_delivery,id_typedelivery_delivery,name_typedelivery,id_itemdelivery_delivery,name_itemdelivery,number_delivery,date_delivery,id_resource_delivery,id_resource,name_resource,date_created_delivery";
 
             if(!empty($_POST['search']['value'])){
             	if(preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/',$_POST['search']['value'])){
-	            	$linkTo = ["number_title","date_title","fullname_subject","number_payorder"];
+	            	$linkTo = ["number_delivery","name_typedelivery","name_itemdelivery","name_resource","date_delivery"];
 	            	$search = str_replace(" ","_",$_POST['search']['value']);
 	            	foreach ($linkTo as $key => $value) {
-	            		$url = "relations?rel=titles,subjects,payorders&type=title,subject,payorder&select=".$select."&linkTo=".
+	            		$url = "relations?rel=deliveries,typedeliveries,itemdeliveries,resources&type=delivery,typedelivery,itemdelivery,resource&select=".$select."&linkTo=".
                             $value."&search=".$search;
 	            		$data = CurlController::request($url,$method,$fields)->results;
 	            		if($data  == "Not Found"){
@@ -56,8 +56,8 @@ class DatatableController{
             }else{
 
 	            /* Seleccionar datos */
-	            $url = "relations?rel=titles,subjects,payorders&type=title,subject,payorder&select=".$select.
-                "&linkTo=date_created_title&between1=".$_GET["between1"]."&between2=".$_GET["between2"].
+	            $url = "relations?rel=deliveries,typedeliveries,itemdeliveries,resources&type=delivery,typedelivery,itemdelivery,resource&select=".$select.
+                "&linkTo=date_created_delivery&between1=".$_GET["between1"]."&between2=".$_GET["between2"].
                 "&orderBy=".$orderBy."&orderMode=".$orderType."&startAt=".$start."&endAt=".$length;
                 //echo '<pre>'; print_r($url); echo '</pre>';exit;
 	            $data = CurlController::request($url,$method,$fields)->results;
@@ -82,32 +82,30 @@ class DatatableController{
             	if($_GET["text"] == "flat"){
 	            	$actions = "";
             	}else{
-            		$actions = "<a href='/titles/edit/".base64_encode($value->id_title."~".$_GET["token"])."' class='btn btn-warning btn-sm mr-1 rounded-circle'>
+            		$actions = "<a href='/deliveries/edit/".base64_encode($value->id_delivery."~".$_GET["token"])."' class='btn btn-warning btn-sm mr-1 rounded-circle'>
 			            		<i class='fas fa-pencil-alt'></i>
 			            		</a>
-			            		<a class='btn btn-danger btn-sm rounded-circle removeItem' idItem='".base64_encode($value->id_title."~".$_GET["token"])."' table='titles' suffix='title' deleteFile='no' page='titles'>
+			            		<a class='btn btn-danger btn-sm rounded-circle removeItem' idItem='".base64_encode($value->id_delivery."~".$_GET["token"])."' table='deliveries' suffix='delivery' deleteFile='no' page='deliveries'>
 			            		<i class='fas fa-trash'></i>
 			            		</a>";
 			        $actions = TemplateController::htmlClean($actions);
             	}	
-
-                $number_title = $value->number_title;
-                $date_title = $value->date_title;
-                $type_title = $value->type_title;
-            	$fullname_subject = $value->fullname_subject;
-                $amount_title = $value->amount_title;
-                $interest_title = $value->interest_title;
-                $number_payorder = $value->number_payorder;
+                
+                $name_typedelivery = $value->name_typedelivery;
+                $name_itemdelivery = $value->name_itemdelivery;
+                $number_delivery = $value->number_delivery;
+                $date_delivery = $value->date_delivery;
+                $name_resource = $value->name_resource;
+                $date_created_delivery = $value->date_created_delivery;
 
             	$dataJson.='{ 
-            		"id_title":"'.($start+$key+1).'",
-                    "number_title":"'.$number_title.'",
-                    "date_title":"'.$date_title.'",
-            		"type_title":"'.$type_title.'",
-            		"fullname_subject":"'.$fullname_subject.'",
-            		"amount_title":"'.$amount_title.'",
-                    "interest_title":"'.$interest_title.'",
-                    "number_payorder":"'.$number_payorder.'",
+            		"id_delivery":"'.($start+$key+1).'",
+                    "name_typedelivery":"'.$name_typedelivery.'",
+                    "name_itemdelivery":"'.$name_itemdelivery.'",
+            		"number_delivery":"'.$number_delivery.'",
+            		"date_delivery":"'.$date_delivery.'",
+            		"name_resource":"'.$name_resource.'",
+                    "date_created_delivery":"'.$date_created_delivery.'",
             		"actions":"'.$actions.'"
             	},';
             }

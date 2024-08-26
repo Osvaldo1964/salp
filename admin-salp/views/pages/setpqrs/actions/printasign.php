@@ -11,8 +11,6 @@ print_r($assign);
 echo '</pre>'; */
 ?>
 
-
-
 <div class="card card-dark card-outline" id="sAssign">
     <div class="card-header">
         <img src="<?php echo TemplateController::srcImg() ?>views/assets/img/global_logo.png" style="width:250px" alt="User Image">
@@ -79,9 +77,11 @@ echo '</pre>'; */
     <div class="card-footer">
         <div class="col-md-8 offset-md-2">
             <div class="row d-print-none mt-2">
-                <div class="col-12 text-right"><a class="btn btn-primary" href="javascript:window.print('#sActa');"><i class="fa fa-print"></i> Imprimir</a></div>
+            <div class="col-6 text-left"><a href="/setpqrs" class="btn btn-light border text-left">Back</a></div>
+                <div class="col-6 text-right"><a class="btn btn-primary" href="javascript:window.print('#sActa');"><i class="fa fa-print"></i> Imprimir</a></div>
             </div>
         </div>
     </div>
     </form>
 </div>
+

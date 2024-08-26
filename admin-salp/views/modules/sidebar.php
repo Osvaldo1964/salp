@@ -270,9 +270,9 @@ $routesArray = array_filter($routesArray);
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/vehicles" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "payorders") : ?>active bg-info<?php endif ?>">
+                                    <a href="/deliveries" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "deliveries") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Seguimiento</p>
+                                        <p>Registro de Actas</p>
                                     </a>
                                 </li>
                             </ul>
