@@ -62,6 +62,7 @@ function validateJS(event, type) {
   }
 }
 
+/* Validar Lineas */
 function validateLinesJS() {
   let nbrand = $('#brand').val();
   var data = new FormData();
@@ -76,6 +77,25 @@ function validateLinesJS() {
     processData: false,
     success: function (response) {
       $("#brandline").html(response);
+    }
+  })
+}
+
+/* Validar Items Actas */
+function validateItemsJS() {
+  let ntypedelivery = $('#typedelivery').val();
+  var data = new FormData();
+  data.append("itemdelivery", ntypedelivery);
+  
+  $.ajax({
+    url: "ajax/ajax-validate.php",
+    method: "POST",
+    data: data,
+    contentType: false,
+    cache: false,
+    processData: false,
+    success: function (response) {
+      $("#itemdelivery").html(response);
     }
   })
 }

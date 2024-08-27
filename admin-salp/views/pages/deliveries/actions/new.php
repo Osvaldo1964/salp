@@ -2,68 +2,28 @@
     <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
         <div class="card-header">
             <?php
-            require_once "controllers/titles.controller.php";
-            $create = new TitlesController();
+            require_once "controllers/deliveries.controller.php";
+            $create = new DeliveriesController();
             //$create -> create();
             ?>
 
             <div class="col-md-8 offset-md-2">
 
-                <!-- Número del Título -->
-                <div class="form-group mt-1">
-                    <label>Número Titulo</label>
-                    <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" onchange="validateRepeat(event,'t&n','titles','number_title')" name="number-title" required>
-
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
-
-                <!-- Fecha del Título -->
-                <div class="form-group mt-2 mb-1">
-                    <div class="input-group-append">
-                        <span class="input-group-text">
-                            Fecha :
-                        </span>
-                        <input type="date" class="form-control" name="date-title">
-                    </div>
-
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
-
-                <!-- Tipo Título -->
+                <!-- Tipo de Acta -->
                 <div class="form-group mt-2">
-                    <label>Tipo Título</label>
+                    <label>Tipo Acta</label>
                     <?php
-                    $typetitles = file_get_contents("views/assets/json/typetitles.json");
-                    $typetitles = json_decode($typetitles, true);
-                    ?>
-                    <select class="form-control select2" name="type-title" required>
-                        <option value>Tipo Título</option>
-                        <?php foreach ($typetitles as $key => $value) : ?>
-                            <option value="<?php echo $value["name"] ?>"><?php echo $value["name"] ?></option>
-                        <?php endforeach ?>
-                    </select>
-
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
-
-                <!-- Deudor -->
-                <div class="form-group mt-2">
-                    <label>Deudor</label>
-                    <?php
-                    $url = "subjects?select=id_subject,fullname_subject";
+                    $url = "typedeliveries?select=id_typedelivery,name_typedelivery";
                     $method = "GET";
                     $fields = array();
-                    $subjects = CurlController::request($url, $method, $fields)->results;
+                    $typedeliveries = CurlController::request($url, $method, $fields)->results;
                     ?>
 
                     <div class="form-group">
-                        <select class="form-control select2" name="subject-title" style="width:100%" required>
-                            <option value="">Seleccione Deudor</option>
-                            <?php foreach ($subjects as $key => $value) : ?>
-                                <option value="<?php echo $value->id_subject ?>"><?php echo $value->fullname_subject ?></option>
+                        <select class="form-control select2" id="typedelivery" name="typedelivery" style="width:100%" onchange="validateItemsJS()" required>
+                            <option value="">Seleccione Tipo de Acta</option>
+                            <?php foreach ($typedeliveries as $key => $value) : ?>
+                                <option value="<?php echo $value->id_typedelivery ?>"><?php echo $value->name_typedelivery ?></option>
                             <?php endforeach ?>
                         </select>
 
@@ -72,28 +32,77 @@
                     </div>
                 </div>
 
-                <!-- Monto del Título -->
+                <!-- Sub de Acta -->
+                <div class="form-group mt-2">
+                    <label>Subtipo Acta</label>
+                    <?php
+                    $url = "itemdeliveries?select=id_itemdelivery,name_itemdelivery&linkTo=id_typedelivery_itemdelivery&equalTo=1";
+                    $method = "GET";
+                    $fields = array();
+                    $itemdeliveries = CurlController::request($url, $method, $fields)->results;
+                    ?>
+
+                    <div class="form-group">
+                        <select class="form-control select2" id="itemdelivery" name="itemdelivery" style="width:100%" required>
+                            <option value="">Seleccione Subtipo de Acta</option>
+                            <?php foreach ($itemdeliveries as $key => $value) : ?>
+                                <option value="<?php echo $value->id_itemdelivery ?>"><?php echo $value->name_itemdelivery ?></option>
+                            <?php endforeach ?>
+                        </select>
+
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                </div>
+
+                <!-- Número del Acta -->
                 <div class="form-group mt-1">
-                    <label>Monto</label>
-                    <input type="text" class="form-control" pattern="[.\\,\\0-9]{1,}" name="amount-title" required>
+                    <label>Número Acta</label>
+                    <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" onchange="validateRepeat(event,'t&n','delvieries','number_delivery')" name="number" required>
 
                     <div class="valid-feedback">Valid.</div>
                     <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
 
-                <!-- Intereses del Título -->
-                <div class="form-group mt-1">
-                    <label>Intereses</label>
-                    <input type="text" class="form-control" pattern="[.\\,\\0-9]{1,}" name="interest-title" required>
+                <!-- Fecha del Acta -->
+                <div class="form-group mt-2 mb-1">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            Fecha :
+                        </span>
+                        <input type="date" class="form-control" name="datedelivery">
+                    </div>
 
                     <div class="valid-feedback">Valid.</div>
                     <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
 
+                <!-- Recursos -->
+                <div class="form-group mt-2">
+                    <label>Recursos de la Inversión</label>
+                    <?php
+                    $url = "resources?select=id_resource,name_resource";
+                    $method = "GET";
+                    $fields = array();
+                    $resources = CurlController::request($url, $method, $fields)->results;
+                    ?>
+
+                    <div class="form-group">
+                        <select class="form-control select2" name="resource" style="width:100%" required>
+                            <option value="">Seleccione Recurso</option>
+                            <?php foreach ($resources as $key => $value) : ?>
+                                <option value="<?php echo $value->id_resource ?>"><?php echo $value->name_resource ?></option>
+                            <?php endforeach ?>
+                        </select>
+
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                </div>
             </div>
             <?php
-            require_once "controllers/titles.controller.php";
-            $create = new TitlesController();
+            require_once "controllers/deliveries.controller.php";
+            $create = new DeliveriesController();
             $create->create();
             ?>
         </div>
@@ -101,7 +110,7 @@
         <div class="card-footer">
             <div class="col-md-8 offset-md-2">
                 <div class="form-group mt-1">
-                    <a href="/titles" class="btn btn-light border text-left">Back</a>
+                    <a href="/deliveries" class="btn btn-light border text-left">Back</a>
                     <button type="submit" class="btn bg-dark float-right">Save</button>
                 </div>
             </div>

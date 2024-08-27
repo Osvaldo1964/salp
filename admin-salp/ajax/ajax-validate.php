@@ -7,6 +7,7 @@ class ValidateController{
 	public $table;
 	public $suffix;
 	public $line;
+	public $item;
 
 	public function dataRepeat(){
 		$url = $this->table."?select=".$this->suffix."&linkTo=".$this->suffix."&equalTo=".$this->data;
@@ -34,8 +35,22 @@ class ValidateController{
 		$cadena .= "</select>";
 		//echo '<pre>'; print_r($cadena); echo '</pre>';
 		echo $cadena;
-		
-		
+	}
+
+	public function selectItems(){
+		$url = "itemdeliveries?select=id_itemdelivery,name_itemdelivery,id_typedelivery_itemdelivery&linkTo=id_typedelivery_itemdelivery&equalTo=".$this->item;
+		$method = "GET";
+		$fields = array();
+		$itemdeliveries = CurlController::request($url, $method, $fields)->results;
+		//echo '<pre>'; print_r($url); echo '</pre>';
+		$cadena = '<select name="itemdelivery" id="itemdelivery">';
+
+		foreach ($itemdeliveries as $key => $value) {
+			$cadena .= "<option value=" . $value->id_itemdelivery . ">" . $value->name_itemdelivery . "</option>";
+		}
+		$cadena .= "</select>";
+		//echo '<pre>'; print_r($cadena); echo '</pre>';
+		echo $cadena;
 	}
 }
 
@@ -51,4 +66,10 @@ if(isset($_POST["brandline"])){
 	$validate = new ValidateController();
 	$validate -> line = $_POST["brandline"];
 	$validate -> selectLines();
+}
+
+if(isset($_POST["itemdelivery"])){
+	$validate = new ValidateController();
+	$validate -> item = $_POST["itemdelivery"];
+	$validate -> selectItems();
 }

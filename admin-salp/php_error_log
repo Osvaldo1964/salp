@@ -2066,3 +2066,333 @@ Stack trace:
 [25-Aug-2024 19:58:40 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_ucap_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 48
 [25-Aug-2024 19:58:40 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_ucap_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 49
 [25-Aug-2024 19:58:40 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_ucap_pqr in C:\xampp\htdocs\salp\admin-salp\views\pages\setpqrs\actions\printasign.php on line 50
+[27-Aug-2024 08:46:00 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[27-Aug-2024 08:46:00 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[27-Aug-2024 08:46:00 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[27-Aug-2024 08:46:00 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[27-Aug-2024 08:46:00 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[27-Aug-2024 08:50:29 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\new.php on line 65
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 28
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Attempt to read property "id_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 28
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Attempt to read property "id_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Attempt to read property "number_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Attempt to read property "date_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 93
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Attempt to read property "amount_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:40:12 America/Bogota] PHP Warning:  Attempt to read property "interest_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 28
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Attempt to read property "id_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 28
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Attempt to read property "id_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Attempt to read property "number_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Attempt to read property "date_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 93
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Attempt to read property "amount_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:42:12 America/Bogota] PHP Warning:  Attempt to read property "interest_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 28
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Attempt to read property "id_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 28
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Attempt to read property "id_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Attempt to read property "number_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Attempt to read property "date_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 93
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Attempt to read property "amount_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:43:27 America/Bogota] PHP Warning:  Attempt to read property "interest_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 28
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Attempt to read property "id_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 28
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Attempt to read property "id_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Attempt to read property "number_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Attempt to read property "date_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 93
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Attempt to read property "amount_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:43:31 America/Bogota] PHP Warning:  Attempt to read property "interest_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 28
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Attempt to read property "id_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 28
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Attempt to read property "id_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Attempt to read property "number_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Attempt to read property "date_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 93
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Attempt to read property "amount_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:45:29 America/Bogota] PHP Warning:  Attempt to read property "interest_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 28
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Attempt to read property "id_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 28
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Attempt to read property "id_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Attempt to read property "number_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Attempt to read property "date_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 93
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Attempt to read property "amount_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:46:08 America/Bogota] PHP Warning:  Attempt to read property "interest_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Undefined variable $delvieriesº in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Attempt to read property "number_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Attempt to read property "date_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 93
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Attempt to read property "amount_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:48:45 America/Bogota] PHP Warning:  Attempt to read property "interest_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Attempt to read property "number_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Attempt to read property "date_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 93
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Attempt to read property "amount_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:49:32 America/Bogota] PHP Warning:  Attempt to read property "interest_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Attempt to read property "number_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Attempt to read property "date_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 93
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Attempt to read property "amount_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:49:37 America/Bogota] PHP Warning:  Attempt to read property "interest_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 33
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Attempt to read property "number_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Attempt to read property "date_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 93
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Attempt to read property "amount_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:49:42 America/Bogota] PHP Warning:  Attempt to read property "interest_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Undefined variable $delvieries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 28
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 28
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Attempt to read property "number_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Attempt to read property "date_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 93
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Attempt to read property "amount_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:50:51 America/Bogota] PHP Warning:  Attempt to read property "interest_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:51:16 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:51:16 America/Bogota] PHP Warning:  Attempt to read property "number_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 41
+[27-Aug-2024 09:51:16 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:51:16 America/Bogota] PHP Warning:  Attempt to read property "date_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 53
+[27-Aug-2024 09:51:16 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:51:16 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:51:16 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:51:16 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:51:16 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:51:16 America/Bogota] PHP Warning:  Attempt to read property "type_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 69
+[27-Aug-2024 09:51:16 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 93
+[27-Aug-2024 09:51:16 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:51:16 America/Bogota] PHP Warning:  Attempt to read property "amount_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 110
+[27-Aug-2024 09:51:16 America/Bogota] PHP Warning:  Undefined variable $titles in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 09:51:16 America/Bogota] PHP Warning:  Attempt to read property "interest_title" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 119
+[27-Aug-2024 10:22:13 America/Bogota] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php:50
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\deliveries.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(197): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(30): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[27-Aug-2024 10:22:21 America/Bogota] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php:50
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\deliveries.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(197): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(30): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[27-Aug-2024 10:22:42 America/Bogota] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php:50
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\deliveries.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(197): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(30): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[27-Aug-2024 10:23:19 America/Bogota] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php:50
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\deliveries.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(197): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(30): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[27-Aug-2024 10:27:03 America/Bogota] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php:51
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\deliveries.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(197): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(30): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 51
+[27-Aug-2024 10:28:08 America/Bogota] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php:51
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\deliveries.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(197): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(30): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 51
+[27-Aug-2024 10:28:21 America/Bogota] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php:51
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\deliveries.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(197): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(30): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 51
+[27-Aug-2024 10:29:15 America/Bogota] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php:52
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\deliveries.php(34): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(197): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(30): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 52
+[27-Aug-2024 10:39:59 America/Bogota] PHP Warning:  Undefined array key "id_itemdelivery_delivery" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 84
+[27-Aug-2024 10:39:59 America/Bogota] PHP Warning:  Undefined array key "number_delivery" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 85
+[27-Aug-2024 10:39:59 America/Bogota] PHP Warning:  Undefined array key "id_resource_delivery" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 87
+[27-Aug-2024 10:40:11 America/Bogota] PHP Warning:  Undefined array key "id_itemdelivery_delivery" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 84
+[27-Aug-2024 10:40:11 America/Bogota] PHP Warning:  Undefined array key "number_delivery" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 85
+[27-Aug-2024 10:40:11 America/Bogota] PHP Warning:  Undefined array key "id_resource_delivery" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 87
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 28
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 28
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Attempt to read property "id_typedelivery_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Attempt to read property "id_typedelivery_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Attempt to read property "id_typedelivery_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 76
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Attempt to read property "id_itemdelivery_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 76
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 92
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Attempt to read property "number_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 92
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 104
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Attempt to read property "date_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 104
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 124
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Attempt to read property "id_resource_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 124
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 124
+[27-Aug-2024 11:08:24 America/Bogota] PHP Warning:  Attempt to read property "id_resource_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 124
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 28
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 28
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Attempt to read property "id_typedelivery_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Attempt to read property "id_typedelivery_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Attempt to read property "id_typedelivery_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 76
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Attempt to read property "id_itemdelivery_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 76
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 92
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Attempt to read property "number_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 92
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 104
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Attempt to read property "date_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 104
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 124
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Attempt to read property "id_resource_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 124
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 124
+[27-Aug-2024 11:08:28 America/Bogota] PHP Warning:  Attempt to read property "id_resource_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 124

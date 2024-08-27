@@ -45,8 +45,8 @@ if (isset($_GET["start"]) && isset($_GET["end"])) {
                     <th>Tipo Acta</th>
                     <th>SubClase Acta</th>
                     <th>Numero Acta</th>
-                    <th>Fecha</th>
                     <th>Recursos</th>
+                    <th>Fecha</th>
                     <th>Fecha Creación</th>
                     <th>Acciones</th>
                 </tr>
