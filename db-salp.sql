@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-08-2024 a las 16:37:30
+-- Tiempo de generación: 28-08-2024 a las 17:08:09
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -99,7 +99,7 @@ CREATE TABLE `deliveries` (
   `id_itemdelivery_delivery` bigint(20) NOT NULL,
   `number_delivery` varchar(15) NOT NULL,
   `date_delivery` date NOT NULL,
-  `id_resources_delivery` bigint(20) NOT NULL,
+  `id_resource_delivery` bigint(20) NOT NULL,
   `date_created_delivery` date DEFAULT NULL,
   `date_updated_delivery` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -108,8 +108,35 @@ CREATE TABLE `deliveries` (
 -- Volcado de datos para la tabla `deliveries`
 --
 
-INSERT INTO `deliveries` (`id_delivery`, `id_typedelivery_delivery`, `id_itemdelivery_delivery`, `number_delivery`, `date_delivery`, `id_resources_delivery`, `date_created_delivery`, `date_updated_delivery`) VALUES
-(1, 1, 1, 'INI-001', '2024-08-01', 2, '2024-08-02', '2024-08-02 16:18:38');
+INSERT INTO `deliveries` (`id_delivery`, `id_typedelivery_delivery`, `id_itemdelivery_delivery`, `number_delivery`, `date_delivery`, `id_resource_delivery`, `date_created_delivery`, `date_updated_delivery`) VALUES
+(1, 1, 1, 'INI-001', '2024-08-01', 2, '2024-08-02', '2024-08-02 16:18:38'),
+(2, 2, 3, 'ACTA-0015', '2024-08-27', 1, '2024-08-27', '2024-08-27 14:38:49');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `details`
+--
+
+CREATE TABLE `details` (
+  `id_detail` bigint(20) NOT NULL,
+  `id_delivery_detail` bigint(20) NOT NULL,
+  `name_detail` text NOT NULL,
+  `unit_detail` varchar(6) NOT NULL,
+  `quantity_detal` decimal(15,2) NOT NULL,
+  `price_detail` decimal(15,2) NOT NULL,
+  `amount_detail` decimal(15,2) NOT NULL,
+  `status_detail` varchar(8) NOT NULL DEFAULT 'Activo',
+  `date_created_detail` date DEFAULT NULL,
+  `date_updated_detail` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `details`
+--
+
+INSERT INTO `details` (`id_detail`, `id_delivery_detail`, `name_detail`, `unit_detail`, `quantity_detal`, `price_detail`, `amount_detail`, `status_detail`, `date_created_detail`, `date_updated_detail`) VALUES
+(1, 2, 'bombillas 30w', 'Und', 10.00, 1500.00, 15000.00, 'Activo', '2024-08-01', '2024-08-27 16:07:55');
 
 -- --------------------------------------------------------
 
@@ -196,7 +223,7 @@ INSERT INTO `itemdeliveries` (`id_itemdelivery`, `code_itemdelivery`, `id_typede
 (1, '01', 1, 'INICIAL', 'Activo', '2024-08-02', '2024-08-02 16:17:03'),
 (2, '02', 2, 'EXPANSION', 'Activo', '2024-08-02', '2024-08-02 16:17:03'),
 (3, '03', 2, 'MODERNIZACION', 'Activo', '2024-08-02', '2024-08-02 16:17:22'),
-(4, '04', 2, 'ACTA DE BAJA dos', 'Activo', '2024-08-15', '2024-08-15 14:28:11');
+(4, '04', 3, 'ACTA DE BAJA dos', 'Activo', '2024-08-15', '2024-08-15 14:28:11');
 
 -- --------------------------------------------------------
 
@@ -394,7 +421,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fullname_user`, `username_user`, `email_user`, `password_user`, `token_user`, `token_exp_user`, `id_rol_user`, `picture_user`, `country_user`, `city_user`, `address_user`, `phone_user`, `method_user`, `date_created_user`, `date_updated_user`, `status_user`, `verification_user`) VALUES
-(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjM4MTM4MTMsImV4cCI6MTcyMzkwMDIxMywiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.tlgf45N4pR-bsGmApVJMtxi4JEHSWbiaFVb24yjWckg', '1723900213', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
+(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjQ3NjYzNjAsImV4cCI6MTcyNDg1Mjc2MCwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.OIfrNeGI9UejKSTrGXEyV7xe88lNqS8IkdxLFWmTLCA', '1724852760', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
 (7, 'Jorge Villalobos', 'jorgito', 'jorge@gmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', NULL, NULL, 'Usuarios', '7.png', 'Algeria', 'Varsobia', 'LA QUE SEA', '+213_3153153153', 'direct', '2024-06-22', '2024-06-22 14:18:30', 1, 1),
 (31, 'Juan Prueto', '', 'prueba@mail.com', '', NULL, NULL, '1', NULL, 'Afghanistan', 'Otra', 'calle 1', '+93_3253253325', 'direct', '2024-06-25', '2024-06-25 20:10:46', 1, 1);
 
@@ -425,6 +452,12 @@ ALTER TABLE `crews`
 --
 ALTER TABLE `deliveries`
   ADD PRIMARY KEY (`id_delivery`);
+
+--
+-- Indices de la tabla `details`
+--
+ALTER TABLE `details`
+  ADD PRIMARY KEY (`id_detail`);
 
 --
 -- Indices de la tabla `elements`
@@ -519,7 +552,13 @@ ALTER TABLE `crews`
 -- AUTO_INCREMENT de la tabla `deliveries`
 --
 ALTER TABLE `deliveries`
-  MODIFY `id_delivery` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_delivery` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `details`
+--
+ALTER TABLE `details`
+  MODIFY `id_detail` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `elements`
