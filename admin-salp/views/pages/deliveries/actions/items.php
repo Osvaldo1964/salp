@@ -50,6 +50,50 @@ if (isset($routesArray[3])) {
                     <input type="text" class="col-md-3 ml-2" name="resource" value="<?php echo $deliveries->name_resource ?>" disabled>
                 </div>
             </div>
+            <div class="col-md-12 offset-md-2">
+                <div class="row mt-2">
+                    <!-- Descripción -->
+                    <div class="form-group col-md-3">
+                        <label>Detalle</label>
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" name="detail" required>
+
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <!-- Unidad -->
+                    <div class="form-group col-md-1">
+                        <label>Unidad</label>
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" name="unit" required>
+
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <!-- Cantidad -->
+                    <div class="form-group col-md-1">
+                        <label>Cantidad</label>
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" name="quatity" required>
+
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <!-- Valor Unitario -->
+                    <div class="form-group col-md-2">
+                        <label>Vlr Unitario</label>
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" name="price" required>
+
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <!-- Total -->
+                    <div class="form-group col-md-3">
+                        <label>Total</label>
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" name="amount" disabled>
+
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <hr>
         <div class="card-boody">
