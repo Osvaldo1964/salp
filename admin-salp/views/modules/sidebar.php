@@ -308,7 +308,7 @@ $routesArray = array_filter($routesArray);
                     <a href="#" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "subjects") : ?>active bg-info<?php endif ?>">
                         <i class="nav-icon far fa-plus-square"></i>
                         <p>
-                            IMP. PREDIAL
+                            INFORMES
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
@@ -396,7 +396,7 @@ $routesArray = array_filter($routesArray);
                     <a href="#" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "subjects") : ?>active bg-info<?php endif ?>">
                         <i class="nav-icon far fa-plus-square"></i>
                         <p>
-                            COACTIVO
+                            GRAFICAS
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
