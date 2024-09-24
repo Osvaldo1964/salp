@@ -5,7 +5,6 @@ require_once "../controllers/template.controller.php";
 
 class DatatableController
 {
-
 	public function data()
 	{
 		//echo '<pre>'; print_r($_POST); echo '</pre>';exit;
