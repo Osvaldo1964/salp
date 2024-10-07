@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-08-2024 a las 17:08:09
+-- Tiempo de generación: 07-10-2024 a las 03:17:56
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -99,7 +99,7 @@ CREATE TABLE `deliveries` (
   `id_itemdelivery_delivery` bigint(20) NOT NULL,
   `number_delivery` varchar(15) NOT NULL,
   `date_delivery` date NOT NULL,
-  `id_resource_delivery` bigint(20) NOT NULL,
+  `id_resources_delivery` bigint(20) NOT NULL,
   `date_created_delivery` date DEFAULT NULL,
   `date_updated_delivery` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -108,35 +108,8 @@ CREATE TABLE `deliveries` (
 -- Volcado de datos para la tabla `deliveries`
 --
 
-INSERT INTO `deliveries` (`id_delivery`, `id_typedelivery_delivery`, `id_itemdelivery_delivery`, `number_delivery`, `date_delivery`, `id_resource_delivery`, `date_created_delivery`, `date_updated_delivery`) VALUES
-(1, 1, 1, 'INI-001', '2024-08-01', 2, '2024-08-02', '2024-08-02 16:18:38'),
-(2, 2, 3, 'ACTA-0015', '2024-08-27', 1, '2024-08-27', '2024-08-27 14:38:49');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `details`
---
-
-CREATE TABLE `details` (
-  `id_detail` bigint(20) NOT NULL,
-  `id_delivery_detail` bigint(20) NOT NULL,
-  `name_detail` text NOT NULL,
-  `unit_detail` varchar(6) NOT NULL,
-  `quantity_detal` decimal(15,2) NOT NULL,
-  `price_detail` decimal(15,2) NOT NULL,
-  `amount_detail` decimal(15,2) NOT NULL,
-  `status_detail` varchar(8) NOT NULL DEFAULT 'Activo',
-  `date_created_detail` date DEFAULT NULL,
-  `date_updated_detail` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `details`
---
-
-INSERT INTO `details` (`id_detail`, `id_delivery_detail`, `name_detail`, `unit_detail`, `quantity_detal`, `price_detail`, `amount_detail`, `status_detail`, `date_created_detail`, `date_updated_detail`) VALUES
-(1, 2, 'bombillas 30w', 'Und', 10.00, 1500.00, 15000.00, 'Activo', '2024-08-01', '2024-08-27 16:07:55');
+INSERT INTO `deliveries` (`id_delivery`, `id_typedelivery_delivery`, `id_itemdelivery_delivery`, `number_delivery`, `date_delivery`, `id_resources_delivery`, `date_created_delivery`, `date_updated_delivery`) VALUES
+(1, 1, 1, 'INI-001', '2024-08-01', 2, '2024-08-02', '2024-08-02 16:18:38');
 
 -- --------------------------------------------------------
 
@@ -176,7 +149,8 @@ CREATE TABLE `elements` (
 INSERT INTO `elements` (`id_element`, `id_class_element`, `code_element`, `name_element`, `life_element`, `address_element`, `id_minute_element`, `id_resource_element`, `id_roud_element`, `id_technology_element`, `id_power_element`, `id_material_element`, `id_height_element`, `altitud_element`, `latitude_element`, `longitude_element`, `id_dispose_element`, `value_element`, `gallery_element`, `status_element`, `date_created_element`, `date_updated_element`) VALUES
 (1, 1, '2514', 'prueba', 'nada', 'casa', 1, 1, 1, 1, 1, 0, NULL, 1.252, 10.2547, 74.2561, 0, 15000.00, '', 'Activo', '2024-08-08', '2024-08-08 16:11:31'),
 (2, 1, '212524', 'MADERA AZUL', '<p>prueba</p>', 'CASSSS', 0, 2, 1, 1, 1, 0, 185, 0, 1.23524, 20.2522, 0, 15000.00, '[\"26704.png\",\"54816.jpg\",\"13486.png\"]', 'Activo', '2024-08-08', '2024-08-08 19:02:44'),
-(3, 1, 'cls95878', 'MADERA VERDE', '<p>otra peurba</p>', 'LA DIRECCION VERDE', 0, 2, 1, 1, 1, 0, 0, 0, 10.4525, 74.2536, 0, 16000.00, '[\"16605.jpg\",\"78349.jpg\"]', 'Activo', '2024-08-08', '2024-08-08 19:06:07');
+(3, 1, 'cls95878', 'MADERA VERDE', '                                <p>otra peurba</p>                                ', 'LA DIRECCION VERDE', 0, 2, 1, 1, 2, 1, 1, 0, 10.4525, 74.2536, 0, 16000.00, '[\"16605.jpg\",\"78349.jpg\"]', 'Activo', '2024-08-08', '2024-08-08 19:06:07'),
+(4, 1, 'hj2515', 'LUMINARIA DE SODIO 100W', '<p>ALGO</p>', 'CARRERA 11', 0, 2, 1, 2, 3, 0, 277, 0, 10.2652, 14.2522, 0, 1500.00, '[\"22450.png\",\"94025.png\"]', 'Activo', '2024-10-05', '2024-10-06 00:43:21');
 
 -- --------------------------------------------------------
 
@@ -223,7 +197,7 @@ INSERT INTO `itemdeliveries` (`id_itemdelivery`, `code_itemdelivery`, `id_typede
 (1, '01', 1, 'INICIAL', 'Activo', '2024-08-02', '2024-08-02 16:17:03'),
 (2, '02', 2, 'EXPANSION', 'Activo', '2024-08-02', '2024-08-02 16:17:03'),
 (3, '03', 2, 'MODERNIZACION', 'Activo', '2024-08-02', '2024-08-02 16:17:22'),
-(4, '04', 3, 'ACTA DE BAJA dos', 'Activo', '2024-08-15', '2024-08-15 14:28:11');
+(4, '04', 2, 'ACTA DE BAJA dos', 'Activo', '2024-08-15', '2024-08-15 14:28:11');
 
 -- --------------------------------------------------------
 
@@ -265,7 +239,9 @@ CREATE TABLE `powers` (
 --
 
 INSERT INTO `powers` (`id_power`, `name_power`, `status_power`, `date_created_power`, `date_updated_power`) VALUES
-(1, '30W', 'Activo', '2024-08-04', '2024-08-04 15:46:17');
+(1, '30W', 'Activo', '2024-08-04', '2024-08-04 15:46:17'),
+(2, '40W', 'Activo', '2024-10-05', '2024-10-06 00:30:59'),
+(3, '100W', 'Activo', '2024-10-05', '2024-10-06 00:31:26');
 
 -- --------------------------------------------------------
 
@@ -296,9 +272,9 @@ CREATE TABLE `pqrs` (
 --
 
 INSERT INTO `pqrs` (`id_pqr`, `name_pqr`, `email_pqr`, `address_pqr`, `message_pqr`, `id_element_pqr`, `dateasign_pqr`, `id_crew_pqr`, `datesolved_pqr`, `latitude_pqr`, `longitude_pqr`, `name_address_pqr`, `status_pqr`, `date_created_pqr`, `date_updated_pqr`) VALUES
-(2, 'Pedro Perez', 'correokdl@correo.com', 'carrera 11 calle 17Santa Marta Colombia', 'ldldld', NULL, NULL, NULL, NULL, 11.2433, -74.2049, 'Cra. 11 & Cl. 17, Comuna 4, Santa Marta, Magdalena, Colombia', 'Activo', '2024-08-15', '2024-08-15 15:31:01'),
-(3, 'Juan Guerra', 'elcorrl@kkf.com', 'calle 22 carrera 3, Santa Marta Colombia', 'se apago', NULL, NULL, NULL, NULL, 11.2409, -74.2132, 'Cl. 22 & Cra. 3, Comuna 2, Santa Marta, Magdalena, Colombia', 'Activo', '2024-08-15', '2024-08-15 15:32:34'),
-(4, 'Autopistas Y Carreteras 2', 'osvicor@hotmail.com', 'calle 23 carrera 4, Santa Marta Colombia', 'prueaba', NULL, '2024-08-16', 1, NULL, 11.2337, -74.1794, 'Cl. 23, Santa Marta, Magdalena, Colombia', 'Activo', '2024-08-15', '2024-08-15 15:48:07');
+(2, 'Pedro Perez', 'correokdl@correo.com', 'carrera 11 calle 17Santa Marta Colombia', 'ldldld', NULL, NULL, NULL, NULL, 11.2433, -74.2049, 'Cra. 11 & Cl. 17, Comuna 4, Santa Marta, Magdalena, Colombia', 'Pending', '2024-08-15', '2024-08-15 15:31:01'),
+(3, 'Juan Guerra', 'elcorrl@kkf.com', 'calle 22 carrera 3, Santa Marta Colombia', 'se apago', NULL, '2024-10-05', 2, NULL, 11.2409, -74.2132, 'Cl. 22 & Cra. 3, Comuna 2, Santa Marta, Magdalena, Colombia', 'Assign', '2024-08-15', '2024-08-15 15:32:34'),
+(4, 'Autopistas Y Carreteras 2', 'osvicor@hotmail.com', 'calle 23 carrera 4, Santa Marta Colombia', 'prueaba', NULL, '2024-08-16', 1, NULL, 11.2337, -74.1794, 'Cl. 23, Santa Marta, Magdalena, Colombia', 'Assign', '2024-08-15', '2024-08-15 15:48:07');
 
 -- --------------------------------------------------------
 
@@ -347,6 +323,33 @@ INSERT INTO `rouds` (`id_roud`, `code_roud`, `name_roud`, `status_roud`, `date_c
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `settings`
+--
+
+CREATE TABLE `settings` (
+  `id_setting` bigint(20) NOT NULL,
+  `nit_setting` text NOT NULL,
+  `fullname_setting` text NOT NULL,
+  `address_setting` text NOT NULL,
+  `email_setting` text NOT NULL,
+  `phone_setting` text NOT NULL,
+  `manager_setting` text NOT NULL,
+  `signature_setting` text NOT NULL,
+  `department_setting` text NOT NULL,
+  `date_created_setting` date DEFAULT NULL,
+  `date_updated_setting` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `settings`
+--
+
+INSERT INTO `settings` (`id_setting`, `nit_setting`, `fullname_setting`, `address_setting`, `email_setting`, `phone_setting`, `manager_setting`, `signature_setting`, `department_setting`, `date_created_setting`, `date_updated_setting`) VALUES
+(1, '901901901', 'EMPRESA DE PRUEBA', 'CARRERA 11 No. 6-45 centro', 'empresa2@correo.com', '325325325', 'Juan Carlos Pérez h', 'signature.png', ', Santa Marta, Colombia', '0000-00-00', '2024-10-06 15:17:10');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `technologies`
 --
 
@@ -363,7 +366,8 @@ CREATE TABLE `technologies` (
 --
 
 INSERT INTO `technologies` (`id_technology`, `name_technology`, `status_technology`, `date_created_technology`, `date_updated_technology`) VALUES
-(1, 'LED', 'Activo', '2024-08-05', '2024-08-05 15:35:55');
+(1, 'LED', 'Activo', '2024-08-05', '2024-08-05 15:35:55'),
+(2, 'SODIO', 'Activo', '2024-10-05', '2024-10-06 00:31:12');
 
 -- --------------------------------------------------------
 
@@ -421,7 +425,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fullname_user`, `username_user`, `email_user`, `password_user`, `token_user`, `token_exp_user`, `id_rol_user`, `picture_user`, `country_user`, `city_user`, `address_user`, `phone_user`, `method_user`, `date_created_user`, `date_updated_user`, `status_user`, `verification_user`) VALUES
-(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjQ3NjYzNjAsImV4cCI6MTcyNDg1Mjc2MCwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.OIfrNeGI9UejKSTrGXEyV7xe88lNqS8IkdxLFWmTLCA', '1724852760', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
+(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjgyMjU0NjgsImV4cCI6MTcyODMxMTg2OCwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.Qd0T6_b6iaq4H58pPvxwrXceSkLvvMlliaf9a2GsfT4', '1728311868', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
 (7, 'Jorge Villalobos', 'jorgito', 'jorge@gmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', NULL, NULL, 'Usuarios', '7.png', 'Algeria', 'Varsobia', 'LA QUE SEA', '+213_3153153153', 'direct', '2024-06-22', '2024-06-22 14:18:30', 1, 1),
 (31, 'Juan Prueto', '', 'prueba@mail.com', '', NULL, NULL, '1', NULL, 'Afghanistan', 'Otra', 'calle 1', '+93_3253253325', 'direct', '2024-06-25', '2024-06-25 20:10:46', 1, 1);
 
@@ -452,12 +456,6 @@ ALTER TABLE `crews`
 --
 ALTER TABLE `deliveries`
   ADD PRIMARY KEY (`id_delivery`);
-
---
--- Indices de la tabla `details`
---
-ALTER TABLE `details`
-  ADD PRIMARY KEY (`id_detail`);
 
 --
 -- Indices de la tabla `elements`
@@ -508,6 +506,12 @@ ALTER TABLE `rouds`
   ADD PRIMARY KEY (`id_roud`);
 
 --
+-- Indices de la tabla `settings`
+--
+ALTER TABLE `settings`
+  ADD PRIMARY KEY (`id_setting`);
+
+--
 -- Indices de la tabla `technologies`
 --
 ALTER TABLE `technologies`
@@ -552,19 +556,13 @@ ALTER TABLE `crews`
 -- AUTO_INCREMENT de la tabla `deliveries`
 --
 ALTER TABLE `deliveries`
-  MODIFY `id_delivery` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT de la tabla `details`
---
-ALTER TABLE `details`
-  MODIFY `id_detail` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_delivery` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `elements`
 --
 ALTER TABLE `elements`
-  MODIFY `id_element` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_element` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `heights`
@@ -588,7 +586,7 @@ ALTER TABLE `materials`
 -- AUTO_INCREMENT de la tabla `powers`
 --
 ALTER TABLE `powers`
-  MODIFY `id_power` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_power` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `pqrs`
@@ -609,10 +607,16 @@ ALTER TABLE `rouds`
   MODIFY `id_roud` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT de la tabla `settings`
+--
+ALTER TABLE `settings`
+  MODIFY `id_setting` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `technologies`
 --
 ALTER TABLE `technologies`
-  MODIFY `id_technology` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_technology` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `typedeliveries`

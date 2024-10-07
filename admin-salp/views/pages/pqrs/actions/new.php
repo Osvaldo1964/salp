@@ -28,7 +28,7 @@
                         <!-- Dirección -->
                         <div class="form-group col-md-12">
                             <label>Dirección</label>
-                            <input type="text" class="form-control" pattern='[a-zA-Z0-9_ ]{1,}' name="address" required>
+                            <input type="text" class="form-control" pattern='[a-zA-Z0-9_ ]{1,}' id="address" name="address" onblur="Actmap()" required>
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
@@ -58,7 +58,7 @@
         <div class="card-footer">
             <div class="col-md-8 offset-md-2">
                 <div class="form-group submtit">
-                    <a href="/elements" class="btn btn-light border text-left">Back</a>
+                    <a href="/pqrs" class="btn btn-light border text-left">Back</a>
                     <button type="submit" class="btn bg-dark float-right saveBtn">Save</button>
                 </div>
             </div>

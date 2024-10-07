@@ -404,6 +404,29 @@ function fntPrintBarcode(area) {
   vprint.close();
 }
 
+function Actmap(){
+  let addressmap = document.querySelector("#address").value;
+  addressmap = addressmap + ', Santa Marta, Colombia';
+  console.log(addressmap);
+  var data = new FormData();
+  data.append("addressmap", addressmap);
+  
+  $.ajax({
+    url: "controllers/pqrs.controller.php",
+    method: "POST",
+    data: data,
+    contentType: false,
+    cache: false,
+    processData: false,
+    success: function (response) {
+      console.log(response);
+     // $("#itemdelivery").html(response);
+    }
+  })
+
+
+}
+
 async function initMap() {
   // Variables para ubicarte en santa marta
   if(latitude === undefined || longitude === undefined)

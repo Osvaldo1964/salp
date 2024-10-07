@@ -3,6 +3,7 @@
 class PqrsController
 {
 
+    public $addressmap;
     /* Creacion de Marcas */
     public function create()
     {
@@ -42,7 +43,7 @@ class PqrsController
                     "latitude_pqr" => $latitud,
                     "longitude_pqr" => $longitud,
                     "name_address_pqr" => $newdireccion,
-                    "status_pqr" => 'Activo',
+                    "status_pqr" => 'Pending',
                     "date_created_pqr" => date("Y-m-d")
                 );
 
@@ -93,7 +94,8 @@ class PqrsController
 
                     /* Agrupamos la información */
                     $data = "dateasign_pqr=" . $_POST["dateasign"] .
-                        "&id_crew_pqr=" . trim(TemplateController::capitalize($_POST["crew"]));
+                        "&id_crew_pqr=" . trim(TemplateController::capitalize($_POST["crew"])) . 
+                        "&status_pqr=" . "Assign";
 
                     /* Solicitud a la API */
                     $url = "pqrs?id=" . $id . "&nameId=id_pqr&token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
@@ -137,10 +139,12 @@ class PqrsController
         }
     }
 
-    function getGeocodeData($address)
+    function getGeocodeData()
     {
-        $address = urlencode($address);
-        $googleMapUrl = "https://maps.googleapis.com/maps/api/geocode/json?address={$address}&key=AIzaSyDDTJ5uq4WEhP4noQ6DKM7aFVUYwGabdu8";
+        $address = $this->addressmap;
+        echo '<pre>'; print_r($address); echo '</pre>';
+        $googleMapUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" . 'carrera 11 calle 25, santa marta, colombia' . "&key=AIzaSyDDTJ5uq4WEhP4noQ6DKM7aFVUYwGabdu8";
+        echo '<pre>'; print_r($googleMapUrl); echo '</pre>';
         $geocodeResponseData = file_get_contents($googleMapUrl);
         $responseData = json_decode($geocodeResponseData, true);
         if ($responseData['status'] == 'OK') {
@@ -159,4 +163,12 @@ class PqrsController
             return false;
         }
     }
+   
+}
+
+
+if(isset($_POST["addressmap"])){
+    $validate = new PqrsController();
+    $validate -> addressmap = $_POST["addressmap"];
+    $validate -> getGeocodeData();
 }

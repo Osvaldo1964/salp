@@ -4,27 +4,30 @@
 total de titulos
 =============================================*/
 
-$url = "titles?select=id_title";
+$url = "pqrs?select=id_pqr";
 $method = "GET";
 $fields = array();
-$titles = CurlController::request($url,$method,$fields); 
+$pqrs = CurlController::request($url,$method,$fields); 
 
-if($titles->status == 200){ 
-  $titles = $titles->total;
+if($pqrs->status == 200){ 
+  $pqrs = $pqrs->total;
 }else{
-  $titles = 0;
+  $pqrs = 0;
 } 
 
 /*=============================================
-total de Deudores
+total de Luminarias
 =============================================*/
-$url = "subjects?select=id_subject";
-$subjects = CurlController::request($url,$method,$fields);
+$select = "id_element,id_class_element,id_technology_element,id_technology,name_technology,id_power_element,id_power,name_power";
+$url = "relations?rel=elements,classes,technologies,powers&type=element,class,technology,power&select=" . $select . "&linkTo=id_class_element&equalTo=" . 1;
+//"relations?select=id_subject";
+$elements = CurlController::request($url,$method,$fields);
+//echo '<pre>'; print_r($url); echo '</pre>';exit;
 
-if($subjects->status == 200){ 
-  $subjects = $subjects->total;
+if($elements->status == 200){ 
+  $elements = $elements->total;
 }else{
-  $subjects = 0;
+  $elements = 0;
 }  
 
 /*=============================================
@@ -60,9 +63,9 @@ if($users->status == 200){
       <span class="info-box-icon bg-info elevation-1"><i class="fas fa-file-alt"></i></span>
 
       <div class="info-box-content">
-        <span class="info-box-text">Títulos</span>
+        <span class="info-box-text">PQRs</span>
         <span class="info-box-number">
-          <?php echo $titles ?>
+          <?php echo $pqrs ?>
         </span>
       </div>
       <!-- /.info-box-content -->
@@ -75,8 +78,8 @@ if($users->status == 200){
       <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-user-check"></i></span>
 
       <div class="info-box-content">
-        <span class="info-box-text">Deudores</span>
-        <span class="info-box-number"><?php echo $subjects ?></span>
+        <span class="info-box-text">Luminarias</span>
+        <span class="info-box-number"><?php echo $elements ?></span>
       </div>
       <!-- /.info-box-content -->
     </div>

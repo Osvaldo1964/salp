@@ -88,17 +88,34 @@ class DatatableController
 				if ($_GET["text"] == "flat") {
 					$status_pqr = $value->status_pqr;
 					//$follow_payorder = "";
+					$actions = "";
 				} else {
 					//echo '<pre>'; print_r($value->follow_payorder); echo '</pre>';exit;
-					if ($value->status_pqr == "Activo") {
-						
+					switch ($value->status_pqr) {
+						case "Pending":
+							$status_pqr = "<span class='badge badge-danger p-2'>" . $value->status_pqr . "</span>";
+							break;
+						case "Assign":
+							$status_pqr = "<span class='badge badge-primary p-2'>" . $value->status_pqr . "</span>";
+							break;
+						case "Success":
+							$status_pqr = "<span class='badge badge-warning p-2'>" . $value->status_pqr . "</span>";
+							break;
+						case "Cancel":
+							$status_pqr = "<span class='badge badge-success p-2'>" . $value->status_pqr . "</span>";
+							break;
+						default:
+							echo "Error";
+					}
+
+/* 					if ($value->status_pqr == "Activo") {
                         $status_pqr = "<span class='badge badge-danger p-2'>" . $value->status_pqr . "</span>";
 					} elseif ($value->status_pqr == "Proceso") {
 						$status_pqr = "<span class='badge badge-info p-2'>" . $value->status_pqr . "</span>";
 					}else{
                         $status_pqr = "<span class='badge badge-success p-2'>" . $value->status_pqr . "</span>";
                     }
-					//echo '<pre>'; print_r($status_payorder); echo '</pre>';exit;
+ */					//echo '<pre>'; print_r($status_payorder); echo '</pre>';exit;
 					
  					$actions = "<a href='/setpqrs/asign/" . base64_encode($value->id_pqr . "~" . $_GET["token"]) . "' class='btn btn-warning btn-sm mr-1 rounded-circle' title='Asignar'>
 			            		<i class='fas fa-pencil-alt'></i>
