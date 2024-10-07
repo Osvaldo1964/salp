@@ -407,10 +407,11 @@ function fntPrintBarcode(area) {
 function Actmap(){
   let addressmap = document.querySelector("#address").value;
   addressmap = addressmap + ', Santa Marta, Colombia';
-  console.log(addressmap);
+
+  //console.log(addressmap);
   var data = new FormData();
   data.append("addressmap", addressmap);
-  
+ 
   $.ajax({
     url: "controllers/pqrs.controller.php",
     method: "POST",
@@ -418,9 +419,13 @@ function Actmap(){
     contentType: false,
     cache: false,
     processData: false,
-    success: function (response) {
+    success: function(response) {
       console.log(response);
-     // $("#itemdelivery").html(response);
+      data = JSON.parse(response);
+      console.log(data['latitud']);
+      latitude = data['latitud'];
+      longitude = data['longitud'];
+      initMap();
     }
   })
 

@@ -25,7 +25,7 @@ if (isset($routesArray[3])) {
 }
 ?>
 
-<div class="card card-dark card-outline col-md-4">
+<div class="card card-dark card-outline col-md-6">
     <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
         <div class="card-header">
             <h5>Asignación de Cuadrilla</h5>
@@ -37,7 +37,7 @@ if (isset($routesArray[3])) {
         </div>
         <div class="card-body">
             <!-- Numero de Pqr  -->
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-4">
                 <div class="form-group">
                     <label>No. Pqr</label>
                     <input type="text" class="form-control" value="<?php echo $pqrs->id_pqr ?>" name="idPqr">
@@ -47,7 +47,7 @@ if (isset($routesArray[3])) {
             </div>
 
             <!-- Fecha de Asignación -->
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-4">
                 <div class="input-group-append">
                     <span class="input-group-text">
                         Fecha :
@@ -60,7 +60,7 @@ if (isset($routesArray[3])) {
             </div>
 
             <!-- Cadrilla -->
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-4">
                 <label>Deudor</label>
                 <?php
                 $url = "crews?select=id_crew,name_crew";
@@ -93,10 +93,11 @@ if (isset($routesArray[3])) {
             </div>
         </div>
         <div class="card-footer">
-            <div class="col-md-8 offset-md-2">
+            <div class="col-md-6 offset-md-2">
                 <div class="form-group submtit">
                     <a href="/setpqrs" class="btn btn-light border text-center">Regresar</a>
-                    <a href="/setpqrs/printasign/<?php echo $idPqr ?>" class='btn btn-success btn-sm mr-1 rounded-circle' title='Imprimir'>
+
+                    <a href="/setpqrs/printasign/<?php echo $idPqr ?>" class='btn btn-success border text-center' title='Imprimir'>Imprimir
                     </a>
                     <button type="submit" class="btn bg-dark float-right">Guardar</button>
                 </div>

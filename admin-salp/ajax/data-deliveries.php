@@ -22,6 +22,7 @@ class DatatableController{
 			$method = "GET";
 			$fields = array();
 			$response = CurlController::request($url,$method,$fields);  
+			//echo '<pre>'; print_r($url); echo '</pre>';exit;
 			if($response->status == 200){	
 				$totalData = $response->total;
 			}else{

@@ -467,3 +467,73 @@ Stack trace:
 [06-Oct-2024 12:55:58 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [06-Oct-2024 12:55:58 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [06-Oct-2024 12:55:58 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[07-Oct-2024 08:30:06 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[07-Oct-2024 08:30:06 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[07-Oct-2024 08:30:06 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[07-Oct-2024 08:30:06 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[07-Oct-2024 08:30:06 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[07-Oct-2024 11:06:57 America/Bogota] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=&amp;key=AIzaSyDDTJ5uq4WEhP4noQ6DKM7aFVUYwGabdu8): Failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 148
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=&amp;key=AIzaSyDDTJ5uq4WEhP4noQ6DKM7aFVUYwGabdu8): Failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 149
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 152
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 152
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 152
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 152
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 152
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 153
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 153
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 153
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 153
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 153
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 154
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 154
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 154
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 32
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 33
+[07-Oct-2024 11:06:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 34
+[07-Oct-2024 11:12:39 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[07-Oct-2024 11:12:39 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[07-Oct-2024 11:12:39 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[07-Oct-2024 11:12:39 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[07-Oct-2024 11:12:39 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[07-Oct-2024 11:34:17 America/Bogota] PHP Warning:  Undefined array key "datesolved" in C:\xampp\htdocs\salp\admin-salp\controllers\pqrs.controller.php on line 165
+[07-Oct-2024 11:37:31 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[07-Oct-2024 11:37:31 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[07-Oct-2024 11:37:31 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[07-Oct-2024 11:37:31 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[07-Oct-2024 11:37:31 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[07-Oct-2024 11:39:37 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[07-Oct-2024 11:39:37 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[07-Oct-2024 11:39:37 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[07-Oct-2024 11:39:37 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[07-Oct-2024 11:39:37 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[07-Oct-2024 11:41:01 America/Bogota] PHP Warning:  Undefined property: stdClass::$name_height in C:\xampp\htdocs\salp\admin-salp\views\pages\elements\actions\edit.php on line 257
+[07-Oct-2024 11:56:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 35
+[07-Oct-2024 11:56:24 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 35
+[07-Oct-2024 11:56:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 40
+[07-Oct-2024 11:56:24 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 40
+[07-Oct-2024 11:56:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[07-Oct-2024 11:56:24 America/Bogota] PHP Warning:  Attempt to read property "name_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[07-Oct-2024 11:56:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 45
+[07-Oct-2024 11:56:24 America/Bogota] PHP Warning:  Attempt to read property "name_itemdelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 45
+[07-Oct-2024 11:56:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 46
+[07-Oct-2024 11:56:24 America/Bogota] PHP Warning:  Attempt to read property "number_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 46
+[07-Oct-2024 11:56:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 49
+[07-Oct-2024 11:56:24 America/Bogota] PHP Warning:  Attempt to read property "date_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 49
+[07-Oct-2024 11:56:24 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[07-Oct-2024 11:56:24 America/Bogota] PHP Warning:  Attempt to read property "name_resource" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[07-Oct-2024 11:59:27 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 36
+[07-Oct-2024 11:59:27 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 36
+[07-Oct-2024 11:59:27 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 41
+[07-Oct-2024 11:59:27 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 41
+[07-Oct-2024 11:59:27 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 45
+[07-Oct-2024 11:59:27 America/Bogota] PHP Warning:  Attempt to read property "name_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 45
+[07-Oct-2024 11:59:27 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 46
+[07-Oct-2024 11:59:27 America/Bogota] PHP Warning:  Attempt to read property "name_itemdelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 46
+[07-Oct-2024 11:59:27 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[07-Oct-2024 11:59:27 America/Bogota] PHP Warning:  Attempt to read property "number_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[07-Oct-2024 11:59:27 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[07-Oct-2024 11:59:27 America/Bogota] PHP Warning:  Attempt to read property "date_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 50
+[07-Oct-2024 11:59:27 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 51
+[07-Oct-2024 11:59:27 America/Bogota] PHP Warning:  Attempt to read property "name_resource" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 51

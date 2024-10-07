@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-10-2024 a las 03:17:56
+-- Tiempo de generación: 07-10-2024 a las 21:26:01
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -99,7 +99,7 @@ CREATE TABLE `deliveries` (
   `id_itemdelivery_delivery` bigint(20) NOT NULL,
   `number_delivery` varchar(15) NOT NULL,
   `date_delivery` date NOT NULL,
-  `id_resources_delivery` bigint(20) NOT NULL,
+  `id_resource_delivery` bigint(20) NOT NULL,
   `date_created_delivery` date DEFAULT NULL,
   `date_updated_delivery` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -108,8 +108,34 @@ CREATE TABLE `deliveries` (
 -- Volcado de datos para la tabla `deliveries`
 --
 
-INSERT INTO `deliveries` (`id_delivery`, `id_typedelivery_delivery`, `id_itemdelivery_delivery`, `number_delivery`, `date_delivery`, `id_resources_delivery`, `date_created_delivery`, `date_updated_delivery`) VALUES
+INSERT INTO `deliveries` (`id_delivery`, `id_typedelivery_delivery`, `id_itemdelivery_delivery`, `number_delivery`, `date_delivery`, `id_resource_delivery`, `date_created_delivery`, `date_updated_delivery`) VALUES
 (1, 1, 1, 'INI-001', '2024-08-01', 2, '2024-08-02', '2024-08-02 16:18:38');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `details`
+--
+
+CREATE TABLE `details` (
+  `id_detail` bigint(20) NOT NULL,
+  `id_delivery_detail` bigint(20) NOT NULL,
+  `name_detail` text NOT NULL,
+  `unit_detail` varchar(6) NOT NULL,
+  `quantity_detal` decimal(15,2) NOT NULL,
+  `price_detail` decimal(15,2) NOT NULL,
+  `amount_detail` decimal(15,2) NOT NULL,
+  `status_detail` varchar(8) NOT NULL,
+  `date_created_detail` date DEFAULT NULL,
+  `date_updated_detail` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `details`
+--
+
+INSERT INTO `details` (`id_detail`, `id_delivery_detail`, `name_detail`, `unit_detail`, `quantity_detal`, `price_detail`, `amount_detail`, `status_detail`, `date_created_detail`, `date_updated_detail`) VALUES
+(1, 1, 'LUMINARIAS LED 30W', 'Und', 10.00, 15600.00, 156000.00, '1', '2024-10-07', '2024-10-07 17:05:47');
 
 -- --------------------------------------------------------
 
@@ -274,7 +300,8 @@ CREATE TABLE `pqrs` (
 INSERT INTO `pqrs` (`id_pqr`, `name_pqr`, `email_pqr`, `address_pqr`, `message_pqr`, `id_element_pqr`, `dateasign_pqr`, `id_crew_pqr`, `datesolved_pqr`, `latitude_pqr`, `longitude_pqr`, `name_address_pqr`, `status_pqr`, `date_created_pqr`, `date_updated_pqr`) VALUES
 (2, 'Pedro Perez', 'correokdl@correo.com', 'carrera 11 calle 17Santa Marta Colombia', 'ldldld', NULL, NULL, NULL, NULL, 11.2433, -74.2049, 'Cra. 11 & Cl. 17, Comuna 4, Santa Marta, Magdalena, Colombia', 'Pending', '2024-08-15', '2024-08-15 15:31:01'),
 (3, 'Juan Guerra', 'elcorrl@kkf.com', 'calle 22 carrera 3, Santa Marta Colombia', 'se apago', NULL, '2024-10-05', 2, NULL, 11.2409, -74.2132, 'Cl. 22 & Cra. 3, Comuna 2, Santa Marta, Magdalena, Colombia', 'Assign', '2024-08-15', '2024-08-15 15:32:34'),
-(4, 'Autopistas Y Carreteras 2', 'osvicor@hotmail.com', 'calle 23 carrera 4, Santa Marta Colombia', 'prueaba', NULL, '2024-08-16', 1, NULL, 11.2337, -74.1794, 'Cl. 23, Santa Marta, Magdalena, Colombia', 'Assign', '2024-08-15', '2024-08-15 15:48:07');
+(4, 'Autopistas Y Carreteras 2', 'osvicor@hotmail.com', 'calle 23 carrera 4, Santa Marta Colombia', 'prueaba', NULL, '2024-08-16', 1, '2024-08-27', 11.2337, -74.1794, 'Cl. 23, Santa Marta, Magdalena, Colombia', 'Success', '2024-08-15', '2024-10-07 05:00:00'),
+(6, 'Osvaldo Villalobos Cortina', 'osvicor1964@gmail.com', 'urb san lorenzo mz j cs 34, Santa Marta Colombia', 'se apago', NULL, NULL, NULL, NULL, 11.2097, -74.163, 'Cra. 66 #48-106, Santa Marta, Magdalena, Colombia', 'Pending', '2024-10-07', '2024-10-07 16:12:19');
 
 -- --------------------------------------------------------
 
@@ -425,7 +452,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fullname_user`, `username_user`, `email_user`, `password_user`, `token_user`, `token_exp_user`, `id_rol_user`, `picture_user`, `country_user`, `city_user`, `address_user`, `phone_user`, `method_user`, `date_created_user`, `date_updated_user`, `status_user`, `verification_user`) VALUES
-(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjgyMjU0NjgsImV4cCI6MTcyODMxMTg2OCwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.Qd0T6_b6iaq4H58pPvxwrXceSkLvvMlliaf9a2GsfT4', '1728311868', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
+(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjgzMDc4MDYsImV4cCI6MTcyODM5NDIwNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.VynYG8AvOyZG53azLr8FlMS5Ao-0i4V3Df4VyUqd3H4', '1728394206', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
 (7, 'Jorge Villalobos', 'jorgito', 'jorge@gmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', NULL, NULL, 'Usuarios', '7.png', 'Algeria', 'Varsobia', 'LA QUE SEA', '+213_3153153153', 'direct', '2024-06-22', '2024-06-22 14:18:30', 1, 1),
 (31, 'Juan Prueto', '', 'prueba@mail.com', '', NULL, NULL, '1', NULL, 'Afghanistan', 'Otra', 'calle 1', '+93_3253253325', 'direct', '2024-06-25', '2024-06-25 20:10:46', 1, 1);
 
@@ -456,6 +483,12 @@ ALTER TABLE `crews`
 --
 ALTER TABLE `deliveries`
   ADD PRIMARY KEY (`id_delivery`);
+
+--
+-- Indices de la tabla `details`
+--
+ALTER TABLE `details`
+  ADD PRIMARY KEY (`id_detail`);
 
 --
 -- Indices de la tabla `elements`
@@ -559,6 +592,12 @@ ALTER TABLE `deliveries`
   MODIFY `id_delivery` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT de la tabla `details`
+--
+ALTER TABLE `details`
+  MODIFY `id_detail` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `elements`
 --
 ALTER TABLE `elements`
@@ -592,7 +631,7 @@ ALTER TABLE `powers`
 -- AUTO_INCREMENT de la tabla `pqrs`
 --
 ALTER TABLE `pqrs`
-  MODIFY `id_pqr` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_pqr` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `resources`
