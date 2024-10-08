@@ -59,7 +59,7 @@ if (isset($routesArray[3])) {
                 <!-- Descripción -->
                 <div class="form-group col-md-3">
                     <label>Detalle</label>
-                    <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" id="detail" name="detail" required>
+                    <input type="text" class="form-control" pattern="^[a-zA-Z0-9\s]+$" id="detail" name="detail" required>
 
                     <div class="valid-feedback">Valid.</div>
                     <div class="invalid-feedback">Please fill out this field.</div>
@@ -67,7 +67,7 @@ if (isset($routesArray[3])) {
                 <!-- Unidad -->
                 <div class="form-group col-md-1">
                     <label>Unidad</label>
-                    <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" id="unit" name="unit" required>
+                    <input type="text" class="form-control" pattern="^[a-zA-Z0-9\s]+$" id="unit" name="unit" required>
 
                     <div class="valid-feedback">Valid.</div>
                     <div class="invalid-feedback">Please fill out this field.</div>
@@ -75,7 +75,7 @@ if (isset($routesArray[3])) {
                 <!-- Cantidad -->
                 <div class="form-group col-md-1">
                     <label>Cantidad</label>
-                    <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" id="quantity" name="quantity" required>
+                    <input type="text" class="form-control" pattern="^\d+(\.\d+)?$" id="quantity" name="quantity" onblur="addTotal()" required>
 
                     <div class="valid-feedback">Valid.</div>
                     <div class="invalid-feedback">Please fill out this field.</div>
@@ -83,7 +83,7 @@ if (isset($routesArray[3])) {
                 <!-- Valor Unitario -->
                 <div class="form-group col-md-2">
                     <label>Vlr Unitario</label>
-                    <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" id="price" name="price" required>
+                    <input type="text" class="form-control" pattern="^\d+(\.\d+)?$" id="price" name="price" onblur="addTotal()" required>
 
                     <div class="valid-feedback">Valid.</div>
                     <div class="invalid-feedback">Please fill out this field.</div>
@@ -91,7 +91,7 @@ if (isset($routesArray[3])) {
                 <!-- Total -->
                 <div class="form-group col-md-3">
                     <label>Total</label>
-                    <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" name="amount" disabled>
+                    <input type="text" class="form-control" pattern="^\d+(\.\d+)?$" id="amount" name="amount" disabled>
 
                     <div class="valid-feedback">Valid.</div>
                     <div class="invalid-feedback">Please fill out this field.</div>
@@ -121,6 +121,7 @@ if (isset($routesArray[3])) {
             <table id="details" class="table table-bordered table-striped text-sm">
                 <thead>
                     <tr>
+                        <th>Id</th>
                         <th>Detalle</th>
                         <th>Unidad</th>
                         <th>Cantidad</th>
@@ -131,41 +132,84 @@ if (isset($routesArray[3])) {
                 </thead>
                 <tbody>
                 </tbody>
-                <tfoot>
+                <tfoot id="tfoot" style="display: none">
+                    <tr>
+                        <td colspan="5">
+                            <span style="color: black; float: right;">TOTAL</span>
+                        </td>
+                        <td id="total" style="text-align: right">
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
                 </tfoot>
+
             </table>
         </div>
     </div>
 </div>
 
 <script>
+    let items_acta = [];
+    let total = 0.00;
+
     function addDetail() {
+        ind_item = items_acta.length + 1;
         name_item = $('#detail').val();
         unit_item = $('#unit').val();
         qty_item = $('#quantity').val();
         prc_item = $('#price').val();
         amo_item = $('#amount').val();
 
+        var aux = {};
+        aux['index'] = ind_item;
+        aux['name'] = name_item;
+        aux['unit'] = name_item;
+        aux['quantity'] = qty_item;
+        aux['price'] = prc_item;
+        aux['amount'] = qty_item * prc_item;
 
-        var descuento = 0.00;
-        existencia = 0;
-        cantidad = 0;
-        descuento = 0;
-        var vlr_descuento = 0.00;
+        items_acta.push(aux);
+        //subtotal = formato_moneda.format(subtotal);
 
 
         $('.dataTables_empty').parent('tr').html('');
         $('#details tbody').append(`<tr>
+                            <td>${ind_item}</td>
 							<td>${name_item}</td>
 							<td>${unit_item}</td>
-							<td><input type="number" min="1.00" onblur='editar_cantidad("${name_item}", ${qty_item}, this)' value="${qty_item}" /></td>
-							<td><input type="number" min="1.00" onblur='cambiar_precio("${name_item}", this)' value="${prc_item}" /></td>
-							<td style="text-align: right">${descuento}</td>
+							<td><input type="number" min="1.00" onblur='addTotal("${name_item}", ${qty_item}, this)' value="${qty_item}" /></td>
+							<td><input type="number" min="1.00" onblur='addTotal("${name_item}", this)' value="${prc_item}" /></td>
+							<td style="text-align: right">${amo_item}</td>
 							<td>
 								<button class="btn btn-danger btn_borrar" onclick="borrar(this)">
 									<i class="fa fa-trash"></i>
 								</button>
 							</td>
 							</tr>`);
+        calcular_total();
     };
+
+    function addTotal() {
+        qty_item = $('#quantity').val();
+        prc_item = $('#price').val();
+        tot_item = qty_item * prc_item;
+        $('#amount').val(tot_item);
+    };
+
+    function calcular_total() {
+        total = 0.00;
+        //console.log(items_acta);
+        for (var i = 0; i <= items_acta.length - 1; i++) {
+            total += (items_acta[i]['quantity'] * items_acta[i]['price'])
+        }
+
+        $('#total').text(total);
+
+        if (items_acta.length > 0) {
+            $('#tfoot').slideDown();
+        } else {
+            $('#tfoot').hide();
+        }
+    }
 </script>
