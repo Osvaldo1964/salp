@@ -106,9 +106,7 @@ class TemplateController
     /* Función para almacenar imágenes */
 
 	static public function saveImage($image, $folder, $path, $width, $height, $name){
-
 		if(isset($image["tmp_name"]) && !empty($image["tmp_name"])){ 
-
 			/* Configuramos la ruta del directorio donde se guardará la imagen */
 			$directory = strtolower("views/".$folder."/".$path);
 

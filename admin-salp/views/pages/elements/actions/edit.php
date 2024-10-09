@@ -95,7 +95,7 @@ if (isset($routesArray[3])) {
                         <!-- Latitud -->
                         <div class="form-group col-md-4">
                             <label>Latiud</label>
-                            <input type="text" class="form-control" pattern="[.\\,\\0-9]{1,}" name="latitude" value="<?php echo $elements->latitude_element ?>" required>
+                            <input type="text" class="form-control" pattern="^-?[0-9]*\.?[0-9]+$" name="latitude" value="<?php echo $elements->latitude_element ?>" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -103,7 +103,7 @@ if (isset($routesArray[3])) {
                         <!-- Longitud -->
                         <div class="form-group col-md-4">
                             <label>Longitud</label>
-                            <input type="text" class="form-control" pattern="[.\\,\\0-9]{1,}" name="longitude" value="<?php echo $elements->longitude_element ?>" required>
+                            <input type="text" class="form-control" pattern="^-?[0-9]*\.?[0-9]+$" name="longitude" value="<?php echo $elements->longitude_element ?>" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -265,15 +265,27 @@ if (isset($routesArray[3])) {
                                 <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
                         </div>
-                        <!-- Precio del Elemento -->
+                    </div>
+                    <div class="row">
                         <div class="form-group col-md-4">
+                            <!-- Cantidad del Elemento -->
+                            <label>Cantidad</label>
+                            <input type="text" class="form-control" pattern="^(0|[1-9]\d*)(\.\d+)?$" name="qty" value="<?php echo $elements->qty_element ?>" >
+
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <!-- Precio del Elemento -->
                             <label>Precio Elemento</label>
-                            <input type="text" class="form-control" pattern="[.\\,\\0-9]{1,}" name="price" value="<?php echo $elements->value_element ?>" required>
+                            <input type="text" class="form-control" pattern="^(0|[1-9]\d*)(\.\d+)?$" name="price" value="<?php echo $elements->value_element ?>" >
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                     </div>
+
 
                     <!-- Galeria de Imagenes -->
                     <label>Galeria de Imagenes del Elemento</label>

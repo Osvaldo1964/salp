@@ -30,7 +30,7 @@
         <div class="card-body">
             <?php
             if (isset($routesArray[2])) {
-                if ($routesArray[2] == "new" || $routesArray[2] == "edit" || $routesArray[2] == "items") {
+                if ($routesArray[2] == "new" || $routesArray[2] == "edit" || $routesArray[2] == "print") {
                     include "actions/" . $routesArray[2] . ".php";
                 }
             } else {

@@ -13,10 +13,10 @@ if (isset($_GET["start"]) && isset($_GET["end"])) {
 
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">
+<!--         <h3 class="card-title">
             <a class="btn bg-info btn-sm" href="/elements/autonew">Generar Lotes</a>
             <a class="btn bg-info btn-sm" href="/elements/new">Generar Manual</a>
-        </h3>
+        </h3> -->
         <div class="card-tools">
             <div class="d-flex">
                 <div class="d-flex mr-2 text-sm">
@@ -58,43 +58,3 @@ if (isset($_GET["start"]) && isset($_GET["end"])) {
 </div>
 
 <script src="views/assets/custom/datatable/datatable.js"></script>
-
-
-<!-- Ventana Modal proceso de seguimiento -->
-
-<!-- The Modal -->
-<div class="modal modal-next" id="nextProcess">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <form method="post" class="needs-validation" novalidate>
-
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Siguiente Proceso para ID <span></span></h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="card my-3 orderBody">
-
-                    </div>
-                </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer d-flex justify-content-between">
-
-                    <?php
-                        require_once "controllers/payorders.controller.php";
-                        $payorderUpdate = new PayordersController();
-                        $payorderUpdate->payorderUpdate();
-                    ?>
-                    <div><button type="button" class="btn btn-danger border" data-dismiss="modal">Cerrar</button></div>
-                    <div><button type="submit" class="btn btn-success">Actualizar</button></div>
-                </div>
-
-            </form>
-
-        </div>
-    </div>
-</div>

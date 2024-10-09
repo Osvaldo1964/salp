@@ -17,6 +17,23 @@ let longitude;
         form.classList.add('was-validated');
       }, false);
     });
+
+    if (document.querySelector(".btnAddImage")) {
+      let btnAddImage = document.querySelector(".btnAddImage");
+      btnAddImage.onclick = function (e) {
+          let key = Date.now();
+          let newElement = document.createElement("div");
+          newElement.id = "div" + key;
+          newElement.innerHTML = `
+          <div class="prevImage"></div>
+          <input type="file" name="foto" id="img${key}" class="inputUploadfile">
+          <label for="img${key}" class="btnUploadfile"><i class="fas fa-upload"></i></label>
+          <button class="btnDeleteImage notblock" type="button" onclick="fntDelItem('#div${key}')"><i class="fas fa-trash-alt"></i></button>`;
+          document.querySelector("#containerImages").appendChild(newElement);
+          document.querySelector("#div" + key + " .btnUploadfile").click();
+          fntInputFile();
+      }
+  }
   }, false);
 })();
 
@@ -46,7 +63,6 @@ function validateRepeat(event, type, table, suffix) {
   })
 }
 
-
 /* Funcion para validar formularios */
 function validateJS(event, type) {
   var pattern;
@@ -61,6 +77,14 @@ function validateJS(event, type) {
     $(event.target).parent().children(".invalid-feedback").html("El campo esta mal escrito");
   }
 }
+
+/* Patrones de formatos para campos en los inputs
+
+  -> Solo numeros positivos con decimales -> "^(0|[1-9]\d*)(\.\d+)?$"
+  -> Numeros negativos o positivos con decimales -> "^-?[0-9]*\.?[0-9]+$"
+
+*/
+
 
 /* Validar Lineas */
 function validateLinesJS() {

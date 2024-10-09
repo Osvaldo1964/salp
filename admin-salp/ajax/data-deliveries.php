@@ -22,7 +22,7 @@ class DatatableController{
 			$method = "GET";
 			$fields = array();
 			$response = CurlController::request($url,$method,$fields);  
-			//echo '<pre>'; print_r($url); echo '</pre>';exit;
+
 			if($response->status == 200){	
 				$totalData = $response->total;
 			}else{
@@ -55,12 +55,11 @@ class DatatableController{
                 	return;
             	}
             }else{
-
 	            /* Seleccionar datos */
 	            $url = "relations?rel=deliveries,typedeliveries,itemdeliveries,resources&type=delivery,typedelivery,itemdelivery,resource&select=".$select.
                 "&linkTo=date_created_delivery&between1=".$_GET["between1"]."&between2=".$_GET["between2"].
                 "&orderBy=".$orderBy."&orderMode=".$orderType."&startAt=".$start."&endAt=".$length;
-                //echo '<pre>'; print_r($url); echo '</pre>';exit;
+
 	            $data = CurlController::request($url,$method,$fields)->results;
 	            $recordsFiltered = $totalData;
             }  
@@ -86,8 +85,11 @@ class DatatableController{
             		$actions = "<a href='/deliveries/edit/".base64_encode($value->id_delivery."~".$_GET["token"])."' class='btn btn-warning btn-sm mr-1 rounded-circle'>
 			            		<i class='fas fa-pencil-alt'></i>
 			            		</a>
-								<a href='/deliveries/items/".base64_encode($value->id_delivery."~".$_GET["token"])."' class='btn btn-warning btn-sm mr-1 rounded-circle'>
+								<a href='/elements/new/".base64_encode($value->id_delivery."~".$_GET["token"])."' class='btn btn-warning btn-sm mr-1 rounded-circle'>
 			            		<i class='fas fa-plus-circle'></i>
+			            		</a>
+								<a href='/deliveries/print/".base64_encode($value->id_delivery."~".$_GET["token"])."' class='btn btn-success btn-sm mr-1 rounded-circle'>
+			            		<i class='fas fa-file-pdf'></i>
 			            		</a>
 			            		<a class='btn btn-danger btn-sm rounded-circle removeItem' idItem='".base64_encode($value->id_delivery."~".$_GET["token"])."' table='deliveries' suffix='delivery' deleteFile='no' page='deliveries'>
 			            		<i class='fas fa-trash'></i>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-10-2024 a las 21:26:01
+-- Tiempo de generación: 09-10-2024 a las 21:37:38
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -161,6 +161,7 @@ CREATE TABLE `elements` (
   `latitude_element` float NOT NULL,
   `longitude_element` float NOT NULL,
   `id_dispose_element` bigint(20) DEFAULT NULL,
+  `qty_element` decimal(15,2) NOT NULL,
   `value_element` decimal(15,2) NOT NULL,
   `gallery_element` text NOT NULL,
   `status_element` varchar(8) NOT NULL,
@@ -172,11 +173,15 @@ CREATE TABLE `elements` (
 -- Volcado de datos para la tabla `elements`
 --
 
-INSERT INTO `elements` (`id_element`, `id_class_element`, `code_element`, `name_element`, `life_element`, `address_element`, `id_minute_element`, `id_resource_element`, `id_roud_element`, `id_technology_element`, `id_power_element`, `id_material_element`, `id_height_element`, `altitud_element`, `latitude_element`, `longitude_element`, `id_dispose_element`, `value_element`, `gallery_element`, `status_element`, `date_created_element`, `date_updated_element`) VALUES
-(1, 1, '2514', 'prueba', 'nada', 'casa', 1, 1, 1, 1, 1, 0, NULL, 1.252, 10.2547, 74.2561, 0, 15000.00, '', 'Activo', '2024-08-08', '2024-08-08 16:11:31'),
-(2, 1, '212524', 'MADERA AZUL', '<p>prueba</p>', 'CASSSS', 0, 2, 1, 1, 1, 0, 185, 0, 1.23524, 20.2522, 0, 15000.00, '[\"26704.png\",\"54816.jpg\",\"13486.png\"]', 'Activo', '2024-08-08', '2024-08-08 19:02:44'),
-(3, 1, 'cls95878', 'MADERA VERDE', '                                <p>otra peurba</p>                                ', 'LA DIRECCION VERDE', 0, 2, 1, 1, 2, 1, 1, 0, 10.4525, 74.2536, 0, 16000.00, '[\"16605.jpg\",\"78349.jpg\"]', 'Activo', '2024-08-08', '2024-08-08 19:06:07'),
-(4, 1, 'hj2515', 'LUMINARIA DE SODIO 100W', '<p>ALGO</p>', 'CARRERA 11', 0, 2, 1, 2, 3, 0, 277, 0, 10.2652, 14.2522, 0, 1500.00, '[\"22450.png\",\"94025.png\"]', 'Activo', '2024-10-05', '2024-10-06 00:43:21');
+INSERT INTO `elements` (`id_element`, `id_class_element`, `code_element`, `name_element`, `life_element`, `address_element`, `id_minute_element`, `id_resource_element`, `id_roud_element`, `id_technology_element`, `id_power_element`, `id_material_element`, `id_height_element`, `altitud_element`, `latitude_element`, `longitude_element`, `id_dispose_element`, `qty_element`, `value_element`, `gallery_element`, `status_element`, `date_created_element`, `date_updated_element`) VALUES
+(1, 1, '2514', 'prueba', 'nada', 'casa', 1, 1, 1, 1, 1, 0, NULL, 1.252, 10.2547, 74.2561, 0, 0.00, 15000.00, '', 'Activo', '2024-08-08', '2024-08-08 16:11:31'),
+(2, 1, '212524', 'MADERA AZUL', '<p>prueba</p>', 'CASSSS', 0, 2, 1, 1, 1, 0, 185, 0, 1.23524, 20.2522, 0, 0.00, 15000.00, '[\"26704.png\",\"54816.jpg\",\"13486.png\"]', 'Activo', '2024-08-08', '2024-08-08 19:02:44'),
+(3, 1, 'cls95878', 'MADERA VERDE', '                                <p>otra peurba</p>                                ', 'LA DIRECCION VERDE', 0, 2, 1, 1, 2, 1, 1, 0, 10.4525, 74.2536, 0, 0.00, 16000.00, '[\"16605.jpg\",\"78349.jpg\"]', 'Activo', '2024-08-08', '2024-08-08 19:06:07'),
+(4, 1, 'hj2515', 'LUMINARIA DE SODIO 100W', '<p>ALGO</p>', 'CARRERA 11', 0, 2, 1, 2, 3, 0, 277, 0, 10.2652, 14.2522, 0, 0.00, 1500.00, '[\"22450.png\",\"94025.png\"]', 'Activo', '2024-10-05', '2024-10-06 00:43:21'),
+(5, 1, 'LED1452', 'LUMINARIA LED 30W', '                                <p>INGRESO AL INVENTARIO 2024-10-09</p>                                ', 'CARRERA 17A CALLE 22', 0, 2, 1, 1, 1, 1, 1, 0, 10.2523, 74.1525, 0, 0.00, 0.00, '[\"43789.jpg\",\"17801.jpg\"]', 'Activo', '2024-10-09', '2024-10-09 13:46:25'),
+(6, 1, 'LED1453', 'LUMINARIA LED 30W', '                                                                                                <p>prueba</p>                                                                                                ', 'CARRERA 22 CALLE 5', 0, 1, 1, 1, 2, 1, 1, 0, 10.2523, 74.1525, 0, 0.00, 0.00, '[\"61356.jpg\",\"40155.jpg\"]', 'Activo', '2024-10-09', '2024-10-09 13:49:48'),
+(7, 2, 'POS1520', 'POSTE DE MADERA 9 MTS', '                                                                                                <p>PRUEBA 2</p>                                                                                                ', 'CALLE 11 CARRERA 16', 1, 2, 1, 1, 1, 1, 1, 0, 10.2523, -74.1525, 0, 1.00, 258652.00, '[\"78204.jpg\"]', 'Activo', '2024-10-09', '2024-10-09 14:23:23'),
+(8, 1, 'LED1454', 'LUMINARIA LED 30W', '<p>OTRO</p>', 'CALLE 1 CARRERA 1', 1, 1, 1, 1, 3, 0, 0, 0, 10.2523, -74.1525, 0, 1.00, 1525000.00, '[\"error\"]', 'Activo', '2024-10-09', '2024-10-09 14:44:46');
 
 -- --------------------------------------------------------
 
@@ -198,6 +203,20 @@ CREATE TABLE `heights` (
 
 INSERT INTO `heights` (`id_height`, `name_height`, `status_height`, `date_created_height`, `date_updated_height`) VALUES
 (1, '9 mts', 'Activo', '2024-08-01', '2024-08-06 19:06:10');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `images`
+--
+
+CREATE TABLE `images` (
+  `id_image` bigint(20) NOT NULL,
+  `id_element_image` bigint(20) NOT NULL,
+  `name_image` text NOT NULL,
+  `date_created_image` date DEFAULT NULL,
+  `date_updated_image` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -452,7 +471,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fullname_user`, `username_user`, `email_user`, `password_user`, `token_user`, `token_exp_user`, `id_rol_user`, `picture_user`, `country_user`, `city_user`, `address_user`, `phone_user`, `method_user`, `date_created_user`, `date_updated_user`, `status_user`, `verification_user`) VALUES
-(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjgzMDc4MDYsImV4cCI6MTcyODM5NDIwNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.VynYG8AvOyZG53azLr8FlMS5Ao-0i4V3Df4VyUqd3H4', '1728394206', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
+(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3Mjg0OTI2ODMsImV4cCI6MTcyODU3OTA4MywiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.0f-ThX5-2kVpx_Mr0NNAGOthnZZfOOJ-vSmZAO8kcA0', '1728579083', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
 (7, 'Jorge Villalobos', 'jorgito', 'jorge@gmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', NULL, NULL, 'Usuarios', '7.png', 'Algeria', 'Varsobia', 'LA QUE SEA', '+213_3153153153', 'direct', '2024-06-22', '2024-06-22 14:18:30', 1, 1),
 (31, 'Juan Prueto', '', 'prueba@mail.com', '', NULL, NULL, '1', NULL, 'Afghanistan', 'Otra', 'calle 1', '+93_3253253325', 'direct', '2024-06-25', '2024-06-25 20:10:46', 1, 1);
 
@@ -501,6 +520,12 @@ ALTER TABLE `elements`
 --
 ALTER TABLE `heights`
   ADD PRIMARY KEY (`id_height`);
+
+--
+-- Indices de la tabla `images`
+--
+ALTER TABLE `images`
+  ADD PRIMARY KEY (`id_image`);
 
 --
 -- Indices de la tabla `itemdeliveries`
@@ -601,13 +626,19 @@ ALTER TABLE `details`
 -- AUTO_INCREMENT de la tabla `elements`
 --
 ALTER TABLE `elements`
-  MODIFY `id_element` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_element` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `heights`
 --
 ALTER TABLE `heights`
   MODIFY `id_height` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `images`
+--
+ALTER TABLE `images`
+  MODIFY `id_image` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `itemdeliveries`
