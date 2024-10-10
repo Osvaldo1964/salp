@@ -57,7 +57,7 @@ if (isset($routesArray[3])) {
                                 <img src="<?php echo TemplateController::srcImg() ?>views/assets/img/global_logo.png" style="width:250px" alt="User Image">
                             </div>
                         </div>
-                        <div class="row invoice-info">
+                        <div class="row invoice-info" style="font-size: 10px;">
                             <div class="col-4">
                                 <address><strong><?= NOMBRE_EMPRESA; ?></strong><br>
                                     <?= DIRECCION; ?><br>
@@ -75,7 +75,7 @@ if (isset($routesArray[3])) {
                         </div>
                         <div class="row">
                             <div class="col-12 table-responsive">
-                                <table class="table table-striped">
+                                <table class="table table-striped" style="font-size: 10px;">
                                     <thead>
                                         <tr>
                                             <th>Código</th>
