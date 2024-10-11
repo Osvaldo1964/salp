@@ -1,47 +1,48 @@
-<div class="card card-dark card-outline">
-    <form id="Infpqr">
-        <div class="card-header">
-            <h4>Informe de PQRs por Fechas</h4>
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Imprimir PQRs por Fechas</h1>
+            </div>
+            <div class="col-sm-6">
+            </div>
         </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <!-- Default box -->
+    <div class="card">
+<!--         <div class="card-header">
+            <h3 class="card-title">Title</h3>
+
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div> -->
         <div class="card-body">
-            <div class="col-md-6 offset-md-2">
-                <!-- Fecha Inicial  -->
-                <div class="form-group col-md-6 mt-2 mb-1">
-                    <div class="input-group-append">
-                        <span class="input-group-text">
-                            Desde :
-                        </span>
-                        <input type="begindate" class="form-control" name="datedelivery">
-                    </div>
-
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
-
-                <!-- Fecha Final -->
-                <div class="form-group col-md-6 mt-2 mb-1">
-                    <div class="input-group-append">
-                        <span class="input-group-text">
-                            Hasta :
-                        </span>
-                        <input type="enddate" class="form-control" name="datedelivery">
-                    </div>
-
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
-
-            </div>
+            <?php
+            if (isset($routesArray[2])) {
+                if ($routesArray[2] == "print") {
+                    include "actions/" . $routesArray[2] . ".php";
+                }
+            } else {
+                include "actions/list.php";
+            }
+            ?>
         </div>
+        <!-- /.card-body -->
+<!--         <div class="card-footer">
+            Footer
+        </div> -->
+        <!-- /.card-footer-->
+    </div>
+    <!-- /.card -->
 
-        <div class="card-footer">
-            <div class="col-md-8 offset-md-2">
-                <div class="form-group mt-1">
-                    <a href="/" class="btn btn-light border text-left">Back</a>
-                    <a href="/print" class="btn btn-light border text-left">Imprimir</a>
-                    <!-- <button type="submit" class="btn bg-dark float-right">Save</button> -->
-                </div>
-            </div>
-        </div>
-    </form>
-</div>
+</section>

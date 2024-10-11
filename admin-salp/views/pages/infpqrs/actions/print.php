@@ -1,43 +1,25 @@
 <?php
-//echo '<pre>'; print_r('dadasdassd'); echo '</pre>';exit;
-if (isset($routesArray[3])) {
+//echo '<pre>'; print_r($_SESSION); echo '</pre>';exit;
 
-    $security = explode("~", base64_decode($routesArray[3]));
-    if ($security[1] == $_SESSION["user"]->token_user) {
-        $select = "*";
-        $url = "relations?rel=deliveries,typedeliveries,itemdeliveries,resources&type=delivery,typedelivery,itemdelivery,resource&select=" . $select . "&linkTo=id_delivery&equalTo=" . $security[0];;
-        $method = "GET";
-        $fields = array();
-        $response = CurlController::request($url, $method, $fields);
-        //echo '<pre>'; print_r($response); echo '</pre>';
-        if ($response->status == 200) {
-            $records = $response->total;
-            $deliveries = $response->results[0];
-            $url2 = "relations?rel=elements,classes,powers,materials,technologies,heights,rouds&type=element,class,power,material,technology,height,roud&select=" . $select .
-                "&orderBy=id_class_element&orderMode=ASC";
-            $method = "GET";
-            $fields = array();
-            $response = CurlController::request($url2, $method, $fields);
-            $recelements = $response->total;
-            $elements = $response->results;
-            //echo '<pre>'; print_r($elements); echo '</pre>';
-        } else {
-            echo '<script>
-				window.location = "/deliveries";
+$select = "*";
+$url = "relations?rel=pqrs,crews&type=pqr,crew&select=" . $select . "&orderBy=date_created_pqr&orderMode=ASC";
+$method = "GET";
+$fields = array();
+$response = CurlController::request($url, $method, $fields);
+if ($response->status == 200) {
+    $records = $response->total;
+    $pqrs = $response->results[0];
+    echo '<pre>';
+    print_r($pqrs);
+    echo '</pre>';
+} else {
+    echo '<script>
+				window.location = "/";
 				</script>';
-        }
-    } else {
-        echo '<script>
-				window.location = "/deliveries";
-				</script>';
-    }
 }
 ?>
 <main class="app-content">
     <div class="app-title">
-        <div>
-            <p>Formato de Acta Imprimible</p>
-        </div>
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -74,12 +56,14 @@ if (isset($routesArray[3])) {
                                 <table class="table table-striped" style="font-size: 10px;">
                                     <thead>
                                         <tr>
-                                            <th>Código</th>
-                                            <th>Descripción</th>
-                                            <th>Tec/Mat</th>
-                                            <th>Pot/Alt</th>
-                                            <th>Dirección</th>
-                                            <th>Valor</th>
+                                            <th>Secuencia</th>
+                                            <th>Fecha</th>
+                                            <th>Reportada Por</th>
+                                            <th>Asignada en</th>
+                                            <th>Cuadrilla</th>
+                                            <th>Resuelta en</th>
+                                            <th>Horas Solución</th>
+                                            <th>Observación</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -88,7 +72,7 @@ if (isset($routesArray[3])) {
                                         $total01 = 0;
                                         $grupo01 = '';
                                         if ($recelements > 0) {
-                                            foreach ($elements as $elemento) {
+                                            foreach ($pqrs as $elemento) {
                                                 if ($grupo01 == '' || $grupo01 != '' & $grupo01 != $elemento->name_class) {
                                                     if ($grupo01 != '') {
                                         ?>
@@ -141,6 +125,3 @@ if (isset($routesArray[3])) {
         </div>
     </div>
 </main>
-
-
-

@@ -70,7 +70,7 @@ class ElementsController
 				$method = "POST";
 				$fields = $data;
 				$response = CurlController::request($url, $method, $fields);
-
+				//echo '<pre>'; print_r($response); echo '</pre>';exit;
 				/* Respuesta de la API */
 				if ($response->status == 200) {
 					echo '<script>
