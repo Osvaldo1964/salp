@@ -82,6 +82,7 @@ function validateJS(event, type) {
 
   -> Solo numeros positivos con decimales -> "^(0|[1-9]\d*)(\.\d+)?$"
   -> Numeros negativos o positivos con decimales -> "^-?[0-9]*\.?[0-9]+$"
+  -> Letras y numeros con punto y guion para direcciones -> [A-Za-z0-9.-]+
 
 */
 
@@ -120,6 +121,25 @@ function validateItemsJS() {
     processData: false,
     success: function (response) {
       $("#itemdelivery").html(response);
+    }
+  })
+}
+
+/* Validar Municipios */
+function validateMunisJS() {
+  let nbrand = $('#dpto').val();
+  var data = new FormData();
+  data.append("munis", nbrand);
+
+  $.ajax({
+    url: "ajax/ajax-validate.php",
+    method: "POST",
+    data: data,
+    contentType: false,
+    cache: false,
+    processData: false,
+    success: function (response) {
+      $("#munis").html(response);
     }
   })
 }

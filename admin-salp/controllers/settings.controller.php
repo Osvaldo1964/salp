@@ -24,15 +24,15 @@ class SettingsController
                 /* Agrupamos la información */
                 $data = "nit_setting=" . $_POST["nit"] .
                     "&fullname_setting=" . trim($_POST["fullname"]) .
+                    "&id_department_setting=" . trim($_POST["dpto"]) .
+					"&id_municipality_setting=" . trim($_POST["munis"]) .
                     "&address_setting=" . trim($_POST["address"]) .
                     "&email_setting=" . trim(strtolower($_POST["email"])) .
                     "&phone_setting=" . trim($_POST["phone"]) .
                     "&manager_setting=" . trim(TemplateController::capitalize($_POST["manager"])) .
-                    "&signature_setting=signature.png" .
-                    "&prefix_payorder_setting=" . trim($_POST["prefix"]) .
-                    "&sequence_payorder_setting=" . trim($_POST["sequence"]);
+                    "&signature_setting=signature.png";
 
-
+                    //echo '<pre>'; print_r($data); echo '</pre>';exit;
                 /* Solicitud a la API */
                 $url = "settings?id=1&nameId=id_setting&token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
                 $method = "PUT";

@@ -2,10 +2,8 @@
 
 class PqrsController
 {
-
     public $addressmap;
     public $lat;
-
 
     /* Creacion de Marcas */
     public function create()
@@ -26,10 +24,21 @@ class PqrsController
                 preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/', $_POST["message"]) */
             ) {
 
+                /* Capturo datos de la ubicacion de la app*/
+                $url = "relations?rel=settings,departments,municipalities&type=setting,department,municipality&linkTo=id_setting&equalTo=1&token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
+                $data = "";
+                $method = "GET";
+                $fields = array();
+                $settings = CurlController::request($url, $method, $fields);
+                //echo '<pre>'; print_r($settings); echo '</pre>';exit;
+                $namedpto =  $settings->results[0]->name_department;
+                $namemuni =  $settings->results[0]->name_municipality;
+    
                 /* Verifico la direccion con google */
                 $nombre = trim(TemplateController::capitalize($_POST["name"]));
                 $email  = strtolower($_POST['email']);
-                $address  = strtolower(($_POST['address'])) . ', Santa Marta Colombia';
+                $address  = strtolower(($_POST['address'])) . ', ' . $namemuni . ', ' . $namedpto;
+                //echo '<pre>'; print_r($address); echo '</pre>';exit;
                 $message  = $_POST['message'];
                 $coordenadas = $this->getGeocodeData2($address);
                 $latitud = $coordenadas[0];
@@ -141,7 +150,6 @@ class PqrsController
         }
     }
 
-
     /* Asignar Cuadrilla */
     public function solved($id)
     {
@@ -211,6 +219,7 @@ class PqrsController
     function getGeocodeData()
     {
         $address = $this->addressmap;
+        $address = $address;
         //echo '<pre>'; print_r($address); echo '</pre>';
         $googleMapUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($address) . "&key=AIzaSyDDTJ5uq4WEhP4noQ6DKM7aFVUYwGabdu8";
         //echo '<pre>'; print_r($googleMapUrl); echo '</pre>';

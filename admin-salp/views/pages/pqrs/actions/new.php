@@ -28,7 +28,7 @@
                         <!-- Dirección -->
                         <div class="form-group col-md-12">
                             <label>Dirección</label>
-                            <input type="text" class="form-control" pattern='[a-zA-Z0-9_ ]{1,}' id="address" name="address" onblur="Actmap()" required>
+                            <input type="text" class="form-control" pattern='[A-Za-z0-9.-]+' id="address" name="address" onblur="Actmap()" required>
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>

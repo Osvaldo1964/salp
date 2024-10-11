@@ -1,5 +1,6 @@
 <?php
-$url = "settings?linkTo=id_setting&equalTo=1";
+$url = "relations?rel=settings,departments,municipalities&type=setting,department,municipality&linkTo=id_setting&equalTo=1";
+
 $method = "GET";
 $fields = array();
 $response = CurlController::request($url, $method, $fields);
@@ -53,6 +54,60 @@ if ($response->status == 200) {
                     <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
 
+                <div class="form-row col-md-12">
+                    <!-- Departamentos -->
+                    <div class="form-group col-md-3">
+                        <label>Departamento</label>
+                        <?php
+                        $url = "departments?select=id_department,name_department";
+                        $method = "GET";
+                        $fields = array();
+                        $dptos = CurlController::request($url, $method, $fields)->results;
+                        ?>
+
+                        <div class="form-group">
+                            <select class="form-control select2" name="dpto" id="dpto" style="width:100%" onchange="validateMunisJS()" required>
+                            <?php foreach ($dptos as $key => $value) : ?>
+                                    <?php if ($value->id_department == $settings->id_department_setting) : ?>
+                                        <option value="<?php echo $settings->id_department_setting ?>" selected><?php echo $settings->name_department ?></option>
+                                    <?php else : ?>
+                                        <option value="<?php echo $value->id_department ?>"><?php echo $value->name_department ?></option>
+                                    <?php endif ?>
+                                <?php endforeach ?>
+                            </select>
+
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                    </div>
+
+                    <!-- Municipios -->
+                    <div class="form-group col-md-3">
+                        <label>Municipio</label>
+                        <?php
+                        $url = "municipalities?select=id_municipality,name_municipality,id_department_municipality";
+                        $method = "GET";
+                        $fields = array();
+                        $munis = CurlController::request($url, $method, $fields)->results;
+                        ?>
+
+                        <div class="form-group">
+                            <select class="form-control select2" name="munis" id="munis" style="width:100%" required>
+                            <?php foreach ($munis as $key => $value) : ?>
+                                    <?php if ($value->id_municipality == $settings->id_municipality_setting) : ?>
+                                        <option value="<?php echo $settings->id_municipality_setting ?>" selected><?php echo $settings->name_municipality ?></option>
+                                    <?php else : ?>
+                                        <option value="<?php echo $value->id_municipality ?>"><?php echo $value->name_municipality ?></option>
+                                    <?php endif ?>
+                                <?php endforeach ?>
+                            </select>
+
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="form-row">
                     <!-- Correo electrónico -->
                     <div class="form-group col-md-8">
@@ -101,28 +156,7 @@ if ($response->status == 200) {
                         <label for="customFile" class="custom-file-label">Choose file</label>
                     </div>
                 </div>
-
-                <div class="form-row">
-                    <!-- Prefijo para Mandamientos -->
-                    <div class="form-group col-md-4">
-                        <label>Prefijo Mandamientos</label>
-                        <input type="text" class="form-control" pattern='[-\\(\\)\\=\\%\\&\\$\\;\\_\\*\\"\\#\\?\\¿\\!\\¡\\:\\,\\.\\0-9a-zA-ZñÑáéíóúÁÉÍÓÚ ]{1,}' name="prefix" value="<?php echo $settings->prefix_payorder_setting ?>" required>
-
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
-                    </div>
-
-                    <!-- Consecutivo para Mandamientos -->
-                    <div class="form-group col-md-4">
-                        <label>Consecutivo Mandamientos</label>
-                        <input type="text" class="form-control" pattern="[-\\(\\)\\0-9 ]{1,}" name="sequence" value="<?php echo $settings->sequence_payorder_setting ?>" required>
-
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
-                    </div>
-                </div>
             </div>
-
         </div>
 </div>
 
