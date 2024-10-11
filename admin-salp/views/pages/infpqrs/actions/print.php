@@ -1,17 +1,32 @@
 <?php
-//echo '<pre>'; print_r($_SESSION); echo '</pre>';exit;
+//echo '<pre>'; print_r($_GET); echo '</pre>';
 
-$select = "*";
-$url = "relations?rel=pqrs,crews&type=pqr,crew&select=" . $select . "&orderBy=date_created_pqr&orderMode=ASC";
+/* Verifico Horas Disponibilidad Todal*/
+$select = "id_element,id_class_element";
+$url = "relations?rel=elements,classes,technologies,powers&type=element,class,technology,power&select=" . $select . "&linkTo=id_class_element&equalTo=" . 1;
 $method = "GET";
 $fields = array();
-$response = CurlController::request($url, $method, $fields);
-if ($response->status == 200) {
-    $records = $response->total;
-    $pqrs = $response->results[0];
-    echo '<pre>';
-    print_r($pqrs);
-    echo '</pre>';
+$elements = CurlController::request($url,$method,$fields);
+//echo '<pre>'; print_r($elements); echo '</pre>';
+
+if($elements->status == 200){ 
+  $elements = $elements->total;
+  $disponibles = $elements * 12 * 30;
+  //echo '<pre>'; print_r($disponibles); echo '</pre>';
+}else{
+  $elements = 0;
+}  
+/* */
+/* Selecciono las PQRs en el rango de fechas */
+$select = "*";
+$url = "relations?rel=pqrs,crews&type=pqr,crew&select=" . $select . "&linkTo=DATE(date_pqr)&between1=" . $_GET['begindate'] . "&between2=" . $_GET['enddate']; 
+//echo '<pre>'; print_r($url); echo '</pre>';
+$pqrs = CurlController::request($url,$method,$fields);
+//echo '<pre>'; print_r($pqrs); echo '</pre>';exit;
+if ($pqrs->status == 200) {
+    $totrec = $pqrs->total;
+    $pqrs = $pqrs->results;
+    //echo '<pre>'; print_r($totrec); echo '</pre>';
 } else {
     echo '<script>
 				window.location = "/";
@@ -25,12 +40,11 @@ if ($response->status == 200) {
         <div class="col-md-12">
             <div class="tile">
                 <?php
-                if ($records = 0) {
+                //echo '<pre>'; print_r($totrec); echo '</pre>';
+                if ($totrec = 0) {
                 ?>
                     <p>Datos no encontrados</p>
                 <?php } else {
-                    $acta = $deliveries->id_delivery;
-                    //dep($acta);
                 ?>
                     <section id="sActa" class="invoice">
                         <div class="row mb-4 ml-2">
@@ -47,9 +61,6 @@ if ($response->status == 200) {
                                     <?= WEB_EMPRESA; ?><br>
                                 </address>
                             </div>
-                            <div class="col-4"><b>Acta No. <?= $deliveries->id_delivery; ?></b><br>
-                                <b>Fecha:</b> <?= $deliveries->date_delivery; ?><br>
-                            </div>
                         </div>
                         <div class="row">
                             <div class="col-12 table-responsive">
@@ -57,8 +68,9 @@ if ($response->status == 200) {
                                     <thead>
                                         <tr>
                                             <th>Secuencia</th>
-                                            <th>Fecha</th>
                                             <th>Reportada Por</th>
+                                            <th>Reporte</th>
+                                            <th>Dirección</th>
                                             <th>Asignada en</th>
                                             <th>Cuadrilla</th>
                                             <th>Resuelta en</th>
@@ -68,56 +80,96 @@ if ($response->status == 200) {
                                     </thead>
                                     <tbody>
                                         <?php
+                                        //echo '<pre>'; print_r($totrec); echo '</pre>';
                                         $subtotal01 = 0;
                                         $total01 = 0;
                                         $grupo01 = '';
-                                        if ($recelements > 0) {
-                                            foreach ($pqrs as $elemento) {
-                                                if ($grupo01 == '' || $grupo01 != '' & $grupo01 != $elemento->name_class) {
-                                                    if ($grupo01 != '') {
+                                        $secuencia = 1;
+                                        $indiceid = 0;
+                                        $totrec = count($pqrs);
+                                        //echo '<pre>'; print_r(count($pqrs)); echo '</pre>';
+                                        if ($totrec > 0) {
+                                            foreach ($pqrs as $pqr) {
+                                                    $inidate = new DateTime($pqr->date_pqr);
+                                                    $enddate = new DateTime($pqr->datesolved_pqr);
+                                                    $diferencia = $inidate->diff($enddate);
+                                                    $horas = ($diferencia->days * 24) + $diferencia->h + ($diferencia->i / 60);
+                                                    $indiceid = $indiceid + $horas;
+                                                    $ctrdate = $inidate->format('Y-m-d'); // Formato: Año-Mes-Día
+                                                    //echo '<pre>'; print_r($ctrdate); echo '</pre>';
+                                                    if ($grupo01 == '') {
+                                                        $grupo01 = $ctrdate;
+                                                        $subtotal01 = 0;
+    
                                         ?>
-                                                        <th colspan="5" class="text-right">Sub-Total: <?= $grupo01; ?> </th>
-                                                        <td class="text-right"><?= SMONEY . ' ' . formatMoney($subtotal01) ?></td>
-                                                    <?php }
-                                                    $grupo01 = $elemento->name_class;
-                                                    $subtotal01 = 0;
-                                                    ?>
                                                     <tr>
-                                                        <th colspan="6" class="text-left"><?= $elemento->name_class; ?></th>
+                                                        <th colspan="6" class="text-left"><?= $grupo01; ?></th>
                                                     </tr>
-                                                <?php }
-                                                ?>
+                                                    <?php }else {
+                                                        if ($grupo01 != $ctrdate) {
+                                                    ?>
+                                                        <tr>
+                                                            <th colspan="7" class="text-right">Sub-Total Pqrs del dia : <?= $grupo01; ?></th>
+                                                            <td class="text-right"><?= formatMoney($subtotal01) ?></td>
+                                                        </tr>
+                                                    <?php
+                                                            $subtotal01 = 0;
+                                                            $grupo01 = $ctrdate;
+                                                    ?>
+                                                        <tr>
+                                                            <th colspan="6" class="text-left"><?= $grupo01; ?></th>
+                                                        </tr>
+                                                    <?php
+                                                        }
+                                                    }
+                                                    ?>
                                                 <tr>
-                                                    <td class="text-left"><?= $elemento->code_element; ?></td>
-                                                    <td class="text-left"><?= $elemento->name_element; ?></td>
-                                                    <td class="text-left"><?= $elemento->id_class_element == 1 ? $elemento->name_technology : $elemento->name_material; ?></td>
-                                                    <td class="text-left"><?= $elemento->id_class_element == 1 ? $elemento->name_power : $elemento->name_height; ?></td>
-                                                    <td class="text-left"><?= $elemento->address_element; ?></td>
-                                                    <td class="text-right"><?= SMONEY . formatMoney($elemento->value_element); ?></td>
+                                                    <td class="text-left"><?= $secuencia; ?></td>
+                                                    <td class="text-left"><?= $pqr->name_pqr; ?></td>
+                                                    <td class="text-left"><?= substr($pqr->message_pqr,0,20); ?></td>
+                                                    <td class="text-left"><?= $pqr->address_pqr; ?></td>
+                                                    <td class="text-left"><?= $pqr->dateasign_pqr; ?></td>
+                                                    <td class="text-left"><?= $pqr->name_crew; ?></td>
+                                                    <td class="text-left"><?= $pqr->datesolved_pqr; ?></td>
+                                                    <td class="text-right"><?= formatMoney($horas); ?></td>
                                                 </tr>
                                         <?php
-                                                $subtotal01 += $elemento->value_element;
-                                                $total01 += $elemento->value_element;
+                                                $secuencia++;
+                                                $subtotal01++;
+                                                $total01++;
                                             }
                                         }
                                         ?>
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <th colspan="5" class="text-right">Sub-Total: <?= $elemento->name_class; ?></th>
-                                            <td class="text-right"><?= SMONEY . ' ' . formatMoney($subtotal01) ?></td>
+                                            <th colspan="7" class="text-right">Sub-Total Pqrs del dia : <?= $grupo01; ?></th>
+                                            <td class="text-right"><?= formatMoney($subtotal01) ?></td>
                                         </tr>
                                         <tr>
-                                            <th colspan="5" class="text-right">Total:</th>
-                                            <td class="text-right"><?= SMONEY . ' ' . formatMoney($total01) ?></td>
+                                            <th colspan="7" class="text-right">Total:</th>
+                                            <td class="text-right"><?= formatMoney($total01) ?></td>
                                         </tr>
+                                        <tr>
+                                            <th colspan="7" class="text-right">Tiempo no dosponible:</th>
+                                            <td class="text-right"><?= formatMoney($indiceid) ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="7" class="text-right">Total Disponibilidad:</th>
+                                            <td class="text-right"><?= formatMoney($indiceid) ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="7" class="text-right">Indice ID:</th>
+                                            <td class="text-right"><?= formatMoney($indiceid/$disponibles) ?></td>
+                                        </tr>
+
                                     </tfoot>
                                 </table>
                             </div>
                         </div>
                     </section>
                     <div class="col-md-8 d-print-none offset-md-2 mt-2">
-                        <a href="/deliveries" class="btn btn-light border text-left">Back</a>
+                        <a href="/infpqrs" class="btn btn-light border text-left">Back</a>
                         <a class="btn btn-primary float-right" href="javascript:window.print('#sActa');"><i class="fa fa-print"></i> Imprimir</a>
                     </div>
                 <?php } ?>

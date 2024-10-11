@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-10-2024 a las 21:37:38
+-- Tiempo de generación: 11-10-2024 a las 17:17:49
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -179,7 +179,7 @@ INSERT INTO `elements` (`id_element`, `id_class_element`, `code_element`, `name_
 (3, 1, 'cls95878', 'MADERA VERDE', '                                <p>otra peurba</p>                                ', 'LA DIRECCION VERDE', 0, 2, 1, 1, 2, 1, 1, 0, 10.4525, 74.2536, 0, 0.00, 16000.00, '[\"16605.jpg\",\"78349.jpg\"]', 'Activo', '2024-08-08', '2024-08-08 19:06:07'),
 (4, 1, 'hj2515', 'LUMINARIA DE SODIO 100W', '<p>ALGO</p>', 'CARRERA 11', 0, 2, 1, 2, 3, 0, 277, 0, 10.2652, 14.2522, 0, 0.00, 1500.00, '[\"22450.png\",\"94025.png\"]', 'Activo', '2024-10-05', '2024-10-06 00:43:21'),
 (5, 1, 'LED1452', 'LUMINARIA LED 30W', '                                <p>INGRESO AL INVENTARIO 2024-10-09</p>                                ', 'CARRERA 17A CALLE 22', 0, 2, 1, 1, 1, 1, 1, 0, 10.2523, 74.1525, 0, 0.00, 0.00, '[\"43789.jpg\",\"17801.jpg\"]', 'Activo', '2024-10-09', '2024-10-09 13:46:25'),
-(6, 1, 'LED1453', 'LUMINARIA LED 30W', '                                                                                                <p>prueba</p>                                                                                                ', 'CARRERA 22 CALLE 5', 0, 1, 1, 1, 2, 1, 1, 0, 10.2523, 74.1525, 0, 0.00, 0.00, '[\"61356.jpg\",\"40155.jpg\"]', 'Activo', '2024-10-09', '2024-10-09 13:49:48'),
+(6, 1, 'LED1453', 'LUMINARIA LED 30W', '                                                                                                                                <p>prueba</p>                                                                                                                                ', 'CARRERA 22 CALLE 5', 0, 1, 1, 1, 2, 1, 1, 0, 10.2523, 74.1525, 0, 1.00, 250252.00, '[\"61356.jpg\",\"40155.jpg\"]', 'Activo', '2024-10-09', '2024-10-09 13:49:48'),
 (7, 2, 'POS1520', 'POSTE DE MADERA 9 MTS', '                                                                                                <p>PRUEBA 2</p>                                                                                                ', 'CALLE 11 CARRERA 16', 1, 2, 1, 1, 1, 1, 1, 0, 10.2523, -74.1525, 0, 1.00, 258652.00, '[\"78204.jpg\"]', 'Activo', '2024-10-09', '2024-10-09 14:23:23'),
 (8, 1, 'LED1454', 'LUMINARIA LED 30W', '<p>OTRO</p>', 'CALLE 1 CARRERA 1', 1, 1, 1, 1, 3, 0, 0, 0, 10.2523, -74.1525, 0, 1.00, 1525000.00, '[\"error\"]', 'Activo', '2024-10-09', '2024-10-09 14:44:46');
 
@@ -296,14 +296,15 @@ INSERT INTO `powers` (`id_power`, `name_power`, `status_power`, `date_created_po
 
 CREATE TABLE `pqrs` (
   `id_pqr` bigint(20) NOT NULL,
+  `date_pqr` datetime DEFAULT NULL,
   `name_pqr` text NOT NULL,
   `email_pqr` text NOT NULL,
   `address_pqr` text NOT NULL,
   `message_pqr` text NOT NULL,
   `id_element_pqr` bigint(20) DEFAULT NULL,
-  `dateasign_pqr` date DEFAULT NULL,
+  `dateasign_pqr` datetime DEFAULT NULL,
   `id_crew_pqr` bigint(20) DEFAULT NULL,
-  `datesolved_pqr` date DEFAULT NULL,
+  `datesolved_pqr` datetime DEFAULT NULL,
   `latitude_pqr` float NOT NULL,
   `longitude_pqr` float NOT NULL,
   `name_address_pqr` text NOT NULL,
@@ -316,11 +317,11 @@ CREATE TABLE `pqrs` (
 -- Volcado de datos para la tabla `pqrs`
 --
 
-INSERT INTO `pqrs` (`id_pqr`, `name_pqr`, `email_pqr`, `address_pqr`, `message_pqr`, `id_element_pqr`, `dateasign_pqr`, `id_crew_pqr`, `datesolved_pqr`, `latitude_pqr`, `longitude_pqr`, `name_address_pqr`, `status_pqr`, `date_created_pqr`, `date_updated_pqr`) VALUES
-(2, 'Pedro Perez', 'correokdl@correo.com', 'carrera 11 calle 17Santa Marta Colombia', 'ldldld', NULL, NULL, NULL, NULL, 11.2433, -74.2049, 'Cra. 11 & Cl. 17, Comuna 4, Santa Marta, Magdalena, Colombia', 'Pending', '2024-08-15', '2024-08-15 15:31:01'),
-(3, 'Juan Guerra', 'elcorrl@kkf.com', 'calle 22 carrera 3, Santa Marta Colombia', 'se apago', NULL, '2024-10-05', 2, NULL, 11.2409, -74.2132, 'Cl. 22 & Cra. 3, Comuna 2, Santa Marta, Magdalena, Colombia', 'Assign', '2024-08-15', '2024-08-15 15:32:34'),
-(4, 'Autopistas Y Carreteras 2', 'osvicor@hotmail.com', 'calle 23 carrera 4, Santa Marta Colombia', 'prueaba', NULL, '2024-08-16', 1, '2024-08-27', 11.2337, -74.1794, 'Cl. 23, Santa Marta, Magdalena, Colombia', 'Success', '2024-08-15', '2024-10-07 05:00:00'),
-(6, 'Osvaldo Villalobos Cortina', 'osvicor1964@gmail.com', 'urb san lorenzo mz j cs 34, Santa Marta Colombia', 'se apago', NULL, NULL, NULL, NULL, 11.2097, -74.163, 'Cra. 66 #48-106, Santa Marta, Magdalena, Colombia', 'Pending', '2024-10-07', '2024-10-07 16:12:19');
+INSERT INTO `pqrs` (`id_pqr`, `date_pqr`, `name_pqr`, `email_pqr`, `address_pqr`, `message_pqr`, `id_element_pqr`, `dateasign_pqr`, `id_crew_pqr`, `datesolved_pqr`, `latitude_pqr`, `longitude_pqr`, `name_address_pqr`, `status_pqr`, `date_created_pqr`, `date_updated_pqr`) VALUES
+(2, '2024-10-02 09:21:50', 'Pedro Perez', 'correokdl@correo.com', 'carrera 11 calle 17Santa Marta Colombia', 'ldldld', NULL, NULL, NULL, NULL, 11.2433, -74.2049, 'Cra. 11 & Cl. 17, Comuna 4, Santa Marta, Magdalena, Colombia', 'Pending', '2024-08-15', '2024-08-15 15:31:01'),
+(3, '2024-10-02 09:22:06', 'Juan Guerra', 'elcorrl@kkf.com', 'calle 22 carrera 3, Santa Marta Colombia', 'se apago', NULL, '2024-10-05 00:00:00', 2, NULL, 11.2409, -74.2132, 'Cl. 22 & Cra. 3, Comuna 2, Santa Marta, Magdalena, Colombia', 'Assign', '2024-08-15', '2024-08-15 15:32:34'),
+(4, '2024-10-07 14:22:12', 'Autopistas Y Carreteras 2', 'osvicor@hotmail.com', 'calle 23 carrera 4, Santa Marta Colombia', 'prueaba', NULL, '2024-08-16 00:00:00', 1, '2024-10-08 09:30:00', 11.2337, -74.1794, 'Cl. 23, Santa Marta, Magdalena, Colombia', 'Success', '2024-08-15', '2024-10-07 05:00:00'),
+(6, '2024-10-04 11:22:21', 'Osvaldo Villalobos Cortina', 'osvicor1964@gmail.com', 'urb san lorenzo mz j cs 34, Santa Marta Colombia', 'se apago', NULL, NULL, NULL, NULL, 11.2097, -74.163, 'Cra. 66 #48-106, Santa Marta, Magdalena, Colombia', 'Pending', '2024-10-07', '2024-10-07 16:12:19');
 
 -- --------------------------------------------------------
 
@@ -471,7 +472,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fullname_user`, `username_user`, `email_user`, `password_user`, `token_user`, `token_exp_user`, `id_rol_user`, `picture_user`, `country_user`, `city_user`, `address_user`, `phone_user`, `method_user`, `date_created_user`, `date_updated_user`, `status_user`, `verification_user`) VALUES
-(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3Mjg0OTI2ODMsImV4cCI6MTcyODU3OTA4MywiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.0f-ThX5-2kVpx_Mr0NNAGOthnZZfOOJ-vSmZAO8kcA0', '1728579083', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
+(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3Mjg2NTI4MjcsImV4cCI6MTcyODczOTIyNywiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.6AW8kfvwhA2XVGDiK_VU8LL84fqIqb63PX3wV-g7FbA', '1728739227', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
 (7, 'Jorge Villalobos', 'jorgito', 'jorge@gmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', NULL, NULL, 'Usuarios', '7.png', 'Algeria', 'Varsobia', 'LA QUE SEA', '+213_3153153153', 'direct', '2024-06-22', '2024-06-22 14:18:30', 1, 1),
 (31, 'Juan Prueto', '', 'prueba@mail.com', '', NULL, NULL, '1', NULL, 'Afghanistan', 'Otra', 'calle 1', '+93_3253253325', 'direct', '2024-06-25', '2024-06-25 20:10:46', 1, 1);
 
