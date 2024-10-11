@@ -156,7 +156,7 @@ if ($pqrs->status == 200) {
                                         </tr>
                                         <tr>
                                             <th colspan="7" class="text-right">Total Disponibilidad:</th>
-                                            <td class="text-right"><?= formatMoney($indiceid) ?></td>
+                                            <td class="text-right"><?= formatMoney($disponibles) ?></td>
                                         </tr>
                                         <tr>
                                             <th colspan="7" class="text-right">Indice ID:</th>
