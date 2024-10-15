@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-10-2024 a las 02:46:46
+-- Tiempo de generación: 15-10-2024 a las 19:25:19
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -1624,6 +1624,7 @@ INSERT INTO `technologies` (`id_technology`, `name_technology`, `status_technolo
 
 CREATE TABLE `transformers` (
   `id_transformer` bigint(20) NOT NULL,
+  `id_delivery_transformer` bigint(20) NOT NULL,
   `code_transformer` varchar(15) NOT NULL,
   `power_transformer` int(5) NOT NULL,
   `address_transformer` text NOT NULL,
@@ -1631,7 +1632,10 @@ CREATE TABLE `transformers` (
   `longitude_transformer` float NOT NULL,
   `type_transformer` varchar(20) NOT NULL,
   `class_transformer` varchar(20) NOT NULL,
+  `cost_transformer` decimal(15,2) NOT NULL,
+  `life_transformer` mediumtext NOT NULL,
   `status_transformer` varchar(8) NOT NULL,
+  `gallery_transformer` text NOT NULL,
   `date_created_transformer` date DEFAULT NULL,
   `date_updated_transformer` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -1640,8 +1644,9 @@ CREATE TABLE `transformers` (
 -- Volcado de datos para la tabla `transformers`
 --
 
-INSERT INTO `transformers` (`id_transformer`, `code_transformer`, `power_transformer`, `address_transformer`, `latitude_transformer`, `longitude_transformer`, `type_transformer`, `class_transformer`, `status_transformer`, `date_created_transformer`, `date_updated_transformer`) VALUES
-(1, 'TRANS-001', 150, 'carrera 22 calle 5', 10.2526, -74.0252, 'Exclusivo', 'Pedestal', '1', '2024-10-14', '2024-10-14 15:14:18');
+INSERT INTO `transformers` (`id_transformer`, `id_delivery_transformer`, `code_transformer`, `power_transformer`, `address_transformer`, `latitude_transformer`, `longitude_transformer`, `type_transformer`, `class_transformer`, `cost_transformer`, `life_transformer`, `status_transformer`, `gallery_transformer`, `date_created_transformer`, `date_updated_transformer`) VALUES
+(1, 1, 'TRANS-001', 150, 'carrera 22 calle 5', 10.2526, -74.0252, 'Exclusivo', 'Pedestal', 0.00, '', 'Activo', '', '2024-10-14', '2024-10-14 15:14:18'),
+(2, 1, 'TRANS004', 150, 'CALLE', 10.2523, -74.1525, 'Exclusivo', 'Aereo', 0.00, '                                                                                                                                                                                                                                                                prueba dos                                                                                                                                                                                                                                ', 'Activo', '[\"19852.jpg\",\"17856.jpg\"]', '2024-10-15', '2024-10-15 05:00:00');
 
 -- --------------------------------------------------------
 
@@ -1699,7 +1704,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fullname_user`, `username_user`, `email_user`, `password_user`, `token_user`, `token_exp_user`, `id_rol_user`, `picture_user`, `country_user`, `city_user`, `address_user`, `phone_user`, `method_user`, `date_created_user`, `date_updated_user`, `status_user`, `verification_user`) VALUES
-(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3Mjg5MTgyNDMsImV4cCI6MTcyOTAwNDY0MywiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.UWdAxNDWPJrvOPlJ-Pao9ql7IM1VnCMKH9IvTIGDy2Q', '1729004643', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
+(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjkwMDE1NjYsImV4cCI6MTcyOTA4Nzk2NiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.UNmy2brr0-5l_zQsGfE7ZBBwqNL4ijRqAatDkInUFXw', '1729087966', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
 (7, 'Jorge Villalobos', 'jorgito', 'jorge@gmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', NULL, NULL, 'Usuarios', '7.png', 'Algeria', 'Varsobia', 'LA QUE SEA', '+213_3153153153', 'direct', '2024-06-22', '2024-06-22 14:18:30', 1, 1),
 (31, 'Juan Prueto', '', 'prueba@mail.com', '', NULL, NULL, '1', NULL, 'Afghanistan', 'Otra', 'calle 1', '+93_3253253325', 'direct', '2024-06-25', '2024-06-25 20:10:46', 1, 1);
 
@@ -1950,7 +1955,7 @@ ALTER TABLE `technologies`
 -- AUTO_INCREMENT de la tabla `transformers`
 --
 ALTER TABLE `transformers`
-  MODIFY `id_transformer` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_transformer` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `typedeliveries`
