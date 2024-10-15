@@ -159,6 +159,30 @@ function execDatatable(text) {
         page = "technologies";
     }
 
+    /* Valido Tabla Transformadores */
+    if ($(".tableTransformers").length > 0) {
+
+        var url = "ajax/data-transformers.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_transformer" },
+            { "data": "code_transformer" },
+            { "data": "power_transformer" },
+            { "data": "address_transformer" },
+            { "data": "latitude_transformer" },
+            { "data": "longitude_transformer" },
+            { "data": "type_transformer" },
+            { "data": "class_transformer" },
+            { "data": "number_delivery" },
+            { "data": "date_created_transformer" },
+            { "data": "status_transformer" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "transformers";
+    }
+
+
     /* Valido Tabla Elementos */
     if ($(".tableElements").length > 0) {
 

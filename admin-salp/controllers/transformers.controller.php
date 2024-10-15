@@ -2,12 +2,11 @@
 
 class TransformersController
 {
-
-	/* Creacion de Marcas */
+	/* Creacion de Transformadores */
 	public function create()
 	{
-		//echo '<pre>'; print_r($_POST); echo '</pre>';return;
-		if (isset($_POST["brand"])) {
+		//echo '<pre>'; print_r($_POST); echo '</pre>';
+		if (isset($_POST["code"])) {
 			echo '<script>
 				matPreloader("on");
 				fncSweetAlert("loading", "Loading...", "");
@@ -15,27 +14,56 @@ class TransformersController
 
 			/* Validamos la sintaxis de los campos */
 			if (
-				preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/', $_POST["brand"])
+				preg_match('/[a-zA-Z0-9_]/', $_POST["code"])
 			) {
+
+				/* Guardar Imagenes de la galeria*/
+				$galleryElement = array();
+				$count = 0;
+				foreach (json_decode($_POST['galleryElement'], true) as $key => $value) {
+					$count++;
+
+					$image["tmp_name"] = $value["file"];
+					$image["type"] = $value["type"];
+					$image["mode"] = "base64";
+					$folder = "img/transformers";
+					$path =  "/" . $_POST["code"];
+					$width = $value["width"];
+					$height = $value["height"];
+					$name = mt_rand(10000, 99999);
+					$saveImageGallery  = TemplateController::saveImage($image, $folder, $path, $width, $height, $name);
+					array_push($galleryElement, $saveImageGallery);
+				}
 
 				/* Agrupamos la información */
 				$data = array(
-					"name_brand" => trim(strtoupper($_POST["brand"])),
-					"date_created_brand" => date("Y-m-d")
+					"id_delivery_transformer" => $_POST["delivery"],
+					"code_transformer" => $_POST["code"],
+					"power_transformer" => $_POST["power"],
+					"address_transformer" => trim(strtoupper($_POST["address"])),
+					"latitude_transformer" => $_POST["latitude"],
+					"longitude_transformer" => $_POST["longitude"],
+					"type_transformer" => $_POST["type"],
+					"class_transformer" => $_POST["class"],
+					"cost_transformer" => $_POST["cost"],
+					"life_transformer" => $_POST["life"],
+					"status_transformer" => 'Activo',
+					"gallery_transformer" => json_encode($galleryElement),
+					"date_created_transformer" => date("Y-m-d")
 				);
 
-				$url = "brands?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
+				$url = "transformers?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
 				$method = "POST";
 				$fields = $data;
 				$response = CurlController::request($url, $method, $fields);
-
+				//echo '<pre>'; print_r($fields); echo '</pre>';exit;
 				/* Respuesta de la API */
 				if ($response->status == 200) {
 					echo '<script>
 					fncFormatInputs();
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Registro grabado correctamente", "/brands");
+					fncSweetAlert("success", "Registro grabado correctamente", "/transformers");
 				</script>';
 				}
 			} else {
@@ -49,34 +77,111 @@ class TransformersController
 		}
 	}
 
-	/* Edición marcas */
+	/* Edición Transformadores */
 	public function edit($id)
 	{
-		if (isset($_POST["idBrand"])) {
+		//echo '<pre>'; print_r($_POST); echo '</pre>';exit;
+		if (isset($_POST["idTransformer"])) {
 			echo '<script>
 					matPreloader("on");
 					fncSweetAlert("loading", "Loading...", "");
 				</script>';
 
-			if ($id == $_POST["idBrand"]) {
-				$select = "id_brand";
-				$url = "brands?select=" . $select . "&linkTo=id_brand&equalTo=" . $id;
+			if ($id == $_POST["idTransformer"]) {
+				$select = "id_transformer";
+				$url = "transformers?select=" . $select . "&linkTo=id_transformer&equalTo=" . $id;
 				$method = "GET";
 				$fields = array();
 				$response = CurlController::request($url, $method, $fields);
-
+				//echo '<pre>'; print_r($response); echo '</pre>';exit;
 				if ($response->status == 200) {
 					/* Validamos la sintaxis de los campos */
 					if (
-						preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/', $_POST["brand"])
+						preg_match('/[a-zA-Z0-9_]/', $_POST["code"])
 					) {
 
-						/* Agrupamos la información */
-						$data = "name_brand=" . trim(strtoupper($_POST["brand"])) . 
-							"&date_created_brand=" . date("Y-m-d");
+						/* Guardar imágenes galería */
+						$galleryElement = array();
+						$count = 0;
+						$count2 = 0;
+						$continueEdit = false;
+
+						if (!empty($_POST['galleryElement'])) {
+							foreach (json_decode($_POST['galleryElement'], true) as $key => $value) {
+								$count++;
+
+								$image["tmp_name"] = $value["file"];
+								$image["type"] = $value["type"];
+								$image["mode"] = "base64";
+
+								$folder = "img/transformers";
+								$path =  "/" . $_POST["code"];
+								$width = $value["width"];
+								$height = $value["height"];
+								$name = mt_rand(10000, 99999);
+
+								$saveImageGallery  = TemplateController::saveImage($image, $folder, $path, $width, $height, $name);
+								array_push($galleryElement, $saveImageGallery);
+
+								if (count($galleryElement) == $count) {
+									if (!empty($_POST['galleryElementOld'])) {
+										foreach (json_decode($_POST['galleryElementOld'], true) as $key => $value) {
+											$count2++;
+											array_push($galleryElement, $value);
+										}
+										if (count(json_decode($_POST['galleryElementOld'], true)) == $count2) {
+											$continueEdit = true;
+										}
+									} else {
+										$continueEdit = true;
+									}
+								}
+							}
+						} else {
+							if (!empty($_POST['galleryElementOld'])) {
+								$count2 = 0;
+								foreach (json_decode($_POST['galleryElementOld'], true) as $key => $value) {
+									$count2++;
+									array_push($galleryElement, $value);
+								}
+								if (count(json_decode($_POST['galleryElementOld'], true)) == $count2) {
+									$continueEdit = true;
+								}
+							}
+						}
+
+						/*  Eliminamos archivos basura del servidor */
+						if (!empty($_POST['deleteGalleryElement'])) {
+							foreach (json_decode($_POST['deleteGalleryElement'], true) as $key => $value) {
+								unlink("views/img/transformers/" . $_POST["code"] . "/" . $value);
+							}
+						}
+
+						/* Validamos que no venga la galería vacía */
+						if (count($galleryElement) == 0) {
+							echo '<script>
+								fncFormatInputs();
+								fncNotie(3, "The gallery cannot be empty");
+								</script>';
+							return;
+						}
+
+						$data = "id_delivery_transformer=" . $_POST["delivery"] .
+							"&code_transformer=" . $_POST["code"] .
+							"&power_transformer=" . $_POST["power"] .
+							"&address_transformer=" . trim(strtoupper($_POST["address"])) .
+							"&latitude_transformer=" . $_POST["latitude"] .
+							"&longitude_transformer=" . $_POST["longitude"] .
+							"&type_transformer=" . $_POST["type"] .
+							"&class_transformer=" . $_POST["class"] .
+							"&cost_transformer=" . $_POST["cost"] .
+							"&life_transformer=" . $_POST["life"] .
+							"&gallery_transformer=" . json_encode($galleryElement) .
+							"&date_updated_transformer=" . date("Y-m-d");
+
 
 						/* Solicitud a la API */
-						$url = "brands?id=" . $id . "&nameId=id_brand&token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
+						$url = "transformers?id=" . $id . "&nameId=id_transformer&token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
 
 						$method = "PUT";
 						$fields = $data;
@@ -88,7 +193,7 @@ class TransformersController
 									fncFormatInputs();
 									matPreloader("off");
 									fncSweetAlert("close", "", "");
-									fncSweetAlert("success", "Registro actualizado correctamente", "/brands");
+									fncSweetAlert("success", "Registro actualizado correctamente", "/transformers");
 							</script>';
 						} else {
 							echo '<script>
@@ -125,199 +230,17 @@ class TransformersController
 		}
 	}
 
-	public function setBrand()
+	function uploadImage(array $data, string $name)
 	{
-		if (!isset($_FILES["InputFile"])) {
-			return;
-		}
-		$rows     = [];
-		$total    = 0;
-		$inserted = 0;
-		$errors   = 0;
-
-		$file     = $_FILES["InputFile"];
-		$tmp      = $file["tmp_name"];
-		$filename = $file["name"];
-		$size     = $file["size"];
-
-		if ($size < 0) {
-			throw new Exception("Selecciona un archivo válido por favor.");
-		}
-
-		$handle = fopen($tmp, "r");
-
-		while (($data = fgetcsv($handle)) !== false) {
-			$rows[] = $data;
-		}
-
-		//dep($rows);
-		unset($rows[0]); // se eliminan las cabeceras
-		$total = count($rows);
-
-		if ($total <= 0) {
-			throw new Exception("El archivo proporcionado está vacio.");
-		}
-
-		/* Cargo paises para validar */
-		$countries = file_get_contents("views/assets/json/countries.json");
-		$countries = json_decode($countries, true);
-
-		/* Cargo tipos de documentos para validar */
-		$typedocs = file_get_contents("views/assets/json/typedocs.json");
-		$typedocs = json_decode($typedocs, true);
-
-		/* Cargo tipos de titulos para validar */
-		$typetitles = file_get_contents("views/assets/json/typetitles.json");
-		$typetitles = json_decode($typetitles, true);
-
-		/* Primero verifico los deudores para crear los que no existan */
-
-		foreach ($rows as $r) {
-			$number_title  = $r[0];
-			$date_title  = $r[1];
-			$type_title  = $r[2];
-			$typedoc_subject = $r[3];
-			$numdoc_subject = $r[4];
-			$fullname_subject = $r[5];
-			$country_subject = $r[6];
-			$city_subject = $r[7];
-			$address_subject = $r[8];
-			$email_subject = $r[9];
-			$phone_subject = $r[10];
-			$amount_title = $r[11];
-			$interest_title = $r[12];
-			$array_subjects[] = $r;
-		}
-
-		/* Primero verifico los deudores para crear los que no existan */
-		for ($i = 0; $i < count($array_subjects); $i++) {
-			$array_subjects[$i][13] = '';
-			$array_subjects[$i][14] = '';
-			$array_subjects[$i][15] = '';
-			$array_subjects[$i][16] = '';
-			$array_subjects[$i][17] = '';
-			$url = "subjects?select=id_subject,numdoc_subject&linkTo=numdoc_subject&equalTo=" . $array_subjects[$i][4];
-			$method = "GET";
-			$fields = array();
-			$response = CurlController::request($url, $method, $fields);
-
-			/* Busco el tipo de documento que este en la base de datos */
-			for ($k = 0; $k < count($typedocs); $k++) {
-				if (trim($array_subjects[$i][3]) == $typedocs[$k]['code']) {
-					$array_subjects[$i][3] = $typedocs[$k]['name'];
-					$array_subjects[$i][15] = 'ok'; // Indica que el typo de documento esta bien
-					break;
-				}
-			}
-			/* Si no sale ok esta mal el typo de documento */
-			if ($array_subjects[$i][15] != 'ok') {
-				$array_subjects[$i][15] = 'Error en el typo de documento';
-			}
-
-			/* Busco el tipo de titulo que este en la base de datos */
-			for ($l = 0; $l < count($typetitles); $l++) {
-				if (trim($array_subjects[$i][2]) == $typetitles[$l]['code']) {
-					$array_subjects[$i][2] = $typetitles[$l]['name'];
-					$array_subjects[$i][17] = 'ok'; // Indica que el typo de documento esta bien
-					break;
-				}
-			}
-			/* Si no sale ok esta mal el typo de documento */
-			if ($array_subjects[$i][17] != 'ok') {
-				$array_subjects[$i][17] = 'Error en el typo de titulo';
-			}
-
-			/* Busco el pais que este en la base de datos */
-			for ($j = 0; $j < count($countries); $j++) {
-				if (trim($array_subjects[$i][6]) == $countries[$j]['name']) {
-					$array_subjects[$i][10] = $countries[$j]['dial_code'] . "_" . $array_subjects[$i][10];
-					$array_subjects[$i][13] = 'ok'; // Indica que el pais esta bien
-					break;
-				}
-			}
-			/* Si no sale ok esta mal el pais */
-			if ($array_subjects[$i][13] != 'ok') {
-				$array_subjects[$i][13] = 'Error en el pais';
-			}
-
-			if ($response->status == 404) {
-
-				/* Si el pais esta bien agrupo para crear*/
-				if ($array_subjects[$i][13] == 'ok' && $array_subjects[$i][15] == 'ok') {
-					$data = array(
-						"typedoc_subject" => $array_subjects[$i][3],
-						"numdoc_subject" => $array_subjects[$i][4],
-						"fullname_subject" => trim(TemplateController::capitalize($array_subjects[$i][5])),
-						"country_subject" => $array_subjects[$i][6],
-						"city_subject" => trim(TemplateController::capitalize($array_subjects[$i][7])),
-						"address_subject" => trim(TemplateController::capitalize($array_subjects[$i][8])),
-						"email_subject" => trim(strtolower($array_subjects[$i][9])),
-						"phone_subject" =>  $array_subjects[$i][10],
-						"date_created_subject" => date("Y-m-d")
-					);
-					$url = "subjects?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
-					$method = "POST";
-					$fields = $data;
-					$response = CurlController::request($url, $method, $fields);
-					$id = $response->results->lastId;
-					/* Verifico si el titulo ya existe */
-					$url = "titles?select=number_title&linkTo=number_title&equalTo=" . $array_subjects[$i][0];
-					$method = "GET";
-					$fields = array();
-					$response = CurlController::request($url, $method, $fields);
-					if ($response->status == 404) {
-						/* Si el titulo no existe lo adiciono */
-						$data2 = array(
-							"number_title" => trim($array_subjects[$i][0]),
-							"date_title" => $array_subjects[$i][1],
-							"type_title" => $array_subjects[$i][2],
-							"id_subject_title" => $id,
-							"amount_title" => str_replace(",", ".", $array_subjects[$i][11]),
-							"interest_title" => str_replace(",", ".", $array_subjects[$i][12]),
-							"date_created_title" => date("Y-m-d")
-						);
-						//echo '<pre>'; print_r($data); echo '</pre>';
-						$url2 = "titles?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
-						$fields2 = $data2;
-						$method = "POST";
-						//echo '<pre>'; print_r($url); echo '</pre>';
-						$response = CurlController::request($url2, $method, $fields2);
-					} else {
-						$array_subjects[$i][16] = 'El titulo ya existe'; // Indica que el deudor ya existe
-					}
-				}
-			} else {
-				/* El deudor existe verifico el titulo */
-				$array_subjects[$i][14] = 'Deudor ya existe'; // Indica que el deudor ya existe
-				$idresult = $response->results[0];
-				$id = $idresult->id_subject;
-				/* Verifico si el titulo ya existe */
-				$url = "titles?select=number_title&linkTo=number_title&equalTo=" . $array_subjects[$i][0];
-				$method = "GET";
-				$fields = array();
-				$response = CurlController::request($url, $method, $fields);
-				if ($response->status == 404) {
-					/* Si el titulo no existe lo adiciono */
-					$data2 = array(
-						"number_title" => trim($array_subjects[$i][0]),
-						"date_title" => $array_subjects[$i][1],
-						"type_title" => $array_subjects[$i][2],
-						"id_subject_title" => $id,
-						"amount_title" => str_replace(",", ".", $array_subjects[$i][11]),
-						"interest_title" => str_replace(",", ".", $array_subjects[$i][12]),
-						"date_created_title" => date("Y-m-d")
-					);
-					$method = "POST";
-					$url2 = "titles?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
-					$fields2 = $data2;
-					$response2 = CurlController::request($url2, $method, $fields2);
-				} else {
-					$array_subjects[$i][16] = 'El titulo ya existe'; // Indica que el deudor ya existe
-				}
-			}
-		}
-
-		return;
+		$url_temp   =   $data['tmp_name'];
+		$destino    =   'Assets/images/uploads/' . $name;
+		$move       =   move_uploaded_file($url_temp, $destino);
+		return $move;
 	}
 
+	//Eliminar un archivo
+	function deleteFile(string $nombre)
+	{
+		unlink('Assets/images/uploads/' . $nombre);
+	}
 }

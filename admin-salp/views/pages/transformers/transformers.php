@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Marcas</h1>
+                <h1>Transformadores</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -10,11 +10,11 @@
                     <?php
                     if (isset($routesArray[2])) {
                         if ($routesArray[2] == "new" || $routesArray[2] == "edit") {
-                            echo '<li class="breadcrumb-item"><a href="/brands">Marcas</a></li>';
+                            echo '<li class="breadcrumb-item"><a href="/transformers">Transformadores</a></li>';
                             echo '<li class="breadcrumb-item active">' . $routesArray[2] . '</li>';
                         }
                     } else {
-                        echo '<li class="breadcrumb-item active">Marcas</li>';
+                        echo '<li class="breadcrumb-item active">Transformadores</li>';
                     }
                     ?>
                 </ol>
@@ -42,7 +42,7 @@
         <div class="card-body">
             <?php
             if (isset($routesArray[2])) {
-                if ($routesArray[2] == "new" || $routesArray[2] == "edit") {
+                if ($routesArray[2] == "edit" || $routesArray[2] == "new") {
                     include "actions/" . $routesArray[2] . ".php";
                 }
             } else {

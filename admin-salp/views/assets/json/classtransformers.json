@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Aereo",
+        "code": "01"
+    },
+    {
+        "name": "Local",
+        "code": "02"
+    },
+    {
+        "name": "Pedestal",
+        "code": "03"
+    },
+    {
+        "name": "Subterraneo",
+        "code": "04"
+    }
+]

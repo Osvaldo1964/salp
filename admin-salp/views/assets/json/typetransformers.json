@@ -1,0 +1,10 @@
+[
+    {
+    "name": "Exclusivo",
+    "code": "01"
+    },
+    {
+    "name": "Compartido con Red",
+    "code": "02"
+    }
+]

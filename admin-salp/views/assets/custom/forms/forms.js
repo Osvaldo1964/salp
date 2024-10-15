@@ -335,6 +335,11 @@ Dropzone.autoDiscover = false;
 var arrayFiles = [];
 var countArrayFiles = 0;
 
+if ($("[name='galleryElementOld']").length > 0 && $("[name='galleryElementOld']").val() != ""){
+  var arrayFilesOld = JSON.parse($("[name='galleryElementOld']").val());
+  var arrayFiles = JSON.parse($("[name='galleryElementOld']").val());
+}
+
 $(".dropzone").dropzone({
   url: "/",
   addRemoveLinks: true,
@@ -375,8 +380,10 @@ $(".dropzone").dropzone({
     var myDropzone = this;
     $(".saveBtn").click(function () {
       if (arrayFiles.length >= 1) {
+        $(this).attr("type","submit");
         myDropzone.processQueue();
       } else {
+        $(this).attr("type","button");
         fncSweetAlert("error", "The gallery cannot be empty", null)
       }
     })
