@@ -241,6 +241,12 @@ $routesArray = array_filter($routesArray);
                                     </a>
                                 </li>
                                 <li class="nav-item">
+                                    <a href="/transformers" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "transformers") : ?>active bg-info<?php endif ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Transformadores</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="/elements" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "elements") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Elementos</p>

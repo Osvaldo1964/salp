@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-10-2024 a las 21:34:07
+-- Tiempo de generación: 15-10-2024 a las 02:46:46
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -1502,6 +1502,7 @@ CREATE TABLE `pqrs` (
   `dateasign_pqr` datetime DEFAULT NULL,
   `id_crew_pqr` bigint(20) DEFAULT NULL,
   `datesolved_pqr` datetime DEFAULT NULL,
+  `solution_pqr` text DEFAULT NULL,
   `latitude_pqr` float NOT NULL,
   `longitude_pqr` float NOT NULL,
   `name_address_pqr` text NOT NULL,
@@ -1514,12 +1515,12 @@ CREATE TABLE `pqrs` (
 -- Volcado de datos para la tabla `pqrs`
 --
 
-INSERT INTO `pqrs` (`id_pqr`, `date_pqr`, `name_pqr`, `email_pqr`, `address_pqr`, `message_pqr`, `id_element_pqr`, `dateasign_pqr`, `id_crew_pqr`, `datesolved_pqr`, `latitude_pqr`, `longitude_pqr`, `name_address_pqr`, `status_pqr`, `date_created_pqr`, `date_updated_pqr`) VALUES
-(2, '2024-10-02 09:21:50', 'Pedro Perez', 'correokdl@correo.com', 'carrera 11 calle 17Santa Marta Colombia', 'ldldld', NULL, NULL, NULL, NULL, 11.2433, -74.2049, 'Cra. 11 & Cl. 17, Comuna 4, Santa Marta, Magdalena, Colombia', 'Pending', '2024-08-15', '2024-08-15 15:31:01'),
-(3, '2024-10-02 09:22:06', 'Juan Guerra', 'elcorrl@kkf.com', 'calle 22 carrera 3, Santa Marta Colombia', 'se apago', NULL, '2024-10-05 00:00:00', 2, NULL, 11.2409, -74.2132, 'Cl. 22 & Cra. 3, Comuna 2, Santa Marta, Magdalena, Colombia', 'Assign', '2024-08-15', '2024-08-15 15:32:34'),
-(4, '2024-10-07 14:22:12', 'Autopistas Y Carreteras 2', 'osvicor@hotmail.com', 'calle 23 carrera 4, Santa Marta Colombia', 'prueaba', NULL, '2024-08-16 00:00:00', 1, '2024-10-08 09:30:00', 11.2337, -74.1794, 'Cl. 23, Santa Marta, Magdalena, Colombia', 'Success', '2024-08-15', '2024-10-07 05:00:00'),
-(6, '2024-10-04 11:22:21', 'Osvaldo Villalobos Cortina', 'osvicor1964@gmail.com', 'urb san lorenzo mz j cs 34, Santa Marta Colombia', 'se apago', NULL, NULL, NULL, NULL, 11.2097, -74.163, 'Cra. 66 #48-106, Santa Marta, Magdalena, Colombia', 'Pending', '2024-10-07', '2024-10-07 16:12:19'),
-(7, NULL, 'Prueba Ut', 'osvicor1964@gmail.com', 'urb. san lorenzo mz j cs 34, MAGDALENA, SANTA MARTA', 'se daño', NULL, NULL, NULL, NULL, 11.2097, -74.163, 'Cra. 66 #48-106, Santa Marta, Magdalena, Colombia', 'Pending', '2024-10-11', '2024-10-11 19:32:55');
+INSERT INTO `pqrs` (`id_pqr`, `date_pqr`, `name_pqr`, `email_pqr`, `address_pqr`, `message_pqr`, `id_element_pqr`, `dateasign_pqr`, `id_crew_pqr`, `datesolved_pqr`, `solution_pqr`, `latitude_pqr`, `longitude_pqr`, `name_address_pqr`, `status_pqr`, `date_created_pqr`, `date_updated_pqr`) VALUES
+(2, '2024-10-02 09:21:50', 'Pedro Perez', 'correokdl@correo.com', 'carrera 11 calle 17Santa Marta Colombia', 'ldldld', NULL, NULL, NULL, NULL, NULL, 11.2433, -74.2049, 'Cra. 11 & Cl. 17, Comuna 4, Santa Marta, Magdalena, Colombia', 'Pending', '2024-08-15', '2024-08-15 15:31:01'),
+(3, '2024-10-02 09:22:06', 'Juan Guerra', 'elcorrl@kkf.com', 'calle 22 carrera 3, Santa Marta Colombia', 'se apago', NULL, '2024-10-05 00:00:00', 2, NULL, NULL, 11.2409, -74.2132, 'Cl. 22 & Cra. 3, Comuna 2, Santa Marta, Magdalena, Colombia', 'Assign', '2024-08-15', '2024-08-15 15:32:34'),
+(4, '2024-10-07 14:22:12', 'Autopistas Y Carreteras 2', 'osvicor@hotmail.com', 'calle 23 carrera 4, Santa Marta Colombia', 'prueaba', NULL, '2024-08-16 00:00:00', 1, '2024-10-08 09:30:00', NULL, 11.2337, -74.1794, 'Cl. 23, Santa Marta, Magdalena, Colombia', 'Success', '2024-08-15', '2024-10-07 05:00:00'),
+(6, '2024-10-04 11:22:21', 'Osvaldo Villalobos Cortina', 'osvicor1964@gmail.com', 'urb san lorenzo mz j cs 34, Santa Marta Colombia', 'se apago', NULL, NULL, NULL, NULL, NULL, 11.2097, -74.163, 'Cra. 66 #48-106, Santa Marta, Magdalena, Colombia', 'Pending', '2024-10-07', '2024-10-07 16:12:19'),
+(7, '2024-10-03 10:07:19', 'Prueba Ut', 'osvicor1964@gmail.com', 'urb. san lorenzo mz j cs 34, MAGDALENA, SANTA MARTA', 'se daño', NULL, NULL, NULL, NULL, NULL, 11.2097, -74.163, 'Cra. 66 #48-106, Santa Marta, Magdalena, Colombia', 'Pending', '2024-10-11', '2024-10-11 19:32:55');
 
 -- --------------------------------------------------------
 
@@ -1618,6 +1619,33 @@ INSERT INTO `technologies` (`id_technology`, `name_technology`, `status_technolo
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `transformers`
+--
+
+CREATE TABLE `transformers` (
+  `id_transformer` bigint(20) NOT NULL,
+  `code_transformer` varchar(15) NOT NULL,
+  `power_transformer` int(5) NOT NULL,
+  `address_transformer` text NOT NULL,
+  `latitude_transformer` float NOT NULL,
+  `longitude_transformer` float NOT NULL,
+  `type_transformer` varchar(20) NOT NULL,
+  `class_transformer` varchar(20) NOT NULL,
+  `status_transformer` varchar(8) NOT NULL,
+  `date_created_transformer` date DEFAULT NULL,
+  `date_updated_transformer` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `transformers`
+--
+
+INSERT INTO `transformers` (`id_transformer`, `code_transformer`, `power_transformer`, `address_transformer`, `latitude_transformer`, `longitude_transformer`, `type_transformer`, `class_transformer`, `status_transformer`, `date_created_transformer`, `date_updated_transformer`) VALUES
+(1, 'TRANS-001', 150, 'carrera 22 calle 5', 10.2526, -74.0252, 'Exclusivo', 'Pedestal', '1', '2024-10-14', '2024-10-14 15:14:18');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `typedeliveries`
 --
 
@@ -1671,7 +1699,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fullname_user`, `username_user`, `email_user`, `password_user`, `token_user`, `token_exp_user`, `id_rol_user`, `picture_user`, `country_user`, `city_user`, `address_user`, `phone_user`, `method_user`, `date_created_user`, `date_updated_user`, `status_user`, `verification_user`) VALUES
-(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3Mjg2NzM1OTIsImV4cCI6MTcyODc1OTk5MiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.POzpkyHSw06umlwbhBOKbTU2CUWktp9tZ6xsGwUDKS4', '1728759992', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
+(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3Mjg5MTgyNDMsImV4cCI6MTcyOTAwNDY0MywiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.UWdAxNDWPJrvOPlJ-Pao9ql7IM1VnCMKH9IvTIGDy2Q', '1729004643', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
 (7, 'Jorge Villalobos', 'jorgito', 'jorge@gmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', NULL, NULL, 'Usuarios', '7.png', 'Algeria', 'Varsobia', 'LA QUE SEA', '+213_3153153153', 'direct', '2024-06-22', '2024-06-22 14:18:30', 1, 1),
 (31, 'Juan Prueto', '', 'prueba@mail.com', '', NULL, NULL, '1', NULL, 'Afghanistan', 'Otra', 'calle 1', '+93_3253253325', 'direct', '2024-06-25', '2024-06-25 20:10:46', 1, 1);
 
@@ -1786,6 +1814,12 @@ ALTER TABLE `settings`
 --
 ALTER TABLE `technologies`
   ADD PRIMARY KEY (`id_technology`);
+
+--
+-- Indices de la tabla `transformers`
+--
+ALTER TABLE `transformers`
+  ADD PRIMARY KEY (`id_transformer`);
 
 --
 -- Indices de la tabla `typedeliveries`
@@ -1911,6 +1945,12 @@ ALTER TABLE `settings`
 --
 ALTER TABLE `technologies`
   MODIFY `id_technology` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `transformers`
+--
+ALTER TABLE `transformers`
+  MODIFY `id_transformer` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `typedeliveries`

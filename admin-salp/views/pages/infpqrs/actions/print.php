@@ -19,7 +19,9 @@ if($elements->status == 200){
 /* */
 /* Selecciono las PQRs en el rango de fechas */
 $select = "*";
-$url = "relations?rel=pqrs,crews&type=pqr,crew&select=" . $select . "&linkTo=DATE(date_pqr)&between1=" . $_GET['begindate'] . "&between2=" . $_GET['enddate']; 
+$url = "relations?rel=pqrs,crews&type=pqr,crew&select=" . $select . "&linkTo=DATE(date_pqr)&between1=" . $_GET['begindate'] . "&between2=" . $_GET['enddate'] . 
+       "&orderBy=date_pqr&orderMode=ASC";
+
 //echo '<pre>'; print_r($url); echo '</pre>';
 $pqrs = CurlController::request($url,$method,$fields);
 //echo '<pre>'; print_r($pqrs); echo '</pre>';exit;
@@ -74,8 +76,8 @@ if ($pqrs->status == 200) {
                                             <th>Asignada en</th>
                                             <th>Cuadrilla</th>
                                             <th>Resuelta en</th>
-                                            <th>Horas Solución</th>
                                             <th>Observación</th>
+                                            <th>Horas Solución</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -103,13 +105,13 @@ if ($pqrs->status == 200) {
     
                                         ?>
                                                     <tr>
-                                                        <th colspan="6" class="text-left"><?= $grupo01; ?></th>
+                                                        <th colspan="9" class="text-left"><?= $grupo01; ?></th>
                                                     </tr>
                                                     <?php }else {
                                                         if ($grupo01 != $ctrdate) {
                                                     ?>
                                                         <tr>
-                                                            <th colspan="7" class="text-right">Sub-Total Pqrs del dia : <?= $grupo01; ?></th>
+                                                            <th colspan="8" class="text-right">Sub-Total Pqrs del dia : <?= $grupo01; ?></th>
                                                             <td class="text-right"><?= formatMoney($subtotal01) ?></td>
                                                         </tr>
                                                     <?php
@@ -117,7 +119,7 @@ if ($pqrs->status == 200) {
                                                             $grupo01 = $ctrdate;
                                                     ?>
                                                         <tr>
-                                                            <th colspan="6" class="text-left"><?= $grupo01; ?></th>
+                                                            <th colspan="9" class="text-left"><?= $grupo01; ?></th>
                                                         </tr>
                                                     <?php
                                                         }
@@ -131,6 +133,7 @@ if ($pqrs->status == 200) {
                                                     <td class="text-left"><?= $pqr->dateasign_pqr; ?></td>
                                                     <td class="text-left"><?= $pqr->name_crew; ?></td>
                                                     <td class="text-left"><?= $pqr->datesolved_pqr; ?></td>
+                                                    <td class="text-left"><?= $pqr->solution_pqr; ?></td>
                                                     <td class="text-right"><?= formatMoney($horas); ?></td>
                                                 </tr>
                                         <?php
@@ -143,23 +146,23 @@ if ($pqrs->status == 200) {
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <th colspan="7" class="text-right">Sub-Total Pqrs del dia : <?= $grupo01; ?></th>
+                                            <th colspan="8" class="text-right">Sub-Total Pqrs del dia : <?= $grupo01; ?></th>
                                             <td class="text-right"><?= formatMoney($subtotal01) ?></td>
                                         </tr>
                                         <tr>
-                                            <th colspan="7" class="text-right">Total:</th>
+                                            <th colspan="8" class="text-right">Total:</th>
                                             <td class="text-right"><?= formatMoney($total01) ?></td>
                                         </tr>
                                         <tr>
-                                            <th colspan="7" class="text-right">Tiempo no dosponible:</th>
+                                            <th colspan="8" class="text-right">Tiempo no dosponible:</th>
                                             <td class="text-right"><?= formatMoney($indiceid) ?></td>
                                         </tr>
                                         <tr>
-                                            <th colspan="7" class="text-right">Total Disponibilidad:</th>
+                                            <th colspan="8" class="text-right">Total Disponibilidad:</th>
                                             <td class="text-right"><?= formatMoney($disponibles) ?></td>
                                         </tr>
                                         <tr>
-                                            <th colspan="7" class="text-right">Indice ID:</th>
+                                            <th colspan="8" class="text-right">Indice ID:</th>
                                             <td class="text-right"><?= formatMoney($indiceid/$disponibles) ?></td>
                                         </tr>
 
