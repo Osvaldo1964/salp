@@ -21,19 +21,19 @@ let longitude;
     if (document.querySelector(".btnAddImage")) {
       let btnAddImage = document.querySelector(".btnAddImage");
       btnAddImage.onclick = function (e) {
-          let key = Date.now();
-          let newElement = document.createElement("div");
-          newElement.id = "div" + key;
-          newElement.innerHTML = `
+        let key = Date.now();
+        let newElement = document.createElement("div");
+        newElement.id = "div" + key;
+        newElement.innerHTML = `
           <div class="prevImage"></div>
           <input type="file" name="foto" id="img${key}" class="inputUploadfile">
           <label for="img${key}" class="btnUploadfile"><i class="fas fa-upload"></i></label>
           <button class="btnDeleteImage notblock" type="button" onclick="fntDelItem('#div${key}')"><i class="fas fa-trash-alt"></i></button>`;
-          document.querySelector("#containerImages").appendChild(newElement);
-          document.querySelector("#div" + key + " .btnUploadfile").click();
-          fntInputFile();
+        document.querySelector("#containerImages").appendChild(newElement);
+        document.querySelector("#div" + key + " .btnUploadfile").click();
+        fntInputFile();
       }
-  }
+    }
   }, false);
 })();
 
@@ -111,7 +111,7 @@ function validateItemsJS() {
   let ntypedelivery = $('#typedelivery').val();
   var data = new FormData();
   data.append("itemdelivery", ntypedelivery);
-  
+
   $.ajax({
     url: "ajax/ajax-validate.php",
     method: "POST",
@@ -335,11 +335,6 @@ Dropzone.autoDiscover = false;
 var arrayFiles = [];
 var countArrayFiles = 0;
 
-if ($("[name='galleryElementOld']").length > 0 && $("[name='galleryElementOld']").val() != ""){
-  var arrayFilesOld = JSON.parse($("[name='galleryElementOld']").val());
-  var arrayFiles = JSON.parse($("[name='galleryElementOld']").val());
-}
-
 $(".dropzone").dropzone({
   url: "/",
   addRemoveLinks: true,
@@ -380,15 +375,20 @@ $(".dropzone").dropzone({
     var myDropzone = this;
     $(".saveBtn").click(function () {
       if (arrayFiles.length >= 1) {
-        $(this).attr("type","submit");
+        $(this).attr("type", "submit");
         myDropzone.processQueue();
       } else {
-        $(this).attr("type","button");
-        fncSweetAlert("error", "The gallery cannot be empty", null)
+        if ($("[name='galleryElementOld']").length > 0 && $("[name='galleryElementOld']").val() != "") {
+          $(this).attr("type", "submit");
+          myDropzone.processQueue();
+        } else {
+          $(this).attr("type", "button");
+          fncSweetAlert("error", "The gallery cannot be empty", null)
+        }
       }
     })
   }
-})
+});
 
 /* Edición de Galería */
 
@@ -455,14 +455,14 @@ function fntPrintBarcode(area) {
   vprint.close();
 }
 
-function Actmap(){
+function Actmap() {
   let addressmap = document.querySelector("#address").value;
   addressmap = addressmap + ', Santa Marta, Colombia';
 
   //console.log(addressmap);
   var data = new FormData();
   data.append("addressmap", addressmap);
- 
+
   $.ajax({
     url: "controllers/pqrs.controller.php",
     method: "POST",
@@ -470,7 +470,7 @@ function Actmap(){
     contentType: false,
     cache: false,
     processData: false,
-    success: function(response) {
+    success: function (response) {
       console.log(response);
       data = JSON.parse(response);
       console.log(data['latitud']);
@@ -485,11 +485,10 @@ function Actmap(){
 
 async function initMap() {
   // Variables para ubicarte en santa marta
-  if(latitude === undefined || longitude === undefined)
-    {
-        latitude = 11.2084292;
-        longitude = -74.2237886;
-    }
+  if (latitude === undefined || longitude === undefined) {
+    latitude = 11.2084292;
+    longitude = -74.2237886;
+  }
 
   // Por si tiene la ubicación activada en el teléfono o navegador, las pilla de ahí y se las asigna
   if (typeof window.latitude !== 'undefined' && typeof window.longitude !== 'undefined') {

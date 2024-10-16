@@ -18,22 +18,32 @@ class TransformersController
 			) {
 
 				/* Guardar Imagenes de la galeria*/
-				$galleryElement = array();
-				$count = 0;
-				foreach (json_decode($_POST['galleryElement'], true) as $key => $value) {
-					$count++;
 
-					$image["tmp_name"] = $value["file"];
-					$image["type"] = $value["type"];
-					$image["mode"] = "base64";
-					$folder = "img/transformers";
-					$path =  "/" . $_POST["code"];
-					$width = $value["width"];
-					$height = $value["height"];
-					$name = mt_rand(10000, 99999);
-					$saveImageGallery  = TemplateController::saveImage($image, $folder, $path, $width, $height, $name);
+				$galleryElement = array();
+				$countGallery = 0;
+
+				foreach (json_decode($_POST["galleryElement"],true) as $key => $value) {
+					
+					$countGallery++;
+
+					$fields = array(
+					
+						"file"=>$value["file"],
+						"type"=>$value["type"],
+						"folder"=>"transformers/".$_POST['code'],
+						"name"=>$_POST["code"]."_".mt_rand(100000000, 9999999999),
+						"width"=>$value["width"],
+						"height"=>$value["height"]
+					);
+
+					$saveImageGallery = CurlController::requestFile($fields);
+					//echo '<pre>'; print_r($saveImageGallery); echo '</pre>';
 					array_push($galleryElement, $saveImageGallery);
+
 				}
+
+				//echo '<pre>'; print_r($saveImageGallery); echo '</pre>';exit;
+
 
 				/* Agrupamos la información */
 				$data = array(
@@ -45,6 +55,7 @@ class TransformersController
 					"longitude_transformer" => $_POST["longitude"],
 					"type_transformer" => $_POST["type"],
 					"class_transformer" => $_POST["class"],
+					"circuit_transformer" => $_POST["circuit"],
 					"cost_transformer" => $_POST["cost"],
 					"life_transformer" => $_POST["life"],
 					"status_transformer" => 'Activo',
@@ -102,69 +113,74 @@ class TransformersController
 
 						/* Guardar imágenes galería */
 						$galleryElement = array();
-						$count = 0;
-						$count2 = 0;
+						$countGallery = 0;
+						$countGallery2 = 0;
 						$continueEdit = false;
 
-						if (!empty($_POST['galleryElement'])) {
-							foreach (json_decode($_POST['galleryElement'], true) as $key => $value) {
-								$count++;
+						if(!empty($_POST['galleryElement'])){	
 
-								$image["tmp_name"] = $value["file"];
-								$image["type"] = $value["type"];
-								$image["mode"] = "base64";
+							/* Proceso para configurar la galería */	
+							//echo '<pre>'; print_r(json_decode($_POST["galleryElement"],true)); echo '</pre>';exit;
+							foreach (json_decode($_POST["galleryElement"],true) as $key => $value) {
+								$countGallery++;
+								$fields = array(
+									"file"=>$value["file"],
+									"type"=>$value["type"],
+									"folder"=>"transformers/".$_POST['code'],
+									"name"=>$_POST["code"]."_".mt_rand(100000000, 9999999999),
+									"width"=>$value["width"],
+									"height"=>$value["height"]
+								);
 
-								$folder = "img/transformers";
-								$path =  "/" . $_POST["code"];
-								$width = $value["width"];
-								$height = $value["height"];
-								$name = mt_rand(10000, 99999);
-
-								$saveImageGallery  = TemplateController::saveImage($image, $folder, $path, $width, $height, $name);
+								$saveImageGallery = CurlController::requestFile($fields);
 								array_push($galleryElement, $saveImageGallery);
 
-								if (count($galleryElement) == $count) {
-									if (!empty($_POST['galleryElementOld'])) {
-										foreach (json_decode($_POST['galleryElementOld'], true) as $key => $value) {
-											$count2++;
+								if($countGallery == count($galleryElement)){
+									if(!empty($_POST['galleryElementOld'])){
+										foreach (json_decode($_POST['galleryElementOld'],true) as $key => $value) {
+											$countGallery2++;
 											array_push($galleryElement, $value);
 										}
-										if (count(json_decode($_POST['galleryElementOld'], true)) == $count2) {
-											$continueEdit = true;
-										}
-									} else {
+
+										if(count(json_decode($_POST['galleryElementOld'],true)) == $countGallery2){
+						  					$continueEdit = true;
+						  				}
+									}else{
 										$continueEdit = true;
 									}
 								}
 							}
-						} else {
-							if (!empty($_POST['galleryElementOld'])) {
-								$count2 = 0;
-								foreach (json_decode($_POST['galleryElementOld'], true) as $key => $value) {
-									$count2++;
+						}else{
+							if(!empty($_POST['galleryElementOld'])){
+								$countGallery2 = 0;
+								foreach (json_decode($_POST['galleryElementOld'],true) as $key => $value) {
+									$countGallery2++;
 									array_push($galleryElement, $value);
 								}
-								if (count(json_decode($_POST['galleryElementOld'], true)) == $count2) {
-									$continueEdit = true;
-								}
+								if(count(json_decode($_POST['galleryElementOld'],true)) == $countGallery2){
+				  					$continueEdit = true;
+				  				}
 							}
 						}
 
-						/*  Eliminamos archivos basura del servidor */
-						if (!empty($_POST['deleteGalleryElement'])) {
-							foreach (json_decode($_POST['deleteGalleryElement'], true) as $key => $value) {
-								unlink("views/img/transformers/" . $_POST["code"] . "/" . $value);
+						/* Eliminamos archivos basura del servidor */
+						if(!empty($_POST['deleteGalleryElement'])){
+							foreach (json_decode($_POST['deleteGalleryElement'],true) as $key => $value) {
+								$fields = array(
+								 "deleteFile"=> "transformers/".$_POST['code'] . "/".$value
+								);
+								$picture = CurlController::requestFile($fields);
 							}
 						}
 
 						/* Validamos que no venga la galería vacía */
-						if (count($galleryElement) == 0) {
-							echo '<script>
+						if(count($galleryElement) == 0){
+			  				echo '<script>
 								fncFormatInputs();
 								fncNotie(3, "The gallery cannot be empty");
-								</script>';
+							</script>';
 							return;
-						}
+			  			}
 
 						$data = "id_delivery_transformer=" . $_POST["delivery"] .
 							"&code_transformer=" . $_POST["code"] .
@@ -174,6 +190,7 @@ class TransformersController
 							"&longitude_transformer=" . $_POST["longitude"] .
 							"&type_transformer=" . $_POST["type"] .
 							"&class_transformer=" . $_POST["class"] .
+							"&circuit_transformer=" . $_POST["circuit"] .
 							"&cost_transformer=" . $_POST["cost"] .
 							"&life_transformer=" . $_POST["life"] .
 							"&gallery_transformer=" . json_encode($galleryElement) .

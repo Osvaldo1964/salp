@@ -41,7 +41,7 @@
                         <!-- Código Transformador -->
                         <div class="form-group col-md-6">
                             <label>Código</label>
-                            <input type="text" class="form-control" pattern="[a-zA-Z0-9_ ]{1,}" id="code" name="code" onchange="validateRepeat(event,'t&n','transformers','code_transformer')" required>
+                            <input type="text" class="form-control" pattern="[A-Za-z0-9.-]" id="code" name="code" onchange="validateRepeat(event,'t&n','transformers','code_transformer')" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="row">
                         <!-- Tipo Transformador -->
-                        <div class="form-group col-md-5">
+                        <div class="form-group col-md-4">
                             <label>Tipo Transformador</label>
                             <?php
                             $typetransformers = file_get_contents("views/assets/json/typetransformers.json");
@@ -66,7 +66,7 @@
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                         <!-- Clase Transformador -->
-                        <div class="form-group col-md-5">
+                        <div class="form-group col-md-4">
                             <label>Clase Transformador</label>
                             <?php
                             $classtransformers = file_get_contents("views/assets/json/classtransformers.json");
@@ -78,6 +78,14 @@
                                     <option value="<?php echo $value["name"] ?>"><?php echo $value["name"] ?></option>
                                 <?php endforeach ?>
                             </select>
+
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <!-- Circuito de Alimentación -->
+                        <div class="form-group col-md-4">
+                            <label>Circuito Alimentación</label>
+                            <input type="text" class="form-control" pattern="[A-Za-z0-9.-]" name="circuit" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>

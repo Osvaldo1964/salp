@@ -66,7 +66,7 @@ if (isset($routesArray[3])) {
                         <!-- Código Elemento -->
                         <div class="form-group col-md-6">
                             <label>Código</label>
-                            <input type="text" class="form-control" pattern="[a-zA-Z0-9_ ]{1,}" id="code" name="code" onchange="validateRepeat(event,'t&n','transformers','code_transformer')" value="<?php echo $transformers->code_transformer ?>" required>
+                            <input type="text" class="form-control" pattern="[A-Za-z0-9.-]" id="code" name="code" onchange="validateRepeat(event,'t&n','transformers','code_transformer')" value="<?php echo $transformers->code_transformer ?>" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -74,7 +74,7 @@ if (isset($routesArray[3])) {
                     </div>
                     <div class="row">
                         <!-- Tipo Transformador -->
-                        <div class="form-group col-md-5">
+                        <div class="form-group col-md-4">
                             <label>Tipo Transformador</label>
                             <?php
                             $typetransformers = file_get_contents("views/assets/json/typetransformers.json");
@@ -94,7 +94,7 @@ if (isset($routesArray[3])) {
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                         <!-- Clase Transformador -->
-                        <div class="form-group col-md-5">
+                        <div class="form-group col-md-4">
                             <label>Clase Transformador</label>
                             <?php
                             $classtransformers = file_get_contents("views/assets/json/classtransformers.json");
@@ -109,6 +109,14 @@ if (isset($routesArray[3])) {
                                     <?php endif ?>
                                 <?php endforeach ?>
                             </select>
+
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <!-- Circuito de Alimentación -->
+                        <div class="form-group col-md-4">
+                            <label>Circuito Alimentación</label>
+                            <input type="text" class="form-control" pattern="[A-Za-z0-9.-]" name="circuit" value="<?php echo $transformers->circuit_transformer ?>" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -147,7 +155,7 @@ if (isset($routesArray[3])) {
                         <div class="form-group col-md-4">
                             <!-- Potencia del Transformador -->
                             <label>Potencia</label>
-                            <input type="text" class="form-control" pattern="^(0|[1-9]\d*)(\.\d+)?$" name="power" value="<?php echo $transformers->power_transformer ?>"> required>
+                            <input type="text" class="form-control" pattern="^(0|[1-9]\d*)(\.\d+)?$" name="power" value="<?php echo $transformers->power_transformer ?>" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -165,11 +173,11 @@ if (isset($routesArray[3])) {
 
                     <!-- Galeria de Imagenes -->
                     <label>Galeria de Imagenes del Transformador</label>
-                    <div class="dropzone mb-3">
+                    <div class="dropzone">
                         <?php foreach (json_decode($transformers->gallery_transformer, true) as $value) : ?>
                             <div class="dz-preview dz-file-preview">
                                 <div class="dz-image">
-                                    <img src="views/img/transformers/<?= $transformers->code_transformer ?>/<?= $value ?>" width="100%">
+                                    <img class="img-fluid" src="<?php echo TemplateController::srcImg() ?>views/img/transformers/<?php echo $transformers->code_transformer ?>/<?= $value ?>" width="100%">
                                 </div>
                                 <a class="dz-remove" data-dz-remove remove="<?= $value ?>" onclick="removeGallery(this)">Eliminar archivo</a>
                             </div>
@@ -199,7 +207,7 @@ if (isset($routesArray[3])) {
                         <div class="form-group col-md-12">
                             <!-- Hoja de Vida del Elemento -->
                             <div class="form-group mt-2">
-                                <label>Hoja de Vida del Elemento</label>
+                                <label>Hoja de Vida del Transformador</label>
                                 <textarea class="summernote" name="life" value="<?php echo $transformers->life_transformer ?>">
                                 <?php echo html_entity_decode($transformers->life_transformer) ?>
                                 </textarea>
