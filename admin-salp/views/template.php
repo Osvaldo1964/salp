@@ -105,6 +105,7 @@ foreach ($routesArray as $key => $value) {
       $routesArray[1] == "materials" ||
       $routesArray[1] == "technologies" ||
       $routesArray[1] == "transformers" ||
+      $routesArray[1] == "poles" ||
       $routesArray[1] == "elements" ||
       $routesArray[1] == "typedeliveries" ||
       $routesArray[1] == "itemdeliveries" ||
@@ -192,6 +193,7 @@ foreach ($routesArray as $key => $value) {
             $routesArray[1] == "materials" ||
             $routesArray[1] == "technologies" ||
             $routesArray[1] == "transformers" ||
+            $routesArray[1] == "poles" ||
             $routesArray[1] == "elements" ||
             $routesArray[1] == "typedeliveries" ||
             $routesArray[1] == "itemdeliveries" ||

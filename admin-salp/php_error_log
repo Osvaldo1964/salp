@@ -3188,3 +3188,99 @@ Stack trace:
 [16-Oct-2024 10:41:19 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 105
 [16-Oct-2024 10:41:19 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 105
 [16-Oct-2024 10:41:19 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 105
+[16-Oct-2024 11:52:44 America/Bogota] PHP Warning:  file_get_contents(views/assets/json/typepoles.json): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\new.php on line 55
+[16-Oct-2024 11:52:44 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\new.php on line 60
+[16-Oct-2024 11:52:44 America/Bogota] PHP Warning:  file_get_contents(views/assets/json/classpoles.json): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\new.php on line 72
+[16-Oct-2024 11:52:44 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\new.php on line 77
+[16-Oct-2024 12:00:57 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[16-Oct-2024 12:00:57 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[16-Oct-2024 12:00:57 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[16-Oct-2024 12:00:57 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[16-Oct-2024 12:00:57 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[16-Oct-2024 12:00:58 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[16-Oct-2024 12:00:58 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[16-Oct-2024 12:00:58 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[16-Oct-2024 12:00:58 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[16-Oct-2024 12:00:58 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[16-Oct-2024 12:01:02 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\controllers\poles.controller.php on line 25
+[16-Oct-2024 12:07:44 America/Bogota] PHP Warning:  Attempt to read property "id_delivery_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 53
+[16-Oct-2024 12:07:44 America/Bogota] PHP Warning:  Attempt to read property "type_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 85
+[16-Oct-2024 12:07:44 America/Bogota] PHP Warning:  Attempt to read property "type_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 85
+[16-Oct-2024 12:07:44 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 105
+[16-Oct-2024 12:07:44 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 105
+[16-Oct-2024 12:07:44 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 105
+[16-Oct-2024 12:07:44 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 105
+[16-Oct-2024 12:07:44 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 177
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Undefined variable $transformers in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 69
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Attempt to read property "code_transformer" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 69
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Attempt to read property "type_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 85
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Attempt to read property "type_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 85
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 105
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 105
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 105
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 105
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Undefined variable $transformers in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 119
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Attempt to read property "circuit_transformer" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 119
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Undefined variable $transformers in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 130
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Attempt to read property "address_transformer" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 130
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Undefined variable $transformers in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 140
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Attempt to read property "latitude_transformer" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 140
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Undefined variable $transformers in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 148
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Attempt to read property "longitude_transformer" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 148
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Undefined variable $transformers in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 158
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Attempt to read property "power_transformer" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 158
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Undefined variable $transformers in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 167
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Attempt to read property "cost_transformer" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 167
+[16-Oct-2024 12:15:03 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 211
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Attempt to read property "type_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 85
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Attempt to read property "type_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 85
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 105
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 105
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 105
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 105
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Undefined variable $transformers in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 119
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Attempt to read property "circuit_transformer" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 119
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Undefined variable $transformers in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 130
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Attempt to read property "address_transformer" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 130
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Undefined variable $transformers in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 140
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Attempt to read property "latitude_transformer" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 140
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Undefined variable $transformers in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 148
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Attempt to read property "longitude_transformer" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 148
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Undefined variable $transformers in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 158
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Attempt to read property "power_transformer" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 158
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Undefined variable $transformers in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 167
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Attempt to read property "cost_transformer" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 167
+[16-Oct-2024 12:17:46 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 211
+[16-Oct-2024 12:22:18 America/Bogota] PHP Warning:  Undefined variable $pole in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 170
+[16-Oct-2024 12:22:18 America/Bogota] PHP Warning:  Attempt to read property "cost_pole" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 170
+[16-Oct-2024 12:22:18 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214
+[16-Oct-2024 12:23:29 America/Bogota] PHP Warning:  Undefined variable $pole in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 170
+[16-Oct-2024 12:23:29 America/Bogota] PHP Warning:  Attempt to read property "cost_pole" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 170
+[16-Oct-2024 12:23:29 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214
+[16-Oct-2024 12:23:51 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214
+[16-Oct-2024 12:25:35 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214
+[16-Oct-2024 12:25:56 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214
+[16-Oct-2024 12:26:01 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[16-Oct-2024 12:26:01 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[16-Oct-2024 12:26:01 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[16-Oct-2024 12:26:01 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[16-Oct-2024 12:26:01 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[16-Oct-2024 12:26:01 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[16-Oct-2024 12:26:01 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[16-Oct-2024 12:26:01 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[16-Oct-2024 12:26:01 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[16-Oct-2024 12:26:01 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[16-Oct-2024 12:26:03 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214
+[16-Oct-2024 12:26:11 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214
+[16-Oct-2024 12:29:08 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214
+[16-Oct-2024 12:29:12 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[16-Oct-2024 12:29:12 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[16-Oct-2024 12:29:12 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[16-Oct-2024 12:29:12 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[16-Oct-2024 12:29:12 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[16-Oct-2024 12:29:13 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[16-Oct-2024 12:29:13 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[16-Oct-2024 12:29:13 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[16-Oct-2024 12:29:13 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[16-Oct-2024 12:29:13 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[16-Oct-2024 12:29:14 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214

@@ -171,12 +171,6 @@ $routesArray = array_filter($routesArray);
                                 <li class="nav-item">
                                     <a href="/infpqrs" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "generate") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>PQRs por Fechas</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/infindis" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
                                         <p>Indice Disponibilidad</p>
                                     </a>
                                 </li>
@@ -244,6 +238,12 @@ $routesArray = array_filter($routesArray);
                                     <a href="/transformers" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "transformers") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Transformadores</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/poles" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "poles") : ?>active bg-info<?php endif ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Postes</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">

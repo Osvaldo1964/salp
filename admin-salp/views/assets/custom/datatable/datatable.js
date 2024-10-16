@@ -182,6 +182,28 @@ function execDatatable(text) {
         page = "transformers";
     }
 
+    /* Valido Tabla Transformadores */
+    if ($(".tablePoles").length > 0) {
+
+        var url = "ajax/data-poles.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_pole" },
+            { "data": "code_pole" },
+            { "data": "name_material" },
+            { "data": "name_height" },
+            { "data": "address_pole" },
+            { "data": "latitude_pole" },
+            { "data": "longitude_pole" },
+            { "data": "cost_pole" },
+            { "data": "number_delivery" },
+            { "data": "date_created_pole" },
+            { "data": "status_pole" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "poles";
+    }
 
     /* Valido Tabla Elementos */
     if ($(".tableElements").length > 0) {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-10-2024 a las 17:53:45
+-- Tiempo de generación: 16-10-2024 a las 19:29:36
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -1465,6 +1465,37 @@ INSERT INTO `municipalities` (`id_municipality`, `name_municipality`, `code_muni
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `poles`
+--
+
+CREATE TABLE `poles` (
+  `id_pole` bigint(20) NOT NULL,
+  `id_delivery_pole` bigint(20) NOT NULL,
+  `code_pole` text NOT NULL,
+  `id_material_pole` bigint(20) NOT NULL,
+  `id_height_pole` bigint(20) NOT NULL,
+  `detail_pole` text NOT NULL,
+  `address_pole` text NOT NULL,
+  `latitude_pole` float NOT NULL,
+  `longitude_pole` float NOT NULL,
+  `life_pole` mediumtext NOT NULL,
+  `gallery_pole` text NOT NULL,
+  `cost_pole` decimal(15,2) NOT NULL,
+  `status_pole` varchar(8) NOT NULL,
+  `date_created_pole` date DEFAULT NULL,
+  `date_updated_detail` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `poles`
+--
+
+INSERT INTO `poles` (`id_pole`, `id_delivery_pole`, `code_pole`, `id_material_pole`, `id_height_pole`, `detail_pole`, `address_pole`, `latitude_pole`, `longitude_pole`, `life_pole`, `gallery_pole`, `cost_pole`, `status_pole`, `date_created_pole`, `date_updated_detail`) VALUES
+(1, 1, 'POST-015', 1, 1, 'CILINDRICO PINTADO DE VERDE', 'CALLE 15 CON CARRERA 1-5', 10.2523, -74.1525, '<p>PRUEBA</p>', '[]', 350000.00, 'Activo', '2024-10-16', '2024-10-16 17:01:02');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `powers`
 --
 
@@ -1787,6 +1818,12 @@ ALTER TABLE `municipalities`
   ADD PRIMARY KEY (`id_municipality`);
 
 --
+-- Indices de la tabla `poles`
+--
+ALTER TABLE `poles`
+  ADD PRIMARY KEY (`id_pole`);
+
+--
 -- Indices de la tabla `powers`
 --
 ALTER TABLE `powers`
@@ -1916,6 +1953,12 @@ ALTER TABLE `materials`
 --
 ALTER TABLE `municipalities`
   MODIFY `id_municipality` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1124;
+
+--
+-- AUTO_INCREMENT de la tabla `poles`
+--
+ALTER TABLE `poles`
+  MODIFY `id_pole` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `powers`
