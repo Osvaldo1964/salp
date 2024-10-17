@@ -166,7 +166,7 @@ class PolesController
 						if(!empty($_POST['deleteGalleryElement'])){
 							foreach (json_decode($_POST['deleteGalleryElement'],true) as $key => $value) {
 								$fields = array(
-								 "deleteFile"=> "poles/".$_POST['code'] . "/".$value
+								 "deleteFile"=> "poles/".$_POST['code'] . "/". $value
 								);
 								$picture = CurlController::requestFile($fields);
 							}
@@ -200,7 +200,7 @@ class PolesController
 						$method = "PUT";
 						$fields = $data;
 						$response = CurlController::request($url, $method, $fields);
-
+						//echo '<pre>'; print_r($response); echo '</pre>';exit;
 						/* Respuesta de la API */
 						if ($response->status == 200) {
 							echo '<script>

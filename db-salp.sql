@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-10-2024 a las 19:29:36
+-- Tiempo de generación: 17-10-2024 a las 03:25:23
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -296,6 +296,29 @@ INSERT INTO `itemdeliveries` (`id_itemdelivery`, `code_itemdelivery`, `id_typede
 (2, '02', 2, 'EXPANSION', 'Activo', '2024-08-02', '2024-08-02 16:17:03'),
 (3, '03', 2, 'MODERNIZACION', 'Activo', '2024-08-02', '2024-08-02 16:17:22'),
 (4, '04', 2, 'ACTA DE BAJA dos', 'Activo', '2024-08-15', '2024-08-15 14:28:11');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `luminaries`
+--
+
+CREATE TABLE `luminaries` (
+  `id_luminary` bigint(20) NOT NULL,
+  `id_delivery_luminary` bigint(20) NOT NULL,
+  `code_luminary` text NOT NULL,
+  `id_tecnology_luminary` bigint(20) NOT NULL,
+  `id_power_luminary` bigint(20) NOT NULL,
+  `id_pole_luminary` bigint(20) NOT NULL,
+  `id_transformer_luminary` bigint(20) NOT NULL,
+  `address_luminary` text NOT NULL,
+  `latitude_luminary` float NOT NULL,
+  `longitude_luminary` float NOT NULL,
+  `cost_luminary` decimal(15,2) NOT NULL,
+  `status_luminary` varchar(8) NOT NULL,
+  `date_created_luminary` date DEFAULT NULL,
+  `date_updated_luminary` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -1483,15 +1506,15 @@ CREATE TABLE `poles` (
   `cost_pole` decimal(15,2) NOT NULL,
   `status_pole` varchar(8) NOT NULL,
   `date_created_pole` date DEFAULT NULL,
-  `date_updated_detail` timestamp NOT NULL DEFAULT current_timestamp()
+  `date_updated_pole` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `poles`
 --
 
-INSERT INTO `poles` (`id_pole`, `id_delivery_pole`, `code_pole`, `id_material_pole`, `id_height_pole`, `detail_pole`, `address_pole`, `latitude_pole`, `longitude_pole`, `life_pole`, `gallery_pole`, `cost_pole`, `status_pole`, `date_created_pole`, `date_updated_detail`) VALUES
-(1, 1, 'POST-015', 1, 1, 'CILINDRICO PINTADO DE VERDE', 'CALLE 15 CON CARRERA 1-5', 10.2523, -74.1525, '<p>PRUEBA</p>', '[]', 350000.00, 'Activo', '2024-10-16', '2024-10-16 17:01:02');
+INSERT INTO `poles` (`id_pole`, `id_delivery_pole`, `code_pole`, `id_material_pole`, `id_height_pole`, `detail_pole`, `address_pole`, `latitude_pole`, `longitude_pole`, `life_pole`, `gallery_pole`, `cost_pole`, `status_pole`, `date_created_pole`, `date_updated_pole`) VALUES
+(1, 1, 'POST-015', 1, 1, 'CILINDRICO PINTADO DE VERDE', 'CALLE 15 CON CARRERA 1-5', 10.2523, -74.1525, '                                                                                                <p>PRUEBA</p>                                                                                                ', '[\"POST-015_1241454385.jpg\",\"POST-015_1038811274.jpg\",\"POST-015_5366133813.jpg\"]', 350000.00, 'Activo', '2024-10-16', '2024-10-16 05:00:00');
 
 -- --------------------------------------------------------
 
@@ -1678,8 +1701,8 @@ CREATE TABLE `transformers` (
 
 INSERT INTO `transformers` (`id_transformer`, `id_delivery_transformer`, `code_transformer`, `power_transformer`, `address_transformer`, `latitude_transformer`, `longitude_transformer`, `type_transformer`, `class_transformer`, `circuit_transformer`, `cost_transformer`, `life_transformer`, `status_transformer`, `gallery_transformer`, `date_created_transformer`, `date_updated_transformer`) VALUES
 (1, 1, 'TRANS-001', 150, 'carrera 22 calle 5', 10.2526, -74.0252, 'Exclusivo', 'Pedestal', '', 0.00, '', 'Activo', '', '2024-10-14', '2024-10-14 15:14:18'),
-(2, 1, 'TRANS004', 150, 'CALLE', 10.2523, -74.1525, 'Exclusivo', 'Aereo', '', 0.00, '                                                                                                                                                                                                                                                                prueba dos                                                                                                                                                                                                                                ', 'Activo', '[\"19852.jpg\",\"17856.jpg\"]', '2024-10-15', '2024-10-15 05:00:00'),
-(8, 1, 'TRANS-002', 150, 'CALLE', 10.2523, -74.1525, 'Exclusivo', 'Aereo', 'L020251', 5000000.00, '                                                                <p>zxzxzx</p>                                                                ', 'Activo', '[\"TRANS-002_820760509.jpg\",\"TRANS-002_6315392975.jpg\",\"TRANS-002_9984175587.jpg\"]', '2024-10-16', '2024-10-16 05:00:00');
+(2, 1, 'TRANS004', 150, 'CALLE', 10.2523, -74.1525, 'Exclusivo', 'Aereo', 'LE91891', 0.00, '                                                                                                                                                                                                                                                                                                                                                                                                                                prueba dos                                                                                                                                                                                                                                                                                                                                                                                                ', 'Activo', '[\"TRANS004_9588372128.png\"]', '2024-10-15', '2024-10-16 05:00:00'),
+(8, 1, 'TRANS-002', 150, 'CALLE', 10.2523, -74.1525, 'Exclusivo', 'Aereo', 'L020251', 5000000.00, '                                                                                                                                                                                                                                                                                                <p>zxzxzx</p>                                                                                                                                                                                                                                                                                                ', 'Activo', '[\"TRANS-002_7054669825.jpg\",\"TRANS-002_8221960063.jpg\",\"TRANS-002_9305056070.jpg\"]', '2024-10-16', '2024-10-16 05:00:00');
 
 -- --------------------------------------------------------
 
@@ -1737,7 +1760,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fullname_user`, `username_user`, `email_user`, `password_user`, `token_user`, `token_exp_user`, `id_rol_user`, `picture_user`, `country_user`, `city_user`, `address_user`, `phone_user`, `method_user`, `date_created_user`, `date_updated_user`, `status_user`, `verification_user`) VALUES
-(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjkwODM5MjksImV4cCI6MTcyOTE3MDMyOSwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.igEZyMk_M_snym--gepRttGS-F2wM8uj4ge7ovFbPg4', '1729170329', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
+(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjkxMTk1MjgsImV4cCI6MTcyOTIwNTkyOCwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.2JTCbNcpkFVrQHF9Pe1ypdVs17psV7EIbJ9V5dPHbMY', '1729205928', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
 (7, 'Jorge Villalobos', 'jorgito', 'jorge@gmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', NULL, NULL, 'Usuarios', '7.png', 'Algeria', 'Varsobia', 'LA QUE SEA', '+213_3153153153', 'direct', '2024-06-22', '2024-06-22 14:18:30', 1, 1),
 (31, 'Juan Prueto', '', 'prueba@mail.com', '', NULL, NULL, '1', NULL, 'Afghanistan', 'Otra', 'calle 1', '+93_3253253325', 'direct', '2024-06-25', '2024-06-25 20:10:46', 1, 1);
 
@@ -1804,6 +1827,13 @@ ALTER TABLE `images`
 --
 ALTER TABLE `itemdeliveries`
   ADD PRIMARY KEY (`id_itemdelivery`);
+
+--
+-- Indices de la tabla `luminaries`
+--
+ALTER TABLE `luminaries`
+  ADD PRIMARY KEY (`id_luminary`),
+  ADD KEY `id_delivery_luminary` (`id_delivery_luminary`);
 
 --
 -- Indices de la tabla `materials`
@@ -1941,6 +1971,12 @@ ALTER TABLE `images`
 --
 ALTER TABLE `itemdeliveries`
   MODIFY `id_itemdelivery` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `luminaries`
+--
+ALTER TABLE `luminaries`
+  MODIFY `id_luminary` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `materials`

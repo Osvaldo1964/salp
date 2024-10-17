@@ -80,18 +80,18 @@ if (isset(getallheaders()["Authorization"]) || getallheaders()["Authorization"] 
 		$arrayDelete = implode("/", $arrayDelete);
 
 		/* Borramos todos los posibles archivos del directorio */
-		$files = glob($_SERVER['DOCUMENT_ROOT'] . "/views/img/" . $arrayDelete . "/*");
-		foreach ($files as $file) {
-			if (file_exists($file)) {
-				unlink($file);	
+		if ($_POST["deleteDir"] == "user" || $_POST["deleteDir"] == "transformers" || $_POST["deleteDir"] == "poles") {
+			$files = glob($_SERVER['DOCUMENT_ROOT'] . "/views/img/" . $arrayDelete . "/*");
+			foreach ($files as $file) {
+				if (file_exists($file)) {
+					unlink($file);
+				}
+			}
+			/* Borramos el directorio */
+			if (is_dir($_SERVER['DOCUMENT_ROOT'] . "/views/img/" . $arrayDelete)) {
+				rmdir($_SERVER['DOCUMENT_ROOT'] . "/views/img/" . $arrayDelete);
 			}
 		}
-
-		/* Borramos el directorio */
-		if (is_dir($_SERVER['DOCUMENT_ROOT'] . "/views/img/" . $arrayDelete)) {
-			rmdir($_SERVER['DOCUMENT_ROOT'] . "/views/img/" . $arrayDelete);
-		}
-		//rmdir($_SERVER['DOCUMENT_ROOT'] . "/views/img/" . $arrayDelete);
 		echo "ok";
 	} else {
 		echo "error";
