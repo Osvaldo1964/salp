@@ -247,9 +247,9 @@ $routesArray = array_filter($routesArray);
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/elements" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "elements") : ?>active bg-info<?php endif ?>">
+                                    <a href="/luminaries" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "luminaries") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Elementos</p>
+                                        <p>Luminarias</p>
                                     </a>
                                 </li>
                             </ul>

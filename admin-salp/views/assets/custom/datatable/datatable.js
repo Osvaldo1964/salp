@@ -222,6 +222,27 @@ function execDatatable(text) {
         page = "elements";
     }
 
+    
+    /* Valido Tabla Luminarias */
+    if ($(".tableLuminaries").length > 0) {
+
+        var url = "ajax/data-luminaries.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_luminary" },
+            { "data": "code_luminary" },
+            { "data": "name_technology" },
+            { "data": "name_power" },
+            { "data": "code_transformer" },
+            { "data": "code_pole" },
+            { "data": "date_created_luminary" },
+            { "data": "status_luminary" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "luminaries";
+    }
+
     /* FIN CONFIGURA DATATABLE PARA ELEMENTOS */
 
     /* CONFIGURAR DATOS PARA ACTAS */

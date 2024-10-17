@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-10-2024 a las 03:25:23
+-- Tiempo de generación: 17-10-2024 a las 23:00:49
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -307,18 +307,28 @@ CREATE TABLE `luminaries` (
   `id_luminary` bigint(20) NOT NULL,
   `id_delivery_luminary` bigint(20) NOT NULL,
   `code_luminary` text NOT NULL,
-  `id_tecnology_luminary` bigint(20) NOT NULL,
+  `id_technology_luminary` bigint(20) NOT NULL,
   `id_power_luminary` bigint(20) NOT NULL,
   `id_pole_luminary` bigint(20) NOT NULL,
   `id_transformer_luminary` bigint(20) NOT NULL,
+  `id_roud_luminary` bigint(20) NOT NULL,
   `address_luminary` text NOT NULL,
   `latitude_luminary` float NOT NULL,
   `longitude_luminary` float NOT NULL,
   `cost_luminary` decimal(15,2) NOT NULL,
+  `life_luminary` mediumtext NOT NULL,
+  `gallery_luminary` text NOT NULL,
   `status_luminary` varchar(8) NOT NULL,
   `date_created_luminary` date DEFAULT NULL,
   `date_updated_luminary` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `luminaries`
+--
+
+INSERT INTO `luminaries` (`id_luminary`, `id_delivery_luminary`, `code_luminary`, `id_technology_luminary`, `id_power_luminary`, `id_pole_luminary`, `id_transformer_luminary`, `id_roud_luminary`, `address_luminary`, `latitude_luminary`, `longitude_luminary`, `cost_luminary`, `life_luminary`, `gallery_luminary`, `status_luminary`, `date_created_luminary`, `date_updated_luminary`) VALUES
+(1, 1, 'LED-0125', 1, 2, 1, 1, 1, 'CALLE 20', 10.252, -74.2562, 1500000.00, '', '', 'Activo', '2024-10-02', '2024-10-17 20:16:25');
 
 -- --------------------------------------------------------
 
@@ -1514,7 +1524,8 @@ CREATE TABLE `poles` (
 --
 
 INSERT INTO `poles` (`id_pole`, `id_delivery_pole`, `code_pole`, `id_material_pole`, `id_height_pole`, `detail_pole`, `address_pole`, `latitude_pole`, `longitude_pole`, `life_pole`, `gallery_pole`, `cost_pole`, `status_pole`, `date_created_pole`, `date_updated_pole`) VALUES
-(1, 1, 'POST-015', 1, 1, 'CILINDRICO PINTADO DE VERDE', 'CALLE 15 CON CARRERA 1-5', 10.2523, -74.1525, '                                                                                                <p>PRUEBA</p>                                                                                                ', '[\"POST-015_1241454385.jpg\",\"POST-015_1038811274.jpg\",\"POST-015_5366133813.jpg\"]', 350000.00, 'Activo', '2024-10-16', '2024-10-16 05:00:00');
+(1, 1, 'POST-015', 1, 1, 'CILINDRICO PINTADO DE VERDE', 'CALLE 15 CON CARRERA 1-5', 10.2523, -74.1525, '                                                                                                                                <p>PRUEBA</p>                                                                                                                                ', '[\"POST-015_1241454385.jpg\",\"POST-015_1038811274.jpg\"]', 350000.00, 'Activo', '2024-10-16', '2024-10-17 05:00:00'),
+(2, 1, 'pos-928', 1, 1, 'sdsdf', 'CASSSS', 1.23523, 74.2536, '<p>sdsdsd</p>', '[\"<br \\/>\\n<b>Fatal error<\\/b>:  Uncaught Error: Call to undefined function imagecreatefromjpeg() in C:\\\\xampp\\\\htdocs\\\\salp\\\\admin-salp\\\\views\\\\img\\\\index.php:37\\nStack trace:\\n#0 {main}\\n  thrown in <b>C:\\\\xampp\\\\htdocs\\\\salp\\\\admin-salp\\\\views\\\\img\\\\index.php<\\/b> on line <b>37<\\/b><br \\/>\\n\"]', 444.00, 'Activo', '2024-10-17', '2024-10-17 15:30:27');
 
 -- --------------------------------------------------------
 
@@ -1760,7 +1771,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fullname_user`, `username_user`, `email_user`, `password_user`, `token_user`, `token_exp_user`, `id_rol_user`, `picture_user`, `country_user`, `city_user`, `address_user`, `phone_user`, `method_user`, `date_created_user`, `date_updated_user`, `status_user`, `verification_user`) VALUES
-(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjkxMTk1MjgsImV4cCI6MTcyOTIwNTkyOCwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.2JTCbNcpkFVrQHF9Pe1ypdVs17psV7EIbJ9V5dPHbMY', '1729205928', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
+(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjkxNzM4NDksImV4cCI6MTcyOTI2MDI0OSwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19._hu8gQG008FVliThvqa61BMAaX_yDMcTMmy2rWTwGFM', '1729260249', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
 (7, 'Jorge Villalobos', 'jorgito', 'jorge@gmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', NULL, NULL, 'Usuarios', '7.png', 'Algeria', 'Varsobia', 'LA QUE SEA', '+213_3153153153', 'direct', '2024-06-22', '2024-06-22 14:18:30', 1, 1),
 (31, 'Juan Prueto', '', 'prueba@mail.com', '', NULL, NULL, '1', NULL, 'Afghanistan', 'Otra', 'calle 1', '+93_3253253325', 'direct', '2024-06-25', '2024-06-25 20:10:46', 1, 1);
 
@@ -1976,7 +1987,7 @@ ALTER TABLE `itemdeliveries`
 -- AUTO_INCREMENT de la tabla `luminaries`
 --
 ALTER TABLE `luminaries`
-  MODIFY `id_luminary` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_luminary` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `materials`
@@ -1994,7 +2005,7 @@ ALTER TABLE `municipalities`
 -- AUTO_INCREMENT de la tabla `poles`
 --
 ALTER TABLE `poles`
-  MODIFY `id_pole` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_pole` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `powers`
