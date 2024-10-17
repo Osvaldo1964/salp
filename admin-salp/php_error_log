@@ -3596,3 +3596,18 @@ Stack trace:
 [16-Oct-2024 18:11:08 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
 [16-Oct-2024 18:11:11 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214
 [16-Oct-2024 18:11:14 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214
+[17-Oct-2024 09:03:44 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214
+[17-Oct-2024 09:03:55 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214
+[17-Oct-2024 09:04:10 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[17-Oct-2024 09:04:10 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[17-Oct-2024 09:04:10 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[17-Oct-2024 09:04:10 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[17-Oct-2024 09:04:10 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[17-Oct-2024 09:04:27 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214
+[17-Oct-2024 09:04:54 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214
+[17-Oct-2024 09:05:01 America/Bogota] PHP Warning:  Undefined property: stdClass::$life_poles in C:\xampp\htdocs\salp\admin-salp\views\pages\poles\actions\edit.php on line 214
+[17-Oct-2024 10:30:22 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[17-Oct-2024 10:30:22 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[17-Oct-2024 10:30:22 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[17-Oct-2024 10:30:22 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[17-Oct-2024 10:30:22 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96

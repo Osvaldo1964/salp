@@ -5,7 +5,6 @@ class PolesController
 	/* Creacion de Postes */
 	public function create()
 	{
-		//echo '<pre>'; print_r($_POST); echo '</pre>';
 		if (isset($_POST["code"])) {
 			echo '<script>
 				matPreloader("on");
@@ -18,46 +17,33 @@ class PolesController
 			) {
 
 				/* Guardar Imagenes de la galeria*/
-
 				$galleryElement = array();
-				$countGallery = 0;
-
-				foreach (json_decode($_POST["galleryElement"],true) as $key => $value) {
-					
-					$countGallery++;
-
-					$fields = array(
-					
-						"file"=>$value["file"],
-						"type"=>$value["type"],
-						"folder"=>"poles/".$_POST['code'],
-						"name"=>$_POST["code"]."_".mt_rand(100000000, 9999999999),
-						"width"=>$value["width"],
-						"height"=>$value["height"]
-					);
-
-					$saveImageGallery = CurlController::requestFile($fields);
-					//echo '<pre>'; print_r($saveImageGallery); echo '</pre>';
-					array_push($galleryPole, $saveImageGallery);
-
+				foreach (json_decode($_POST['galleryElement'], true) as $key => $value) {
+					$image["tmp_name"] = $value["file"];
+					$image["type"] = $value["type"];
+					$image["mode"] = "base64";
+					$folder = "img/poles";
+					$path =  "/" . strtolower($_POST["code"]);
+					$width = $value["width"];
+					$height = $value["height"];
+					$name = strtolower($_POST["code"]) . "-" . mt_rand(10000000, 99999999);
+					$saveImageGallery  = TemplateController::saveImage($image, $folder, $path, $width, $height, $name);
+					array_push($galleryElement, $saveImageGallery);
 				}
-
-				//echo '<pre>'; print_r($saveImageGallery); echo '</pre>';exit;
-
 
 				/* Agrupamos la información */
 				$data = array(
-                    "id_delivery_pole" => $_POST["delivery"],
+					"id_delivery_pole" => $_POST["delivery"],
 					"code_pole" => $_POST["code"],
 					"id_material_pole" => $_POST["material"],
-                    "id_height_pole" => $_POST["height"],
-                    "detail_pole" => $_POST["detail"],
+					"id_height_pole" => $_POST["height"],
+					"detail_pole" => $_POST["detail"],
 					"address_pole" => trim(strtoupper($_POST["address"])),
 					"latitude_pole" => $_POST["latitude"],
 					"longitude_pole" => $_POST["longitude"],
-                    "life_pole" => $_POST["life"],
-					"gallery_pole" => json_encode($galleryPole),
-                    "cost_pole" => $_POST["cost"],
+					"life_pole" => $_POST["life"],
+					"gallery_pole" => json_encode($galleryElement),
+					"cost_pole" => $_POST["cost"],
 					"status_pole" => 'Activo',
 					"date_created_pole" => date("Y-m-d")
 				);
@@ -103,7 +89,7 @@ class PolesController
 				$method = "GET";
 				$fields = array();
 				$response = CurlController::request($url, $method, $fields);
-				//echo '<pre>'; print_r($response); echo '</pre>';exit;
+				
 				if ($response->status == 200) {
 					/* Validamos la sintaxis de los campos */
 					if (
@@ -112,85 +98,77 @@ class PolesController
 
 						/* Guardar imágenes galería */
 						$galleryElement = array();
-						$countGallery = 0;
-						$countGallery2 = 0;
-						$continueEdit = false;
+						$count = 0;
+						$count2 = 0;
 
-						if(!empty($_POST['galleryElement'])){	
+						if (!empty($_POST['galleryElement'])) {
+							foreach (json_decode($_POST['galleryElement'], true) as $key => $value) {
+								$count++;
 
-							/* Proceso para configurar la galería */	
-							//echo '<pre>'; print_r(json_decode($_POST["galleryElement"],true)); echo '</pre>';exit;
-							foreach (json_decode($_POST["galleryElement"],true) as $key => $value) {
-								$countGallery++;
-								$fields = array(
-									"file"=>$value["file"],
-									"type"=>$value["type"],
-									"folder"=>"poles/".$_POST['code'],
-									"name"=>$_POST["code"]."_".mt_rand(100000000, 9999999999),
-									"width"=>$value["width"],
-									"height"=>$value["height"]
-								);
+								$image["tmp_name"] = $value["file"];
+								$image["type"] = $value["type"];
+								$image["mode"] = "base64";
 
-								$saveImageGallery = CurlController::requestFile($fields);
+								$folder = "img/poles";
+								$path =  "/" . strtolower($_POST["code"]);
+								$width = $value["width"];
+								$height = $value["height"];
+								$name = strtolower($_POST["code"]) . "-" . mt_rand(10000000, 99999999);
+
+								$saveImageGallery  = TemplateController::saveImage($image, $folder, $path, $width, $height, $name);
 								array_push($galleryElement, $saveImageGallery);
 
-								if($countGallery == count($galleryElement)){
-									if(!empty($_POST['galleryElementOld'])){
-										foreach (json_decode($_POST['galleryElementOld'],true) as $key => $value) {
-											$countGallery2++;
+								if (count($galleryElement) == $count) {
+									if (!empty($_POST['galleryElementOld'])) {
+										foreach (json_decode($_POST['galleryElementOld'], true) as $key => $value) {
+											$count2++;
 											array_push($galleryElement, $value);
 										}
-
-										if(count(json_decode($_POST['galleryElementOld'],true)) == $countGallery2){
-						  					$continueEdit = true;
-						  				}
-									}else{
-										$continueEdit = true;
+										if (count(json_decode($_POST['galleryElementOld'], true)) == $count2) {
+										}
+									} else {
 									}
 								}
 							}
-						}else{
-							if(!empty($_POST['galleryElementOld'])){
-								$countGallery2 = 0;
-								foreach (json_decode($_POST['galleryElementOld'],true) as $key => $value) {
-									$countGallery2++;
+						} else {
+							if (!empty($_POST['galleryElementOld'])) {
+								$count2 = 0;
+								foreach (json_decode($_POST['galleryElementOld'], true) as $key => $value) {
+									$count2++;
 									array_push($galleryElement, $value);
 								}
-								if(count(json_decode($_POST['galleryElementOld'],true)) == $countGallery2){
-				  					$continueEdit = true;
-				  				}
+								if (count(json_decode($_POST['galleryElementOld'], true)) == $count2) {
+									$continueEdit = true;
+								}
 							}
 						}
 
-						/* Eliminamos archivos basura del servidor */
-						if(!empty($_POST['deleteGalleryElement'])){
-							foreach (json_decode($_POST['deleteGalleryElement'],true) as $key => $value) {
-								$fields = array(
-								 "deleteFile"=> "poles/".$_POST['code'] . "/". $value
-								);
-								$picture = CurlController::requestFile($fields);
+						/*  Eliminamos archivos basura del servidor */
+						if (!empty($_POST['deleteGalleryElement'])) {
+							foreach (json_decode($_POST['deleteGalleryElement'], true) as $key => $value) {
+								unlink("views/img/poles/" . strtolower($_POST["code"]) . "/" . $value);
 							}
 						}
 
 						/* Validamos que no venga la galería vacía */
-						if(count($galleryElement) == 0){
-			  				echo '<script>
+						if (count($galleryElement) == 0) {
+							echo '<script>
 								fncFormatInputs();
 								fncNotie(3, "The gallery cannot be empty");
-							</script>';
+								</script>';
 							return;
-			  			}
+						}
 
 						$data = "id_delivery_pole=" . $_POST["delivery"] .
-                            "&code_pole=" . $_POST["code"] .
+							"&code_pole=" . $_POST["code"] .
 							"&id_material_pole=" . $_POST["material"] .
-                            "&id_height_pole=" . $_POST["height"] .
-                            "&detail_pole=" . $_POST["detail"] .
+							"&id_height_pole=" . $_POST["height"] .
+							"&detail_pole=" . $_POST["detail"] .
 							"&address_pole=" . trim(strtoupper($_POST["address"])) .
 							"&latitude_pole=" . $_POST["latitude"] .
 							"&longitude_pole=" . $_POST["longitude"] .
-                            "&life_pole=" . $_POST["life"] .
-                            "&gallery_pole=" . json_encode($galleryElement) .
+							"&life_pole=" . $_POST["life"] .
+							"&gallery_pole=" . json_encode($galleryElement) .
 							"&cost_pole=" . $_POST["cost"] .
 							"&date_updated_pole=" . date("Y-m-d");
 

@@ -116,7 +116,7 @@ class TemplateController
 			}
 
 			/* Eliminar todos los archivos que existan en ese directorio */
-			if($folder != "img/elements" && $folder != "img/stores"){
+			if($folder != "img/elements" && $folder != "img/stores" && $folder != "img/poles" && $folder != "img/transformers" && $folder != "img/luminaries"){
 				$files = glob($directory."/*");
 				foreach ($files as $file) {
 					unlink($file);

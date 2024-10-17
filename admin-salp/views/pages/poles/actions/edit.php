@@ -180,7 +180,7 @@ if (isset($routesArray[3])) {
                         <?php foreach (json_decode($poles->gallery_pole, true) as $value) : ?>
                             <div class="dz-preview dz-file-preview">
                                 <div class="dz-image">
-                                    <img class="img-fluid" src="<?php echo TemplateController::srcImg() ?>views/img/poles/<?php echo $poles->code_pole ?>/<?= $value ?>" width="100%">
+                                    <img class="img-fluid" src="<?php echo TemplateController::srcImg() ?>views/img/poles/<?php echo strtolower($poles->code_pole) ?>/<?= $value ?>" width="100%">
                                 </div>
                                 <a class="dz-remove" data-dz-remove remove="<?= $value ?>" onclick="removeGallery(this)">Eliminar archivo</a>
                             </div>
