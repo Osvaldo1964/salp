@@ -3,21 +3,21 @@ if (isset($routesArray[3])) {
     $security = explode("~", base64_decode($routesArray[3]));
     if ($security[1] == $_SESSION["user"]->token_user) {
         $select = "*";
-        $url = "relations?rel=elements,classes,powers,materials,technologies,resources,rouds&type=element,class,power,material,technology,resource,roud&select=" . $select . "&linkTo=id_element&equalTo=" . $security[0];
+        $url = "relations?rel=luminaries,deliveries,technologies,powers,rouds,transformers,poles&type=luminary,delivery,technology,power,roud,transformer,pole&select=" . $select . "&linkTo=id_luminary&equalTo=" . $security[0];
         $method = "GET";
         $fields = array();
         $response = CurlController::request($url, $method, $fields);
 
         if ($response->status == 200) {
-            $elements = $response->results[0];
+            $luminaries = $response->results[0];
         } else {
             echo '<script>
-				window.location = "/elements";
+				window.location = "/luminaries";
 				</script>';
         }
     } else {
         echo '<script>
-				window.location = "/elements";
+				window.location = "/luminaries";
 				</script>';
     }
 }
@@ -25,35 +25,35 @@ if (isset($routesArray[3])) {
 
 <div class="card card-dark card-outline">
     <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
-        <input type="hidden" value="<?php echo $elements->id_element ?>" name="idElement">
+        <input type="hidden" value="<?php echo $luminaries->id_luminary ?>" name="idLuminary">
         <div class="card-header">
             <?php
-            require_once "controllers/elements.controller.php";
-            $create = new ElementsController();
-            $create->edit($elements->id_element);
+            require_once "controllers/luminaries.controller.php";
+            $create = new LuminariesController();
+            $create->edit($luminaries->id_luminary);
             ?>
 
             <div class="row">
                 <!-- Izquierda -->
                 <div class="col-md-6">
                     <div class="row">
-                        <!-- Seleccionar Clase -->
+                        <!-- Seleccionar Acta de Ingreso -->
                         <div class="form-group col-md-6">
-                            <label>Clase</label>
+                            <label>No. Acta</label>
                             <?php
-                            $url = "classes?select=id_class,name_class";
+                            $url = "deliveries?select=id_delivery,number_delivery";
                             $method = "GET";
                             $fields = array();
-                            $classes = CurlController::request($url, $method, $fields)->results;
+                            $deliveries = CurlController::request($url, $method, $fields)->results;
                             ?>
 
                             <div class="form-group">
-                                <select class="form-control select2" id="classname" name="classname" style="width:100%" onchange="activeBlocks()" required>
-                                    <?php foreach ($classes as $key => $value) : ?>
-                                        <?php if ($value->id_class == $elements->id_class_element) : ?>
-                                            <option value="<?php echo $elements->id_class_element ?>" selected><?php echo $elements->name_class ?></option>
+                                <select class="form-control select2" name="delivery" style="width:100%" required>
+                                    <?php foreach ($deliveries as $key => $value) : ?>
+                                        <?php if ($value->id_delivery == $luminaries->id_delivery_luminary) : ?>
+                                            <option value="<?php echo $luminaries->id_delivery_luminary ?>" selected><?php echo $luminaries->number_delivery ?></option>
                                         <?php else : ?>
-                                            <option value="<?php echo $value->id_class ?>"><?php echo $value->name_class ?></option>
+                                            <option value="<?php echo $value->id_delivery ?>"><?php echo $value->number_delivery ?></option>
                                         <?php endif ?>
                                     <?php endforeach ?>
                                 </select>
@@ -66,67 +66,30 @@ if (isset($routesArray[3])) {
                         <!-- Código Elemento -->
                         <div class="form-group col-md-6">
                             <label>Código</label>
-                            <input type="text" class="form-control" pattern="[a-zA-Z0-9_ ]{1,}" id="code" name="code" onchange="validateRepeat(event,'t&n','elements','code_element')" value="<?php echo $elements->code_element ?>" required>
+                            <input type="text" class="form-control" pattern="[A-Za-z0-9.-]" id="code" name="code" onchange="validateRepeat(event,'t&n','luminaries','code_luminary')" value="<?php echo $luminaries->code_luminary ?>" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                     </div>
                     <div class="row">
-                        <!-- Descripción -->
-                        <div class="form-group col-md-12">
-                            <label>Descripción</label>
-                            <input type="text" class="form-control" pattern='[a-zA-Z0-9_ ]{1,}' name="name" value="<?php echo $elements->name_element ?>" required>
-
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
-
-                        <!-- Dirección -->
-                        <div class="form-group col-md-12">
-                            <label>Dirección</label>
-                            <input type="text" class="form-control" pattern='[a-zA-Z0-9_ ]{1,}' name="address" value="<?php echo $elements->address_element ?>" required>
-
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- Latitud -->
+                        <!-- Seleccion Tecnologia -->
                         <div class="form-group col-md-4">
-                            <label>Latiud</label>
-                            <input type="text" class="form-control" pattern="^-?[0-9]*\.?[0-9]+$" name="latitude" value="<?php echo $elements->latitude_element ?>" required>
-
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
-                        <!-- Longitud -->
-                        <div class="form-group col-md-4">
-                            <label>Longitud</label>
-                            <input type="text" class="form-control" pattern="^-?[0-9]*\.?[0-9]+$" name="longitude" value="<?php echo $elements->longitude_element ?>" required>
-
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- Seleccion Recursos -->
-                        <div class="form-group col-md-6">
-                            <label>Recurso</label>
+                            <label>Tecnologias</label>
                             <?php
-                            $url = "resources?select=id_resource,name_resource";
+                            $url = "technologies?select=id_technology,name_technology";
                             $method = "GET";
                             $fields = array();
-                            $resources = CurlController::request($url, $method, $fields)->results;
+                            $technologies = CurlController::request($url, $method, $fields)->results;
                             ?>
 
                             <div class="form-group">
-                                <select class="form-control select2" name="resource" style="width:100%" required>
-                                    <?php foreach ($resources as $key => $value) : ?>
-                                        <?php if ($value->id_resource == $elements->id_resource_element) : ?>
-                                            <option value="<?php echo $elements->id_resource_element ?>" selected><?php echo $elements->name_resource ?></option>
+                                <select class="form-control select2" name="technology" style="width:100%">
+                                    <?php foreach ($technologies as $key => $value) : ?>
+                                        <?php if ($value->id_technology == $luminaries->id_technology_luminary) : ?>
+                                            <option value="<?php echo $luminaries->id_technology_luminary ?>" selected><?php echo $luminaries->name_technology ?></option>
                                         <?php else : ?>
-                                            <option value="<?php echo $value->id_resource ?>"><?php echo $value->name_resource ?></option>
+                                            <option value="<?php echo $value->id_technology ?>"><?php echo $value->name_technology ?></option>
                                         <?php endif ?>
                                     <?php endforeach ?>
                                 </select>
@@ -135,6 +98,88 @@ if (isset($routesArray[3])) {
                                 <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
                         </div>
+
+                        <!-- Seleccion Potencia -->
+                        <div class="form-group col-md-4">
+                            <label>Potencias</label>
+                            <?php
+                            $url = "powers?select=id_power,name_power";
+                            $method = "GET";
+                            $fields = array();
+                            $powers = CurlController::request($url, $method, $fields)->results;
+                            ?>
+
+                            <div class="form-group">
+                                <select class="form-control select2" id="power" name="power" style="width:100%">
+                                    <?php foreach ($powers as $key => $value) : ?>
+                                        <?php if ($value->id_power == $luminaries->id_power_luminary) : ?>
+                                            <option value="<?php echo $luminaries->id_power_luminary ?>" selected><?php echo $luminaries->name_power ?></option>
+                                        <?php else : ?>
+                                            <option value="<?php echo $value->id_power ?>"><?php echo $value->name_power ?></option>
+                                        <?php endif ?>
+                                    <?php endforeach ?>
+                                </select>
+
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Seleccion Transformador -->
+                        <div class="form-group col-md-4">
+                            <label>Transformador</label>
+                            <?php
+                            $url = "transformers?select=id_transformer,code_transformer";
+                            $method = "GET";
+                            $fields = array();
+                            $transformers = CurlController::request($url, $method, $fields)->results;
+                            ?>
+
+                            <div class="form-group">
+                                <select class="form-control select2" name="transformer" style="width:100%">
+                                <?php foreach ($transformers as $key => $value) : ?>
+                                        <?php if ($value->id_transformer == $luminaries->id_transformer_luminary) : ?>
+                                            <option value="<?php echo $luminaries->id_transformer_luminary ?>" selected><?php echo $luminaries->code_transformer ?></option>
+                                        <?php else : ?>
+                                            <option value="<?php echo $value->id_transformer ?>"><?php echo $value->code_transformer ?></option>
+                                        <?php endif ?>
+                                    <?php endforeach ?>
+                                </select>
+
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+
+                        <!-- Seleccion Poste -->
+                        <div class="form-group col-md-4">
+                            <label>Poste - Estructura</label>
+                            <?php
+                            $url = "poles?select=id_pole,code_pole";
+                            $method = "GET";
+                            $fields = array();
+                            $poles = CurlController::request($url, $method, $fields)->results;
+                            ?>
+
+                            <div class="form-group">
+                                <select class="form-control select2" name="pole" style="width:100%">
+                                <?php foreach ($poles as $key => $value) : ?>
+                                        <?php if ($value->id_pole == $luminaries->id_pole_luminary) : ?>
+                                            <option value="<?php echo $luminaries->id_pole_luminary ?>" selected><?php echo $luminaries->code_pole ?></option>
+                                        <?php else : ?>
+                                            <option value="<?php echo $value->id_pole ?>"><?php echo $value->code_pole ?></option>
+                                        <?php endif ?>
+                                    <?php endforeach ?>
+                                </select>
+
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
                         <!-- Seleccion Tipos de Vias -->
                         <div class="form-group col-md-6">
                             <label>Tipos de Vias</label>
@@ -148,8 +193,8 @@ if (isset($routesArray[3])) {
                             <div class="form-group">
                                 <select class="form-control select2" name="roud" style="width:100%" required>
                                     <?php foreach ($rouds as $key => $value) : ?>
-                                        <?php if ($value->id_roud == $elements->id_roud_element) : ?>
-                                            <option value="<?php echo $elements->id_roud_element ?>" selected><?php echo $elements->name_roud ?></option>
+                                        <?php if ($value->id_roud == $luminaries->id_roud_luminary) : ?>
+                                            <option value="<?php echo $luminaries->id_roud_luminary ?>" selected><?php echo $luminaries->name_roud ?></option>
                                         <?php else : ?>
                                             <option value="<?php echo $value->id_roud ?>"><?php echo $value->name_roud ?></option>
                                         <?php endif ?>
@@ -160,140 +205,51 @@ if (isset($routesArray[3])) {
                                 <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <!-- Seleccion Tecnologia -->
-                        <div class="form-group col-md-4 notblock" id="divTecno">
-                            <label>Tecnologias</label>
-                            <?php
-                            $url = "technologies?select=id_technology,name_technology";
-                            $method = "GET";
-                            $fields = array();
-                            $technologies = CurlController::request($url, $method, $fields)->results;
-                            ?>
 
-                            <div class="form-group">
-                                <select class="form-control select2" id="tecno" name="tecno" style="width:100%">
-                                    <?php foreach ($technologies as $key => $value) : ?>
-                                        <?php if ($value->id_technology == $elements->id_technology_element) : ?>
-                                            <option value="<?php echo $elements->id_technology_element ?>" selected><?php echo $elements->name_technology ?></option>
-                                        <?php else : ?>
-                                            <option value="<?php echo $value->id_technology ?>"><?php echo $value->name_technology ?></option>
-                                        <?php endif ?>
-                                    <?php endforeach ?>
-                                </select>
-
-                                <div class="valid-feedback">Valid.</div>
-                                <div class="invalid-feedback">Please fill out this field.</div>
-                            </div>
-                        </div>
-
-                        <!-- Seleccion Potencia -->
-                        <div class="form-group col-md-4 notblock" id="divPotencia">
-                            <label>Potencias</label>
-                            <?php
-                            $url = "powers?select=id_power,name_power";
-                            $method = "GET";
-                            $fields = array();
-                            $powers = CurlController::request($url, $method, $fields)->results;
-                            ?>
-
-                            <div class="form-group">
-                                <select class="form-control select2" id="power" name="power" style="width:100%">
-                                    <?php foreach ($powers as $key => $value) : ?>
-                                        <?php if ($value->id_power == $elements->id_power_element) : ?>
-                                            <option value="<?php echo $elements->id_power_element ?>" selected><?php echo $elements->name_power ?></option>
-                                        <?php else : ?>
-                                            <option value="<?php echo $value->id_power ?>"><?php echo $value->name_power ?></option>
-                                        <?php endif ?>
-                                    <?php endforeach ?>
-                                </select>
-
-                                <div class="valid-feedback">Valid.</div>
-                                <div class="invalid-feedback">Please fill out this field.</div>
-                            </div>
-                        </div>
-
-                        <!-- Seleccion Material -->
-                        <div class="form-group col-md-4 notblock" id="divMaterial">
-                            <label>Materiales</label>
-                            <?php
-                            $url = "materials?select=id_material,name_material";
-                            $method = "GET";
-                            $fields = array();
-                            $materials = CurlController::request($url, $method, $fields)->results;
-                            ?>
-
-                            <div class="form-group">
-                                <select class="form-control select2" id="material" name="material" style="width:100%">
-                                    <?php foreach ($materials as $key => $value) : ?>
-                                        <?php if ($value->id_material == $elements->id_material_element) : ?>
-                                            <option value="<?php echo $elements->id_material_element ?>" selected><?php echo $elements->name_material ?></option>
-                                        <?php else : ?>
-                                            <option value="<?php echo $value->id_material ?>"><?php echo $value->name_material ?></option>
-                                        <?php endif ?>
-                                    <?php endforeach ?>
-                                </select>
-
-                                <div class="valid-feedback">Valid.</div>
-                                <div class="invalid-feedback">Please fill out this field.</div>
-                            </div>
-                        </div>
-
-                        <!-- Seleccion altura -->
-                        <div class="form-group col-md-4 notblock" id="divAltura">
-                            <label>Alturas</label>
-                            <?php
-                            $url = "heights?select=id_height,name_height";
-                            $method = "GET";
-                            $fields = array();
-                            $heights = CurlController::request($url, $method, $fields)->results;
-                            ?>
-
-                            <div class="form-group">
-                                <select class="form-control select2" id="height" name="height" style="width:100%">
-                                    <?php foreach ($heights as $key => $value) : ?>
-                                        <?php if ($value->id_height == $elements->id_height_element) : ?>
-                                            <option value="<?php echo $elements->id_height_element ?>" selected><?php echo $elements->name_height ?></option>
-                                        <?php else : ?>
-                                            <option value="<?php echo $value->id_height ?>"><?php echo $value->name_height ?></option>
-                                        <?php endif ?>
-                                    <?php endforeach ?>
-                                </select>
-
-                                <div class="valid-feedback">Valid.</div>
-                                <div class="invalid-feedback">Please fill out this field.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-4">
-                            <!-- Cantidad del Elemento -->
-                            <label>Cantidad</label>
-                            <input type="text" class="form-control" pattern="^(0|[1-9]\d*)(\.\d+)?$" name="qty" value="<?php echo $elements->qty_element ?>" >
+                        <!-- Dirección -->
+                        <div class="form-group col-md-12">
+                            <label>Dirección</label>
+                            <input type="text" class="form-control" pattern='[a-zA-Z0-9_ ]{1,}' name="address" value="<?php echo $luminaries->address_luminary ?>" required>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
+                    </div>
+                    <div class="row">
+                        <!-- Latitud -->
+                        <div class="form-group col-md-4">
+                            <label>Latiud</label>
+                            <input type="text" class="form-control" pattern="^-?[0-9]*\.?[0-9]+$" name="latitude" value="<?php echo $luminaries->latitude_luminary ?>" required>
 
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <!-- Longitud -->
+                        <div class="form-group col-md-4">
+                            <label>Longitud</label>
+                            <input type="text" class="form-control" pattern="^-?[0-9]*\.?[0-9]+$" name="longitude" value="<?php echo $luminaries->longitude_luminary ?>" required>
+
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="form-group col-md-4">
                             <!-- Precio del Elemento -->
-                            <label>Precio Elemento</label>
-                            <input type="text" class="form-control" pattern="^(0|[1-9]\d*)(\.\d+)?$" name="price" value="<?php echo $elements->value_element ?>" >
+                            <label>Precio Luminaria</label>
+                            <input type="text" class="form-control" pattern="^(0|[1-9]\d*)(\.\d+)?$" name="cost" value="<?php echo $luminaries->cost_luminary ?>">
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                     </div>
-
-
                     <!-- Galeria de Imagenes -->
                     <label>Galeria de Imagenes del Elemento</label>
                     <div class="dropzone mb-3">
-                        <?php foreach (json_decode($elements->gallery_element, true) as $value): ?>
+                        <?php foreach (json_decode($luminaries->gallery_luminary, true) as $value): ?>
                             <div class="dz-preview dz-file-preview">
                                 <div class="dz-image">
-                                    <img src="views/img/elements/<?= $elements->code_element ?>/<?= $value ?>" width="100%">
+                                    <img src="views/img/luminaries/<?= strtolower($luminaries->code_luminary) ?>/<?= $value ?>" width="100%">
                                 </div>
                                 <a class="dz-remove" data-dz-remove remove="<?= $value ?>" onclick="removeGallery(this)">Eliminar archivo</a>
                             </div>
@@ -302,7 +258,7 @@ if (isset($routesArray[3])) {
                         </div>
 
                     </div>
-                    <input type="hidden" name="galleryElementOld" value='<?= $elements->gallery_element ?>'>
+                    <input type="hidden" name="galleryElementOld" value='<?= $luminaries->gallery_luminary ?>'>
                     <input type="hidden" name="galleryElement">
                     <input type="hidden" name="deleteGalleryElement">
                 </div>
@@ -311,7 +267,7 @@ if (isset($routesArray[3])) {
                     <div class="row justify-content-center">
                         <!-- Muestro Código de Barras -->
                         <div class="form-group col-md-12">
-                            <div id="divBarCode" style="display: flex; flex-direction:column; align-items:center;" >
+                            <div id="divBarCode" style="display: flex; flex-direction:column; align-items:center;">
                                 <div id="printCode">
                                     <svg id="barcode"></svg>
                                 </div>
@@ -323,9 +279,9 @@ if (isset($routesArray[3])) {
                         <div class="form-group col-md-12">
                             <!-- Hoja de Vida del Elemento -->
                             <div class="form-group mt-2">
-                                <label>Hoja de Vida del Elemento</label>
-                                <textarea class="summernote" name="life" value="<?php echo $elements->life_element ?>">
-                                <?php echo html_entity_decode($elements->life_element) ?>
+                                <label>Hoja de Vida de la Luminaria</label>
+                                <textarea class="summernote" name="life" value="<?php echo $luminaries->life_luminary ?>">
+                                <?php echo html_entity_decode($luminaries->life_luminary) ?>
                                 </textarea>
 
                                 <div class="valid-feedback">Valid.</div>
@@ -339,7 +295,7 @@ if (isset($routesArray[3])) {
         <div class="card-footer">
             <div class="col-md-8 offset-md-2">
                 <div class="form-group submtit">
-                    <a href="/elements" class="btn btn-light border text-left">Back</a>
+                    <a href="/luminaries" class="btn btn-light border text-left">Back</a>
                     <button type="submit" class="btn bg-dark float-right saveBtn">Save</button>
                 </div>
             </div>

@@ -102,3 +102,94 @@ Stack trace:
 [17-Oct-2024 20:35:10 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [17-Oct-2024 20:35:10 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [17-Oct-2024 20:35:10 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[18-Oct-2024 11:57:56 America/Bogota] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 28
+[18-Oct-2024 11:57:56 America/Bogota] PHP Warning:  Attempt to read property "id_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 28
+[18-Oct-2024 11:57:56 America/Bogota] PHP Fatal error:  Uncaught Error: Class "LuminariesController" not found in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php:32
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\luminaries.php(47): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(30): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 32
+[18-Oct-2024 12:06:13 America/Bogota] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 28
+[18-Oct-2024 12:06:13 America/Bogota] PHP Warning:  Attempt to read property "id_luminary" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 28
+[18-Oct-2024 12:06:13 America/Bogota] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 197
+[18-Oct-2024 12:06:13 America/Bogota] PHP Warning:  Attempt to read property "name_roud" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 197
+[18-Oct-2024 12:06:13 America/Bogota] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 249
+[18-Oct-2024 12:06:13 America/Bogota] PHP Warning:  Attempt to read property "gallery_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 249
+[18-Oct-2024 12:06:13 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 249
+[18-Oct-2024 12:07:13 America/Bogota] PHP Warning:  Undefined variable $elements in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 249
+[18-Oct-2024 12:07:13 America/Bogota] PHP Warning:  Attempt to read property "gallery_element" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 249
+[18-Oct-2024 12:07:13 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 249
+[18-Oct-2024 12:07:42 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 249
+[18-Oct-2024 12:09:50 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[18-Oct-2024 12:09:50 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[18-Oct-2024 12:09:50 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[18-Oct-2024 12:09:50 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[18-Oct-2024 12:09:50 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[18-Oct-2024 12:09:57 America/Bogota] PHP Warning:  Undefined array key "technology" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 159
+[18-Oct-2024 12:09:57 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 167
+[18-Oct-2024 12:09:57 America/Bogota] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php:171
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php(33): LuminariesController->edit(1)
+#1 C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\luminaries.php(47): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\views\template.php(203): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\salp\admin-salp\index.php(30): TemplateController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 171
+[18-Oct-2024 12:14:58 America/Bogota] PHP Warning:  Undefined array key "technology" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 159
+[18-Oct-2024 12:14:58 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 167
+[18-Oct-2024 12:14:58 America/Bogota] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php:171
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php(33): LuminariesController->edit(1)
+#1 C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\luminaries.php(47): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\views\template.php(203): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\salp\admin-salp\index.php(30): TemplateController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 171
+[18-Oct-2024 12:15:04 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 249
+[18-Oct-2024 12:15:06 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 249
+[18-Oct-2024 12:15:19 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[18-Oct-2024 12:15:19 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[18-Oct-2024 12:15:19 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[18-Oct-2024 12:15:19 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[18-Oct-2024 12:15:19 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[18-Oct-2024 12:15:23 America/Bogota] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php:171
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php(33): LuminariesController->edit(1)
+#1 C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\luminaries.php(47): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\views\template.php(203): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\salp\admin-salp\index.php(30): TemplateController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 171
+[18-Oct-2024 12:16:43 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 249
+[18-Oct-2024 12:16:46 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[18-Oct-2024 12:16:46 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[18-Oct-2024 12:16:46 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[18-Oct-2024 12:16:46 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[18-Oct-2024 12:16:46 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[18-Oct-2024 12:16:52 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 249
+[18-Oct-2024 12:18:08 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[18-Oct-2024 12:18:08 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[18-Oct-2024 12:18:08 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[18-Oct-2024 12:18:08 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[18-Oct-2024 12:18:08 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[18-Oct-2024 12:26:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[18-Oct-2024 12:26:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[18-Oct-2024 12:26:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[18-Oct-2024 12:26:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[18-Oct-2024 12:26:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[18-Oct-2024 12:26:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[18-Oct-2024 12:26:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[18-Oct-2024 12:26:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[18-Oct-2024 12:26:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[18-Oct-2024 12:26:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[18-Oct-2024 12:58:23 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[18-Oct-2024 12:58:23 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[18-Oct-2024 12:58:23 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[18-Oct-2024 12:58:23 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[18-Oct-2024 12:58:23 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96

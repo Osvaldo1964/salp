@@ -26,7 +26,7 @@ class LuminariesController
 					$path =  "/" . strtolower($_POST["code"]);
 					$width = $value["width"];
 					$height = $value["height"];
-					$name = mt_rand(1000000, 9999999);
+					$name = strtolower($_POST["code"]) . "-" . mt_rand(1000000, 9999999);
 					$saveImageGallery  = TemplateController::saveImage($image, $folder, $path, $width, $height, $name);
 					array_push($galleryElement, $saveImageGallery);
 				}
@@ -114,7 +114,7 @@ class LuminariesController
 								$path =  "/" . strtolower($_POST["code"]);
 								$width = $value["width"];
 								$height = $value["height"];
-								$name = mt_rand(1000000, 9999999);
+								$name = strtolower($_POST["code"]) . "-" . mt_rand(1000000, 9999999);
 
 								$saveImageGallery  = TemplateController::saveImage($image, $folder, $path, $width, $height, $name);
 								array_push($galleryElement, $saveImageGallery);
@@ -167,9 +167,7 @@ class LuminariesController
 							"&cost_luminary=" . $_POST["cost"] .
 							"&life_luminary=" . $_POST["life"] .
 							"&gallery_luminary=" . json_encode($galleryElement) .
-							"&status_luminary=" . "Activo" . 
-                            "&date_updated_luminary=" . new DateTime();
-
+							"&status_luminary=" . "Activo";
 
 						/* Solicitud a la API */
 						$url = "luminaries?id=" . $id . "&nameId=id_luminary&token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
