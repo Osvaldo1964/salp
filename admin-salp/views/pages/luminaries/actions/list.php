@@ -48,6 +48,7 @@ if (isset($_GET["start"]) && isset($_GET["end"])) {
                     <th>Potencia</th>
                     <th>Transformador</th>
                     <th>Poste</th>
+                    <th>Acta Ingreso</th>
                     <th>Fecha Creacion</th>
                     <th>Estado</th>
                     <th>Acciones</th>

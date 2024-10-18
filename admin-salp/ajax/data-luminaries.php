@@ -113,6 +113,7 @@ class DatatableController
                 $name_power = $value->name_power;
                 $code_transformer = $value->code_transformer;
                 $code_pole = $value->code_pole;
+                $number_delivery = $value->number_delivery;
                 $date_created_luminary = $value->date_created_luminary;
 
                 $dataJson .= '{ 
@@ -122,6 +123,7 @@ class DatatableController
                     "name_power":"' . $name_power . '",
                     "code_transformer":"' . $code_transformer . '",
                     "code_pole":"' . $code_pole . '",
+                    "number_delivery":"' . $number_delivery . '",
 					"date_created_luminary":"' . $date_created_luminary . '",
                     "status_luminary":"' . $status_luminary . '",
                     "actions":"' . $actions . '"

@@ -235,6 +235,7 @@ function execDatatable(text) {
             { "data": "name_power" },
             { "data": "code_transformer" },
             { "data": "code_pole" },
+            { "data": "number_delivery" },
             { "data": "date_created_luminary" },
             { "data": "status_luminary" },
             { "data": "actions", "orderable": false, "search": false }
