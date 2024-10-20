@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-10-2024 a las 23:00:49
+-- Tiempo de generación: 20-10-2024 a las 18:44:58
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -328,7 +328,7 @@ CREATE TABLE `luminaries` (
 --
 
 INSERT INTO `luminaries` (`id_luminary`, `id_delivery_luminary`, `code_luminary`, `id_technology_luminary`, `id_power_luminary`, `id_pole_luminary`, `id_transformer_luminary`, `id_roud_luminary`, `address_luminary`, `latitude_luminary`, `longitude_luminary`, `cost_luminary`, `life_luminary`, `gallery_luminary`, `status_luminary`, `date_created_luminary`, `date_updated_luminary`) VALUES
-(1, 1, 'LED-0125', 1, 2, 1, 1, 1, 'CALLE 20', 10.252, -74.2562, 1500000.00, '', '', 'Activo', '2024-10-02', '2024-10-17 20:16:25');
+(2, 1, 'led-525', 1, 2, 1, 2, 1, 'CARRERA 11 CALLE 17', 1.23524, 74.2536, 444.00, '<p>PREUBA</p>', '[\"led-525-5553112.jpg\",\"led-525-5252210.jpg\"]', 'Activo', '2024-10-18', '2024-10-18 17:26:48');
 
 -- --------------------------------------------------------
 
@@ -1771,9 +1771,32 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fullname_user`, `username_user`, `email_user`, `password_user`, `token_user`, `token_exp_user`, `id_rol_user`, `picture_user`, `country_user`, `city_user`, `address_user`, `phone_user`, `method_user`, `date_created_user`, `date_updated_user`, `status_user`, `verification_user`) VALUES
-(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjkxNzM4NDksImV4cCI6MTcyOTI2MDI0OSwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19._hu8gQG008FVliThvqa61BMAaX_yDMcTMmy2rWTwGFM', '1729260249', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
+(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3Mjk0NDAxNTgsImV4cCI6MTcyOTUyNjU1OCwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.1nvl_riJk3I7vE2lWDwMxhIlc4cTfc90JlKr0sRiWvU', '1729526558', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
 (7, 'Jorge Villalobos', 'jorgito', 'jorge@gmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', NULL, NULL, 'Usuarios', '7.png', 'Algeria', 'Varsobia', 'LA QUE SEA', '+213_3153153153', 'direct', '2024-06-22', '2024-06-22 14:18:30', 1, 1),
 (31, 'Juan Prueto', '', 'prueba@mail.com', '', NULL, NULL, '1', NULL, 'Afghanistan', 'Otra', 'calle 1', '+93_3253253325', 'direct', '2024-06-25', '2024-06-25 20:10:46', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `uses`
+--
+
+CREATE TABLE `uses` (
+  `id_use` bigint(20) NOT NULL,
+  `name_use` text NOT NULL,
+  `amount_use` decimal(10,2) NOT NULL,
+  `minimal_use` decimal(10,2) NOT NULL,
+  `status_use` varchar(8) NOT NULL,
+  `date_created_use` date DEFAULT NULL,
+  `date_updated_use` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `uses`
+--
+
+INSERT INTO `uses` (`id_use`, `name_use`, `amount_use`, `minimal_use`, `status_use`, `date_created_use`, `date_updated_use`) VALUES
+(1, 'RESIDENCIAL ESTRATO I', 15.00, 15200.00, 'Activo', '2024-10-20', '2024-10-20 16:27:59');
 
 --
 -- Índices para tablas volcadas
@@ -1920,6 +1943,12 @@ ALTER TABLE `users`
   ADD KEY `id_rol_user` (`id_rol_user`(768));
 
 --
+-- Indices de la tabla `uses`
+--
+ALTER TABLE `uses`
+  ADD PRIMARY KEY (`id_use`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -1987,7 +2016,7 @@ ALTER TABLE `itemdeliveries`
 -- AUTO_INCREMENT de la tabla `luminaries`
 --
 ALTER TABLE `luminaries`
-  MODIFY `id_luminary` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_luminary` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `materials`
@@ -2060,6 +2089,12 @@ ALTER TABLE `typedeliveries`
 --
 ALTER TABLE `users`
   MODIFY `id_user` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT de la tabla `uses`
+--
+ALTER TABLE `uses`
+  MODIFY `id_use` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -179,7 +179,7 @@ $routesArray = array_filter($routesArray);
                     </ul>
                 </li>
 
-                <!-- Menu de ELEMENTOS-->
+                <!-- Menu de INVENTARIOS-->
                 <li class="nav-item menu-close">
                     <a href="#" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "subjects") : ?>active bg-info<?php endif ?>">
                         <i class="nav-icon far fa-plus-square"></i>
@@ -309,12 +309,12 @@ $routesArray = array_filter($routesArray);
                     </ul>
                 </li>
 
-                <!-- Menu de PREDIAL-->
+                <!-- Menu de FACTUACION / RECAUDOS-->
                 <li class="nav-item menu-close">
                     <a href="#" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "subjects") : ?>active bg-info<?php endif ?>">
                         <i class="nav-icon far fa-plus-square"></i>
                         <p>
-                            INFORMES
+                            FACTURACION/RECAUDOS
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
@@ -329,21 +329,21 @@ $routesArray = array_filter($routesArray);
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/subjects" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "subjects") : ?>active bg-info<?php endif ?>">
+                                    <a href="/uses" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "uses") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Sujetos</p>
+                                        <p>Estratos</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="/titles" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "titles") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Títulos</p>
+                                        <p>--</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="/payorders" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "payorders") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Mandamientos</p>
+                                        <p>--</p>
                                     </a>
                                 </li>
                             </ul>

@@ -397,6 +397,26 @@ function execDatatable(text) {
         page = "vehicles";
     }
 
+    /* TABLAS PARA FACTURACION - RECAUDOS */
+
+        /* Valido Tabla Estratos */
+        if ($(".tableUses").length > 0) {
+
+            var url = "ajax/data-uses.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+    
+            var columns = [
+                { "data": "id_use" },
+                { "data": "name_use" },
+                { "data": "amount_use" },
+                { "data": "minimal_use" },
+                { "data": "actions", "orderable": false, "search": false }
+            ];
+    
+            page = "uses";
+        }
+
+    /* FIN TABLAS PARA FACTURACION - RECAUDOS */
+
     /* Valido Tabla Sujetos */
     if ($(".tableSubjects").length > 0) {
 
