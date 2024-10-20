@@ -193,3 +193,139 @@ Stack trace:
 [18-Oct-2024 12:58:23 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [18-Oct-2024 12:58:23 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [18-Oct-2024 12:58:23 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[19-Oct-2024 15:04:13 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 249
+[19-Oct-2024 15:04:24 America/Bogota] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\luminaries\actions\edit.php on line 249
+[19-Oct-2024 15:06:02 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[19-Oct-2024 15:06:02 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[19-Oct-2024 15:06:02 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[19-Oct-2024 15:06:02 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[19-Oct-2024 15:06:02 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[19-Oct-2024 15:06:03 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[19-Oct-2024 15:06:03 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[19-Oct-2024 15:06:03 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[19-Oct-2024 15:06:03 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[19-Oct-2024 15:06:03 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[19-Oct-2024 15:29:57 America/Bogota] PHP Warning:  include(views/pages/infinvval/infinvval.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\salp\admin-salp\views\template.php on line 207
+[19-Oct-2024 15:29:57 America/Bogota] PHP Warning:  include(): Failed opening 'views/pages/infinvval/infinvval.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\salp\admin-salp\views\template.php on line 207
+[19-Oct-2024 15:37:56 America/Bogota] PHP Warning:  Undefined array key "between1" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 5
+[19-Oct-2024 15:37:56 America/Bogota] PHP Warning:  Undefined array key "between2" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 5
+[20-Oct-2024 07:42:35 America/Bogota] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 28
+[20-Oct-2024 07:42:35 America/Bogota] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 28
+[20-Oct-2024 07:42:35 America/Bogota] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 110
+[20-Oct-2024 07:42:35 America/Bogota] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php:110
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\infinvval.php(33): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(207): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(30): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 110
+[20-Oct-2024 07:42:35 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[20-Oct-2024 07:42:35 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[20-Oct-2024 07:42:35 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[20-Oct-2024 07:42:35 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[20-Oct-2024 07:42:35 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[20-Oct-2024 07:42:46 America/Bogota] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 28
+[20-Oct-2024 07:42:46 America/Bogota] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 28
+[20-Oct-2024 07:42:46 America/Bogota] PHP Warning:  Undefined variable $pqrs in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 110
+[20-Oct-2024 07:42:46 America/Bogota] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php:110
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\infinvval.php(33): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(207): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(30): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 110
+[20-Oct-2024 07:42:46 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[20-Oct-2024 07:42:46 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[20-Oct-2024 07:42:46 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[20-Oct-2024 07:42:46 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[20-Oct-2024 07:42:46 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[20-Oct-2024 07:43:57 America/Bogota] PHP Warning:  Attempt to read property "total" on int in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 34
+[20-Oct-2024 07:44:17 America/Bogota] PHP Warning:  Undefined property: stdClass::$code in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 37
+[20-Oct-2024 07:44:17 America/Bogota] PHP Warning:  Undefined property: stdClass::$adress in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 39
+[20-Oct-2024 07:44:46 America/Bogota] PHP Warning:  Undefined property: stdClass::$adress_luminary in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 39
+[20-Oct-2024 07:53:50 America/Bogota] PHP Warning:  Undefined variable $ctrucap in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 77
+[20-Oct-2024 07:53:50 America/Bogota] PHP Warning:  Undefined variable $ctrucap in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 77
+[20-Oct-2024 07:53:50 America/Bogota] PHP Warning:  Undefined variable $ctrucap in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 77
+[20-Oct-2024 07:54:41 America/Bogota] PHP Warning:  Undefined variable $ctrucap in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 77
+[20-Oct-2024 07:54:41 America/Bogota] PHP Warning:  Undefined variable $ctrucap in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 77
+[20-Oct-2024 07:54:41 America/Bogota] PHP Warning:  Undefined variable $ctrucap in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 77
+[20-Oct-2024 08:18:30 America/Bogota] PHP Warning:  Undefined variable $secuencia in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 191
+[20-Oct-2024 08:18:30 America/Bogota] PHP Warning:  Undefined variable $indiceid in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 209
+[20-Oct-2024 08:18:30 America/Bogota] PHP Warning:  Undefined variable $disponibles in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 213
+[20-Oct-2024 08:18:30 America/Bogota] PHP Warning:  Undefined variable $indiceid in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 217
+[20-Oct-2024 08:18:30 America/Bogota] PHP Warning:  Undefined variable $disponibles in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 217
+[20-Oct-2024 08:18:30 America/Bogota] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php:217
+Stack trace:
+#0 C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\infinvval.php(33): include()
+#1 C:\xampp\htdocs\salp\admin-salp\views\template.php(207): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\salp\admin-salp\controllers\template.controller.php(18): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\salp\admin-salp\index.php(30): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 217
+[20-Oct-2024 08:34:57 America/Bogota] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 95
+[20-Oct-2024 08:34:57 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 95
+[20-Oct-2024 08:34:57 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:34:57 America/Bogota] PHP Warning:  Undefined array key 5 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 95
+[20-Oct-2024 08:34:57 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 95
+[20-Oct-2024 08:34:57 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:34:57 America/Bogota] PHP Warning:  Undefined array key 6 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 95
+[20-Oct-2024 08:34:57 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 95
+[20-Oct-2024 08:34:57 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:36:00 America/Bogota] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 95
+[20-Oct-2024 08:36:00 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 95
+[20-Oct-2024 08:36:00 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:36:00 America/Bogota] PHP Warning:  Undefined array key 5 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 95
+[20-Oct-2024 08:36:00 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 95
+[20-Oct-2024 08:36:00 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:36:00 America/Bogota] PHP Warning:  Undefined array key 6 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 95
+[20-Oct-2024 08:36:00 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 95
+[20-Oct-2024 08:36:00 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:39:45 America/Bogota] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:39:45 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:39:45 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 97
+[20-Oct-2024 08:39:45 America/Bogota] PHP Warning:  Undefined array key 5 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:39:45 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:39:45 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 97
+[20-Oct-2024 08:39:45 America/Bogota] PHP Warning:  Undefined array key 6 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:39:45 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:39:45 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 97
+[20-Oct-2024 08:41:58 America/Bogota] PHP Warning:  Undefined array key 5 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 95
+[20-Oct-2024 08:41:58 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 95
+[20-Oct-2024 08:41:58 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:47:11 America/Bogota] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:47:11 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:47:11 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 97
+[20-Oct-2024 08:47:11 America/Bogota] PHP Warning:  Undefined array key 5 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:47:11 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:47:11 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 97
+[20-Oct-2024 08:49:29 America/Bogota] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:49:29 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:49:29 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 97
+[20-Oct-2024 08:49:29 America/Bogota] PHP Warning:  Undefined array key 5 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:49:29 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 96
+[20-Oct-2024 08:49:29 America/Bogota] PHP Warning:  Undefined array key "cost" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 97
+[20-Oct-2024 08:56:36 America/Bogota] PHP Warning:  Undefined array key "type" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 36
+[20-Oct-2024 08:57:34 America/Bogota] PHP Warning:  Undefined array key "type" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 36
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Undefined array key "address" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 201
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Undefined array key "address" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 201
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 182
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 182
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 190
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 190
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 200
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 200
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 201
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 201
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 202
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 202
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 203
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 203
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 206
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 206
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 207
+[20-Oct-2024 09:05:11 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 207
+[20-Oct-2024 09:08:07 America/Bogota] PHP Warning:  Undefined array key "address" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 200
+[20-Oct-2024 09:08:07 America/Bogota] PHP Warning:  Undefined array key "address" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 200
+[20-Oct-2024 09:08:07 America/Bogota] PHP Warning:  Undefined array key "address" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 200

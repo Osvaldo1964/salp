@@ -293,15 +293,15 @@ $routesArray = array_filter($routesArray);
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/generate" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "generate") : ?>active bg-info<?php endif ?>">
+                                    <a href="/infinvval" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "infinvval") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Generar Mandamientos</p>
+                                        <p>Inventario Valorizado</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/controlpqrs" class="nav-link">
+                                    <a href="/inflinten" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "inflinten") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Seguimiento PQRs</p>
+                                        <p>Líneas de Tensión</p>
                                     </a>
                                 </li>
                             </ul>
