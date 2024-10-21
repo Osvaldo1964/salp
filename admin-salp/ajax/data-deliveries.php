@@ -85,7 +85,7 @@ class DatatableController{
             		$actions = "<a href='/deliveries/edit/".base64_encode($value->id_delivery."~".$_GET["token"])."' class='btn btn-warning btn-sm mr-1 rounded-circle'>
 			            		<i class='fas fa-pencil-alt'></i>
 			            		</a>
-								<a href='/elements/new/".base64_encode($value->id_delivery."~".$_GET["token"])."' class='btn btn-warning btn-sm mr-1 rounded-circle'>
+								<a href='/deliveries/newitem/".base64_encode($value->id_delivery."~".$_GET["token"])."' class='btn btn-warning btn-sm mr-1 rounded-circle'>
 			            		<i class='fas fa-plus-circle'></i>
 			            		</a>
 								<a href='/deliveries/print/".base64_encode($value->id_delivery."~".$_GET["token"])."' class='btn btn-success btn-sm mr-1 rounded-circle'>

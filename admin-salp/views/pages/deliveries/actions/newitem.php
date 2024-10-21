@@ -1,39 +1,14 @@
-<?php
-if (isset($routesArray[3])) {
-    $security = explode("~", base64_decode($routesArray[3]));
-    if ($security[1] == $_SESSION["user"]->token_user) {
-        $select = "*";
-        $url = "deliveries?select=id_delivery&linkTo=id_delivery&equalTo=" . $security[0];
-        $method = "GET";
-        $fields = array();
-        $response = CurlController::request($url, $method, $fields);
-        //echo '<pre>'; print_r($response); echo '</pre>';
-        if ($response->status == 200) {
-            $deliveries = $response->results[0];
-        } else {
-            echo '<script>
-				window.location = "/deliveries";
-				</script>';
-        }
-    } else {
-        echo '<script>
-				window.location = "/deliveries";
-				</script>';
-    }
-}
-?>
-
 <div class="card card-dark card-outline">
     <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
-        <input type="hidden" value="<?php echo $deliveries->id_delivery ?>" name="idDelivery">
         <div class="card-header">
             <?php
             require_once "controllers/deliveries.controller.php";
             $create = new DeliveriesController();
-            $create->edit($deliveries->id_delivery);
+            //$create -> create();
             ?>
 
             <div class="col-md-8 offset-md-2">
+
                 <!-- Tipo de Acta -->
                 <div class="form-group mt-2">
                     <label>Tipo Acta</label>
@@ -46,12 +21,9 @@ if (isset($routesArray[3])) {
 
                     <div class="form-group">
                         <select class="form-control select2" id="typedelivery" name="typedelivery" style="width:100%" onchange="validateItemsJS()" required>
+                            <option value="">Seleccione Tipo de Acta</option>
                             <?php foreach ($typedeliveries as $key => $value) : ?>
-                                <?php if ($value->id_typedelivery == $deliveries->id_typedelivery_delivery) : ?>
-                                    <option value="<?php echo $deliveries->id_typedelivery_delivery ?>" selected><?php echo $deliveries->name_typedelivery ?></option>
-                                <?php else : ?>
-                                    <option value="<?php echo $value->id_typedelivery; ?>"><?php echo $value->name_typedelivery ?></option>
-                                <?php endif ?>
+                                <option value="<?php echo $value->id_typedelivery ?>"><?php echo $value->name_typedelivery ?></option>
                             <?php endforeach ?>
                         </select>
 
@@ -72,12 +44,9 @@ if (isset($routesArray[3])) {
 
                     <div class="form-group">
                         <select class="form-control select2" id="itemdelivery" name="itemdelivery" style="width:100%" required>
+                            <option value="">Seleccione Subtipo de Acta</option>
                             <?php foreach ($itemdeliveries as $key => $value) : ?>
-                                <?php if ($value->id_itemdelivery == $deliveries->id_itemdelivery_delivery) : ?>
-                                    <option value="<?php echo $deliveries->id_itemdelivery_delivery ?>" selected><?php echo $deliveries->name_itemdelivery ?></option>
-                                <?php else : ?>
-                                    <option value="<?php echo $value->id_itemdelivery; ?>"><?php echo $value->name_itemdelivery ?></option>
-                                <?php endif ?>
+                                <option value="<?php echo $value->id_itemdelivery ?>"><?php echo $value->name_itemdelivery ?></option>
                             <?php endforeach ?>
                         </select>
 
@@ -89,7 +58,7 @@ if (isset($routesArray[3])) {
                 <!-- Número del Acta -->
                 <div class="form-group mt-1">
                     <label>Número Acta</label>
-                    <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" onchange="validateRepeat(event,'t&n','delvieries','number_delivery')" name="number" value="<?php echo $deliveries->number_delivery ?>" required>
+                    <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" onchange="validateRepeat(event,'t&n','delvieries','number_delivery')" name="number" required>
 
                     <div class="valid-feedback">Valid.</div>
                     <div class="invalid-feedback">Please fill out this field.</div>
@@ -101,7 +70,7 @@ if (isset($routesArray[3])) {
                         <span class="input-group-text">
                             Fecha :
                         </span>
-                        <input type="date" class="form-control" value="<?php echo $deliveries->date_delivery ?>" name="datedelivery">
+                        <input type="date" class="form-control" name="datedelivery">
                     </div>
 
                     <div class="valid-feedback">Valid.</div>
@@ -120,12 +89,9 @@ if (isset($routesArray[3])) {
 
                     <div class="form-group">
                         <select class="form-control select2" name="resource" style="width:100%" required>
-                        <?php foreach ($resources as $key => $value) : ?>
-                                <?php if ($value->id_resource == $deliveries->id_resource_delivery) : ?>
-                                    <option value="<?php echo $deliveries->id_resource_delivery ?>" selected><?php echo $deliveries->name_resource ?></option>
-                                <?php else : ?>
-                                    <option value="<?php echo $value->id_resource; ?>"><?php echo $value->name_resource ?></option>
-                                <?php endif ?>
+                            <option value="">Seleccione Recurso</option>
+                            <?php foreach ($resources as $key => $value) : ?>
+                                <option value="<?php echo $value->id_resource ?>"><?php echo $value->name_resource ?></option>
                             <?php endforeach ?>
                         </select>
 
@@ -133,9 +99,12 @@ if (isset($routesArray[3])) {
                         <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
                 </div>
-
-
             </div>
+            <?php
+            require_once "controllers/deliveries.controller.php";
+            $create = new DeliveriesController();
+            $create->create();
+            ?>
         </div>
 
         <div class="card-footer">
