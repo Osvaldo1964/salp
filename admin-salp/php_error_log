@@ -394,3 +394,15 @@ Stack trace:
 [20-Oct-2024 11:57:32 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [20-Oct-2024 11:57:32 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [20-Oct-2024 11:57:32 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[22-Oct-2024 10:18:28 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_typedelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[22-Oct-2024 10:18:28 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_typedelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[22-Oct-2024 10:18:28 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_typedelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[22-Oct-2024 10:18:28 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_itemdelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 76
+[22-Oct-2024 10:18:28 America/Bogota] PHP Warning:  Undefined property: stdClass::$number_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 92
+[22-Oct-2024 10:18:28 America/Bogota] PHP Warning:  Undefined property: stdClass::$date_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 104
+[22-Oct-2024 10:18:28 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_resource_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 124
+[22-Oct-2024 10:18:28 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_resource_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 124
+[22-Oct-2024 10:24:42 America/Bogota] PHP Warning:  Undefined property: stdClass::$number_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\newitem.php on line 43
+[22-Oct-2024 10:28:07 America/Bogota] PHP Warning:  Undefined property: stdClass::$number_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\newitem.php on line 44
+[22-Oct-2024 10:28:51 America/Bogota] PHP Warning:  Undefined property: stdClass::$number_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\newitem.php on line 45
+[22-Oct-2024 10:30:37 America/Bogota] PHP Warning:  Undefined property: stdClass::$number_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\newitem.php on line 46

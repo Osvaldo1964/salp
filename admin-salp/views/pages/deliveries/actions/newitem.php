@@ -1,3 +1,31 @@
+<?php
+//echo '<pre>'; print_r($routesArray); echo '</pre>';
+if (isset($routesArray[3])) {
+    $security = explode("~", base64_decode($routesArray[3]));
+    //echo '<pre>'; print_r($security); echo '</pre>';
+    if ($security[1] == $_SESSION["user"]->token_user) {
+        $select = "*";
+        $url = "deliveries?select=id_delivery,number_delivery,date_delivery&linkTo=id_delivery&equalTo=" . $security[0];
+        $method = "GET";
+        $fields = array();
+        $response = CurlController::request($url, $method, $fields);
+        //echo '<pre>'; print_r($response); echo '</pre>';
+        if ($response->status == 200) {
+            $deliveries = $response->results[0];
+            //echo '<pre>'; print_r($deliveries); echo '</pre>';
+        } else {
+            echo '<script>
+				window.location = "/deliveries";
+				</script>';
+        }
+    } else {
+        echo '<script>
+				window.location = "/deliveries";
+				</script>';
+    }
+}
+?>
+
 <div class="card card-dark card-outline">
     <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
         <div class="card-header">
@@ -7,96 +35,28 @@
             //$create -> create();
             ?>
 
-            <div class="col-md-8 offset-md-2">
+            <div class="col-md-10 offset-md-2">
+                <div class="row">
+                    <!-- Número del Acta -->
+                    <div class="form-group col-md-4">
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                Acta :
+                            </span>
+                            <input type="text" class="form-control" name="number" value="<?php echo $deliveries->number_delivery ?>">
+                        </div>
 
-                <!-- Tipo de Acta -->
-                <div class="form-group mt-2">
-                    <label>Tipo Acta</label>
-                    <?php
-                    $url = "typedeliveries?select=id_typedelivery,name_typedelivery";
-                    $method = "GET";
-                    $fields = array();
-                    $typedeliveries = CurlController::request($url, $method, $fields)->results;
-                    ?>
-
-                    <div class="form-group">
-                        <select class="form-control select2" id="typedelivery" name="typedelivery" style="width:100%" onchange="validateItemsJS()" required>
-                            <option value="">Seleccione Tipo de Acta</option>
-                            <?php foreach ($typedeliveries as $key => $value) : ?>
-                                <option value="<?php echo $value->id_typedelivery ?>"><?php echo $value->name_typedelivery ?></option>
-                            <?php endforeach ?>
-                        </select>
-
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
-                    </div>
-                </div>
-
-                <!-- Sub de Acta -->
-                <div class="form-group mt-2">
-                    <label>Subtipo Acta</label>
-                    <?php
-                    $url = "itemdeliveries?select=id_itemdelivery,name_itemdelivery&linkTo=id_typedelivery_itemdelivery&equalTo=1";
-                    $method = "GET";
-                    $fields = array();
-                    $itemdeliveries = CurlController::request($url, $method, $fields)->results;
-                    ?>
-
-                    <div class="form-group">
-                        <select class="form-control select2" id="itemdelivery" name="itemdelivery" style="width:100%" required>
-                            <option value="">Seleccione Subtipo de Acta</option>
-                            <?php foreach ($itemdeliveries as $key => $value) : ?>
-                                <option value="<?php echo $value->id_itemdelivery ?>"><?php echo $value->name_itemdelivery ?></option>
-                            <?php endforeach ?>
-                        </select>
-
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
-                    </div>
-                </div>
-
-                <!-- Número del Acta -->
-                <div class="form-group mt-1">
-                    <label>Número Acta</label>
-                    <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" onchange="validateRepeat(event,'t&n','delvieries','number_delivery')" name="number" required>
-
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
-
-                <!-- Fecha del Acta -->
-                <div class="form-group mt-2 mb-1">
-                    <div class="input-group-append">
-                        <span class="input-group-text">
-                            Fecha :
-                        </span>
-                        <input type="date" class="form-control" name="datedelivery">
                     </div>
 
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
+                    <!-- Fecha del Acta -->
+                    <div class="form-group col-md-4">
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                Fecha :
+                            </span>
+                            <input type="date" class="form-control" name="datedelivery" value="<?php echo $deliveries->date_delivery ?>">
+                        </div>
 
-                <!-- Recursos -->
-                <div class="form-group mt-2">
-                    <label>Recursos de la Inversión</label>
-                    <?php
-                    $url = "resources?select=id_resource,name_resource";
-                    $method = "GET";
-                    $fields = array();
-                    $resources = CurlController::request($url, $method, $fields)->results;
-                    ?>
-
-                    <div class="form-group">
-                        <select class="form-control select2" name="resource" style="width:100%" required>
-                            <option value="">Seleccione Recurso</option>
-                            <?php foreach ($resources as $key => $value) : ?>
-                                <option value="<?php echo $value->id_resource ?>"><?php echo $value->name_resource ?></option>
-                            <?php endforeach ?>
-                        </select>
-
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
                 </div>
             </div>
@@ -109,7 +69,7 @@
 
         <div class="card-footer">
             <div class="col-md-8 offset-md-2">
-                <div class="form-group mt-1">
+                <div class="form-group">
                     <a href="/deliveries" class="btn btn-light border text-left">Back</a>
                     <button type="submit" class="btn bg-dark float-right">Save</button>
                 </div>
