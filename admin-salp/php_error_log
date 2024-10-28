@@ -329,3 +329,135 @@ Stack trace:
 [20-Oct-2024 09:08:07 America/Bogota] PHP Warning:  Undefined array key "address" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 200
 [20-Oct-2024 09:08:07 America/Bogota] PHP Warning:  Undefined array key "address" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 200
 [20-Oct-2024 09:08:07 America/Bogota] PHP Warning:  Undefined array key "address" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 200
+[28-Oct-2024 08:44:22 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 08:44:22 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 08:44:22 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 08:44:22 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 08:44:22 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[28-Oct-2024 09:04:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:04:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:04:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:04:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:04:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[28-Oct-2024 09:04:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:04:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:04:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:04:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:04:43 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[28-Oct-2024 09:27:33 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:27:33 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:27:33 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:27:33 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:27:33 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[28-Oct-2024 09:29:20 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:29:20 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:29:20 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:29:20 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:29:20 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[28-Oct-2024 09:29:24 America/Bogota] PHP Warning:  Undefined array key "number" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 79
+[28-Oct-2024 09:31:29 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:31:29 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:31:30 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:31:30 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:31:30 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[28-Oct-2024 09:31:34 America/Bogota] PHP Warning:  Undefined array key "number" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 79
+[28-Oct-2024 09:32:26 America/Bogota] PHP Warning:  Undefined array key "number" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 79
+[28-Oct-2024 09:33:17 America/Bogota] PHP Warning:  Undefined array key "number" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 79
+[28-Oct-2024 09:33:17 America/Bogota] PHP Warning:  Undefined array key "code" in C:\xampp\htdocs\salp\admin-salp\controllers\transformers.controller.php on line 17
+[28-Oct-2024 09:33:26 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:33:26 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:33:26 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:33:26 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:33:26 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[28-Oct-2024 09:33:48 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:33:48 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:33:48 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:33:48 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:33:48 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[28-Oct-2024 09:33:53 America/Bogota] PHP Warning:  Undefined array key "number" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 79
+[28-Oct-2024 09:33:53 America/Bogota] PHP Warning:  Undefined array key "code" in C:\xampp\htdocs\salp\admin-salp\controllers\transformers.controller.php on line 17
+[28-Oct-2024 09:34:33 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:34:33 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:34:33 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:34:33 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:34:33 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[28-Oct-2024 09:34:37 America/Bogota] PHP Warning:  Undefined array key "number" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 79
+[28-Oct-2024 09:34:37 America/Bogota] PHP Warning:  Undefined array key "code" in C:\xampp\htdocs\salp\admin-salp\controllers\transformers.controller.php on line 27
+[28-Oct-2024 09:36:04 America/Bogota] PHP Warning:  Attempt to read property "type_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 85
+[28-Oct-2024 09:36:04 America/Bogota] PHP Warning:  Attempt to read property "type_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 85
+[28-Oct-2024 09:36:04 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 105
+[28-Oct-2024 09:36:04 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 105
+[28-Oct-2024 09:36:04 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 105
+[28-Oct-2024 09:36:04 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 105
+[28-Oct-2024 09:36:08 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:36:08 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:36:08 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:36:08 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:36:08 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[28-Oct-2024 09:36:10 America/Bogota] PHP Warning:  unlink(views/img/transformers/trans-020/trans-020-35808824.jpg): No such file or directory in C:\xampp\htdocs\salp\admin-salp\controllers\transformers.controller.php on line 157
+[28-Oct-2024 09:36:11 America/Bogota] PHP Warning:  Attempt to read property "type_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 85
+[28-Oct-2024 09:36:11 America/Bogota] PHP Warning:  Attempt to read property "type_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 85
+[28-Oct-2024 09:36:11 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 105
+[28-Oct-2024 09:36:11 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 105
+[28-Oct-2024 09:36:11 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 105
+[28-Oct-2024 09:36:11 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 105
+[28-Oct-2024 09:36:35 America/Bogota] PHP Warning:  Attempt to read property "type_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 85
+[28-Oct-2024 09:36:35 America/Bogota] PHP Warning:  Attempt to read property "type_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 85
+[28-Oct-2024 09:36:35 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 105
+[28-Oct-2024 09:36:35 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 105
+[28-Oct-2024 09:36:35 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 105
+[28-Oct-2024 09:36:35 America/Bogota] PHP Warning:  Attempt to read property "class_transformer" on array in C:\xampp\htdocs\salp\admin-salp\views\pages\transformers\actions\edit.php on line 105
+[28-Oct-2024 09:43:03 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:43:03 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:43:03 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:43:03 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:43:03 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[28-Oct-2024 09:43:07 America/Bogota] PHP Warning:  Undefined array key "number" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 79
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Attempt to read property "name_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Attempt to read property "name_itemdelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Attempt to read property "number_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Attempt to read property "date_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Attempt to read property "name_resource" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 124
+[28-Oct-2024 09:43:10 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 124
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Attempt to read property "name_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Attempt to read property "name_itemdelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Attempt to read property "number_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Attempt to read property "date_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Attempt to read property "name_resource" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 124
+[28-Oct-2024 09:44:09 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 124
+[28-Oct-2024 09:45:03 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:45:03 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 09:45:03 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:45:03 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 09:45:03 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[28-Oct-2024 09:45:06 America/Bogota] PHP Warning:  Undefined array key "number" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 79
+[28-Oct-2024 09:50:14 America/Bogota] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 102
+[28-Oct-2024 09:50:17 America/Bogota] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 102
+[28-Oct-2024 09:50:26 America/Bogota] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 102
+[28-Oct-2024 09:50:31 America/Bogota] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 102
+[28-Oct-2024 10:05:13 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 10:05:13 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[28-Oct-2024 10:05:13 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 10:05:13 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[28-Oct-2024 10:05:13 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[28-Oct-2024 10:05:16 America/Bogota] PHP Warning:  Undefined array key "number" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 79

@@ -422,20 +422,6 @@ if (document.querySelector("#code")) {
   }
 }
 
-/* Funcion de Codigo de Barras */
-if (document.querySelector("#codel")) {
-  let inputCodigo = document.querySelector("#codel");
-  inputCodigo.onkeyup = function () {
-    if (inputCodigo.value.length >= 5) {
-      document.querySelector("#divBarCode").classList.remove("notblock");
-      fntBarcode();
-      document.querySelector(".btnPrint").classList.remove("d-none");
-    } else {
-      document.querySelector("#divBarCode").classList.add("notblock");
-    }
-  }
-}
-
 /* Funcion para activar o desactivar atributos de elementos*/
 function activeBlocks() {
   var selectElement = document.getElementById('classname');

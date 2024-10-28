@@ -32,11 +32,11 @@ if (isset($routesArray[3])) {
     <form id="formDetails">
         <input type="hidden" value="<?php echo $deliveries->id_delivery ?>" name="idDelivery">
         <div class="card-header">
-            <?php
-            require_once "controllers/deliveries.controller.php";
-            $create = new DeliveriesController();
-            $create->edit($deliveries->id_delivery);
-            ?>
+            <!--             <?php
+                                require_once "controllers/deliveries.controller.php";
+                                $create = new DeliveriesController();
+                                $create->edit($deliveries->id_delivery);
+                                ?> -->
             <div class="col-md-12 offset-md-2">
                 <div class="row">
                     <input type="text" class="col-md-3" name="typedelivery" value="<?php echo $deliveries->name_typedelivery ?>" disabled>
@@ -50,14 +50,14 @@ if (isset($routesArray[3])) {
             </div>
         </div>
 
-        <div class="card-body col-md-12">
+        <div class="card-body col-md-12 d-flex justify-content-center">
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalTransformers">
                 Adicionar Transformadores
             </button>
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalPoles">
+            <button type="button" class="btn btn-default ml-2" data-toggle="modal" data-target="#modalPoles">
                 Adicionar Postes
             </button>
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalLuminaries">
+            <button type="button" class="btn btn-default ml-2" data-toggle="modal" data-target="#modalLuminaries">
                 Adicionar Luminarias
             </button>
 
@@ -75,22 +75,53 @@ if (isset($routesArray[3])) {
     </form>
 </div>
 
-<div class="row" mt-2>
+<div class="row" id="details" mt-2>
     <div class="col-md-12">
         <div class="row">
             <table id="details" class="table table-bordered table-striped text-sm">
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Detalle</th>
-                        <th>Unidad</th>
+                        <th>Grupo</th>
+                        <th>Código</th>
+                        <th>Detalles</th>
+                        <th>Dirección</th>
                         <th>Cantidad</th>
-                        <th>Vlr. Unitario</th>
-                        <th>Total</th>
-                        <th>Acciones</th>
+                        <th>Valor</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+                    $select = "*";
+                    $url = "viewinvs?select=*";
+                    $method = "GET";
+                    $fields = array();
+                    $secuencia = 1;
+                    $response = CurlController::request($url, $method, $fields);
+                    //echo '<pre>'; print_r($url); echo '</pre>';exit;
+
+                    if ($response->status == 200) {
+                        $viewsinvs = $response->results;
+                        foreach ($viewsinvs as $viewsinv) {
+                            ?>
+                            <tr>
+                                <td class="text-left"><?= $secuencia; ?></td>
+                                <td class="text-left"><?= $viewsinv->group_viewinv; ?></td>
+                                <td class="text-left"><?= $viewsinv->code_viewinv; ?></td>
+                                <td class="text-left"><?= $viewsinv->info_viewinv; ?></td>
+                                <td class="text-left"><?= $viewsinv->address_viewinv; ?></td>
+                                <td class="text-left"><?= $viewsinv->qty_viewinv; ?></td>
+                                <td class="text-left"><?= $viewsinv->cost_viewinv; ?></td>
+                            </tr>
+                        <?php
+                        $secuencia++;
+                        }
+                    } else {
+                        echo '<script>
+				                window.location = "/deliveries";
+				                </script>';
+                    }
+                    ?>
                 </tbody>
                 <tfoot id="tfoot" style="display: none">
                     <tr>
@@ -127,39 +158,14 @@ if (isset($routesArray[3])) {
                             require_once "controllers/transformers.controller.php";
                             $create = new TransformersController();
                             ?>
-
                             <div class="row col-md-12">
                                 <!-- Izquierda -->
                                 <div class="col-md-6">
                                     <div class="row">
-                                        <!-- Seleccionar Acta de Ingreso -->
-                                        <div class="form-group col-md-6">
-                                            <label>No. Acta</label>
-                                            <?php
-                                            $url = "deliveries?select=id_delivery,number_delivery";
-                                            $method = "GET";
-                                            $fields = array();
-                                            $deliveries = CurlController::request($url, $method, $fields)->results;
-                                            ?>
-
-                                            <div class="form-group">
-                                                <select class="form-control select2" name="delivery" style="width:100%" required>
-                                                    <!-- onchange="activeBlocks()" -->
-                                                    <option value="">Seleccione Acta de Ingreso</option>
-                                                    <?php foreach ($deliveries as $key => $value) : ?>
-                                                        <option value="<?php echo $value->id_delivery ?>"><?php echo $value->number_delivery ?></option>
-                                                    <?php endforeach ?>
-                                                </select>
-
-                                                <div class="valid-feedback">Valid.</div>
-                                                <div class="invalid-feedback">Please fill out this field.</div>
-                                            </div>
-                                        </div>
-
                                         <!-- Código Transformador -->
                                         <div class="form-group col-md-6">
                                             <label>Código</label>
-                                            <input type="text" class="form-control" pattern="[A-Za-z0-9.-]" id="code" name="code" onchange="validateRepeat(event,'t&n','transformers','code_transformer')" required>
+                                            <input type="text" class="form-control" pattern="[A-Za-z0-9.-]" id="codeT" name="codeT" onchange="validateRepeat(event,'t&n','transformers','code_transformer')" required>
 
                                             <div class="valid-feedback">Valid.</div>
                                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -173,7 +179,7 @@ if (isset($routesArray[3])) {
                                             $typetransformers = file_get_contents("views/assets/json/typetransformers.json");
                                             $typetransformers = json_decode($typetransformers, true);
                                             ?>
-                                            <select class="form-control select2" name="type" required>
+                                            <select class="form-control select2" name="typeT" required>
                                                 <option value>Tipo Transformador</option>
                                                 <?php foreach ($typetransformers as $key => $value) : ?>
                                                     <option value="<?php echo $value["name"] ?>"><?php echo $value["name"] ?></option>
@@ -190,7 +196,7 @@ if (isset($routesArray[3])) {
                                             $classtransformers = file_get_contents("views/assets/json/classtransformers.json");
                                             $classtransformers = json_decode($classtransformers, true);
                                             ?>
-                                            <select class="form-control select2" name="class" required>
+                                            <select class="form-control select2" name="classT" required>
                                                 <option value>Clase Transformador</option>
                                                 <?php foreach ($classtransformers as $key => $value) : ?>
                                                     <option value="<?php echo $value["name"] ?>"><?php echo $value["name"] ?></option>
@@ -203,7 +209,7 @@ if (isset($routesArray[3])) {
                                         <!-- Circuito de Alimentación -->
                                         <div class="form-group col-md-4">
                                             <label>Circuito Alimentación</label>
-                                            <input type="text" class="form-control" pattern="[A-Za-z0-9.-]" name="circuit" required>
+                                            <input type="text" class="form-control" pattern="[A-Za-z0-9.-]" name="circuitT" required>
 
                                             <div class="valid-feedback">Valid.</div>
                                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -213,7 +219,7 @@ if (isset($routesArray[3])) {
                                         <!-- Dirección -->
                                         <div class="form-group col-md-12">
                                             <label>Dirección</label>
-                                            <input type="text" class="form-control" pattern="[A-Za-z0-9.-]" name="address" required>
+                                            <input type="text" class="form-control" pattern="[A-Za-z0-9.-]" name="addressT" required>
 
                                             <div class="valid-feedback">Valid.</div>
                                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -223,7 +229,7 @@ if (isset($routesArray[3])) {
                                         <!-- Latitud -->
                                         <div class="form-group col-md-4">
                                             <label>Latiud</label>
-                                            <input type="text" class="form-control" pattern="^-?[0-9]*\.?[0-9]+$" name="latitude" required>
+                                            <input type="text" class="form-control" pattern="^-?[0-9]*\.?[0-9]+$" name="latitudeT" required>
 
                                             <div class="valid-feedback">Valid.</div>
                                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -231,7 +237,7 @@ if (isset($routesArray[3])) {
                                         <!-- Longitud -->
                                         <div class="form-group col-md-4">
                                             <label>Longitud</label>
-                                            <input type="text" class="form-control" pattern="^-?[0-9]*\.?[0-9]+$" name="longitude" required>
+                                            <input type="text" class="form-control" pattern="^-?[0-9]*\.?[0-9]+$" name="longitudeT" required>
 
                                             <div class="valid-feedback">Valid.</div>
                                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -241,7 +247,7 @@ if (isset($routesArray[3])) {
                                         <div class="form-group col-md-4">
                                             <!-- Potencia del Transformador -->
                                             <label>Potencia</label>
-                                            <input type="text" class="form-control" pattern="^(0|[1-9]\d*)(\.\d+)?$" name="power" required>
+                                            <input type="text" class="form-control" pattern="^(0|[1-9]\d*)(\.\d+)?$" name="powerT" required>
 
                                             <div class="valid-feedback">Valid.</div>
                                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -250,7 +256,7 @@ if (isset($routesArray[3])) {
                                         <div class="form-group col-md-4">
                                             <!-- Precio del Transformador -->
                                             <label>Valor</label>
-                                            <input type="text" class="form-control" pattern="^(0|[1-9]\d*)(\.\d+)?$" name="cost" required>
+                                            <input type="text" class="form-control" pattern="^(0|[1-9]\d*)(\.\d+)?$" name="costT" required>
 
                                             <div class="valid-feedback">Valid.</div>
                                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -271,9 +277,9 @@ if (isset($routesArray[3])) {
                                     <div class="row justify-content-center">
                                         <!-- Muestro Código de Barras -->
                                         <div class="form-group col-md-12 textcenter">
-                                            <div id="divBarCode" style="display: flex; flex-direction:column; align-items:center;" class="textcenter">
+                                            <div id="divBarCodeT" style="display: flex; flex-direction:column; align-items:center;" class="textcenter">
                                                 <div id="printCode">
-                                                    <svg id="barcode"></svg>
+                                                    <svg id="barcodeT"></svg>
                                                 </div>
                                                 <button class="btn btn-success btn-sm d-none btnPrint" type="button" onClick="fntPrintBarcode('#printCode')"><i class="fas fa-print"></i> Imprimir</button>
                                             </div>
@@ -284,7 +290,7 @@ if (isset($routesArray[3])) {
                                             <!-- Hoja de Vida del transformero -->
                                             <div class="form-group mt-2">
                                                 <label>Hoja de Vida del Transformador</label>
-                                                <textarea class="summernote" name="life" required></textarea>
+                                                <textarea class="summernote" name="lifeT" required></textarea>
 
                                                 <div class="valid-feedback">Valid.</div>
                                                 <div class="invalid-feedback">Please fill out this field.</div>
@@ -308,6 +314,14 @@ if (isset($routesArray[3])) {
                             </div>
                         </div>
   -->
+                        <div class="card-footer">
+                            <div class="col-md-8 offset-md-2">
+                                <div class="form-group submtit">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary saveBtn">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -782,8 +796,6 @@ if (isset($routesArray[3])) {
 <!-- /.modal -->
 
 <script>
-
-    
     let items_acta = [];
     let total = 0.00;
 
@@ -848,17 +860,21 @@ if (isset($routesArray[3])) {
     }
 
     /* Funcion de Codigo de Barras */
-    if (document.querySelector("#codel")) {
-        alert('ksakas');
-        let inputCodigo = document.querySelector("#codel");
+    if (document.querySelector("#codeT")) {
+        let inputCodigo = document.querySelector("#codeT");
         inputCodigo.onkeyup = function() {
             if (inputCodigo.value.length >= 5) {
-                document.querySelector("#divBarCode").classList.remove("notblock");
-                fntBarcode();
+                document.querySelector("#divBarCodeT").classList.remove("notblock");
+                fntBarcodeT();
                 document.querySelector(".btnPrint").classList.remove("d-none");
             } else {
-                document.querySelector("#divBarCode").classList.add("notblock");
+                document.querySelector("#divBarCodeT").classList.add("notblock");
             }
         }
+    }
+
+    function fntBarcodeT(e) {
+        let codigo = document.querySelector("#codeT").value;
+        JsBarcode("#barcodeT", codigo);
     }
 </script>

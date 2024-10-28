@@ -5,8 +5,8 @@ class TransformersController
 	/* Creacion de Transformadores */
 	public function create()
 	{
-		//echo '<pre>'; print_r($_POST); echo '</pre>';exit;
-		if (isset($_POST["codeT"])) {
+		//echo '<pre>'; print_r($_POST); echo '</pre>';
+		if (isset($_POST["code"])) {
 			echo '<script>
 				matPreloader("on");
 				fncSweetAlert("loading", "Loading...", "");
@@ -14,7 +14,7 @@ class TransformersController
 
 			/* Validamos la sintaxis de los campos */
 			if (
-				preg_match('/[a-zA-Z0-9_]/', $_POST["codeT"])
+				preg_match('/[a-zA-Z0-9_]/', $_POST["code"])
 			) {
 
 				/* Guardar Imagenes de la galeria*/
@@ -24,27 +24,27 @@ class TransformersController
 					$image["type"] = $value["type"];
 					$image["mode"] = "base64";
 					$folder = "img/transformers";
-					$path =  "/" . strtolower($_POST["codeT"]);
+					$path =  "/" . strtolower($_POST["code"]);
 					$width = $value["width"];
 					$height = $value["height"];
-					$name = strtolower($_POST["codeT"]) . "-" . mt_rand(10000000, 99999999);
+					$name = strtolower($_POST["code"]) . "-" . mt_rand(10000000, 99999999);
 					$saveImageGallery  = TemplateController::saveImage($image, $folder, $path, $width, $height, $name);
 					array_push($galleryElement, $saveImageGallery);
 				}
 
 				/* Agrupamos la información */
 				$data = array(
-					"id_delivery_transformer" => $_POST["idDelivery"],
-					"code_transformer" => $_POST["codeT"],
-					"power_transformer" => $_POST["powerT"],
-					"address_transformer" => trim(strtoupper($_POST["addressT"])),
-					"latitude_transformer" => $_POST["latitudeT"],
-					"longitude_transformer" => $_POST["longitudeT"],
-					"type_transformer" => $_POST["typeT"],
-					"class_transformer" => $_POST["classT"],
-					"circuit_transformer" => $_POST["circuitT"],
-					"cost_transformer" => $_POST["costT"],
-					"life_transformer" => $_POST["lifeT"],
+					"id_delivery_transformer" => $_POST["delivery"],
+					"code_transformer" => $_POST["code"],
+					"power_transformer" => $_POST["power"],
+					"address_transformer" => trim(strtoupper($_POST["address"])),
+					"latitude_transformer" => $_POST["latitude"],
+					"longitude_transformer" => $_POST["longitude"],
+					"type_transformer" => $_POST["type"],
+					"class_transformer" => $_POST["class"],
+					"circuit_transformer" => $_POST["circuit"],
+					"cost_transformer" => $_POST["cost"],
+					"life_transformer" => $_POST["life"],
 					"status_transformer" => 'Activo',
 					"gallery_transformer" => json_encode($galleryElement),
 					"date_created_transformer" => date("Y-m-d")
@@ -57,24 +57,11 @@ class TransformersController
 				//echo '<pre>'; print_r($fields); echo '</pre>';exit;
 				/* Respuesta de la API */
 				if ($response->status == 200) {
-					$data2 = array(
-						"group_viewinv" => "TRANSFORMADORES",
-						"code_viewinv" => $_POST["codeT"],
-						"info_viewinv" => $_POST["powerT"] . " KWh",
-						"address_viewinv" => trim(strtoupper($_POST["addressT"])),
-						"qty_viewinv" => 1,
-						"cost_viewinv" => $_POST["costT"],
-						"date_created_viewinv" => date("Y-m-d")
-					);
-					$url = "viewinvs?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
-					$method = "POST";
-					$fields = $data2;
-					$response = CurlController::request($url, $method, $fields);
 					echo '<script>
 					fncFormatInputs();
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Registro grabado correctamente", "/deliveries/items/".$_POST["idDelivery"]);
+					fncSweetAlert("success", "Registro grabado correctamente", "/transformers");
 				</script>';
 				}
 			} else {
