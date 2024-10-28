@@ -249,7 +249,7 @@ $(".summernote").summernote({
 
   placeholder: '',
   tabsize: 2,
-  height: 400,
+  height: 300,
   toolbar: [
     ['misc', ['codeview', 'undo', 'redo']],
     ['style', ['bold', 'italic', 'underline', 'clear']],
@@ -411,6 +411,20 @@ function removeGallery(elem) {
 /* Funcion de Codigo de Barras */
 if (document.querySelector("#code")) {
   let inputCodigo = document.querySelector("#code");
+  inputCodigo.onkeyup = function () {
+    if (inputCodigo.value.length >= 5) {
+      document.querySelector("#divBarCode").classList.remove("notblock");
+      fntBarcode();
+      document.querySelector(".btnPrint").classList.remove("d-none");
+    } else {
+      document.querySelector("#divBarCode").classList.add("notblock");
+    }
+  }
+}
+
+/* Funcion de Codigo de Barras */
+if (document.querySelector("#codel")) {
+  let inputCodigo = document.querySelector("#codel");
   inputCodigo.onkeyup = function () {
     if (inputCodigo.value.length >= 5) {
       document.querySelector("#divBarCode").classList.remove("notblock");

@@ -329,3 +329,120 @@ Stack trace:
 [20-Oct-2024 09:08:07 America/Bogota] PHP Warning:  Undefined array key "address" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 200
 [20-Oct-2024 09:08:07 America/Bogota] PHP Warning:  Undefined array key "address" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 200
 [20-Oct-2024 09:08:07 America/Bogota] PHP Warning:  Undefined array key "address" in C:\xampp\htdocs\salp\admin-salp\views\pages\infinvval\actions\print.php on line 200
+[27-Oct-2024 14:14:18 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:14:18 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:14:18 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:14:18 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:14:18 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:14:18 America/Bogota] PHP Warning:  Attempt to read property "name_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:14:18 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:14:18 America/Bogota] PHP Warning:  Attempt to read property "name_itemdelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:14:18 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 49
+[27-Oct-2024 14:14:18 America/Bogota] PHP Warning:  Attempt to read property "number_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 49
+[27-Oct-2024 14:14:18 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 52
+[27-Oct-2024 14:14:18 America/Bogota] PHP Warning:  Attempt to read property "date_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 52
+[27-Oct-2024 14:14:18 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 53
+[27-Oct-2024 14:14:18 America/Bogota] PHP Warning:  Attempt to read property "name_resource" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 53
+[27-Oct-2024 14:14:22 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:14:22 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:14:22 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:14:22 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:14:22 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:14:22 America/Bogota] PHP Warning:  Attempt to read property "name_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:14:22 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:14:22 America/Bogota] PHP Warning:  Attempt to read property "name_itemdelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:14:22 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 49
+[27-Oct-2024 14:14:22 America/Bogota] PHP Warning:  Attempt to read property "number_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 49
+[27-Oct-2024 14:14:22 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 52
+[27-Oct-2024 14:14:22 America/Bogota] PHP Warning:  Attempt to read property "date_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 52
+[27-Oct-2024 14:14:22 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 53
+[27-Oct-2024 14:14:22 America/Bogota] PHP Warning:  Attempt to read property "name_resource" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 53
+[27-Oct-2024 14:15:35 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Oct-2024 14:15:35 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Oct-2024 14:15:35 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:15:35 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:15:35 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[27-Oct-2024 14:15:35 America/Bogota] PHP Warning:  Attempt to read property "name_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[27-Oct-2024 14:15:35 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:15:35 America/Bogota] PHP Warning:  Attempt to read property "name_itemdelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:15:35 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[27-Oct-2024 14:15:35 America/Bogota] PHP Warning:  Attempt to read property "number_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[27-Oct-2024 14:15:35 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:15:35 America/Bogota] PHP Warning:  Attempt to read property "date_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:15:35 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:15:35 America/Bogota] PHP Warning:  Attempt to read property "name_resource" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:15:37 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Oct-2024 14:15:37 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Oct-2024 14:15:37 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:15:37 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:15:37 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[27-Oct-2024 14:15:37 America/Bogota] PHP Warning:  Attempt to read property "name_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[27-Oct-2024 14:15:37 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:15:37 America/Bogota] PHP Warning:  Attempt to read property "name_itemdelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:15:37 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[27-Oct-2024 14:15:37 America/Bogota] PHP Warning:  Attempt to read property "number_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[27-Oct-2024 14:15:37 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:15:37 America/Bogota] PHP Warning:  Attempt to read property "date_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:15:37 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:15:37 America/Bogota] PHP Warning:  Attempt to read property "name_resource" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:16:17 America/Bogota] PHP Warning:  Undefined property: stdClass::$name_typedelivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[27-Oct-2024 14:16:17 America/Bogota] PHP Warning:  Undefined property: stdClass::$name_itemdelivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:16:17 America/Bogota] PHP Warning:  Undefined property: stdClass::$name_resource in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:24:42 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Oct-2024 14:24:42 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Oct-2024 14:24:42 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:24:42 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:24:42 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[27-Oct-2024 14:24:42 America/Bogota] PHP Warning:  Attempt to read property "name_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[27-Oct-2024 14:24:42 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:24:42 America/Bogota] PHP Warning:  Attempt to read property "name_itemdelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:24:42 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[27-Oct-2024 14:24:42 America/Bogota] PHP Warning:  Attempt to read property "number_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[27-Oct-2024 14:24:42 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:24:42 America/Bogota] PHP Warning:  Attempt to read property "date_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:24:42 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:24:42 America/Bogota] PHP Warning:  Attempt to read property "name_resource" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:24:44 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Oct-2024 14:24:44 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Oct-2024 14:24:44 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:24:44 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:24:44 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[27-Oct-2024 14:24:44 America/Bogota] PHP Warning:  Attempt to read property "name_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[27-Oct-2024 14:24:44 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:24:44 America/Bogota] PHP Warning:  Attempt to read property "name_itemdelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:24:44 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[27-Oct-2024 14:24:44 America/Bogota] PHP Warning:  Attempt to read property "number_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[27-Oct-2024 14:24:44 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:24:44 America/Bogota] PHP Warning:  Attempt to read property "date_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:24:44 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:24:44 America/Bogota] PHP Warning:  Attempt to read property "name_resource" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:41:56 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Oct-2024 14:41:56 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Oct-2024 14:41:56 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:41:56 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:41:56 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[27-Oct-2024 14:41:56 America/Bogota] PHP Warning:  Attempt to read property "name_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[27-Oct-2024 14:41:56 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:41:56 America/Bogota] PHP Warning:  Attempt to read property "name_itemdelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:41:56 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[27-Oct-2024 14:41:56 America/Bogota] PHP Warning:  Attempt to read property "number_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[27-Oct-2024 14:41:56 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:41:56 America/Bogota] PHP Warning:  Attempt to read property "date_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:41:56 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:41:56 America/Bogota] PHP Warning:  Attempt to read property "name_resource" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Attempt to read property "name_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Attempt to read property "name_itemdelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Attempt to read property "number_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Attempt to read property "date_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Attempt to read property "name_resource" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 124
+[27-Oct-2024 14:42:43 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 124
