@@ -37,56 +37,68 @@ if (isset($routesArray[3])) {
             ?>
         </div>
         <div class="card-body">
-            <!-- Numero de Pqr  -->
-            <div class="form-group col-md-4">
-                <div class="form-group">
-                    <label>No. Pqr</label>
-                    <input type="text" class="form-control" value="<?php echo $pqrs->id_pqr ?>" name="idPqr" disabled>
+            <div class="row">
+                <!-- Numero de Pqr  -->
+                <div class="form-group col-md-4">
+                    <div class="form-group">
+                        <label>No. Pqr</label>
+                        <input type="text" class="form-control" value="<?php echo $pqrs->id_pqr ?>" name="idPqr" disabled>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                </div>
+
+                <!-- Cadrilla -->
+                <div class="form-group col-md-4">
+                    <label>Cuadrilla</label>
+                    <?php
+                    $url = "crews?select=id_crew,name_crew";
+                    $method = "GET";
+                    $fields = array();
+                    $crews = CurlController::request($url, $method, $fields)->results;
+                    ?>
+
+                    <div class="form-group">
+                        <select class="form-control select2" name="crew" style="width:100%" disabled>
+                            <?php if ($pqrs->id_crew_pqr != NULL) : ?>
+                                <?php foreach ($crews as $key => $value) : ?>
+                                    <?php if ($value->id_crew == $pqrs->id_crew_pqr) : ?>
+                                        <option value="<?php echo $pqrs->id_crew_pqr ?>" selected><?php echo $pqrs->name_crew ?></option>
+                                    <?php else : ?>
+                                        <option value="<?php echo $value->id_crew ?>"><?php echo $value->name_crew ?></option>
+                                    <?php endif ?>
+                                <?php endforeach ?>
+                            <?php else : ?>
+                                <option value="">Seleccione Cuadrilla</option>
+                                <?php foreach ($crews as $key => $value) : ?>
+                                    <option value="<?php echo $value->id_crew ?>"><?php echo $value->name_crew ?></option>
+                                <?php endforeach ?>
+                            <?php endif ?>
+                        </select>
+
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Fecha de Resolución -->
+                <div class="form-group col-md-4">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            Fecha :
+                        </span>
+                        <input type="date" class="form-control" value="<?php echo $pqrs->dateasign_pqr ?>" name="datesolved">
+                    </div>
+
                     <div class="valid-feedback">Valid.</div>
                     <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
-            </div>
 
-            <!-- Fecha de Resuelta -->
-            <div class="form-group col-md-4">
-                <div class="input-group-append">
-                    <span class="input-group-text">
-                        Fecha :
-                    </span>
-                    <input type="date" class="form-control" value="<?php echo $pqrs->dateasign_pqr ?>" name="datesolved" >
-                </div>
-
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
-            </div>
-
-            <!-- Cadrilla -->
-            <div class="form-group col-md-4">
-                <label>Deudor</label>
-                <?php
-                $url = "crews?select=id_crew,name_crew";
-                $method = "GET";
-                $fields = array();
-                $crews = CurlController::request($url, $method, $fields)->results;
-                ?>
-
-                <div class="form-group">
-                    <select class="form-control select2" name="crew" style="width:100%" disabled>
-                        <?php if ($pqrs->id_crew_pqr != NULL) : ?>
-                            <?php foreach ($crews as $key => $value) : ?>
-                                <?php if ($value->id_crew == $pqrs->id_crew_pqr) : ?>
-                                    <option value="<?php echo $pqrs->id_crew_pqr ?>" selected><?php echo $pqrs->name_crew ?></option>
-                                <?php else : ?>
-                                    <option value="<?php echo $value->id_crew ?>"><?php echo $value->name_crew ?></option>
-                                <?php endif ?>
-                            <?php endforeach ?>
-                        <?php else : ?>
-                            <option value="">Seleccione Cuadrilla</option>
-                            <?php foreach ($crews as $key => $value) : ?>
-                                <option value="<?php echo $value->id_crew ?>"><?php echo $value->name_crew ?></option>
-                            <?php endforeach ?>
-                        <?php endif ?>
-                    </select>
+                <!-- Observaciones -->
+                <div class="form-group col-md-12">
+                    <label>Observaciones</label>
+                    <input type="text" class="form-control" pattern='[A-Za-z0-9.-]' name="solution" required>
 
                     <div class="valid-feedback">Valid.</div>
                     <div class="invalid-feedback">Please fill out this field.</div>

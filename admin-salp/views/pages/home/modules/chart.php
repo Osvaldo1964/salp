@@ -49,8 +49,8 @@ $cancell = round($cancell * 100 / $total);
 
 // Luminarias por Tecnologia y Potencia
 
-$select = "id_element,name_technology,name_power";
-$url = "relations?rel=elements,classes,technologies,powers&type=element,class,technology,power&select=" . $select . "&linkTo=id_class_element&equalTo=" . 1;
+$select = "id_luminary,name_technology,name_power";
+$url = "relations?rel=luminaries,technologies,powers&type=luminary,technology,power&select=" . $select;
 //"relations?select=id_subject";
 $elements = CurlController::request($url, $method, $fields);
 $registers = $elements->total;

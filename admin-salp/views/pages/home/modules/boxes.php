@@ -18,11 +18,11 @@ if($pqrs->status == 200){
 /*=============================================
 total de Luminarias
 =============================================*/
-$select = "id_element,id_class_element,id_technology_element,id_technology,name_technology,id_power_element,id_power,name_power";
-$url = "relations?rel=elements,classes,technologies,powers&type=element,class,technology,power&select=" . $select . "&linkTo=id_class_element&equalTo=" . 1;
+$select = "*";
+$url = "relations?rel=luminaries,technologies,powers&type=luminary,technology,power&select=" . $select;
 //"relations?select=id_subject";
 $elements = CurlController::request($url,$method,$fields);
-//echo '<pre>'; print_r($url); echo '</pre>';exit;
+//echo '<pre>'; print_r($elements); echo '</pre>';exit;
 
 if($elements->status == 200){ 
   $elements = $elements->total;
@@ -95,7 +95,7 @@ if($users->status == 200){
       <span class="info-box-icon bg-success elevation-1"><i class="fas fa-file-signature"></i></span>
 
       <div class="info-box-content">
-        <span class="info-box-text">Mandamientos</span>
+        <span class="info-box-text">Pendientes</span>
         <span class="info-box-number"><?php echo $payorders ?></span>
       </div>
       <!-- /.info-box-content -->

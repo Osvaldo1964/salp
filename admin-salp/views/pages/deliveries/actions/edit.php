@@ -3,7 +3,7 @@ if (isset($routesArray[3])) {
     $security = explode("~", base64_decode($routesArray[3]));
     if ($security[1] == $_SESSION["user"]->token_user) {
         $select = "*";
-        $url = "relations?rel=deliveries,typedeliveries,itemdeliveries,resources&type=delivery,typedelivery,itemdelivery,resource&select=" . $select . "&linkTo=id_delivery&equalTo=" . $security[0];;
+        $url = "deliveries?select=id_delivery&linkTo=id_delivery&equalTo=" . $security[0];
         $method = "GET";
         $fields = array();
         $response = CurlController::request($url, $method, $fields);
