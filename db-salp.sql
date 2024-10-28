@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-10-2024 a las 18:44:58
+-- Tiempo de generación: 28-10-2024 a las 21:24:48
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -1713,7 +1713,11 @@ CREATE TABLE `transformers` (
 INSERT INTO `transformers` (`id_transformer`, `id_delivery_transformer`, `code_transformer`, `power_transformer`, `address_transformer`, `latitude_transformer`, `longitude_transformer`, `type_transformer`, `class_transformer`, `circuit_transformer`, `cost_transformer`, `life_transformer`, `status_transformer`, `gallery_transformer`, `date_created_transformer`, `date_updated_transformer`) VALUES
 (1, 1, 'TRANS-001', 150, 'carrera 22 calle 5', 10.2526, -74.0252, 'Exclusivo', 'Pedestal', '', 0.00, '', 'Activo', '', '2024-10-14', '2024-10-14 15:14:18'),
 (2, 1, 'TRANS004', 150, 'CALLE', 10.2523, -74.1525, 'Exclusivo', 'Aereo', 'LE91891', 0.00, '                                                                                                                                                                                                                                                                                                                                                                                                                                prueba dos                                                                                                                                                                                                                                                                                                                                                                                                ', 'Activo', '[\"TRANS004_9588372128.png\"]', '2024-10-15', '2024-10-16 05:00:00'),
-(8, 1, 'TRANS-002', 150, 'CALLE', 10.2523, -74.1525, 'Exclusivo', 'Aereo', 'L020251', 5000000.00, '                                                                                                                                                                                                                                                                                                <p>zxzxzx</p>                                                                                                                                                                                                                                                                                                ', 'Activo', '[\"TRANS-002_7054669825.jpg\",\"TRANS-002_8221960063.jpg\",\"TRANS-002_9305056070.jpg\"]', '2024-10-16', '2024-10-16 05:00:00');
+(8, 1, 'TRANS-002', 150, 'CALLE', 10.2523, -74.1525, 'Exclusivo', 'Aereo', 'L020251', 5000000.00, '                                                                                                                                                                                                                                                                                                <p>zxzxzx</p>                                                                                                                                                                                                                                                                                                ', 'Activo', '[\"TRANS-002_7054669825.jpg\",\"TRANS-002_8221960063.jpg\",\"TRANS-002_9305056070.jpg\"]', '2024-10-16', '2024-10-16 05:00:00'),
+(9, 1, 'TRANS-020', 150, 'CALLE 33LLDL', 10.253, -74.2536, 'Exclusivo', 'Aereo', 'C5658', 2500000.00, '                                <p>prueba</p>                                ', 'Activo', '[\"trans-020-66966241.jpg\"]', '2024-10-28', '2024-10-28 05:00:00'),
+(10, 1, 'TRANS-021', 500, 'EL CENTRO', 10.2533, -74.2536, 'Exclusivo', 'Subterraneo', 'D2525', 3500000.00, '<p>OTRA</p>', 'Activo', '[\"trans-021-49751014.jpg\"]', '2024-10-28', '2024-10-28 14:43:07'),
+(11, 1, 'TRANS-022', 500, 'CARTAGEA', 10.2533, -74.2536, 'Compartido con Red', 'Aereo', 'D2525333', 2500000.00, '<p>RUEBA</p>', 'Activo', '[\"trans-022-41322203.jpg\"]', '2024-10-28', '2024-10-28 14:45:06'),
+(12, 1, 'port-KDL', 150, 'CALLE 33LLDLDDDDD', 10.253, -74.2536, 'Exclusivo', 'Pedestal', 'D2525', 3500000.00, '<p>SDSD</p>', 'Activo', '[\"port-kdl-26029486.jpg\"]', '2024-10-28', '2024-10-28 15:05:16');
 
 -- --------------------------------------------------------
 
@@ -1771,7 +1775,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fullname_user`, `username_user`, `email_user`, `password_user`, `token_user`, `token_exp_user`, `id_rol_user`, `picture_user`, `country_user`, `city_user`, `address_user`, `phone_user`, `method_user`, `date_created_user`, `date_updated_user`, `status_user`, `verification_user`) VALUES
-(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3Mjk0NDAxNTgsImV4cCI6MTcyOTUyNjU1OCwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.1nvl_riJk3I7vE2lWDwMxhIlc4cTfc90JlKr0sRiWvU', '1729526558', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
+(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MzAxMjMwNjEsImV4cCI6MTczMDIwOTQ2MSwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.i6-Y5an6kjPuW-DvBwF1zzj84BgVq2gEeH4e7XnL0BA', '1730209461', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
 (7, 'Jorge Villalobos', 'jorgito', 'jorge@gmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', NULL, NULL, 'Usuarios', '7.png', 'Algeria', 'Varsobia', 'LA QUE SEA', '+213_3153153153', 'direct', '2024-06-22', '2024-06-22 14:18:30', 1, 1),
 (31, 'Juan Prueto', '', 'prueba@mail.com', '', NULL, NULL, '1', NULL, 'Afghanistan', 'Otra', 'calle 1', '+93_3253253325', 'direct', '2024-06-25', '2024-06-25 20:10:46', 1, 1);
 
@@ -1797,6 +1801,34 @@ CREATE TABLE `uses` (
 
 INSERT INTO `uses` (`id_use`, `name_use`, `amount_use`, `minimal_use`, `status_use`, `date_created_use`, `date_updated_use`) VALUES
 (1, 'RESIDENCIAL ESTRATO I', 15.00, 15200.00, 'Activo', '2024-10-20', '2024-10-20 16:27:59');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `viewinvs`
+--
+
+CREATE TABLE `viewinvs` (
+  `id_viewinv` bigint(20) NOT NULL,
+  `group_viewinv` varchar(20) NOT NULL,
+  `code_viewinv` varchar(10) NOT NULL,
+  `info_viewinv` text NOT NULL,
+  `address_viewinv` text NOT NULL,
+  `qty_viewinv` decimal(15,2) NOT NULL,
+  `cost_viewinv` decimal(15,2) NOT NULL,
+  `date_created_viewinv` date DEFAULT NULL,
+  `date_updated_viewinv` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `viewinvs`
+--
+
+INSERT INTO `viewinvs` (`id_viewinv`, `group_viewinv`, `code_viewinv`, `info_viewinv`, `address_viewinv`, `qty_viewinv`, `cost_viewinv`, `date_created_viewinv`, `date_updated_viewinv`) VALUES
+(1, 'TRANSFORMADORES', 'TRANS-020', '150 KWh', 'CALLE 33LLDL', 1.00, 2500000.00, '2024-10-28', '2024-10-28 14:34:38'),
+(2, 'TRANSFORMADORES', 'TRANS-021', '500 KWh', 'EL CENTRO', 1.00, 3500000.00, '2024-10-28', '2024-10-28 14:43:07'),
+(3, 'TRANSFORMADORES', 'TRANS-022', '500 KWh', 'CARTAGEA', 1.00, 2500000.00, '2024-10-28', '2024-10-28 14:45:07'),
+(4, 'TRANSFORMADORES', 'port-KDL', '150 KWh', 'CALLE 33LLDLDDDDD', 1.00, 3500000.00, '2024-10-28', '2024-10-28 15:05:16');
 
 --
 -- Índices para tablas volcadas
@@ -1949,6 +1981,12 @@ ALTER TABLE `uses`
   ADD PRIMARY KEY (`id_use`);
 
 --
+-- Indices de la tabla `viewinvs`
+--
+ALTER TABLE `viewinvs`
+  ADD PRIMARY KEY (`id_viewinv`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -2076,7 +2114,7 @@ ALTER TABLE `technologies`
 -- AUTO_INCREMENT de la tabla `transformers`
 --
 ALTER TABLE `transformers`
-  MODIFY `id_transformer` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_transformer` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `typedeliveries`
@@ -2095,6 +2133,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `uses`
   MODIFY `id_use` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `viewinvs`
+--
+ALTER TABLE `viewinvs`
+  MODIFY `id_viewinv` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
