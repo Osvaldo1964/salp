@@ -6,7 +6,7 @@ class LuminariesController
 	public function create()
 	{
 		//echo '<pre>'; print_r($_POST); echo '</pre>';exit;
-		if (isset($_POST["code"])) {
+		if (isset($_POST["codeL"])) {
 			echo '<script>
 				matPreloader("on");
 				fncSweetAlert("loading", "Loading...", "");
@@ -14,7 +14,7 @@ class LuminariesController
 
 			/* Validamos la sintaxis de los campos */
 			if (
-				preg_match('/[a-zA-Z0-9_]/', $_POST["code"])
+				preg_match('/[a-zA-Z0-9_]/', $_POST["codeL"])
 			) {
 				/* Guardar Imagenes de la galeria*/
 				$galleryElement = array();
@@ -23,10 +23,10 @@ class LuminariesController
 					$image["type"] = $value["type"];
 					$image["mode"] = "base64";
 					$folder = "img/luminaries";
-					$path =  "/" . strtolower($_POST["code"]);
+					$path =  "/" . strtolower($_POST["codeL"]);
 					$width = $value["width"];
 					$height = $value["height"];
-					$name = strtolower($_POST["code"]) . "-" . mt_rand(1000000, 9999999);
+					$name = strtolower($_POST["codeL"]) . "-" . mt_rand(1000000, 9999999);
 					$saveImageGallery  = TemplateController::saveImage($image, $folder, $path, $width, $height, $name);
 					array_push($galleryElement, $saveImageGallery);
 				}
@@ -34,19 +34,19 @@ class LuminariesController
 				/* Agrupamos la información */
 				$data = array(
 					"id_delivery_luminary" => $_POST["delivery"],
-					"code_luminary" => $_POST["code"],
-                    "id_technology_luminary" => $_POST["technology"],
-                    "id_power_luminary" => $_POST["power"],
-                    "id_pole_luminary" => $_POST["pole"],
-                    "id_transformer_luminary" => $_POST["transformer"],
-                    "id_roud_luminary" => $_POST["roud"],
+					"code_luminary" => $_POST["codeL"],
+					"id_technology_luminary" => $_POST["technology"],
+					"id_power_luminary" => $_POST["power"],
+					"id_pole_luminary" => $_POST["pole"],
+					"id_transformer_luminary" => $_POST["transformer"],
+					"id_roud_luminary" => $_POST["roud"],
 					"address_luminary" => trim(strtoupper($_POST["address"])),
 					"latitude_luminary" => $_POST["latitude"],
 					"longitude_luminary" => $_POST["longitude"],
-                    "cost_luminary" => $_POST["cost"],
-                    "life_luminary" => $_POST["life"],
-                    "gallery_luminary" => json_encode($galleryElement),
-                    "status_luminary" => "Activo",
+					"cost_luminary" => $_POST["cost"],
+					"life_luminary" => $_POST["life"],
+					"gallery_luminary" => json_encode($galleryElement),
+					"status_luminary" => "Activo",
 					"date_created_luminary" => date("Y-m-d")
 				);
 
@@ -57,6 +57,20 @@ class LuminariesController
 				//echo '<pre>'; print_r($response); echo '</pre>';exit;
 				/* Respuesta de la API */
 				if ($response->status == 200) {
+					$data2 = array(
+						"group_viewinv" => "LUMINARIAS",
+						"code_viewinv" => $_POST["codeL"],
+						"info_viewinv" => $_POST["material"] . $_POST["height"],
+						"address_viewinv" => trim(strtoupper($_POST["address"])),
+						"qty_viewinv" => 1,
+						"cost_viewinv" => $_POST["cost"],
+						"date_created_viewinv" => date("Y-m-d")
+					);
+					$url = "viewinvs?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
+					$method = "POST";
+					$fields = $data2;
+					$response = CurlController::request($url, $method, $fields);
+
 					echo '<script>
 					fncFormatInputs();
 					matPreloader("off");
@@ -158,10 +172,10 @@ class LuminariesController
 							"&code_luminary=" . $_POST["code"] .
 							"&id_technology_luminary=" . $_POST["technology"] .
 							"&id_power_luminary=" . $_POST["power"] .
-                            "&id_pole_luminary=" . $_POST["pole"] .
-                            "&id_transformer_luminary=" . $_POST["transformer"] .
+							"&id_pole_luminary=" . $_POST["pole"] .
+							"&id_transformer_luminary=" . $_POST["transformer"] .
 							"&id_roud_luminary=" . $_POST["roud"] .
-                            "&address_luminary=" . trim(strtoupper($_POST["address"])) .
+							"&address_luminary=" . trim(strtoupper($_POST["address"])) .
 							"&latitude_luminary=" . $_POST["latitude"] .
 							"&longitude_luminary=" . $_POST["longitude"] .
 							"&cost_luminary=" . $_POST["cost"] .

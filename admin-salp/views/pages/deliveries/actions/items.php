@@ -103,7 +103,7 @@ if (isset($routesArray[3])) {
                     if ($response->status == 200) {
                         $viewsinvs = $response->results;
                         foreach ($viewsinvs as $viewsinv) {
-                            ?>
+                    ?>
                             <tr>
                                 <td class="text-left"><?= $secuencia; ?></td>
                                 <td class="text-left"><?= $viewsinv->group_viewinv; ?></td>
@@ -113,8 +113,8 @@ if (isset($routesArray[3])) {
                                 <td class="text-left"><?= $viewsinv->qty_viewinv; ?></td>
                                 <td class="text-left"><?= $viewsinv->cost_viewinv; ?></td>
                             </tr>
-                        <?php
-                        $secuencia++;
+                    <?php
+                            $secuencia++;
                         }
                     } else {
                         echo '<script>
@@ -325,10 +325,10 @@ if (isset($routesArray[3])) {
                     </form>
                 </div>
             </div>
-            <div class="modal-footer justify-content-between">
+            <!--             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary saveBtn">Save changes</button>
-            </div>
+            </div> -->
         </div>
         <!-- /.modal-content -->
     </div>
@@ -357,30 +357,6 @@ if (isset($routesArray[3])) {
                                 <!-- Izquierda -->
                                 <div class="col-md-6">
                                     <div class="row">
-                                        <!-- Seleccionar Acta de Ingreso -->
-                                        <div class="form-group col-md-6">
-                                            <label>No. Acta</label>
-                                            <?php
-                                            $url = "deliveries?select=id_delivery,number_delivery";
-                                            $method = "GET";
-                                            $fields = array();
-                                            $deliveries = CurlController::request($url, $method, $fields)->results;
-                                            ?>
-
-                                            <div class="form-group">
-                                                <select class="form-control select2" name="delivery" style="width:100%" required>
-                                                    <!-- onchange="activeBlocks()" -->
-                                                    <option value="">Seleccione Acta de Ingreso</option>
-                                                    <?php foreach ($deliveries as $key => $value) : ?>
-                                                        <option value="<?php echo $value->id_delivery ?>"><?php echo $value->number_delivery ?></option>
-                                                    <?php endforeach ?>
-                                                </select>
-
-                                                <div class="valid-feedback">Valid.</div>
-                                                <div class="invalid-feedback">Please fill out this field.</div>
-                                            </div>
-                                        </div>
-
                                         <!-- Código Poste -->
                                         <div class="form-group col-md-6">
                                             <label>Código</label>
@@ -524,21 +500,22 @@ if (isset($routesArray[3])) {
                             $create->create();
                             ?>
                         </div>
-                        <!--         <div class="card-footer">
-            <div class="col-md-8 offset-md-2">
-                <div class="form-group submtit">
-                    <a href="/poles" class="btn btn-light border text-left">Regresar</a>
-                    <button type="submit" class="btn bg-dark float-right saveBtn">Grabar</button>
-                </div>
-            </div>
-        </div> -->
+                        <div class="card-footer">
+                            <div class="col-md-8 offset-md-2">
+                                <div class="form-group submtit">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary saveBtn">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
-            <div class="modal-footer justify-content-between">
+            <!--             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
             </div>
+ -->
         </div>
         <!-- /.modal-content -->
     </div>
@@ -562,7 +539,6 @@ if (isset($routesArray[3])) {
                             require_once "controllers/luminaries.controller.php";
                             $create = new LuminariesController();
                             ?>
-
                             <div class="row">
                                 <!-- Izquierda -->
                                 <div class="col-md-6">
@@ -570,7 +546,7 @@ if (isset($routesArray[3])) {
                                         <!-- Código Elemento -->
                                         <div class="form-group col-md-6">
                                             <label>Código</label>
-                                            <input type="text" class="form-control" pattern="[A-Za-z0-9.-]" id="codel" name="codel" onchange="validateRepeat(event,'t&n','luminaries','code_luminary')" required>
+                                            <input type="text" class="form-control" pattern="[A-Za-z0-9.-]" id="codeL" name="codeL" onchange="validateRepeat(event,'t&n','luminaries','code_luminary')" required>
 
                                             <div class="valid-feedback">Valid.</div>
                                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -744,9 +720,9 @@ if (isset($routesArray[3])) {
                                     <div class="row justify-content-center">
                                         <!-- Muestro Código de Barras -->
                                         <div class="form-group col-md-12 textcenter">
-                                            <div id="divBarCode" style="display: flex; flex-direction:column; align-items:center;" class="textcenter">
+                                            <div id="divBarCodeL" style="display: flex; flex-direction:column; align-items:center;" class="textcenter">
                                                 <div id="printCode">
-                                                    <svg id="barcode"></svg>
+                                                    <svg id="barcodeL"></svg>
                                                 </div>
                                                 <button class="btn btn-success btn-sm d-none btnPrint" type="button" onClick="fntPrintBarcode('#printCode')"><i class="fas fa-print"></i> Imprimir</button>
                                             </div>
@@ -772,21 +748,22 @@ if (isset($routesArray[3])) {
                             $create->create();
                             ?>
                         </div>
-                        <!--         <div class="card-footer">
-            <div class="col-md-8 offset-md-2">
-                <div class="form-group submtit">
-                    <a href="/luminaries" class="btn btn-light border text-left">Back</a>
-                    <button type="submit" class="btn bg-dark float-right saveBtn">Save</button>
-                </div>
-            </div>
-        </div> -->
+                        <div class="card-footer">
+                            <div class="col-md-8 offset-md-2">
+                                <div class="form-group submtit">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary saveBtn">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
-            <div class="modal-footer justify-content-between">
+            <!--             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
             </div>
+ -->
         </div>
         <!-- /.modal-content -->
     </div>
@@ -876,5 +853,25 @@ if (isset($routesArray[3])) {
     function fntBarcodeT(e) {
         let codigo = document.querySelector("#codeT").value;
         JsBarcode("#barcodeT", codigo);
+    }
+
+    
+    /* Funcion de Codigo de Barras */
+    if (document.querySelector("#codeL")) {
+        let inputCodigo = document.querySelector("#codeL");
+        inputCodigo.onkeyup = function() {
+            if (inputCodigo.value.length >= 5) {
+                document.querySelector("#divBarCodeL").classList.remove("notblock");
+                fntBarcodeL();
+                document.querySelector(".btnPrint").classList.remove("d-none");
+            } else {
+                document.querySelector("#divBarCodeL").classList.add("notblock");
+            }
+        }
+    }
+
+    function fntBarcodeL(e) {
+        let codigo = document.querySelector("#codeL").value;
+        JsBarcode("#barcodeL", codigo);
     }
 </script>

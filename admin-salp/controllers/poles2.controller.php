@@ -55,19 +55,6 @@ class PolesController
 				//echo '<pre>'; print_r($fields); echo '</pre>';exit;
 				/* Respuesta de la API */
 				if ($response->status == 200) {
-					$data2 = array(
-						"group_viewinv" => "POSTES",
-						"code_viewinv" => $_POST["code"],
-						"info_viewinv" => $_POST["material"] . $_POST["height"],
-						"address_viewinv" => trim(strtoupper($_POST["address"])),
-						"qty_viewinv" => 1,
-						"cost_viewinv" => $_POST["cost"],
-						"date_created_viewinv" => date("Y-m-d")
-					);
-					$url = "viewinvs?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
-					$method = "POST";
-					$fields = $data2;
-					$response = CurlController::request($url, $method, $fields);
 					echo '<script>
 					fncFormatInputs();
 					matPreloader("off");
@@ -102,7 +89,7 @@ class PolesController
 				$method = "GET";
 				$fields = array();
 				$response = CurlController::request($url, $method, $fields);
-
+				
 				if ($response->status == 200) {
 					/* Validamos la sintaxis de los campos */
 					if (
