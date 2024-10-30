@@ -10,6 +10,7 @@ class ValidateController
 	public $line;
 	public $item;
 	public $muni;
+	public $delivery;
 
 	public function dataRepeat()
 	{
@@ -72,6 +73,16 @@ class ValidateController
 		//echo '<pre>'; print_r($cadena); echo '</pre>';
 		echo $cadena;
 	}
+
+	public function selectDeliveries()
+	{
+		$url = "relations?rel=viewinvs,deliveries&type=viewinv,delivery&select=*&linkTo=id_delivery_viewinv&equalTo=" . $this->delivery;
+		$method = "GET";
+		$fields = array();
+		$viewinvs = CurlController::request($url, $method, $fields)->results;
+		echo '<pre>'; print_r($viewinvs); echo '</pre>';
+		echo $viewinvs;
+	}
 }
 
 if (isset($_POST["data"])) {
@@ -98,4 +109,10 @@ if(isset($_POST["munis"])){
 	$validate = new ValidateController();
 	$validate -> muni = $_POST["munis"];
 	$validate -> selectMunis();
+}
+
+if(isset($_POST["idDelivery"])){
+	$validate = new ValidateController();
+	$validate -> delivery = $_POST["idDelivery"];
+	$validate -> selectDeliveries();
 }

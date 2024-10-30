@@ -58,6 +58,7 @@ class TransformersController
 				/* Respuesta de la API */
 				if ($response->status == 200) {
 					$data2 = array(
+						"id_delivery_viewinv" => $_POST["idDelivery"],
 						"group_viewinv" => "TRANSFORMADORES",
 						"code_viewinv" => $_POST["codeT"],
 						"info_viewinv" => $_POST["powerT"] . " KWh",

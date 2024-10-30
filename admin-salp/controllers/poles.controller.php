@@ -56,6 +56,7 @@ class PolesController
 				/* Respuesta de la API */
 				if ($response->status == 200) {
 					$data2 = array(
+						"id_delivery_viewinv" => $_POST["idDelivery"],
 						"group_viewinv" => "POSTES",
 						"code_viewinv" => $_POST["code"],
 						"info_viewinv" => $_POST["material"] . $_POST["height"],
@@ -72,7 +73,7 @@ class PolesController
 					fncFormatInputs();
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Registro grabado correctamente", "/poles");
+					fncSweetAlert("success", "Registro grabado correctamente", "/deliveries/items/".$_POST["idDelivery"]);
 				</script>';
 				}
 			} else {

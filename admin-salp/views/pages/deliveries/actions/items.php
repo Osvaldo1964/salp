@@ -4,7 +4,7 @@ if (isset($routesArray[3])) {
     $security = explode("~", base64_decode($routesArray[3]));
     if ($security[1] == $_SESSION["user"]->token_user) {
         $select = "*";
-        $url = "relations?rel=deliveries,typedeliveries,itemdeliveries,resources&type=delivery,typedelivery,itemdelivery,resource&select=" . $select . "&linkTo=id_delivery&equalTo=" . $security[0];;
+        $url = "relations?rel=deliveries,typedeliveries,itemdeliveries,resources&type=delivery,typedelivery,itemdelivery,resource&select=" . $select . "&linkTo=id_delivery&equalTo=" . $security[0];
         $method = "GET";
         $fields = array();
         $response = CurlController::request($url, $method, $fields);
@@ -93,7 +93,7 @@ if (isset($routesArray[3])) {
                 <tbody>
                     <?php
                     $select = "*";
-                    $url = "viewinvs?select=*";
+                    $url = "relations?rel=viewinvs,deliveries&type=viewinv,delivery&select=*&linkTo=id_delivery_viewinv&equalTo=" . $security[0];
                     $method = "GET";
                     $fields = array();
                     $secuencia = 1;
@@ -347,6 +347,7 @@ if (isset($routesArray[3])) {
             <div class="modal-body">
                 <div class="card card-dark card-outline">
                     <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+                    <input type="hidden" value="<?php echo $deliveries->id_delivery ?>" name="idDelivery">
                         <div class="card-header">
                             <?php
                             require_once "controllers/poles.controller.php";
@@ -534,6 +535,7 @@ if (isset($routesArray[3])) {
             <div class="modal-body">
                 <div class="card card-dark card-outline">
                     <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+                    <input type="hidden" value="<?php echo $deliveries->id_delivery ?>" name="idDelivery">
                         <div class="card-header">
                             <?php
                             require_once "controllers/luminaries.controller.php";
@@ -752,7 +754,7 @@ if (isset($routesArray[3])) {
                             <div class="col-md-8 offset-md-2">
                                 <div class="form-group submtit">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary saveBtn">Save changes</button>
+                                    <button type="submit" class="btn btn-primary saveBtn upTable">Save changes</button>
                                 </div>
                             </div>
                         </div>
@@ -855,7 +857,25 @@ if (isset($routesArray[3])) {
         JsBarcode("#barcodeT", codigo);
     }
 
-    
+    $(".upTable").click(function() {
+        let ndelivery = $('#idDelivery').val();
+        var data = new FormData();
+        data.append("idDelivery", ndelivery);
+
+        $.ajax({
+            url: "ajax/ajax-validate.php",
+            method: "POST",
+            data: data,
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function(response) {
+                console.log(response);
+            }
+        })
+
+    })
+
     /* Funcion de Codigo de Barras */
     if (document.querySelector("#codeL")) {
         let inputCodigo = document.querySelector("#codeL");

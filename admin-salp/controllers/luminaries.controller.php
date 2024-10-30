@@ -33,7 +33,7 @@ class LuminariesController
 
 				/* Agrupamos la información */
 				$data = array(
-					"id_delivery_luminary" => $_POST["delivery"],
+					"id_delivery_luminary" => $_POST["idDelivery"],
 					"code_luminary" => $_POST["codeL"],
 					"id_technology_luminary" => $_POST["technology"],
 					"id_power_luminary" => $_POST["power"],
@@ -58,15 +58,17 @@ class LuminariesController
 				/* Respuesta de la API */
 				if ($response->status == 200) {
 					$data2 = array(
+						"id_delivery_viewinv" => $_POST["idDelivery"],
 						"group_viewinv" => "LUMINARIAS",
 						"code_viewinv" => $_POST["codeL"],
-						"info_viewinv" => $_POST["material"] . $_POST["height"],
+						"info_viewinv" => $_POST["technology"] . $_POST["power"],
 						"address_viewinv" => trim(strtoupper($_POST["address"])),
 						"qty_viewinv" => 1,
 						"cost_viewinv" => $_POST["cost"],
 						"date_created_viewinv" => date("Y-m-d")
 					);
 					$url = "viewinvs?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
+					echo '<pre>'; print_r($data2); echo '</pre>';
 					$method = "POST";
 					$fields = $data2;
 					$response = CurlController::request($url, $method, $fields);
@@ -75,7 +77,7 @@ class LuminariesController
 					fncFormatInputs();
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Registro grabado correctamente", "/luminaries");
+					fncSweetAlert("success", "Registro grabado correctamente", "/deliveries/items/".$_POST["idDelivery"]);
 				</script>';
 				}
 			} else {

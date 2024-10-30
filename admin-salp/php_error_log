@@ -499,3 +499,80 @@ Stack trace:
 [29-Oct-2024 11:44:37 America/Bogota] PHP Warning:  Undefined array key "delivery" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 36
 [29-Oct-2024 11:44:37 America/Bogota] PHP Warning:  Undefined array key "material" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 63
 [29-Oct-2024 11:44:37 America/Bogota] PHP Warning:  Undefined array key "height" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 63
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 33
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 38
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Attempt to read property "name_typedelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 42
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Attempt to read property "name_itemdelivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 43
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Attempt to read property "number_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 44
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Attempt to read property "date_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 47
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Attempt to read property "name_resource" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 48
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Undefined variable $deliveries in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 155
+[30-Oct-2024 10:29:20 America/Bogota] PHP Warning:  Attempt to read property "id_delivery" on null in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\items.php on line 155
+[30-Oct-2024 10:29:56 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 10:29:56 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 10:29:56 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 10:29:56 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 10:29:56 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[30-Oct-2024 10:30:03 America/Bogota] PHP Warning:  Undefined array key "delivery" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 36
+[30-Oct-2024 10:30:03 America/Bogota] PHP Warning:  Undefined array key "material" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 63
+[30-Oct-2024 10:30:03 America/Bogota] PHP Warning:  Undefined array key "height" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 63
+[30-Oct-2024 11:00:13 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 11:00:13 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 11:00:13 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 11:00:13 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 11:00:13 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[30-Oct-2024 11:00:28 America/Bogota] PHP Warning:  Undefined array key "delivery" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 36
+[30-Oct-2024 11:00:28 America/Bogota] PHP Warning:  Undefined array key "material" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 63
+[30-Oct-2024 11:00:28 America/Bogota] PHP Warning:  Undefined array key "height" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 63
+[30-Oct-2024 11:10:26 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 11:10:26 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 11:10:26 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 11:10:26 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 11:10:26 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[30-Oct-2024 11:10:36 America/Bogota] PHP Warning:  Undefined array key "delivery" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 36
+[30-Oct-2024 11:10:36 America/Bogota] PHP Warning:  Undefined array key "idDelivery" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 61
+[30-Oct-2024 11:10:36 America/Bogota] PHP Warning:  Undefined array key "material" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 64
+[30-Oct-2024 11:10:36 America/Bogota] PHP Warning:  Undefined array key "height" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 64
+[30-Oct-2024 11:11:18 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 11:11:18 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 11:11:18 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 11:11:18 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 11:11:18 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[30-Oct-2024 11:11:53 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 11:11:53 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 11:11:53 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 11:11:53 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 11:11:53 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[30-Oct-2024 11:11:57 America/Bogota] PHP Warning:  Undefined array key "delivery" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 36
+[30-Oct-2024 11:11:57 America/Bogota] PHP Warning:  Undefined array key "idDelivery" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 61
+[30-Oct-2024 11:11:57 America/Bogota] PHP Warning:  Undefined array key "material" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 64
+[30-Oct-2024 11:11:57 America/Bogota] PHP Warning:  Undefined array key "height" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 64
+[30-Oct-2024 11:15:41 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 11:15:41 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 11:15:41 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 11:15:41 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 11:15:41 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[30-Oct-2024 11:15:47 America/Bogota] PHP Warning:  Undefined array key "delivery" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 36
+[30-Oct-2024 11:15:47 America/Bogota] PHP Warning:  Undefined array key "idDelivery" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 61
+[30-Oct-2024 11:15:47 America/Bogota] PHP Warning:  Undefined array key "material" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 64
+[30-Oct-2024 11:15:47 America/Bogota] PHP Warning:  Undefined array key "height" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 64
+[30-Oct-2024 11:19:53 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 11:19:53 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 11:19:53 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 11:19:53 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 11:19:53 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[30-Oct-2024 11:19:58 America/Bogota] PHP Warning:  Undefined array key "idDelivery" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 36
+[30-Oct-2024 11:19:58 America/Bogota] PHP Warning:  Undefined array key "idDelivery" in C:\xampp\htdocs\salp\admin-salp\controllers\luminaries.controller.php on line 61
+[30-Oct-2024 11:24:47 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 11:24:47 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 56
+[30-Oct-2024 11:24:47 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 11:24:47 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
+[30-Oct-2024 11:24:47 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[30-Oct-2024 11:24:52 America/Bogota] PHP Warning:  Undefined array key "number" in C:\xampp\htdocs\salp\admin-salp\controllers\deliveries.controller.php on line 79
