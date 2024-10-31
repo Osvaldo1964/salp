@@ -870,6 +870,7 @@ if (isset($routesArray[3])) {
             cache: false,
             processData: false,
             success: function(response) {
+                alert('asasas');
                 console.log(response);
             }
         })

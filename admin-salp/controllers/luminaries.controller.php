@@ -74,10 +74,11 @@ class LuminariesController
 					$response = CurlController::request($url, $method, $fields);
 
 					echo '<script>
+					var idDoc = "<?php echo $_POST["idDelivery"] ?>";
 					fncFormatInputs();
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Registro grabado correctamente", "/deliveries/items/".$_POST["idDelivery"]);
+					fncSweetAlert("success", "Registro grabado correctamente", "/deliveries/items/" + idDoc);
 				</script>';
 				}
 			} else {
