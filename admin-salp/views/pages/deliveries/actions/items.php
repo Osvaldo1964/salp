@@ -536,6 +536,8 @@ if (isset($routesArray[3])) {
                 <div class="card card-dark card-outline">
                     <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
                     <input type="hidden" value="<?php echo $deliveries->id_delivery ?>" name="idDelivery">
+                    <input type="hidden" value="<?php echo $technologies->name_technology ?>" name="nameTecno">
+                    <input type="hidden" value="<?php echo $power->name_power ?>" name="namePower">
                         <div class="card-header">
                             <?php
                             require_once "controllers/luminaries.controller.php";

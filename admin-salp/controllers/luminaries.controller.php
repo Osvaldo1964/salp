@@ -61,7 +61,7 @@ class LuminariesController
 						"id_delivery_viewinv" => $_POST["idDelivery"],
 						"group_viewinv" => "LUMINARIAS",
 						"code_viewinv" => $_POST["codeL"],
-						"info_viewinv" => $_POST["technology"] . $_POST["power"],
+						"info_viewinv" => $_POST["nameTechnology"] . " " . $_POST["name_power"],
 						"address_viewinv" => trim(strtoupper($_POST["address"])),
 						"qty_viewinv" => 1,
 						"cost_viewinv" => $_POST["cost"],
