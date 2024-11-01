@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-10-2024 a las 21:24:48
+-- Tiempo de generación: 01-11-2024 a las 21:17:03
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -328,7 +328,66 @@ CREATE TABLE `luminaries` (
 --
 
 INSERT INTO `luminaries` (`id_luminary`, `id_delivery_luminary`, `code_luminary`, `id_technology_luminary`, `id_power_luminary`, `id_pole_luminary`, `id_transformer_luminary`, `id_roud_luminary`, `address_luminary`, `latitude_luminary`, `longitude_luminary`, `cost_luminary`, `life_luminary`, `gallery_luminary`, `status_luminary`, `date_created_luminary`, `date_updated_luminary`) VALUES
-(2, 1, 'led-525', 1, 2, 1, 2, 1, 'CARRERA 11 CALLE 17', 1.23524, 74.2536, 444.00, '<p>PREUBA</p>', '[\"led-525-5553112.jpg\",\"led-525-5252210.jpg\"]', 'Activo', '2024-10-18', '2024-10-18 17:26:48');
+(2, 1, 'led-525', 1, 2, 1, 2, 1, 'CARRERA 11 CALLE 17', 1.23524, 74.2536, 444.00, '<p>PREUBA</p>', '[\"led-525-5553112.jpg\",\"led-525-5252210.jpg\"]', 'Activo', '2024-10-18', '2024-10-18 17:26:48'),
+(3, 1, 'LED-1535', 1, 1, 1, 2, 1, 'CRA 19 # 12-37 LOCAL 20', 10.2523, -74.2526, 125036.00, '<p>AASASDA</p>', '[\"led-1535-4820715.png\"]', 'Activo', '2024-10-31', '2024-10-31 16:02:41'),
+(4, 1, 'LED-357357', 2, 2, 2, 8, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>dsdsd</p>', '[\"led-357357-5297859.jpg\"]', 'Activo', '2024-10-31', '2024-10-31 16:13:31'),
+(5, 1, 'led-85271', 2, 3, 1, 9, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 12305.00, '<p>dsdfsds</p>', '[\"led-85271-6391546.png\"]', 'Activo', '2024-10-31', '2024-10-31 16:20:30'),
+(6, 1, 'led-85271', 2, 3, 1, 9, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 12305.00, '<p>dsdfsds</p>', '[\"led-85271-6199142.png\"]', 'Activo', '2024-10-31', '2024-10-31 16:20:55'),
+(7, 1, 'LED-25265', 2, 1, 2, 10, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>SSASASA</p>', '[\"led-25265-5459970.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 13:38:41'),
+(8, 1, 'LED-85282', 2, 1, 2, 9, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>SDSDFSD</p>', '[\"led-85282-3386705.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 13:48:38'),
+(9, 1, 'LED-85282', 2, 1, 2, 9, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>sasa</p>', '[\"led-85282-6614137.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 13:56:35'),
+(10, 1, 'led-522', 1, 2, 1, 9, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 12305.00, '<p>sasdasda</p>', '[\"led-522-7914141.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 13:57:45'),
+(11, 1, 'led-522', 1, 2, 1, 9, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 12305.00, '<p>sasdasda</p>', '[\"led-522-5314457.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 13:58:31'),
+(12, 1, 'led-522', 1, 2, 1, 9, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 12305.00, '<p>sasdasda</p>', '[\"led-522-7231669.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 13:59:16'),
+(13, 1, 'led-252', 1, 2, 1, 1, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>sdasasd</p>', '[\"led-252-1450977.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 14:00:51'),
+(14, 1, 'led-2525', 1, 2, 1, 10, 1, 'CALLE 334O0', 10.2354, -74.0125, 12305.00, '<p>sasas</p>', '[\"led-2525-2070819.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 14:14:51'),
+(15, 1, 'led-2525', 1, 2, 1, 10, 1, 'CALLE 334O0', 10.2354, -74.0125, 12305.00, '<p>sasas</p>', '[]', 'Activo', '2024-11-01', '2024-11-01 14:19:07'),
+(16, 1, 'led-2525', 1, 2, 1, 10, 1, 'CALLE 334O0', 10.2354, -74.0125, 12305.00, '<p>sasas</p>', '[]', 'Activo', '2024-11-01', '2024-11-01 14:24:56'),
+(17, 1, 'led-25236', 1, 2, 1, 1, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>gdgadf</p>', '[\"led-25236-6401146.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 14:25:44'),
+(18, 1, 'led-25236', 1, 2, 1, 1, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>dsdsdf</p>', '[\"led-25236-8437870.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 14:27:11'),
+(19, 1, 'led-25236', 1, 2, 1, 1, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>dsdfsdf</p>', '[\"led-25236-5823040.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 14:30:09'),
+(20, 1, 'lek-a-sa', 1, 1, 1, 1, 1, 'CALLE 334O0', 10.2354, -74.0125, 12305.00, '<p>asasasd</p>', '[\"lek-a-sa-2932364.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 14:31:51'),
+(21, 1, 'led-2582', 0, 0, 0, 0, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 12305.00, '<p>sasasas</p>', '[\"led-2582-2705932.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 14:37:59'),
+(22, 1, 'led-5522', 1, 2, 2, 1, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>sdsdgsd</p>', '[\"led-5522-2842589.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 15:48:28'),
+(23, 1, 'led-55s5dsd', 2, 1, 2, 1, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>fdfgd</p>', '[\"led-55s5dsd-4410830.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 15:58:12'),
+(24, 1, 'led-52522', 1, 1, 1, 1, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>dsdfsdfsdf</p>', '[\"led-52522-7016389.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 16:02:59'),
+(25, 1, 'led-582', 1, 1, 1, 2, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>vxcvxcvx</p>', '[\"led-582-9203236.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 16:04:43'),
+(26, 1, 'led-2255', 1, 0, 1, 2, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>dvsvsxc</p>', '[\"led-2255-4736039.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 16:06:31'),
+(27, 1, 'led-2255', 1, 2, 1, 8, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>fdfdf</p>', '[\"led-2255-9511076.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 16:08:05'),
+(28, 1, 'led-2522', 1, 2, 2, 1, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>pdldld</p>', '[\"led-2522-2657012.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 16:50:13'),
+(29, 1, 'lek-15252', 1, 3, 1, 1, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>ssfsadf</p>', '[\"lek-15252-5469988.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 16:51:15'),
+(30, 1, 'LED-9988', 1, 3, 1, 1, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>DSDSD</p>', '[\"led-9988-1076897.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 17:01:21'),
+(31, 1, 'led-150', 1, 2, 1, 1, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>sasasas</p>', '[\"led-150-9405143.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 17:38:53'),
+(32, 1, 'led-450', 1, 2, 1, 1, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>dsssxzxv</p>', '[\"led-450-1441222.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 17:48:13'),
+(33, 1, 'led-450', 1, 2, 1, 1, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>dsssxzxv</p>', '[\"led-450-9272370.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 17:48:47'),
+(34, 1, 'led-450', 1, 2, 1, 1, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>dsssxzxv</p>', '[\"led-450-5224713.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 18:41:08'),
+(35, 1, 'led-8855', 1, 2, 1, 9, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>prprprp</p>', '[\"led-8855-3180618.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 18:42:05'),
+(36, 1, 'led-8855', 1, 2, 1, 9, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>prprprp</p>', '[\"led-8855-5986327.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 18:42:38'),
+(37, 1, 'led-8855', 1, 2, 1, 9, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>prprprp</p>', '[\"led-8855-9874556.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 18:43:30'),
+(38, 1, 'led-9999', 1, 2, 1, 1, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>gzczcx</p>', '[\"led-9999-6744149.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 18:43:58'),
+(39, 1, 'led-9999', 1, 2, 1, 1, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>gzczcx</p>', '[\"led-9999-5241416.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 18:45:03'),
+(40, 1, 'led-25652', 1, 2, 1, 10, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 12305.00, '<p>asasas</p>', '[\"led-25652-1174640.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 18:51:28'),
+(41, 1, 'led-5566', 2, 3, 1, 10, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 12305.00, '<p>asasas</p>', '[\"led-5566-2368782.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 18:52:47'),
+(42, 1, 'led-ssaa', 2, 2, 1, 10, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>cxxcx</p>', '[\"led-ssaa-7941022.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 19:02:13'),
+(43, 1, 'led-dasas', 1, 2, 1, 10, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 12305.00, '<p>sxdvxcvxsc</p>', '[\"led-dasas-9678800.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 19:12:36'),
+(44, 1, 'led-1515', 1, 2, 1, 10, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 12305.00, '<p>prueba</p>', '[\"led-1515-7846668.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 19:25:52'),
+(45, 1, 'led-25252', 1, 3, 2, 2, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>sasaasas</p>', '[\"led-25252-9478744.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 19:28:12'),
+(46, 1, 'led-951', 2, 2, 1, 2, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>asasasasas</p>', '[\"led-951-1653129.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 19:44:22'),
+(47, 1, 'led-951', 2, 2, 1, 2, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>asasasasas</p>', '[\"led-951-8486782.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 19:44:44'),
+(48, 1, 'led-951', 2, 2, 1, 2, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>asasasasas</p>', '[\"led-951-7094706.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 19:46:28'),
+(49, 1, 'led-951', 2, 2, 1, 2, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>asasasasas</p>', '[\"led-951-8007686.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 19:46:32'),
+(50, 1, 'led-6555', 1, 3, 1, 2, 1, 'CALLE 334O0', 10.2354, -74.0125, 12305.00, '<p>gdgdfbdfb</p>', '[\"led-6555-8534677.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 19:47:07'),
+(51, 1, 'led-6555', 1, 3, 1, 2, 1, 'CALLE 334O0', 10.2354, -74.0125, 12305.00, '<p>gdgdfbdfb</p>', '[\"led-6555-3449816.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 19:48:13'),
+(52, 1, 'LED-7755', 1, 3, 1, 2, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>BXCXCVXC</p>', '[\"led-7755-7024541.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 19:48:43'),
+(53, 1, 'led-2266', 2, 3, 1, 2, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>xcxcvxcv</p>', '[\"led-2266-5656417.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 19:49:50'),
+(54, 1, 'led-2266', 2, 3, 1, 2, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>xcxcvxcv</p>', '[\"led-2266-2067761.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 19:51:33'),
+(55, 1, 'led-2266', 2, 3, 1, 2, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>xcxcvxcv</p>', '[\"led-2266-8872696.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 19:58:33'),
+(56, 1, 'led-2266', 2, 3, 1, 2, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>xcxcvxcv</p>', '[\"led-2266-4592025.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 19:58:41'),
+(57, 1, 'led-2266', 2, 3, 1, 2, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>saasas</p>', '[\"led-2266-4602650.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 20:12:45'),
+(58, 1, 'led-52225', 1, 2, 1, 2, 1, 'CALLE 334O0ASASAS', 10.2354, -74.0125, 1230.00, '<p>sallsdds</p>', '[\"led-52225-9501669.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 20:13:40'),
+(59, 1, 'led-aasa1', 1, 3, 1, 1, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>sdasda</p>', '[\"led-aasa1-6529375.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 20:14:19'),
+(60, 1, 'led-aasa1', 1, 3, 1, 1, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>sdasda</p>', '[\"led-aasa1-8383529.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 20:15:19'),
+(61, 1, 'led-aasa1', 1, 3, 1, 1, 1, 'CALLE 334O0', 10.2354, -74.0125, 1230.00, '<p>sdasda</p>', '[\"led-aasa1-8228470.jpg\"]', 'Activo', '2024-11-01', '2024-11-01 20:16:01');
 
 -- --------------------------------------------------------
 
@@ -1717,7 +1776,9 @@ INSERT INTO `transformers` (`id_transformer`, `id_delivery_transformer`, `code_t
 (9, 1, 'TRANS-020', 150, 'CALLE 33LLDL', 10.253, -74.2536, 'Exclusivo', 'Aereo', 'C5658', 2500000.00, '                                <p>prueba</p>                                ', 'Activo', '[\"trans-020-66966241.jpg\"]', '2024-10-28', '2024-10-28 05:00:00'),
 (10, 1, 'TRANS-021', 500, 'EL CENTRO', 10.2533, -74.2536, 'Exclusivo', 'Subterraneo', 'D2525', 3500000.00, '<p>OTRA</p>', 'Activo', '[\"trans-021-49751014.jpg\"]', '2024-10-28', '2024-10-28 14:43:07'),
 (11, 1, 'TRANS-022', 500, 'CARTAGEA', 10.2533, -74.2536, 'Compartido con Red', 'Aereo', 'D2525333', 2500000.00, '<p>RUEBA</p>', 'Activo', '[\"trans-022-41322203.jpg\"]', '2024-10-28', '2024-10-28 14:45:06'),
-(12, 1, 'port-KDL', 150, 'CALLE 33LLDLDDDDD', 10.253, -74.2536, 'Exclusivo', 'Pedestal', 'D2525', 3500000.00, '<p>SDSD</p>', 'Activo', '[\"port-kdl-26029486.jpg\"]', '2024-10-28', '2024-10-28 15:05:16');
+(12, 1, 'port-KDL', 150, 'CALLE 33LLDLDDDDD', 10.253, -74.2536, 'Exclusivo', 'Pedestal', 'D2525', 3500000.00, '<p>SDSD</p>', 'Activo', '[\"port-kdl-26029486.jpg\"]', '2024-10-28', '2024-10-28 15:05:16'),
+(13, 1, 'TRA-456', 150, 'LA QUIE SEA', 10.263, -74.2513, 'Exclusivo', 'Pedestal', 'GF252', 152620.00, '<p>SFASASDF</p>', 'Activo', '[\"tra-456-90506395.jpg\"]', '2024-11-01', '2024-11-01 13:41:37'),
+(14, 1, 'tra-0236', 150, 'LA QUIE SEA', 10.263, -74.2513, 'Exclusivo', 'Local', 'GF2526', 152620.00, '<p>xzxczx</p>', 'Activo', '[\"tra-0236-46983556.jpg\"]', '2024-11-01', '2024-11-01 16:43:28');
 
 -- --------------------------------------------------------
 
@@ -1775,7 +1836,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fullname_user`, `username_user`, `email_user`, `password_user`, `token_user`, `token_exp_user`, `id_rol_user`, `picture_user`, `country_user`, `city_user`, `address_user`, `phone_user`, `method_user`, `date_created_user`, `date_updated_user`, `status_user`, `verification_user`) VALUES
-(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MzAxMjMwNjEsImV4cCI6MTczMDIwOTQ2MSwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.i6-Y5an6kjPuW-DvBwF1zzj84BgVq2gEeH4e7XnL0BA', '1730209461', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
+(1, 'Osvaldo José Villalobos Cortina', 'osvicor', 'osvicor@hotmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MzA0ODkyNjQsImV4cCI6MTczMDU3NTY2NCwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJvc3ZpY29yQGhvdG1haWwuY29tIn19.x--ZfcfJhbJe6FiyXYrlKOKfD1J3qZGRC2wLfvRhCF8', '1730575664', 'Administradores', '1.jpg', 'Afghanistan', 'Santa Marta', 'Urb. San Lorenzo Mz J Cs 34', '93_3153153153', 'direct', '2024-06-17', '2024-06-17 18:47:27', 1, 0),
 (7, 'Jorge Villalobos', 'jorgito', 'jorge@gmail.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', NULL, NULL, 'Usuarios', '7.png', 'Algeria', 'Varsobia', 'LA QUE SEA', '+213_3153153153', 'direct', '2024-06-22', '2024-06-22 14:18:30', 1, 1),
 (31, 'Juan Prueto', '', 'prueba@mail.com', '', NULL, NULL, '1', NULL, 'Afghanistan', 'Otra', 'calle 1', '+93_3253253325', 'direct', '2024-06-25', '2024-06-25 20:10:46', 1, 1);
 
@@ -1810,6 +1871,7 @@ INSERT INTO `uses` (`id_use`, `name_use`, `amount_use`, `minimal_use`, `status_u
 
 CREATE TABLE `viewinvs` (
   `id_viewinv` bigint(20) NOT NULL,
+  `id_delivery_viewinv` bigint(20) NOT NULL,
   `group_viewinv` varchar(20) NOT NULL,
   `code_viewinv` varchar(10) NOT NULL,
   `info_viewinv` text NOT NULL,
@@ -1819,16 +1881,6 @@ CREATE TABLE `viewinvs` (
   `date_created_viewinv` date DEFAULT NULL,
   `date_updated_viewinv` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `viewinvs`
---
-
-INSERT INTO `viewinvs` (`id_viewinv`, `group_viewinv`, `code_viewinv`, `info_viewinv`, `address_viewinv`, `qty_viewinv`, `cost_viewinv`, `date_created_viewinv`, `date_updated_viewinv`) VALUES
-(1, 'TRANSFORMADORES', 'TRANS-020', '150 KWh', 'CALLE 33LLDL', 1.00, 2500000.00, '2024-10-28', '2024-10-28 14:34:38'),
-(2, 'TRANSFORMADORES', 'TRANS-021', '500 KWh', 'EL CENTRO', 1.00, 3500000.00, '2024-10-28', '2024-10-28 14:43:07'),
-(3, 'TRANSFORMADORES', 'TRANS-022', '500 KWh', 'CARTAGEA', 1.00, 2500000.00, '2024-10-28', '2024-10-28 14:45:07'),
-(4, 'TRANSFORMADORES', 'port-KDL', '150 KWh', 'CALLE 33LLDLDDDDD', 1.00, 3500000.00, '2024-10-28', '2024-10-28 15:05:16');
 
 --
 -- Índices para tablas volcadas
@@ -2054,7 +2106,7 @@ ALTER TABLE `itemdeliveries`
 -- AUTO_INCREMENT de la tabla `luminaries`
 --
 ALTER TABLE `luminaries`
-  MODIFY `id_luminary` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_luminary` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT de la tabla `materials`
@@ -2114,7 +2166,7 @@ ALTER TABLE `technologies`
 -- AUTO_INCREMENT de la tabla `transformers`
 --
 ALTER TABLE `transformers`
-  MODIFY `id_transformer` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_transformer` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `typedeliveries`
@@ -2138,7 +2190,7 @@ ALTER TABLE `uses`
 -- AUTO_INCREMENT de la tabla `viewinvs`
 --
 ALTER TABLE `viewinvs`
-  MODIFY `id_viewinv` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_viewinv` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -55,6 +55,21 @@ class LuminariesController
 				$method = "POST";
 				$fields = $data;
 				$response = CurlController::request($url, $method, $fields);
+
+				/* Busco tecnologia */
+				$url = "technologies?select=id_technology,name_technology&linkTo=id_technology&equalTo=".$_POST["technology"];
+				$method = "GET";
+				$fields = "";
+				$response = CurlController::request($url, $method, $fields);
+				$technologies = $response->results[0];
+				//echo '<pre>'; print_r($technologies); echo '</pre>';
+				/* Busco potencia */
+				$url = "powers?select=id_power,name_power&linkTo=id_power&equalTo=".$_POST["power"];
+				$response = CurlController::request($url, $method, $fields);
+				$powers = $response->results[0];
+				//echo '<pre>'; print_r($powers); echo '</pre>';exit;
+				
+
 				//echo '<pre>'; print_r($response); echo '</pre>';exit;
 				/* Respuesta de la API */
 				if ($response->status == 200) {
@@ -62,7 +77,7 @@ class LuminariesController
 						"id_delivery_viewinv" => $_POST["idDelivery"],
 						"group_viewinv" => "LUMINARIAS",
 						"code_viewinv" => $_POST["codeL"],
-						"info_viewinv" => $_POST["technology"] . " " . $_POST["power"],
+						"info_viewinv" => $technologies->name_technology . " " . $powers->name_power,
 						"address_viewinv" => trim(strtoupper($_POST["address"])),
 						"qty_viewinv" => 1,
 						"cost_viewinv" => $_POST["cost"],
@@ -80,7 +95,7 @@ class LuminariesController
 					fncFormatInputs();
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Registro grabado correctamente", "/deliveries/items/1" );
+					fncSweetAlert("success", "Registro grabado correctamente", location.reload() );
 				</script>';
 				}
 			} else {
