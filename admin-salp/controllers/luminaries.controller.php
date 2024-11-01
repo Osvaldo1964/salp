@@ -8,8 +8,8 @@ class LuminariesController
 		//echo '<pre>'; print_r($_POST); echo '</pre>';exit;
 		if (isset($_POST["codeL"])) {
 			echo '<script>
-				matPreloader("on");
-				fncSweetAlert("loading", "Loading...", "");
+					matPreloader("on");
+					fncSweetAlert("loading", "Loading...", "");
 			</script>';
 
 			/* Validamos la sintaxis de los campos */
@@ -31,6 +31,7 @@ class LuminariesController
 					array_push($galleryElement, $saveImageGallery);
 				}
 
+				$idDoc = $_POST["idDelivery"];
 				/* Agrupamos la información */
 				$data = array(
 					"id_delivery_luminary" => $_POST["idDelivery"],
@@ -61,24 +62,25 @@ class LuminariesController
 						"id_delivery_viewinv" => $_POST["idDelivery"],
 						"group_viewinv" => "LUMINARIAS",
 						"code_viewinv" => $_POST["codeL"],
-						"info_viewinv" => $_POST["nameTechnology"] . " " . $_POST["name_power"],
+						"info_viewinv" => $_POST["technology"] . " " . $_POST["power"],
 						"address_viewinv" => trim(strtoupper($_POST["address"])),
 						"qty_viewinv" => 1,
 						"cost_viewinv" => $_POST["cost"],
 						"date_created_viewinv" => date("Y-m-d")
 					);
 					$url = "viewinvs?token=" . $_SESSION["user"]->token_user . "&table=users&suffix=user";
-					echo '<pre>'; print_r($data2); echo '</pre>';
 					$method = "POST";
 					$fields = $data2;
 					$response = CurlController::request($url, $method, $fields);
 
+					$codigo = $_POST["idDelivery"];
+					//echo '<pre>'; print_r($codigo); echo '</pre>';
+
 					echo '<script>
-					var idDoc = "<?php echo $_POST["idDelivery"] ?>";
 					fncFormatInputs();
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Registro grabado correctamente", "/deliveries/items/" + idDoc);
+					fncSweetAlert("success", "Registro grabado correctamente", "/deliveries/items/1" );
 				</script>';
 				}
 			} else {

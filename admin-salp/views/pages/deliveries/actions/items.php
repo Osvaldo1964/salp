@@ -8,7 +8,8 @@ if (isset($routesArray[3])) {
         $method = "GET";
         $fields = array();
         $response = CurlController::request($url, $method, $fields);
-        //echo '<pre>'; print_r($url); echo '</pre>';exit;
+        //echo '<pre>'; print_r($url); echo '</pre>';
+        //echo '<pre>'; print_r($response); echo '</pre>';
 
         if ($response->status == 200) {
             $deliveries = $response->results[0];
@@ -32,11 +33,6 @@ if (isset($routesArray[3])) {
     <form id="formDetails">
         <input type="hidden" value="<?php echo $deliveries->id_delivery ?>" name="idDelivery">
         <div class="card-header">
-            <!--             <?php
-                                require_once "controllers/deliveries.controller.php";
-                                $create = new DeliveriesController();
-                                $create->edit($deliveries->id_delivery);
-                                ?> -->
             <div class="col-md-12 offset-md-2">
                 <div class="row">
                     <input type="text" class="col-md-3" name="typedelivery" value="<?php echo $deliveries->name_typedelivery ?>" disabled>
@@ -117,9 +113,6 @@ if (isset($routesArray[3])) {
                             $secuencia++;
                         }
                     } else {
-                        echo '<script>
-				                window.location = "/deliveries";
-				                </script>';
                     }
                     ?>
                 </tbody>
@@ -347,7 +340,7 @@ if (isset($routesArray[3])) {
             <div class="modal-body">
                 <div class="card card-dark card-outline">
                     <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
-                    <input type="hidden" value="<?php echo $deliveries->id_delivery ?>" name="idDelivery">
+                        <input type="hidden" value="<?php echo $deliveries->id_delivery ?>" name="idDelivery">
                         <div class="card-header">
                             <?php
                             require_once "controllers/poles.controller.php";
@@ -535,14 +528,8 @@ if (isset($routesArray[3])) {
             <div class="modal-body">
                 <div class="card card-dark card-outline">
                     <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
-                    <input type="hidden" value="<?php echo $deliveries->id_delivery ?>" name="idDelivery">
-                    <input type="hidden" value="<?php echo $technologies->name_technology ?>" name="nameTecno">
-                    <input type="hidden" value="<?php echo $power->name_power ?>" name="namePower">
+                        <input type="hidden" value="<?php echo $deliveries->id_delivery ?>" name="idDelivery">
                         <div class="card-header">
-                            <?php
-                            require_once "controllers/luminaries.controller.php";
-                            $create = new LuminariesController();
-                            ?>
                             <div class="row">
                                 <!-- Izquierda -->
                                 <div class="col-md-6">
@@ -569,7 +556,7 @@ if (isset($routesArray[3])) {
                                             ?>
 
                                             <div class="form-group">
-                                                <select class="form-control select2" name="technology" style="width:100%">
+                                                <select class="form-control select2" id="technology" name="technology" style="width:100%">
                                                     <option value="">Seleccione la Tecnologia</option>
                                                     <?php foreach ($technologies as $key => $value) : ?>
                                                         <option value="<?php echo $value->id_technology ?>"><?php echo $value->name_technology ?></option>
@@ -763,11 +750,7 @@ if (isset($routesArray[3])) {
                     </form>
                 </div>
             </div>
-            <!--             <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
- -->
+
         </div>
         <!-- /.modal-content -->
     </div>
@@ -860,23 +843,27 @@ if (isset($routesArray[3])) {
     }
 
     $(".upTable").click(function() {
-        let ndelivery = $('#idDelivery').val();
-        var data = new FormData();
-        data.append("idDelivery", ndelivery);
+        /*        var combo1 = document.getElementById("techology");
+               var selected1 = combo1.options[combo1.selectedIndex].text;
+               alert(selected1); */
+        /*         let ndelivery = $('#idDelivery').val();
+                var data = new FormData();
+                data.append("idDelivery", ndelivery);
 
-        $.ajax({
-            url: "ajax/ajax-validate.php",
-            method: "POST",
-            data: data,
-            contentType: false,
-            cache: false,
-            processData: false,
-            success: function(response) {
-                alert('asasas');
-                console.log(response);
-            }
-        })
+                $.ajax({
+                    url: "ajax/ajax-validate.php",
+                    method: "POST",
+                    data: data,
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function(response) {
+                        alert('asasas');
+                        console.log(response);
+                    }
+                })
 
+         */
     })
 
     /* Funcion de Codigo de Barras */
