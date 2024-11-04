@@ -91,12 +91,12 @@ class LuminariesController
 					$codigo = $_POST["idDelivery"];
 					//echo '<pre>'; print_r($codigo); echo '</pre>';
 
-					echo '<script>
+					echo `<script>
 					fncFormatInputs();
-					matPreloader("off");
+					matPreloader('off');
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Registro grabado correctamente", location.reload() );
-				</script>';
+					fncSweetAlert("success", "Registro grabado correctamente", "/deliveries/items/" . idDel );
+				</script>`;
 				}
 			} else {
 				echo '<script>
