@@ -89,14 +89,14 @@ class LuminariesController
 					$response = CurlController::request($url, $method, $fields);
 
 					$codigo = $_POST["idDelivery"];
-					//echo '<pre>'; print_r($codigo); echo '</pre>';
+					//echo '<pre>'; print_r($response); echo '</pre>';
 
-					echo `<script>
+					echo '<script>
 					fncFormatInputs();
-					matPreloader('off');
+					matPreloader("off");
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Registro grabado correctamente", "/deliveries/items/" . idDel );
-				</script>`;
+					fncSweetAlert("success", "Registro actualizado correctamente", "/deliveries/items/' . base64_encode($codigo."~".$_GET["token"]) . '");
+			</script>';
 				}
 			} else {
 				echo '<script>

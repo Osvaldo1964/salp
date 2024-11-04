@@ -1,5 +1,5 @@
 <?php
-
+        echo '<pre>'; print_r($routesArray); echo '</pre>';
 if (isset($routesArray[3])) {
     $security = explode("~", base64_decode($routesArray[3]));
     if ($security[1] == $_SESSION["user"]->token_user) {
@@ -14,7 +14,7 @@ if (isset($routesArray[3])) {
         if ($response->status == 200) {
             $deliveries = $response->results[0];
             //echo '<pre>'; print_r($details); echo '</pre>';
-            //echo '<pre>'; print_r($deliveries); echo '</pre>';
+            echo '<pre>'; print_r($deliveries); echo '</pre>';
         } else {
             echo '<script>
 				window.location = "/deliveries";
@@ -26,7 +26,6 @@ if (isset($routesArray[3])) {
 				</script>';
     }
 }
-
 ?>
 
 <div class="card card-dark card-outline col-md-12">
