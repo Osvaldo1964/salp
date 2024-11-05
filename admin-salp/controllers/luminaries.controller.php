@@ -62,15 +62,13 @@ class LuminariesController
 				$fields = "";
 				$response = CurlController::request($url, $method, $fields);
 				$technologies = $response->results[0];
-				//echo '<pre>'; print_r($technologies); echo '</pre>';
+
 				/* Busco potencia */
 				$url = "powers?select=id_power,name_power&linkTo=id_power&equalTo=".$_POST["power"];
 				$response = CurlController::request($url, $method, $fields);
 				$powers = $response->results[0];
 				//echo '<pre>'; print_r($powers); echo '</pre>';exit;
 				
-
-				//echo '<pre>'; print_r($response); echo '</pre>';exit;
 				/* Respuesta de la API */
 				if ($response->status == 200) {
 					$data2 = array(
@@ -88,14 +86,14 @@ class LuminariesController
 					$fields = $data2;
 					$response = CurlController::request($url, $method, $fields);
 
-					$codigo = $_POST["idDelivery"];
+					$codigo = base64_encode($_POST["idDelivery"]);
 					//echo '<pre>'; print_r($response); echo '</pre>';
 
 					echo '<script>
 					fncFormatInputs();
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Registro actualizado correctamente", "/deliveries/items/' . base64_encode($codigo."~".$_GET["token"]) . '");
+					fncSweetAlert("success", "Registro Creado correctamente", "/deliveries/items/' . $codigo . '");
 			</script>';
 				}
 			} else {

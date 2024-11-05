@@ -71,11 +71,14 @@ class TransformersController
 					$method = "POST";
 					$fields = $data2;
 					$response = CurlController::request($url, $method, $fields);
+
+					$codigo = base64_encode($_POST["idDelivery"]);
+					
 					echo '<script>
 					fncFormatInputs();
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Registro grabado correctamente", "/deliveries/items/".$_POST["idDelivery"]);
+					fncSweetAlert("success", "Registro grabado correctamente", "/deliveries/items/' . $codigo . '");
 				</script>';
 				}
 			} else {

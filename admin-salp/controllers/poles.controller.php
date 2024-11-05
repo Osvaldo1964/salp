@@ -53,13 +53,28 @@ class PolesController
 				$fields = $data;
 				$response = CurlController::request($url, $method, $fields);
 				//echo '<pre>'; print_r($fields); echo '</pre>';exit;
+
+				/* Busco Materiales */
+				$url = "materials?select=id_material,name_material&linkTo=id_material&equalTo=" . $_POST["material"];
+				$method = "GET";
+				$fields = "";
+				$response = CurlController::request($url, $method, $fields);
+				$materials = $response->results[0];
+
+				/* Busco Alturas */
+				$url = "heights?select=id_height,name_height&linkTo=id_height&equalTo=" . $_POST["height"];
+				$response = CurlController::request($url, $method, $fields);
+				$heights = $response->results[0];
+				//echo '<pre>'; print_r($powers); echo '</pre>';exit;
+
+
 				/* Respuesta de la API */
 				if ($response->status == 200) {
 					$data2 = array(
 						"id_delivery_viewinv" => $_POST["idDelivery"],
 						"group_viewinv" => "POSTES",
 						"code_viewinv" => $_POST["code"],
-						"info_viewinv" => $_POST["material"] . $_POST["height"],
+						"info_viewinv" => $materials->name_material . " " . $heights->name_height,
 						"address_viewinv" => trim(strtoupper($_POST["address"])),
 						"qty_viewinv" => 1,
 						"cost_viewinv" => $_POST["cost"],
@@ -69,11 +84,14 @@ class PolesController
 					$method = "POST";
 					$fields = $data2;
 					$response = CurlController::request($url, $method, $fields);
+
+					$codigo = base64_encode($_POST["idDelivery"]);
+
 					echo '<script>
 					fncFormatInputs();
 					matPreloader("off");
 					fncSweetAlert("close", "", "");
-					fncSweetAlert("success", "Registro grabado correctamente", "/deliveries/items/".$_POST["idDelivery"]);
+					fncSweetAlert("success", "Registro Creado correctamente", "/deliveries/items/' . $codigo . '");
 				</script>';
 				}
 			} else {

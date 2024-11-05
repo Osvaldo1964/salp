@@ -1,31 +1,29 @@
 <?php
-        echo '<pre>'; print_r($routesArray); echo '</pre>';
 if (isset($routesArray[3])) {
-    $security = explode("~", base64_decode($routesArray[3]));
-    if ($security[1] == $_SESSION["user"]->token_user) {
-        $select = "*";
-        $url = "relations?rel=deliveries,typedeliveries,itemdeliveries,resources&type=delivery,typedelivery,itemdelivery,resource&select=" . $select . "&linkTo=id_delivery&equalTo=" . $security[0];
+    $security = base64_decode($routesArray[3]);
+    $select = "*";
+    $url = "relations?rel=details,deliveries&type=detail,delivery&select=" . $select . "&linkTo=id_delivery_detail&equalTo=" . $security[0];;
+    $method = "GET";
+    $fields = array();
+    $response = CurlController::request($url, $method, $fields);
+    //echo '<pre>'; print_r($url); echo '</pre>';exit;
+
+    if ($response->status == 200) {
+        $details = $response->results[0];
+        $url = "relations?rel=deliveries,typedeliveries,itemdeliveries,resources&type=delivery,typedelivery,itemdelivery,resource&select=" . $select . "&linkTo=id_delivery&equalTo=" . $security[0];;
         $method = "GET";
         $fields = array();
         $response = CurlController::request($url, $method, $fields);
-        //echo '<pre>'; print_r($url); echo '</pre>';
-        //echo '<pre>'; print_r($response); echo '</pre>';
-
-        if ($response->status == 200) {
-            $deliveries = $response->results[0];
-            //echo '<pre>'; print_r($details); echo '</pre>';
-            echo '<pre>'; print_r($deliveries); echo '</pre>';
-        } else {
-            echo '<script>
-				window.location = "/deliveries";
-				</script>';
-        }
+        $deliveries = $response->results[0];
+        //echo '<pre>'; print_r($details); echo '</pre>';
+        //echo '<pre>'; print_r($deliveries); echo '</pre>';
     } else {
         echo '<script>
 				window.location = "/deliveries";
 				</script>';
     }
 }
+
 ?>
 
 <div class="card card-dark card-outline col-md-12">
