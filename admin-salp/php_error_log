@@ -2269,3 +2269,30 @@ Stack trace:
 [07-Nov-2024 12:43:01 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [07-Nov-2024 12:43:01 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 81
 [07-Nov-2024 12:43:01 America/Bogota] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\salp\admin-salp\views\modules\sidebar.php on line 96
+[07-Nov-2024 18:19:35 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_typedelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[07-Nov-2024 18:19:35 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_typedelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[07-Nov-2024 18:19:35 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_typedelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[07-Nov-2024 18:19:35 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_itemdelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 76
+[07-Nov-2024 18:19:35 America/Bogota] PHP Warning:  Undefined property: stdClass::$number_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 92
+[07-Nov-2024 18:19:35 America/Bogota] PHP Warning:  Undefined property: stdClass::$date_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 104
+[07-Nov-2024 18:19:35 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_resource_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 124
+[07-Nov-2024 18:19:35 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_resource_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 124
+[07-Nov-2024 18:20:48 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_typedelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[07-Nov-2024 18:20:48 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_typedelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[07-Nov-2024 18:20:48 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_typedelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[07-Nov-2024 18:20:48 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_itemdelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 76
+[07-Nov-2024 18:20:48 America/Bogota] PHP Warning:  Undefined property: stdClass::$number_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 92
+[07-Nov-2024 18:20:48 America/Bogota] PHP Warning:  Undefined property: stdClass::$date_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 104
+[07-Nov-2024 18:20:48 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_resource_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 124
+[07-Nov-2024 18:20:48 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_resource_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 124
+[07-Nov-2024 18:20:51 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_typedelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[07-Nov-2024 18:20:51 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_typedelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[07-Nov-2024 18:20:51 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_typedelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 50
+[07-Nov-2024 18:20:52 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_itemdelivery_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 76
+[07-Nov-2024 18:20:52 America/Bogota] PHP Warning:  Undefined property: stdClass::$number_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 92
+[07-Nov-2024 18:20:52 America/Bogota] PHP Warning:  Undefined property: stdClass::$date_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 104
+[07-Nov-2024 18:20:52 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_resource_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 124
+[07-Nov-2024 18:20:52 America/Bogota] PHP Warning:  Undefined property: stdClass::$id_resource_delivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 124
+[07-Nov-2024 18:23:31 America/Bogota] PHP Warning:  Undefined property: stdClass::$name_typedelivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 51
+[07-Nov-2024 18:23:31 America/Bogota] PHP Warning:  Undefined property: stdClass::$name_itemdelivery in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 77
+[07-Nov-2024 18:23:31 America/Bogota] PHP Warning:  Undefined property: stdClass::$name_resource in C:\xampp\htdocs\salp\admin-salp\views\pages\deliveries\actions\edit.php on line 125

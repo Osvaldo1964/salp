@@ -3,7 +3,8 @@ if (isset($routesArray[3])) {
     $security = explode("~", base64_decode($routesArray[3]));
     if ($security[1] == $_SESSION["user"]->token_user) {
         $select = "*";
-        $url = "deliveries?select=id_delivery&linkTo=id_delivery&equalTo=" . $security[0];
+        $url = "relations?rel=deliveries,typedeliveries,itemdeliveries,resources&type=delivery,typedelivery,itemdelivery,resource&select=" . $select . "&linkTo=id_delivery&equalTo=" . $security[0];
+        //"deliveries?select=" . $select . "&linkTo=id_delivery&equalTo=" . $security[0];
         $method = "GET";
         $fields = array();
         $response = CurlController::request($url, $method, $fields);
@@ -89,7 +90,7 @@ if (isset($routesArray[3])) {
                 <!-- Número del Acta -->
                 <div class="form-group mt-1">
                     <label>Número Acta</label>
-                    <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" onchange="validateRepeat(event,'t&n','delvieries','number_delivery')" name="number" value="<?php echo $deliveries->number_delivery ?>" required>
+                    <input type="text" class="form-control" pattern="[A-Za-z0-9]+([-])+([A-Za-z0-9]{1,}" onchange="validateRepeat(event,'t&n','deliveries','number_delivery')" name="number" value="<?php echo $deliveries->number_delivery ?>" required>
 
                     <div class="valid-feedback">Valid.</div>
                     <div class="invalid-feedback">Please fill out this field.</div>
