@@ -2,7 +2,7 @@
 
 /* Busco Transformadores */
 $select = "id_transformer,code_transformer,number_delivery,power_transformer,address_transformer,cost_transformer,status_transformer,date_created_transformer";
-$url = "relations?rel=transformers,deliveries&type=transformer,delivery&select=" . $select . "&filterTo=status_transformer&inTo='Activo'";
+$url = "relations?rel=transformers,deliveries&type=transformer,delivery&select=" . $select . "&filterTo=status_transformer&inTo='Activo'&orderBy=power_transformer&orderMode=ASC";
 $method = "GET";
 $fields = array();
 $transformers = CurlController::request($url, $method, $fields);
@@ -12,7 +12,7 @@ $transformers = $transformers->results;
 
 /* Busco Postes */
 $select = "id_pole,code_pole,number_delivery,name_material,name_height,address_pole,cost_pole,date_created_pole,status_pole";
-$url = "relations?rel=poles,deliveries,materials,heights&type=pole,delivery,material,height&select=" . $select . "&filterTo=status_pole&inTo='Activo'";
+$url = "relations?rel=poles,deliveries,materials,heights&type=pole,delivery,material,height&select=" . $select . "&filterTo=status_pole&inTo='Activo'&orderBy=name_material,name_height&orderMode=ASC";
 $method = "GET";
 $fields = array();
 $poles = CurlController::request($url, $method, $fields);
@@ -22,7 +22,7 @@ $poles = $poles->results;
 
 /* Busco Luminarias */
 $select = "id_luminary,code_luminary,number_delivery,name_technology,name_power,address_luminary,cost_luminary,date_created_luminary,status_luminary";
-$url = "relations?rel=luminaries,deliveries,technologies,powers,rouds,transformers,poles&type=luminary,delivery,technology,power,roud,transformer,pole&select=" . $select . "&filterTo=status_luminary&inTo='Activo'";
+$url = "relations?rel=luminaries,deliveries,technologies,powers,rouds,transformers,poles&type=luminary,delivery,technology,power,roud,transformer,pole&select=" . $select . "&filterTo=status_luminary&inTo='Activo'&orderBy=name_technology,name_power&orderMode=ASC";
 $method = "GET";
 $fields = array();
 $luminaries = CurlController::request($url, $method, $fields);

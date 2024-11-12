@@ -304,7 +304,6 @@ function execDatatable(text) {
 
     /* CONFIGURAR DATOS PARA ACTAS */
 
-
     /* Valido Tabla Cuadrillas*/
     if ($(".tableCrews").length > 0) {
 
@@ -360,44 +359,7 @@ function execDatatable(text) {
         page = "brands";
     }
 
-    /* Valido Tabla Líneas */
-    if ($(".tableLines").length > 0) {
-
-        var url = "ajax/data-brandlines.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
-
-        var columns = [
-            { "data": "id_brandline" },
-            { "data": "name_brandline" },
-            { "data": "name_brand" },
-            { "data": "date_created_brandline" },
-            { "data": "actions", "orderable": false, "search": false }
-        ];
-
-        page = "brandlines";
-    }
-
-    /* Valido Tabla Vehículos */
-    if ($(".tableVehicles").length > 0) {
-
-        var url = "ajax/data-vehicles.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
-
-        var columns = [
-            { "data": "id_vehicle" },
-            { "data": "plate_vehicle" },
-            { "data": "fullname_subject" },
-            { "data": "name_brand" },
-            { "data": "name_brandline" },
-            { "data": "model_vehicle" },
-            { "data": "cilindraje_vehicle" },
-            { "data": "date_created_vehicle" },
-            { "data": "status_vehicle" },
-            { "data": "actions", "orderable": false, "search": false }
-        ];
-
-        page = "vehicles";
-    }
-
-    /* TABLAS PARA FACTURACION - RECAUDOS */
+     /* TABLAS PARA FACTURACION - RECAUDOS */
 
         /* Valido Tabla Estratos */
         if ($(".tableUses").length > 0) {
@@ -414,6 +376,26 @@ function execDatatable(text) {
     
             page = "uses";
         }
+
+    /* Valido Tabla Costo Energia */
+    if ($(".tableEnergies").length > 0) {
+
+        var url = "ajax/data-energies.php?text=" + text + "&between1=" + $("#between1").val() + "&between2=" + $("#between2").val() + "&token=" + localStorage.getItem("token_user")
+
+        var columns = [
+            { "data": "id_energy" },
+            { "data": "name_lender" },
+            { "data": "period_energy" },
+            { "data": "bill_energy" },
+            { "data": "amount_energy" },
+            { "data": "fee_energy" },
+            { "data": "total_energy" },
+            { "data": "date_created_energy" },
+            { "data": "actions", "orderable": false, "search": false }
+        ];
+
+        page = "energies";
+    }
 
     /* FIN TABLAS PARA FACTURACION - RECAUDOS */
 

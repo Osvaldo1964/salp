@@ -249,3 +249,9 @@
         </div>
     </form>
 </div>
+
+<script>
+    function fntCalculo(){
+        document.getElementById('total').val() = document.getElementById('amount').val() * document.getElementById('fee').val() ;
+    }
+</script>

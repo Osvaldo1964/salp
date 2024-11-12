@@ -314,7 +314,7 @@ $routesArray = array_filter($routesArray);
                     <a href="#" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "subjects") : ?>active bg-info<?php endif ?>">
                         <i class="nav-icon far fa-plus-square"></i>
                         <p>
-                            FACTURACION/RECAUDOS
+                            COSTOS/FACTURACION
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
@@ -358,9 +358,9 @@ $routesArray = array_filter($routesArray);
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/generate" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "generate") : ?>active bg-info<?php endif ?>">
+                                    <a href="/energies" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "energies") : ?>active bg-info<?php endif ?>">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Generar Mandamientos</p>
+                                        <p>Costo Energía</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">

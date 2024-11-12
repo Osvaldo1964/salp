@@ -82,6 +82,7 @@ function validateJS(event, type) {
 
   -> Solo numeros positivos con decimales -> "^(0|[1-9]\d*)(\.\d+)?$"
   -> Numeros negativos o positivos con decimales -> "^-?[0-9]*\.?[0-9]+$"
+  "^(?=.*[A-Za-z])(?=.*\d).+$"
   -> Letras y numeros con punto y guion para direcciones -> [A-Za-z0-9.-]+
 
 */
